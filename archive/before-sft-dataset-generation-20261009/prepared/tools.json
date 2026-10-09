@@ -1,0 +1,93 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_weather",
+      "description": "只在用户询问当前或未来七天的天气时调用；普通闲聊中提到天气时不要调用。用户明确说出城市时，将城市名填入location；同时明确说出省份或上级城市时，填入adm用于消歧，不要自行猜测上级地区。地点是省份、含糊地名或无法确定具体城市时先反问。用户没说地点时省略location，工具会使用当前智能体天气配置中的default_location；不要把上下文城市填入location。用户没说日期时按今天理解。工具返回当前天气和未来七天预报，不接收日期参数；只根据报告中确实存在的日期回答。回复时使用报告第一行的城市名，允许省略末尾的“市”，不要翻译或改成其他地点。若返回need_city、ambiguous_city或city_not_found，向用户追问具体城市或上级地区，再根据下一轮回答重新调用本工具；若返回fetch_error，说明暂时无法查询，不要编造天气。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "用户明确提出的城市名，如杭州、朝阳。未说城市时不要传此参数，由工具使用当前智能体配置的默认城市。"
+          },
+          "adm": {
+            "type": "string",
+            "description": "用户明确提供的上级省份或城市，仅用于重名地区消歧，例如辽宁；不要猜测。"
+          },
+          "lang": {
+            "type": "string",
+            "description": "返回用户使用的语言code，例如zh_CN/zh_HK/en_US/ja_JP等，默认zh_CN"
+          }
+        },
+        "required": [
+          "lang"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "hass_set_state",
+      "description": "设置homeassistant里设备的状态,包括开、关,调整灯光亮度、颜色、色温,调整播放器的音量,设备的暂停、继续、静音操作",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "需要操作的动作,打开设备:turn_on,关闭设备:turn_off,增加亮度:brightness_up,降低亮度:brightness_down,设置亮度:brightness_value,增加音量:volume_up,降低音量:volume_down,设置音量:volume_set,设置色温:set_kelvin,设置颜色:set_color,设备暂停:pause,设备继续:continue,静音/取消静音:volume_mute"
+              },
+              "input": {
+                "type": "integer",
+                "description": "只有在设置音量,设置亮度时候才需要,有效值为1-100,对应音量和亮度的1%-100%"
+              },
+              "is_muted": {
+                "type": "string",
+                "description": "只有在设置静音操作时才需要,设置静音的时候该值为true,取消静音时该值为false"
+              },
+              "rgb_color": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "description": "只有在设置颜色时需要,这里填目标颜色的rgb值"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "entity_id": {
+            "type": "string",
+            "description": "需要操作的设备id,homeassistant里的entity_id"
+          }
+        },
+        "required": [
+          "state",
+          "entity_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "state_hub_snapshot",
+      "description": "获取 Home Assistant State Hub 的实体状态摘要，返回已订阅且允许暴露的实体名称、实际 entity_id 和当前状态。可先用名称找到 entity_id，再将该 ID 传给 hass_get_state 或 hass_set_state；摘要可能不包含全部 HA 实体，本工具不执行控制。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "max_highlight": {
+            "type": "integer",
+            "description": "最多返回多少条 highlight（1-80，默认 30）"
+          }
+        },
+        "required": []
+      }
+    }
+  }
+]

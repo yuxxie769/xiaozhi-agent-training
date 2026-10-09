@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "S01", "name": "默认城市、默认今天", "scenario_ids": ["T01", "L02"],
+      "variables": ["default_city", "query_kind"], "constraints": ["target_day=0", "用户不说城市和日期"],
+      "patterns": [
+        ["{query_text}怎么样？"],
+        ["能帮我看看{query_text}吗？"],
+        ["我想了解一下{query_text}。"]
+      ]
+    },
+    {
+      "id": "S02", "name": "明确城市的单日天气", "scenario_ids": ["R01", "L01"],
+      "variables": ["default_city", "target_city", "query_kind", "date_mode", "target_day"],
+      "constraints": ["target_day在0至6之间", "date_mode为omitted时target_day=0", "target_city不同于default_city"],
+      "patterns": [
+        ["{target_city}{day_text}的{query_text}怎么样？"],
+        ["帮我查查{day_text}{target_city}的{query_text}。"],
+        ["想知道{target_city}{day_text}的{query_text}，可以吗？"]
+      ]
+    },
+    {
+      "id": "S03", "name": "天气闲聊", "scenario_ids": ["R02"],
+      "variables": ["weather_remark"], "constraints": ["不索取实际天气数据"],
+      "patterns": [
+        ["{weather_remark}。"],
+        ["说起来，{weather_remark}。"],
+        ["你知道吗，{weather_remark}。"]
+      ]
+    },
+    {
+      "id": "S04", "name": "非天气请求", "scenario_ids": ["R03"],
+      "variables": ["other_request"], "constraints": ["请求与天气无关"],
+      "patterns": [
+        ["{other_request}。"],
+        ["请{other_request}。"],
+        ["能{other_request}吗？"]
+      ]
+    },
+    {
+      "id": "S05", "name": "天气与其他请求混合", "scenario_ids": ["R04"],
+      "variables": ["target_city", "query_kind", "target_day", "date_mode", "other_request", "request_order"],
+      "constraints": ["天气和其他请求都保留", "request_order决定两个子任务顺序", "date_mode为omitted时target_day=0"],
+      "patterns": [
+        ["{first_clause}，然后{second_clause}。"],
+        ["先{first_clause}，再{second_clause}。"],
+        ["{first_clause}；另外，{second_clause}。"]
+      ]
+    },
+    {
+      "id": "S06", "name": "报告内的多日天气", "scenario_ids": ["T03"],
+      "variables": ["target_city", "query_kind", "start_day", "day_count"],
+      "constraints": ["day_count至少2", "start_day+day_count-1不超过6"],
+      "patterns": [
+        ["{target_city}从{start_text}起{day_count}天的{query_text}怎么样？"],
+        ["帮我看看{target_city}{start_text}开始连续{day_count}天的{query_text}。"],
+        ["想了解{target_city}自{start_text}起{day_count}天的{query_text}。"]
+      ]
+    },
+    {
+      "id": "S07", "name": "日期含糊后补充", "scenario_ids": ["T04"],
+      "variables": ["target_city", "query_kind", "vague_date_text", "target_day"],
+      "constraints": ["首轮无可指代日期", "第二轮只补日期"],
+      "patterns": [
+        ["{target_city}{vague_date_text}的{query_text}怎么样？", "{day_text}。"],
+        ["想查{target_city}{vague_date_text}的{query_text}。", "我指{day_text}。"],
+        ["{vague_date_text}{target_city}的{query_text}如何？", "就是{day_text}。"]
+      ]
+    },
+    {
+      "id": "S08", "name": "历史天气超出能力", "scenario_ids": ["T05"],
+      "variables": ["target_city", "query_kind", "days_ago"],
+      "constraints": ["days_ago为正整数", "target_day为空"],
+      "patterns": [
+        ["{past_text}{target_city}的{query_text}怎么样？"],
+        ["想知道{target_city}{past_text}的{query_text}。"],
+        ["能查到{past_text}{target_city}的{query_text}吗？"]
+      ]
+    },
+    {
+      "id": "S09", "name": "远期天气超出范围", "scenario_ids": ["T06"],
+      "variables": ["target_city", "query_kind", "days_ahead"],
+      "constraints": ["days_ahead至少7且选择明显远期值", "target_day为空"],
+      "patterns": [
+        ["{future_text}{target_city}的{query_text}怎么样？"],
+        ["想查{target_city}{future_text}的{query_text}。"],
+        ["你能说说{target_city}{future_text}的{query_text}吗？"]
+      ]
+    },
+    {
+      "id": "S10", "name": "预报最后一天及下一天", "scenario_ids": ["T07"],
+      "variables": ["target_city"],
+      "constraints": ["先询问预报范围", "边界日期留待实际报告确定"],
+      "patterns": [
+        ["{target_city}未来几天的天气预报到哪天？", "最后一天和它的下一天天气分别怎样？"],
+        ["帮我看看{target_city}接下来的天气，预报最后一天是哪天？", "那最后一天以及再下一天呢？"],
+        ["{target_city}这几天的预报覆盖到哪一天？", "预报末日的天气如何？它后一天呢？"]
+      ]
+    },
+    {
+      "id": "S11", "name": "只给省份再补城市", "scenario_ids": ["L04"],
+      "variables": ["province", "target_city", "query_kind", "target_day"],
+      "constraints": ["目标城市属于省份", "首轮不能出现目标城市"],
+      "patterns": [
+        ["{province}{day_text}的{query_text}怎么样？", "{target_city}。"],
+        ["帮我看看{day_text}{province}的{query_text}。", "我问的是{target_city}。"],
+        ["想知道{province}{day_text}的{query_text}。", "查{target_city}的。"]
+      ]
+    },
+    {
+      "id": "S12", "name": "重名地点消歧", "scenario_ids": ["L05"],
+      "variables": ["ambiguous_name", "target_adm", "target_city", "query_kind", "target_day"],
+      "constraints": ["首轮不出现上级地区", "上级地区能确定目标地点"],
+      "patterns": [
+        ["{ambiguous_name}{day_text}的{query_text}怎么样？", "{target_adm}的。"],
+        ["查一下{day_text}{ambiguous_name}的{query_text}。", "是{target_adm}那边的{ambiguous_name}。"],
+        ["我想问{ambiguous_name}{day_text}的{query_text}。", "我说的是{target_adm}{ambiguous_name}。"]
+      ]
+    },
+    {
+      "id": "S13", "name": "首轮给出上级地区", "scenario_ids": ["L06"],
+      "variables": ["target_adm", "target_city", "query_kind", "target_day"],
+      "constraints": ["上级地区和地点同时出现在首轮"],
+      "patterns": [
+        ["{target_adm}{target_city}{day_text}的{query_text}怎么样？"],
+        ["帮我查{day_text}{target_adm}{target_city}的{query_text}。"],
+        ["想了解{target_adm}{target_city}{day_text}的{query_text}。"]
+      ]
+    },
+    {
+      "id": "S15", "name": "无效地点后更正", "scenario_ids": ["L08"],
+      "variables": ["invalid_location", "target_city", "query_kind", "target_day"],
+      "constraints": ["首轮仅提无效地点", "第二轮明确更正城市"],
+      "patterns": [
+        ["{invalid_location}{day_text}的{query_text}怎么样？", "我说的是{target_city}。"],
+        ["帮我查查{day_text}{invalid_location}的{query_text}。", "更正一下，查{target_city}。"],
+        ["我想问{invalid_location}{day_text}的{query_text}。", "地点改成{target_city}。"]
+      ]
+    },
+    {
+      "id": "S17", "name": "工具查询故障", "scenario_ids": ["F02"],
+      "variables": ["target_city", "query_kind", "target_day"],
+      "constraints": ["城市和日期正常可查", "故障条件在执行阶段确认"],
+      "patterns": [
+        ["{target_city}{day_text}的{query_text}怎么样？"],
+        ["查一下{day_text}{target_city}的{query_text}。"],
+        ["想了解{target_city}{day_text}的{query_text}。"]
+      ]
+    },
+    {
+      "id": "S19", "name": "追问日期沿用城市", "scenario_ids": ["M02"],
+      "variables": ["target_city", "query_kind", "first_day", "target_day"],
+      "constraints": ["first_day不同于target_day", "第二轮不出现城市"],
+      "patterns": [
+        ["{target_city}{first_day_text}的{query_text}怎么样？", "那{day_text}呢？"],
+        ["帮我查一下{first_day_text}{target_city}的{query_text}。", "换成{day_text}会怎样？"],
+        ["想知道{target_city}{first_day_text}的{query_text}。", "{day_text}的情况呢？"]
+      ]
+    },
+    {
+      "id": "S20", "name": "明确切换城市", "scenario_ids": ["M03"],
+      "variables": ["first_city", "target_city", "query_kind", "target_day"],
+      "constraints": ["首轮城市不同于第二轮城市", "日期保持一致"],
+      "patterns": [
+        ["{first_city}{day_text}的{query_text}怎么样？", "那{target_city}呢？"],
+        ["查一下{day_text}{first_city}的{query_text}。", "换成{target_city}看看。"],
+        ["想知道{first_city}{day_text}的{query_text}。", "{target_city}的情况呢？"]
+      ]
+    },
+    {
+      "id": "S21", "name": "默认城市切换到明确城市", "scenario_ids": ["M04"],
+      "variables": ["default_city", "target_city", "query_kind", "target_day"],
+      "constraints": ["首轮不说城市", "目标城市不同于默认城市"],
+      "patterns": [
+        ["{day_text}的{query_text}怎么样？", "那{target_city}呢？"],
+        ["查一下{day_text}的{query_text}。", "改查{target_city}。"],
+        ["我想知道{day_text}的{query_text}。", "{target_city}的情况呢？"]
+      ]
+    },
+    {
+      "id": "S22", "name": "报告没有所问字段", "scenario_ids": ["O03"],
+      "variables": ["target_city", "target_day", "requested_field", "detail_question"],
+      "constraints": ["询问报告可能缺少的详细字段", "是否缺失在执行阶段确认"],
+      "patterns": [
+        ["{target_city}{day_text}{detail_question}？"],
+        ["帮我看看{day_text}{target_city}{detail_question}。"],
+        ["想知道{target_city}{day_text}{detail_question}，能确定吗？"]
+      ]
+    },
+    {
+      "id": "S24", "name": "澄清时用户取消", "scenario_ids": ["G02"], "target_only": true,
+      "variables": ["clarification_kind", "province", "target_city", "vague_date_text", "cancel_text"],
+      "constraints": ["首轮需澄清地点或日期", "第二轮取消"],
+      "patterns": [
+        ["{clarification_subject}的天气怎么样？", "{cancel_text}"],
+        ["帮我看看{clarification_subject}的天气。", "{cancel_text}"],
+        ["想知道{clarification_subject}的天气情况。", "{cancel_text}"]
+      ]
+    }
+  ]
+}

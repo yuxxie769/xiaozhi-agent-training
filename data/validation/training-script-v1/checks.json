@@ -1,0 +1,19 @@
+{
+  "tests": 49,
+  "passed": true,
+  "gpu_training_verified": false,
+  "qwen_weights_downloaded": false,
+  "code_sha256": {
+    "train-sft.json": "fb4cd1f69097780de8af84ea5ef27804930d08cf4c76a11a8b4f6cfb68288e52",
+    "requirements-training.txt": "bfd80660220c7113fae31c02951fc82e9f97dc3adeaa1594388cf9eaf2fcca53",
+    "scripts/train_sft.py": "952aef048aa5e44c531eb7396c01c003ae686555ce7f2c6cf679d8e1196e2e3a",
+    "scripts/sft_data.py": "c0e5825ee1acee0357aab1a1c24760974068c73fbeb110a93e2ef0bf28ff0df7",
+    "scripts/check_sft_adapter.py": "16461e3319967b8d5be5041fa0baca6abe6018ce0a9047c34eccce7fb9cd5272",
+    "tests/test_sft_data.py": "a2726ebfbb076684762276c1e574ac7f27c435662b4e15a884a7c231b1e455d7",
+    "tests/test_sft_trainer_integration.py": "7ac75fcbf731ec7d12136c1bc0bf944f2dd818f655a84e224506437e575cc413"
+  },
+  "sources": [
+    "https://unsloth.ai/docs/models/qwen3.5/fine-tune",
+    "https://huggingface.co/docs/transformers/main_classes/trainer"
+  ]
+}

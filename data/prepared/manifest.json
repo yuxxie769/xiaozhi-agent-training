@@ -1,0 +1,127 @@
+{
+  "schema_version": 2,
+  "status": "SFT 训练数据集已生成，目标模型训练适配待验证。",
+  "framework": "Unsloth + RTL",
+  "model_family": "Qwen3.5-9B",
+  "checkpoint": {
+    "model_id": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "sources": [
+    {
+      "source_index": 0,
+      "scenario": "weather",
+      "conversations": "data/raw/weather/conversations.json",
+      "conversations_sha256": "5aa1a42b57aa356c419e18618bd2411b0d7a2163d0ad0e5b05c6a7db2dfb549e",
+      "scores": "data/raw/weather/scores.current.json",
+      "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d",
+      "score_policy": "使用已修订的最新评分版本。",
+      "rubric_version": "2.0",
+      "count": 300,
+      "scored_statuses": {
+        "pass": 283,
+        "fail": 17
+      },
+      "trace_binding": "identity_check_plan_and_evidence_only"
+    },
+    {
+      "source_index": 1,
+      "scenario": "home_switch",
+      "conversations": "data/raw/home_switch/conversations.json",
+      "conversations_sha256": "e6082cb32b5b3a56c4c72521300894c1d7abebfe263a73e48d44e7fffeea9dd3",
+      "scores": "data/raw/home_switch/scores.current.json",
+      "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a",
+      "score_policy": "使用已修订的最新评分版本。",
+      "rubric_version": "home_switch/1.5",
+      "count": 299,
+      "scored_statuses": {
+        "pass": 288,
+        "fail": 11
+      },
+      "trace_binding": "sha256"
+    }
+  ],
+  "config_sha256": "fe8b999049904a8b3ee9b7c662a958704c2c18aa62837572bee1f92a5a0f98ba",
+  "exporter_sha256": "f9cb739657c496e59ad6550261976c2ce78befe950101d6f40ed0e15ca7fd628",
+  "system_prompt_sha256": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+  "weather_tool_source": "evaluation/weather-tool.json",
+  "weather_tool_source_sha256": "c887ea71da20edaa3c5442289865a4b046782697f2112a74edf54936c514b2db",
+  "weather_tool_provenance": "reconstructed_contract_aligned_with_latest_rules_not_historical_snapshot",
+  "target_tools_source": "tools.json",
+  "target_tools_sha256": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+  "target_tool_names": [
+    "get_lunar",
+    "get_news_from_newsnow",
+    "get_weather",
+    "handle_exit_intent",
+    "hass_get_state",
+    "hass_set_state",
+    "play_music",
+    "state_hub_snapshot",
+    "task_engine_control"
+  ],
+  "target_tools_provenance_sha256": "92ced4ca2531c3f41e7f3585e0eaecef8e736b24a2209b74cfd96c10d98b13af",
+  "scoring_sha256": {
+    "eval_scoring.py": "fb52f24b846396e701f0298267c8080ce282e02ce4781d6f9f46f5c3743ca51f",
+    "home_switch_scoring.py": "1e5510e9ae96fc4243d2e64e01ea4df8822f5fea16f35f37eeb9824b28970192",
+    "home_switch_seeds.py": "78643a4535f246ca28adfc40c98c73ae65419edad749808b7a1e754b18ad37b4",
+    "weather_scoring.py": "55d9eea6292d4bc530b958d6337fcc818ef2f33da7ba4accb95372362b657e01"
+  },
+  "counts": {
+    "home_switch": {
+      "passed_sample": 273,
+      "failed_sample": 11,
+      "quarantine": 15
+    },
+    "weather": {
+      "passed_sample": 283,
+      "failed_sample": 17
+    }
+  },
+  "source_samples": 599,
+  "train_samples": 556,
+  "failed_samples": 28,
+  "quarantine": 15,
+  "duplicates": 0,
+  "quarantine_reasons": {
+    "runtime_injected_messages": 15
+  },
+  "evaluation_policy": "测试由独立评估种子生成器负责；不从源轨迹划分测试集。",
+  "training_contract": {
+    "loss_roles": [
+      "assistant"
+    ],
+    "include_assistant_tool_calls": true,
+    "mask_roles": [
+      "system",
+      "user",
+      "tool"
+    ],
+    "mask_tool_definitions": true,
+    "token_masks_verified": false,
+    "target_chat_template_verified": false,
+    "verification_scope": "export_stage_only; subsequent CPU checks are recorded separately in data/validation",
+    "tools_argument_required_in_chat_template": true,
+    "arguments_format": "object",
+    "tools_scope": "all_enabled_non_mcp_server_plugins",
+    "packing": false,
+    "truncation": "reject_overlength_until_reviewed"
+  },
+  "limitations": [
+    "Historical scores and invalid actions use original tool availability; behavior under the unified system and expanded tools has not been re-evaluated.",
+    "Weather tool definition is reconstructed, not a historical snapshot.",
+    "Failed samples retain evidence; possible future DPO use has not been assessed."
+  ],
+  "artifact_sha256": {
+    "audit.jsonl": "90b0f9e7af959aeacb0bb770a43d8fcd5bd04265f1b3981e5a8112f6b14cf492",
+    "failed.jsonl": "31b05b373d24632e0ffb7755a5d5f516207bb1f3a574ae6d98be149d4da5cbd3",
+    "inventory.json": "ca5c9ba3632eb47fb92d258f805b6ea9204af584ee676f72f399842d9e45c9e8",
+    "metadata.jsonl": "9ffd0de642e7b0a521a0ea9d1aa318056c5cad163c838eeaabc98dbc2bf662e5",
+    "report.md": "4cfaecd888467fb38c885f44866433c3c796851ec66948c9ff9f747bc65853b8",
+    "review.jsonl": "f8745fbf24079bd186d40b966112965cd5473ccc88b667420f2f4cdd821c870f",
+    "system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "tools-source.json": "92ced4ca2531c3f41e7f3585e0eaecef8e736b24a2209b74cfd96c10d98b13af",
+    "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "train.jsonl": "972f52d4493634f011d1191d882e153a1fcda6267db9adb377fce7a682acdb12"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "status": "SFT 训练数据集已生成，目标模型训练适配待验证。",
+  "framework": "Unsloth + RTL",
+  "model_family": "Qwen3.5-9B",
+  "checkpoint": null,
+  "sources": [
+    {
+      "source_index": 0,
+      "scenario": "weather",
+      "conversations": "data/raw/weather/conversations.json",
+      "conversations_sha256": "5aa1a42b57aa356c419e18618bd2411b0d7a2163d0ad0e5b05c6a7db2dfb549e",
+      "scores": "data/raw/weather/scores.current.json",
+      "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d",
+      "score_policy": "使用已修订的最新评分版本。",
+      "rubric_version": "2.0",
+      "count": 300,
+      "scored_statuses": {
+        "pass": 283,
+        "fail": 17
+      },
+      "trace_binding": "identity_check_plan_and_evidence_only"
+    },
+    {
+      "source_index": 1,
+      "scenario": "home_switch",
+      "conversations": "data/raw/home_switch/conversations.json",
+      "conversations_sha256": "e6082cb32b5b3a56c4c72521300894c1d7abebfe263a73e48d44e7fffeea9dd3",
+      "scores": "data/raw/home_switch/scores.current.json",
+      "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a",
+      "score_policy": "使用已修订的最新评分版本。",
+      "rubric_version": "home_switch/1.5",
+      "count": 299,
+      "scored_statuses": {
+        "pass": 288,
+        "fail": 11
+      },
+      "trace_binding": "sha256"
+    }
+  ],
+  "config_sha256": "d644c0819cd1af15e1bbfb1823ca92b04c310b0163285d2ff10a5556e37ed6c6",
+  "exporter_sha256": "0045324f822f7529c7794383d70e4c39894e8bbfb023405a4804dc15a30ffa18",
+  "system_prompt_sha256": "7faeb4e5b96d7c78fa8463f8012b9bed73f12d437e627d2d19e08a6d10163045",
+  "weather_tool_source": "evaluation/weather-tool.json",
+  "weather_tool_source_sha256": "c887ea71da20edaa3c5442289865a4b046782697f2112a74edf54936c514b2db",
+  "weather_tool_provenance": "reconstructed_contract_aligned_with_latest_rules_not_historical_snapshot",
+  "scoring_sha256": {
+    "eval_scoring.py": "fb52f24b846396e701f0298267c8080ce282e02ce4781d6f9f46f5c3743ca51f",
+    "home_switch_scoring.py": "1e5510e9ae96fc4243d2e64e01ea4df8822f5fea16f35f37eeb9824b28970192",
+    "home_switch_seeds.py": "78643a4535f246ca28adfc40c98c73ae65419edad749808b7a1e754b18ad37b4",
+    "weather_scoring.py": "55d9eea6292d4bc530b958d6337fcc818ef2f33da7ba4accb95372362b657e01"
+  },
+  "counts": {
+    "home_switch": {
+      "passed_sample": 273,
+      "failed_sample": 11,
+      "quarantine": 15
+    },
+    "weather": {
+      "passed_sample": 283,
+      "failed_sample": 17
+    }
+  },
+  "source_samples": 599,
+  "train_samples": 556,
+  "failed_samples": 28,
+  "quarantine": 15,
+  "duplicates": 0,
+  "quarantine_reasons": {
+    "runtime_injected_messages": 15
+  },
+  "evaluation_policy": "测试由独立评估种子生成器负责；不从源轨迹划分测试集。",
+  "training_contract": {
+    "loss_roles": [
+      "assistant"
+    ],
+    "include_assistant_tool_calls": true,
+    "mask_roles": [
+      "system",
+      "user",
+      "tool"
+    ],
+    "mask_tool_definitions": true,
+    "token_masks_verified": false,
+    "target_chat_template_verified": false,
+    "tools_argument_required_in_chat_template": true,
+    "arguments_format": "object",
+    "packing": false,
+    "truncation": "reject_overlength_until_reviewed"
+  },
+  "limitations": [
+    "Historical scores apply to original trajectories; unified-system model behavior has not been re-evaluated.",
+    "Weather tool definition is reconstructed, not a historical snapshot.",
+    "Failed samples retain evidence; possible future DPO use has not been assessed."
+  ],
+  "artifact_sha256": {
+    "audit.jsonl": "5144c23a94ede327e32b2cd0e711f6c7880f30c03e6cc1a78db887f05f0b910d",
+    "failed.jsonl": "f605544aac6e47b6551fc328dc1d984293606107a102ae3d944add74138eca05",
+    "inventory.json": "ca5c9ba3632eb47fb92d258f805b6ea9204af584ee676f72f399842d9e45c9e8",
+    "metadata.jsonl": "d52275a99f3ff8c8fa381ec03bdea6604d31f7a8408357384e7f5c2bc9b50e81",
+    "report.md": "273e7c0fffef568b4eaca69899cfa7ccf4c3f4f408638fa36a27cd3aa24952e5",
+    "review.jsonl": "3a5f917a2c03523d1b82406174380956bce55ea8229f784724c334875377e97d",
+    "system-prompt.txt": "7faeb4e5b96d7c78fa8463f8012b9bed73f12d437e627d2d19e08a6d10163045",
+    "train.jsonl": "2fe310185f16ef31ea25ee77f4d37f7735a4b9449fde06028ca484102612e351"
+  }
+}

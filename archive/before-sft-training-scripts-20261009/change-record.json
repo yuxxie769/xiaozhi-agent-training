@@ -1,0 +1,38 @@
+{
+  "reason": "非思考 SFT 训练脚本与说明；原数据、训练集和测试种子保持不变",
+  "changed_before": {
+    "README.md": "aadab45bba34b29c551423cfaffbce337bc18e14806674f843fc6c11852d2b1c",
+    "项目总文档.md": "70b992cfe72d78fce49865587af917de88db34a7e92710b88a77a823ce53e01f",
+    "config.json": "e5d003bdfa284fc3882ee3649449b2867d4c246798d4fd5ee46c8bc33ce293e2"
+  },
+  "installed_sha256": {
+    "README.md": "f794f2012074d94acc286b78745d16c86cab326a345a8f6e902d1295da772807",
+    "项目总文档.md": "433f64c434c6cc3d4de29e66ad59104bf9978cb40f442538c683cdf761c19231",
+    "config.json": "acd8a8598cec7f850d6cf64cb54d5e4026ac371d4ce392235b654bc140fc19b2",
+    "训练说明.md": "85d7896736adc66b00e8e4245edd790b0a1c849dcc7202e3ab837f47ef080c97",
+    "train-sft.json": "fb4cd1f69097780de8af84ea5ef27804930d08cf4c76a11a8b4f6cfb68288e52",
+    "requirements-training.txt": "bfd80660220c7113fae31c02951fc82e9f97dc3adeaa1594388cf9eaf2fcca53",
+    "scripts/train_sft.py": "952aef048aa5e44c531eb7396c01c003ae686555ce7f2c6cf679d8e1196e2e3a",
+    "scripts/sft_data.py": "c0e5825ee1acee0357aab1a1c24760974068c73fbeb110a93e2ef0bf28ff0df7",
+    "scripts/check_sft_adapter.py": "16461e3319967b8d5be5041fa0baca6abe6018ce0a9047c34eccce7fb9cd5272",
+    "tests/test_sft_data.py": "a2726ebfbb076684762276c1e574ac7f27c435662b4e15a884a7c231b1e455d7",
+    "tests/test_sft_trainer_integration.py": "7ac75fcbf731ec7d12136c1bc0bf944f2dd818f655a84e224506437e575cc413",
+    "data/validation/training-script-v1/system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "data/validation/training-script-v1/report.md": "45edaf574cb3b293818bcd5b3902b5bf33d7b520db7ed67db17d174c0e14d445",
+    "data/validation/training-script-v1/tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "data/validation/training-script-v1/sample-lengths.json": "18bfde158f61dc9f4308795564b9a2ffb5f8f4c094b15835f05be265e8f51a34",
+    "data/validation/training-script-v1/model-source.json": "735cf72edde97f1c12a7eb14db99706b5fcbcf802f4de56f0cfd276c945a593d",
+    "data/validation/training-script-v1/checks.json": "ef0a9be93e2dec4df353f3d8a4f56ff5b4dc1aadff529b49ca37a9b5d375fc73",
+    "data/validation/training-script-v1/tests.log": "ded169df8f96fc803fa30fb697db35bb0820840ca28fea0c36d7fe09444692fc",
+    "data/validation/training-script-v1/run-fingerprint.json": "d2ced3671d4e3062a9c1a897e3b8befc6758c100cd667e5af1e492358576f822",
+    "data/validation/training-script-v1/preflight.json": "d4424e0762704032a7843e3dae3b1b0a5705acd11e0d2fd4e0750cb2572c7b32",
+    "data/validation/training-script-v1/status.json": "edc928ab9f1731b9ce220821735937ebf2e98b6dff7927bbfec0aa3bf1e9713d",
+    "data/validation/training-script-v1/environment.json": "5b4e539c5c24dd76602b787cde19f26bb116ec9cb0a944e97f6320b0c57e341c"
+  },
+  "checks": {
+    "tests_passed": 49,
+    "cpu_preflight_samples": 556,
+    "gpu_verified": false
+  },
+  "preserved_file_count": 66
+}

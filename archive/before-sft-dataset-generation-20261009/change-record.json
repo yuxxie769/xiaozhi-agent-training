@@ -1,0 +1,59 @@
+{
+  "status": "completed",
+  "changed_files": [
+    "scripts/prepare_training_data.py",
+    "scripts/generate_evaluation_seeds.py",
+    "tests/test_prepare_training_data.py",
+    "tests/test_prepared_dataset.py",
+    "config.json",
+    "system-prompt.txt",
+    "README.md",
+    "项目总文档.md",
+    "evaluation/seed_generation/README.md"
+  ],
+  "original_files_sha256": {
+    "scripts/prepare_training_data.py": "0e25d02e6920e4792757064c0b3eb68663766785d3af26a32d6af8bdcf0dddc4",
+    "scripts/generate_evaluation_seeds.py": "bab279080b3484b4ada90c84e5697a3171794b7519073cdc51a8aa330d074e65",
+    "tests/test_prepare_training_data.py": "71765b038a4365ef62e0f231ff3fdc6d62aff97cadac48e0d77ecbbf6d6724fe",
+    "tests/test_prepared_dataset.py": null,
+    "config.json": "3f5dbaa6f1ea0d0f41f3adb44a023b8780103f0e2ee1859235c658712f599945",
+    "system-prompt.txt": "192d9dd915a15483798770365f40972f581dbe9d7c0c9d615110c521e505848a",
+    "README.md": "da93f13175fa9515c6d4a727558653491a2948a77aa5a6aebf70ddb0095e17a1",
+    "项目总文档.md": "d49177fa0be7fb564fa030a7d49f8200a9b1ab25867a8c6d22aca3a94c279c11",
+    "evaluation/seed_generation/README.md": "96310cfcc4f40d5f129bb3574b7836b880f7b7d0bac6cb093f2837c836ca9917"
+  },
+  "original_raw_sha256": {
+    "home_switch/conversations.json": "e6082cb32b5b3a56c4c72521300894c1d7abebfe263a73e48d44e7fffeea9dd3",
+    "home_switch/scores.current.json": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a",
+    "weather/conversations.json": "5aa1a42b57aa356c419e18618bd2411b0d7a2163d0ad0e5b05c6a7db2dfb549e",
+    "weather/scores.current.json": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  "old_prepared_sha256": {
+    "audit.jsonl": "aaa1f545c44e62bf1dc7c063e332956d47107c764156f776febd9217777aedcc",
+    "failed.test.jsonl": "373b3ba335714c4c017877a85e0802257d72d63a93269129af26e636fc3464a7",
+    "failed.train.jsonl": "3280f8e7ff0c3792c30ea1e9c936df6dd8ee688c6907d950ce2ce83cab284ebf",
+    "manifest.json": "45863276655344161a1077c2bb52cdbf010dd2cf08bf3824adddaeaea3e18410",
+    "metadata.jsonl": "f718964da8dba747b98263696ffa1c5563b9f1e0cc240ab10650ae6c8f5f3fd6",
+    "report.md": "68b8b1eda659beaeb145579e87333cd450080ce0468f7395d84b0e739238e650",
+    "review.jsonl": "8358f0ed9d45a46ab6b9b92bbccff7bc3d3e06453ca88d3abff17355fcbb014f",
+    "system-prompt.txt": "192d9dd915a15483798770365f40972f581dbe9d7c0c9d615110c521e505848a",
+    "test.jsonl": "1ec2b2082a1b27ea659a79e9d34560ed95c70d2c9cb1fe459b07e42c4fd70963",
+    "test.source-trajectories.jsonl": "cf217fc8abeb4066e8e03fb8e5edd763b3a7c6e94960c9071032916491477d45",
+    "tools.json": "6227100512686b92d183500e01e78f3ab4e2b07ba9fbc82f81f01c88762434b2",
+    "train.jsonl": "2eb1f045f45d0c5ab6e86d4438414370996e386adf4ac788660a35cdd75a1e24"
+  },
+  "new_prepared_sha256": {
+    "audit.jsonl": "5144c23a94ede327e32b2cd0e711f6c7880f30c03e6cc1a78db887f05f0b910d",
+    "failed.jsonl": "f605544aac6e47b6551fc328dc1d984293606107a102ae3d944add74138eca05",
+    "inventory.json": "ca5c9ba3632eb47fb92d258f805b6ea9204af584ee676f72f399842d9e45c9e8",
+    "manifest.json": "378536de720a6bc82ec3d5f7430905ebbd0290e22bdfdb38192d460b81ef8aab",
+    "metadata.jsonl": "d52275a99f3ff8c8fa381ec03bdea6604d31f7a8408357384e7f5c2bc9b50e81",
+    "report.md": "273e7c0fffef568b4eaca69899cfa7ccf4c3f4f408638fa36a27cd3aa24952e5",
+    "review.jsonl": "3a5f917a2c03523d1b82406174380956bce55ea8229f784724c334875377e97d",
+    "system-prompt.txt": "7faeb4e5b96d7c78fa8463f8012b9bed73f12d437e627d2d19e08a6d10163045",
+    "train.jsonl": "2fe310185f16ef31ea25ee77f4d37f7735a4b9449fde06028ca484102612e351"
+  },
+  "source_data_unchanged": true,
+  "tests_passed": 27,
+  "note": "Old split outputs archived unchanged; regenerated all SFT data from raw. Seed generator only migrated evaluation size config; not run."
+}

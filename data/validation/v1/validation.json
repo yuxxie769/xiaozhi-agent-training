@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "status": "tokenizer_and_explicit_labels_verified_cpu_only",
+  "model_id": "Qwen/Qwen3.5-9B",
+  "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "enable_thinking": false,
+  "prepared_manifest_sha256": "7ed5805e4d0d1f3e2221fdf98b9b58b0d9b1c8dd6ded0a6a0b02bdc4176f670a",
+  "training_data_sha256": "972f52d4493634f011d1191d882e153a1fcda6267db9adb377fce7a682acdb12",
+  "tokenizer_snapshot": {
+    "model_id": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "files": {
+      "chat_template.jinja": {
+        "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "bytes": 7756
+      },
+      "config.json": {
+        "sha256": "d0883072e01861ed0b2d47be3c16c36a8e81c224c7ffaa310c6558fb3f932b05",
+        "bytes": 3126
+      },
+      "tokenizer.json": {
+        "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "bytes": 12807982
+      },
+      "tokenizer_config.json": {
+        "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+        "bytes": 16710
+      }
+    },
+    "weights_downloaded": false
+  },
+  "adapter_sha256": "8d58d42c46d959450af816ec9c4a717ff8502182b26996f11818b451afcff127",
+  "validator_sha256": "fc7efcc1ec6c37757ca32efac8aa0238d1433b9a4dcfcb07e8fbe2139f2cedc3",
+  "packages": {
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "jinja2": "3.1.6"
+  },
+  "samples": 556,
+  "tool_count": 9,
+  "lengths": {
+    "min": 3068,
+    "median": 3664.0,
+    "p90": 4545,
+    "p95": 5286,
+    "max": 6848
+  },
+  "by_scenario": {
+    "home_switch": {
+      "min": 3308,
+      "median": 4106,
+      "p90": 5286,
+      "p95": 6004,
+      "max": 6848
+    },
+    "weather": {
+      "min": 3068,
+      "median": 3485,
+      "p90": 3722,
+      "p95": 3816,
+      "max": 3941
+    }
+  },
+  "overlength_counts": {
+    "4096": 143,
+    "8192": 0,
+    "16384": 0
+  },
+  "assistant_messages": 1840,
+  "assistant_tool_calls": 952,
+  "supervised_tokens": 72629,
+  "official_template_generation_blocks": false,
+  "label_policy": "assistant content/tool calls and EOS; context, headers, empty think prefixes and padding are -100",
+  "truncation": false,
+  "packing": false,
+  "gpu_trainer_integration_verified": false,
+  "training_started": false,
+  "longest_sample": "home_switch:T15-G002-P3",
+  "sources": [
+    "https://huggingface.co/Qwen/Qwen3.5-9B/tree/c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+    "https://huggingface.co/docs/transformers/chat_extras"
+  ],
+  "artifact_sha256": {
+    "learned-example.txt": "ec3f42717339a567b0b5bab6ab84bfa11623ba7f1c8824990b9ecee2fdff122a",
+    "rendered-example.txt": "2d26afa738d5675c57221fc2aaa8d501f99a09d3b56b4e06914765fe7634c0ab",
+    "report.md": "ace274b168fb39f810bb775c7b18612d6c1aea8f40e35b2866df4ef261d5b1d1",
+    "token-lengths.jsonl": "9cd5979d124b68c661f155dac4de1b25e9ae20bfe48bb6ffd751b55ff7330116"
+  }
+}

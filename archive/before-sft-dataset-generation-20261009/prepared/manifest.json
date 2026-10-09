@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "status": "candidates_require_target_prompt_and_tokenizer_test",
+  "framework": "Unsloth + RTL",
+  "model_family": "Qwen3.5-9B",
+  "checkpoint": null,
+  "sources": [
+    {
+      "scenario": "weather",
+      "conversations": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/conversations.json",
+      "conversations_sha256": "5aa1a42b57aa356c419e18618bd2411b0d7a2163d0ad0e5b05c6a7db2dfb549e",
+      "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+      "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d",
+      "score_policy": "使用已修订的最新评分版本。",
+      "rubric_version": "2.0",
+      "count": 300,
+      "scored_statuses": {
+        "pass": 283,
+        "fail": 17
+      },
+      "trace_binding": "identity_check_plan_and_evidence_only"
+    },
+    {
+      "scenario": "home_switch",
+      "conversations": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/conversations.json",
+      "conversations_sha256": "e6082cb32b5b3a56c4c72521300894c1d7abebfe263a73e48d44e7fffeea9dd3",
+      "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+      "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a",
+      "score_policy": "使用已修订的最新评分版本。",
+      "rubric_version": "home_switch/1.5",
+      "count": 299,
+      "scored_statuses": {
+        "pass": 288,
+        "fail": 11
+      },
+      "trace_binding": "sha256"
+    }
+  ],
+  "config_sha256": "3f5dbaa6f1ea0d0f41f3adb44a023b8780103f0e2ee1859235c658712f599945",
+  "exporter_sha256": "0e25d02e6920e4792757064c0b3eb68663766785d3af26a32d6af8bdcf0dddc4",
+  "system_prompt_sha256": "192d9dd915a15483798770365f40972f581dbe9d7c0c9d615110c521e505848a",
+  "weather_tool_source": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/evaluation/weather-tool.json",
+  "weather_tool_source_sha256": "c887ea71da20edaa3c5442289865a4b046782697f2112a74edf54936c514b2db",
+  "target_tools_sha256": "39712b37e658a7b0c167700d65783ea77b7fa5a6abe4e448027fc93f4043fd37",
+  "counts": {
+    "home_switch": {
+      "passed_sample:train": 222,
+      "passed_sample:test": 51,
+      "quarantine:train": 9,
+      "quarantine:test": 6,
+      "failed_sample:train": 8,
+      "failed_sample:test": 3
+    },
+    "weather": {
+      "passed_sample:train": 225,
+      "failed_sample:train": 15,
+      "passed_sample:test": 58,
+      "failed_sample:test": 2
+    }
+  },
+  "train_samples": 447,
+  "test_samples": 109,
+  "failed_samples": 28,
+  "quarantine": 15,
+  "quarantine_reasons": {
+    "runtime_injected_messages": 15
+  },
+  "split_policy": {
+    "seed": "agent-sft-v1-20261008",
+    "test_fraction_requested": 0.2,
+    "unit": "scenario_template_and_identical_full_user_sequences",
+    "assigned_before_filtering": true,
+    "final_test_set": false
+  },
+  "training_contract": {
+    "loss_roles": [
+      "assistant"
+    ],
+    "include_assistant_tool_calls": true,
+    "mask_roles": [
+      "system",
+      "user",
+      "tool"
+    ],
+    "token_masks_verified": false,
+    "tools_argument_required_in_chat_template": true,
+    "arguments_format": "object",
+    "packing": false,
+    "truncation": "reject_overlength_until_reviewed"
+  },
+  "limitations": [
+    "Historical scores validate original trajectories, not the rewritten system or expanded tool set.",
+    "Weather definition reconstructed from source and aligned with the latest city-name rule; historical snapshot unavailable.",
+    "Date/timezone added from session metadata; no hidden simulator state or seed answers exported to model input.",
+    "Development test uses previously evaluated templates; collect fresh final-test cases before training.",
+    "Cross-domain tool interactions and general-chat coverage require new generated and scored trajectories.",
+    "Failed samples retain evidence; possible future DPO use has not been assessed."
+  ],
+  "artifact_sha256": {
+    "audit.jsonl": "aaa1f545c44e62bf1dc7c063e332956d47107c764156f776febd9217777aedcc",
+    "failed.test.jsonl": "373b3ba335714c4c017877a85e0802257d72d63a93269129af26e636fc3464a7",
+    "failed.train.jsonl": "3280f8e7ff0c3792c30ea1e9c936df6dd8ee688c6907d950ce2ce83cab284ebf",
+    "metadata.jsonl": "f718964da8dba747b98263696ffa1c5563b9f1e0cc240ab10650ae6c8f5f3fd6",
+    "review.jsonl": "8358f0ed9d45a46ab6b9b92bbccff7bc3d3e06453ca88d3abff17355fcbb014f",
+    "system-prompt.txt": "192d9dd915a15483798770365f40972f581dbe9d7c0c9d615110c521e505848a",
+    "test.jsonl": "1ec2b2082a1b27ea659a79e9d34560ed95c70d2c9cb1fe459b07e42c4fd70963",
+    "test.source-trajectories.jsonl": "cf217fc8abeb4066e8e03fb8e5edd763b3a7c6e94960c9071032916491477d45",
+    "tools.json": "6227100512686b92d183500e01e78f3ab4e2b07ba9fbc82f81f01c88762434b2",
+    "train.jsonl": "2eb1f045f45d0c5ab6e86d4438414370996e386adf4ac788660a35cdd75a1e24"
+  }
+}

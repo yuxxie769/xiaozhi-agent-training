@@ -1,0 +1,10 @@
+{
+  "samples": 556,
+  "tools": 9,
+  "max_tokens": 6848,
+  "enable_thinking": false,
+  "assistant_messages": 1840,
+  "tool_calls": 952,
+  "truncation": false,
+  "packing": false
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "status": "candidates_require_target_prompt_and_tokenizer_validation",
+  "framework": "Qwen + Unsloth",
+  "checkpoint": null,
+  "sources": [
+    {
+      "scenario": "weather",
+      "conversations": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-runs/full-300-20260930-015831/generation/conversations.json",
+      "conversations_sha256": "5aa1a42b57aa356c419e18618bd2411b0d7a2163d0ad0e5b05c6a7db2dfb549e",
+      "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-runs/full-300-20260930-015831/scoring-real/scores.json",
+      "scores_sha256": "39abe93e7d4328026eceaeef3e979940051ccbd60b23bfe987005dd8ce85d32c",
+      "score_policy": "保留城市名逐字一致的原评分，与当前工具说明及目标提示词一致；不使用放宽城市名后的评分。",
+      "rubric_version": "2.0",
+      "count": 300,
+      "scored_statuses": {
+        "pass": 278,
+        "fail": 22
+      },
+      "trace_binding": "identity_check_plan_and_evidence_only"
+    },
+    {
+      "scenario": "home_switch",
+      "conversations": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/home-switch-5groups-20261008-013500/run-002-text-client/conversations.json",
+      "conversations_sha256": "e6082cb32b5b3a56c4c72521300894c1d7abebfe263a73e48d44e7fffeea9dd3",
+      "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/home-switch-5groups-20261008-013500/run-002-text-client/revised-current-rules/scores.json",
+      "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a",
+      "score_policy": "使用已按当前规则重新计算程序检查并选择性复评的版本，允许相邻上一轮同设备可用状态复用。",
+      "rubric_version": "home_switch/1.5",
+      "count": 299,
+      "scored_statuses": {
+        "pass": 288,
+        "fail": 11
+      },
+      "trace_binding": "sha256"
+    }
+  ],
+  "config_sha256": "1b6ac38a71204a10ed7c6fc7dc81836fd477fe73b1c00c5b4e38aafd13b74ff5",
+  "exporter_sha256": "2bf173d6fd98690efbf8e4050686156a3a109ddf04b16a7f75bb3887b573f5ba",
+  "system_prompt_sha256": "5207f612fd42ea985ab3489e68db584278dc95ce4b7d3281eab4b5c62ce0583f",
+  "weather_tool_source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/plugins_func/functions/get_weather.py",
+  "weather_tool_source_sha256": "fe0fc70e35d76e1ffb920209be46a394169de6ba153aa8470ad6b66d82abf1b2",
+  "target_tools_sha256": "c27e1e9bea4ab61737134b345c84c9284427b92e33088e34540583788c653b2b",
+  "counts": {
+    "home_switch": {
+      "sft_candidate:train": 222,
+      "sft_candidate:validation": 51,
+      "quarantine:train": 9,
+      "quarantine:validation": 6,
+      "dpo_review_candidate:train": 8,
+      "dpo_review_candidate:validation": 3
+    },
+    "weather": {
+      "sft_candidate:train": 222,
+      "dpo_review_candidate:train": 18,
+      "sft_candidate:validation": 56,
+      "dpo_review_candidate:validation": 4
+    }
+  },
+  "sft_train": 444,
+  "sft_validation": 107,
+  "dpo_review_candidates": 33,
+  "dpo_ready_pairs": 0,
+  "quarantine": 15,
+  "quarantine_reasons": {
+    "runtime_injected_messages": 15
+  },
+  "split_policy": {
+    "seed": "agent-sft-v1-20261008",
+    "validation_fraction_requested": 0.2,
+    "unit": "scenario_template_and_identical_full_user_sequences",
+    "assigned_before_filtering": true,
+    "final_test_set": false
+  },
+  "training_contract": {
+    "loss_roles": [
+      "assistant"
+    ],
+    "include_assistant_tool_calls": true,
+    "mask_roles": [
+      "system",
+      "user",
+      "tool"
+    ],
+    "token_masks_verified": false,
+    "tools_argument_required_in_chat_template": true,
+    "arguments_format": "object",
+    "packing": false,
+    "truncation": "reject_overlength_until_reviewed"
+  },
+  "limitations": [
+    "Historical scores validate original trajectories, not the rewritten system or expanded tool set.",
+    "Weather tool definition reconstructed from current source; historical snapshot unavailable.",
+    "Date/timezone added from session metadata; no hidden simulator state or seed answers exported to model input.",
+    "Development validation uses previously evaluated templates; collect fresh final-test cases before training.",
+    "Cross-domain tool interactions and general-chat coverage require new generated and scored trajectories.",
+    "No chosen responses invented; DPO files are a review queue, not trainable preference pairs."
+  ],
+  "artifact_sha256": {
+    "audit.jsonl": "4ce86c2124b52143623cc4d237c994e549ddd8211e0f7bfe3d645d781b1cc326",
+    "dpo.review.train.jsonl": "b9bebb9cb43be8424ffa9fc8c94da09ac720cc9667e468874ba9d0a79dfc59e1",
+    "dpo.review.validation.jsonl": "4e8b575b2f47e9753af38bfddadd97087801f6f985dcd4c2f03caff0eaa94e49",
+    "quarantine.jsonl": "3ae78870c4bcb3b7a397ab8cb0d4d35410928a4c5d5b85aefd864cdcb9ba25ca",
+    "sft.metadata.jsonl": "d3505a8a5f47f09accb60baac11b7e83318f01f8fbe6396aeb40b3a69d473776",
+    "sft.train.jsonl": "f46ea068971210d65c85f528b409f1f299a89eb44dd4644dc9d5877581e5391e",
+    "sft.validation.jsonl": "a3e7f4200724bb7cf6556c79decbb45ad270add817ff44bafa954b6f396dc621",
+    "system-prompt.txt": "5207f612fd42ea985ab3489e68db584278dc95ce4b7d3281eab4b5c62ce0583f",
+    "tools.json": "e7ffd1b71f3091da35bcfe941ac9a7e742e42a744b962beb7aa91277bc24331e",
+    "validation.source-trajectories.jsonl": "cf217fc8abeb4066e8e03fb8e5edd763b3a7c6e94960c9071032916491477d45"
+  }
+}

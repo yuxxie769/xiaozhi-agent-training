@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-08",
+  "purpose": "migration_only_no_new_training_stage",
+  "unit_tests": {
+    "count": 13,
+    "status": "passed"
+  },
+  "source_snapshot_files": 43,
+  "checksums": "all copied source files match before cleanup",
+  "independent_export": {
+    "status": "passed",
+    "cwd": "temporary directory outside server and training project",
+    "python_flags": [
+      "-I",
+      "-B"
+    ],
+    "compared_files": [
+      "audit.jsonl",
+      "dpo.review.train.jsonl",
+      "dpo.review.validation.jsonl",
+      "quarantine.jsonl",
+      "report.md",
+      "sft.metadata.jsonl",
+      "sft.train.jsonl",
+      "sft.validation.jsonl",
+      "system-prompt.txt",
+      "tools.json",
+      "validation.source-trajectories.jsonl"
+    ],
+    "manifest_difference": "expected: local source paths, code and config hashes changed"
+  },
+  "import_check": "no loaded module from xiaozhi-esp32-server",
+  "counts": {
+    "sft_train": 444,
+    "sft_validation": 107,
+    "dpo_review_candidates": 33,
+    "quarantine": 15
+  },
+  "original_inputs": "preserved",
+  "moved_files": "removed from original training locations only after verified copy",
+  "model": "Qwen3.5-9B",
+  "training_started": false,
+  "tokenizer_validation": "not started"
+}

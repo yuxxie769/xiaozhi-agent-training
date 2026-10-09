@@ -1,0 +1,10 @@
+# 先按服务器驱动安装匹配的 CUDA PyTorch/torchvision，再安装本文件。
+# 这是依赖范围，不是已经验证的 GPU 锁定环境；成功试跑后记录实际版本。
+unsloth
+unsloth_zoo
+transformers>=5,<6
+datasets>=4
+peft
+accelerate
+bitsandbytes
+Pillow

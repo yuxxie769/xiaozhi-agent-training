@@ -1,0 +1,7 @@
+.................................................
+----------------------------------------------------------------------
+Ran 49 tests in 8.910s
+
+OK
+{'loss': '3.468', 'grad_norm': '2.848', 'learning_rate': '0.0001', 'epoch': '1'}
+{'train_runtime': '0.0047', 'train_samples_per_second': '422', 'train_steps_per_second': '211', 'train_loss': '3.468', 'epoch': '1'}

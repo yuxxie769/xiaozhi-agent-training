@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "system_prompt": "system-prompt.txt",
+  "weather_tool_source": "../../../plugins_func/functions/get_weather.py",
+  "split_seed": "agent-sft-v1-20261008",
+  "validation_fraction": 0.2,
+  "sources": [
+    {
+      "scenario": "weather",
+      "conversations": "../../../tmp/weather-eval-runs/full-300-20260930-015831/generation/conversations.json",
+      "scores": "../../../tmp/weather-eval-runs/full-300-20260930-015831/scoring-real/scores.json",
+      "score_policy": "保留城市名逐字一致的原评分，与当前工具说明及目标提示词一致；不使用放宽城市名后的评分。"
+    },
+    {
+      "scenario": "home_switch",
+      "conversations": "../../../tmp/home-switch-5groups-20261008-013500/run-002-text-client/conversations.json",
+      "scores": "../../../tmp/home-switch-5groups-20261008-013500/run-002-text-client/revised-current-rules/scores.json",
+      "score_policy": "使用已按当前规则重新计算程序检查并选择性复评的版本，允许相邻上一轮同设备可用状态复用。"
+    }
+  ]
+}

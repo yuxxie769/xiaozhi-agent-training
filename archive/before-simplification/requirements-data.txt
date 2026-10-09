@@ -1,0 +1,3 @@
+# Offline preparation and tests use only the Python standard library.
+# Python 3.10+; Linux/macOS timezone database required.
+# Training dependencies are deliberately not pinned until the training server is checked.

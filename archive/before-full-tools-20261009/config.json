@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "system_prompt": "system-prompt.txt",
+  "weather_tool_source": "evaluation/weather-tool.json",
+  "sources": [
+    {
+      "scenario": "weather",
+      "conversations": "data/raw/weather/conversations.json",
+      "scores": "data/raw/weather/scores.current.json",
+      "score_policy": "使用已修订的最新评分版本。"
+    },
+    {
+      "scenario": "home_switch",
+      "conversations": "data/raw/home_switch/conversations.json",
+      "scores": "data/raw/home_switch/scores.current.json",
+      "score_policy": "使用已修订的最新评分版本。"
+    }
+  ],
+  "project": {
+    "status": "sft_dataset_generated_training_adapter_pending",
+    "model_family": "Qwen3.5-9B",
+    "checkpoint_and_revision": "pending_confirmation",
+    "framework": "Unsloth + RTL",
+    "training_route": [
+      "SFT",
+      "DPO"
+    ],
+    "hardware": {
+      "gpu_model": "RTX 4080 SUPER",
+      "gpu_count": 1,
+      "vram_gb": 32,
+      "vram_basis": "user_confirmed_modified_or_measured"
+    },
+    "thinking_mode": "pending_confirmation",
+    "training_os": "pending_confirmation",
+    "cuda_and_packages": "not_validated",
+    "training_started": false
+  },
+  "evaluation_seed_fraction": 0.2
+}

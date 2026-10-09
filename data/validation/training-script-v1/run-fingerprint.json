@@ -1,0 +1,30 @@
+{
+  "config": {
+    "prepared_dir": "data/prepared",
+    "tokenizer_dir": "tokenizer",
+    "enable_thinking": false,
+    "max_seq_length": 8192,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "epochs": 2,
+    "learning_rate": 0.0001,
+    "lora_rank": 16,
+    "lora_alpha": 16,
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "seed": 20261009,
+    "save_steps": 25,
+    "save_total_limit": 2,
+    "smoke_samples": 8,
+    "smoke_steps": 5
+  },
+  "mode": "preflight",
+  "prepared_manifest_sha256": "7ed5805e4d0d1f3e2221fdf98b9b58b0d9b1c8dd6ded0a6a0b02bdc4176f670a",
+  "tokenizer_snapshot_sha256": "b892796b129b05a86a01f7b2c560c74e9bb1496af61f6da3d1718e290a26e781",
+  "scripts": {
+    "train_sft.py": "952aef048aa5e44c531eb7396c01c003ae686555ce7f2c6cf679d8e1196e2e3a",
+    "sft_data.py": "c0e5825ee1acee0357aab1a1c24760974068c73fbeb110a93e2ef0bf28ff0df7",
+    "training_format.py": "8d58d42c46d959450af816ec9c4a717ff8502182b26996f11818b451afcff127"
+  }
+}

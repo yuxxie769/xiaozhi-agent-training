@@ -1,0 +1,50 @@
+{
+  "status": "completed",
+  "original_sha256": {
+    "tools.json": null,
+    "tools-source.json": null,
+    "config.json": "d644c0819cd1af15e1bbfb1823ca92b04c310b0163285d2ff10a5556e37ed6c6",
+    "system-prompt.txt": "7faeb4e5b96d7c78fa8463f8012b9bed73f12d437e627d2d19e08a6d10163045",
+    "scripts/prepare_training_data.py": "0045324f822f7529c7794383d70e4c39894e8bbfb023405a4804dc15a30ffa18",
+    "scripts/generate_evaluation_seeds.py": "cf9e3587a673eb19deb5e29e0efa3326ca83716255b53ff63d0d9f5101848879",
+    "tests/test_prepare_training_data.py": "5762871629b63974ce0131d7d3abb18eb6c12374a690adc720f1b24fc2d35fc1",
+    "tests/test_prepared_dataset.py": "babbde30d0eed8de188f847f7e61a17dfdfc997c0629c8acd2941c02b462ce45",
+    "tests/test_generate_evaluation_seeds.py": "92a0bedf70b1cf41939b53d187092ba9b896a7372cc86e615bd6feefb82caaf0",
+    "README.md": "dbca049837edb61f52510a93e562e50418eb55f159d5719fa3ba04bb16a90768",
+    "项目总文档.md": "9e15632686dba30a33b51804cf54c6bb2aacf03ae2d0f81d7a57820d5e3b1916",
+    "evaluation/seed_generation/README.md": "29a10cc6734b7f18f22febd7835ccacbf1f5f8a9e3c8c9d1e26c13fb570818c9"
+  },
+  "old_prepared_sha256": {
+    "audit.jsonl": "5144c23a94ede327e32b2cd0e711f6c7880f30c03e6cc1a78db887f05f0b910d",
+    "failed.jsonl": "f605544aac6e47b6551fc328dc1d984293606107a102ae3d944add74138eca05",
+    "inventory.json": "ca5c9ba3632eb47fb92d258f805b6ea9204af584ee676f72f399842d9e45c9e8",
+    "manifest.json": "378536de720a6bc82ec3d5f7430905ebbd0290e22bdfdb38192d460b81ef8aab",
+    "metadata.jsonl": "d52275a99f3ff8c8fa381ec03bdea6604d31f7a8408357384e7f5c2bc9b50e81",
+    "report.md": "273e7c0fffef568b4eaca69899cfa7ccf4c3f4f408638fa36a27cd3aa24952e5",
+    "review.jsonl": "3a5f917a2c03523d1b82406174380956bce55ea8229f784724c334875377e97d",
+    "system-prompt.txt": "7faeb4e5b96d7c78fa8463f8012b9bed73f12d437e627d2d19e08a6d10163045",
+    "train.jsonl": "2fe310185f16ef31ea25ee77f4d37f7735a4b9449fde06028ca484102612e351"
+  },
+  "new_prepared_sha256": {
+    "audit.jsonl": "25192a338facc08d9fe13bda5a7e46c059c7abde2f3cafcfa9c100e606682274",
+    "failed.jsonl": "ed2071cea1f3efc56d46249004e5f3d5e68f073dab64df133e742f66f8dab2a7",
+    "inventory.json": "ca5c9ba3632eb47fb92d258f805b6ea9204af584ee676f72f399842d9e45c9e8",
+    "manifest.json": "47ffbfbe19789e54dfcb7cc7ccd100b821fdd7a1646c11727c819eedd2eedc37",
+    "metadata.jsonl": "91bddd0bfdc201676fdcd57a20f291eeaa256f67a6c4bcb2a544e472c6f4432e",
+    "report.md": "4cfaecd888467fb38c885f44866433c3c796851ec66948c9ff9f747bc65853b8",
+    "review.jsonl": "f8745fbf24079bd186d40b966112965cd5473ccc88b667420f2f4cdd821c870f",
+    "system-prompt.txt": "2bdb40cb6df210305aac238b54bf98aaf06cfa23cecbe75107e09521db01432d",
+    "tools-source.json": "92ced4ca2531c3f41e7f3585e0eaecef8e736b24a2209b74cfd96c10d98b13af",
+    "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "train.jsonl": "e3385e4811216efb3e7ac8dc9ac56bf1c93abdd65f0202c4da3f27200bd51ebb"
+  },
+  "seed_v2_sha256": {
+    "generation-report.json": "6e468b21b6aaba4091adac76f156d3f7f3346fc6a62113d5cf84efcf0f121ba3",
+    "home_switch-seeds.json": "71fb3cada261e712165378f068d47bdf77aea90df3a4eccb4d7ec7a56d084126",
+    "report.md": "537fcd6f72e1e6fd582754220b1fc873264c988954daae074f119dfefb9079b7",
+    "weather-seeds.json": "1ee4bb163b23d16d6b50a6af7f818f0c488d5b7133b132a8d46af9cbeb15f636"
+  },
+  "raw_unchanged": true,
+  "seed_v1_unchanged": true,
+  "tests_passed": 33
+}

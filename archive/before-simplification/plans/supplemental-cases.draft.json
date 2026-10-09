@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "planned_inputs_not_training_trajectories",
+  "tools": ["get_weather", "state_hub_snapshot", "hass_set_state"],
+  "requirements": [
+    "使用统一目标提示词和有来源的工具返回，不手写结果冒充实际轨迹。",
+    "控制类在可复位模拟器中执行，准备可见设备目录；不控制真实设备。",
+    "按组合任务家族隔离训练、验证、最终测试，变体继承父任务划分。",
+    "预期行为仅供评分，不注入模型输入。"
+  ],
+  "cases": [
+    {"id": "M01", "family": "weather_then_home", "user_turns": ["杭州明天天气怎么样？", "再把客厅灯关掉。"], "checks": ["保留天气问题日期", "切换至家居工具", "先取得客厅灯状态再按需控制并核验"]},
+    {"id": "M02", "family": "home_then_weather", "user_turns": ["打开书房阅读灯。", "明天深圳会下雨吗？"], "checks": ["核验灯状态", "切换天气工具", "不把房间当作天气城市"]},
+    {"id": "M03", "family": "same_turn_weather_home", "user_turns": ["查一下北京今天的天气，再打开客厅灯。"], "checks": ["两类需求均完成", "遵守各自工具参数", "分别报告结果"]},
+    {"id": "M04", "family": "same_turn_partial_failure", "user_turns": ["告诉我上海明天的天气，顺便关闭书房阅读灯。"], "environment": "天气查询返回 fetch_error，家居状态可用", "checks": ["天气失败不编造", "独立家居任务仍处理", "明确分别报告"]},
+    {"id": "M05", "family": "cancel_switch_domain", "user_turns": ["帮我打开灯。", "先不用了，查一下广州的天气。"], "environment": "目录中有多盏灯", "checks": ["第一轮澄清", "取消后不控制", "完成新的天气需求"]},
+    {"id": "M06", "family": "correct_city_then_home", "user_turns": ["查一下杭州的天气。", "不是杭州，是苏州。再打开书房阅读灯。"], "checks": ["新城市重新查询", "执行独立家居需求", "不复用杭州报告回答苏州"]},
+    {"id": "N01", "family": "casual_weather", "user_turns": ["我喜欢听雨声，你呢？"], "checks": ["自然回应", "不查询天气", "不编造当前实际天气"]},
+    {"id": "N02", "family": "cancel_without_action", "user_turns": ["别开灯，我只想安静坐一会儿。"], "checks": ["不控制", "不多余查询"]},
+    {"id": "N03", "family": "general_chat", "user_turns": ["给我讲一个简短的笑话。"], "checks": ["完成文字请求", "不调用工具", "不以仅限天气或家居为由拒绝"]},
+    {"id": "N04", "family": "query_only", "user_turns": ["客厅灯现在开着吗？先别改变它。"], "checks": ["查询状态", "不执行控制", "据实回答"]}
+  ]
+}

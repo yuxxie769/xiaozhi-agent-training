@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "destination": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training",
+  "original_repository": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server",
+  "files": [
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/prepare_training_data.py",
+      "destination": "archive/pre-migration/prepare_training_data.py",
+      "sha256": "2bf173d6fd98690efbf8e4050686156a3a109ddf04b16a7f75bb3887b573f5ba",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tests/test_prepare_training_data.py",
+      "destination": "archive/pre-migration/test_prepare_training_data.py",
+      "sha256": "744a54aa96112a9e9d4aa50cc9813f192af15acd8734e4bb050226ee2d408e84",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/training-data/v1/README.md",
+      "destination": "archive/pre-migration/config-and-docs/README.md",
+      "sha256": "21749df5808d36f0e7f3483d572f8f72b5bcf6a88ab78d6e90efb555fee6b306",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/training-data/v1/sources.json",
+      "destination": "archive/pre-migration/config-and-docs/sources.json",
+      "sha256": "1b6ac38a71204a10ed7c6fc7dc81836fd477fe73b1c00c5b4e38aafd13b74ff5",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/training-data/v1/supplemental-cases.json",
+      "destination": "archive/pre-migration/config-and-docs/supplemental-cases.json",
+      "sha256": "e5e32f3811900f2b8ef2c84760faa763b620ddd3e4fa58f24cbe8eb674455ff9",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/training-data/v1/system-prompt.txt",
+      "destination": "archive/pre-migration/config-and-docs/system-prompt.txt",
+      "sha256": "5207f612fd42ea985ab3489e68db584278dc95ce4b7d3281eab4b5c62ce0583f",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/audit.jsonl",
+      "destination": "archive/pre-migration/first-trial/audit.jsonl",
+      "sha256": "d338d29aaec60266bafe13093f70daeed1f498684a5a6b683a65cc112638438c",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/dpo.review.train.jsonl",
+      "destination": "archive/pre-migration/first-trial/dpo.review.train.jsonl",
+      "sha256": "da682f374305bdf57f50d20ccf7ddafcdd86b16744504443841d59ef6817731b",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/dpo.review.validation.jsonl",
+      "destination": "archive/pre-migration/first-trial/dpo.review.validation.jsonl",
+      "sha256": "fabd5ff425feaa00fffe5b24d2ad5f5870ed80ef542f55d7eba1012a91ee2a0d",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/manifest.json",
+      "destination": "archive/pre-migration/first-trial/manifest.json",
+      "sha256": "06a8897cc049db21296e9e13fe2ddc8d349e7c7e57a48724af9583a465035294",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/quarantine.jsonl",
+      "destination": "archive/pre-migration/first-trial/quarantine.jsonl",
+      "sha256": "f904df4960de275195e264b05fc6ac06a88dc427808e383ae8a0aba130643b76",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/report.md",
+      "destination": "archive/pre-migration/first-trial/report.md",
+      "sha256": "366c9cfc16f8ea40020c85a94f8e6df1d334a396acfa39f37aae36198eddc87b",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/sft.metadata.jsonl",
+      "destination": "archive/pre-migration/first-trial/sft.metadata.jsonl",
+      "sha256": "d3505a8a5f47f09accb60baac11b7e83318f01f8fbe6396aeb40b3a69d473776",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/sft.train.jsonl",
+      "destination": "archive/pre-migration/first-trial/sft.train.jsonl",
+      "sha256": "f46ea068971210d65c85f528b409f1f299a89eb44dd4644dc9d5877581e5391e",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/sft.validation.jsonl",
+      "destination": "archive/pre-migration/first-trial/sft.validation.jsonl",
+      "sha256": "a3e7f4200724bb7cf6556c79decbb45ad270add817ff44bafa954b6f396dc621",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/system-prompt.txt",
+      "destination": "archive/pre-migration/first-trial/system-prompt.txt",
+      "sha256": "5207f612fd42ea985ab3489e68db584278dc95ce4b7d3281eab4b5c62ce0583f",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/tools.json",
+      "destination": "archive/pre-migration/first-trial/tools.json",
+      "sha256": "e7ffd1b71f3091da35bcfe941ac9a7e742e42a744b962beb7aa91277bc24331e",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008/validation.source-trajectories.jsonl",
+      "destination": "archive/pre-migration/first-trial/validation.source-trajectories.jsonl",
+      "sha256": "cf217fc8abeb4066e8e03fb8e5edd763b3a7c6e94960c9071032916491477d45",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/audit.jsonl",
+      "destination": "data/candidates/v0/audit.jsonl",
+      "sha256": "4ce86c2124b52143623cc4d237c994e549ddd8211e0f7bfe3d645d781b1cc326",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/dpo.review.train.jsonl",
+      "destination": "data/candidates/v0/dpo.review.train.jsonl",
+      "sha256": "b9bebb9cb43be8424ffa9fc8c94da09ac720cc9667e468874ba9d0a79dfc59e1",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/dpo.review.validation.jsonl",
+      "destination": "data/candidates/v0/dpo.review.validation.jsonl",
+      "sha256": "4e8b575b2f47e9753af38bfddadd97087801f6f985dcd4c2f03caff0eaa94e49",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/manifest.json",
+      "destination": "data/candidates/v0/manifest.json",
+      "sha256": "ba246d20608cfd6c305148f4587fdc0f58bf3ea788fee25b6058deede520539f",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/quarantine.jsonl",
+      "destination": "data/candidates/v0/quarantine.jsonl",
+      "sha256": "3ae78870c4bcb3b7a397ab8cb0d4d35410928a4c5d5b85aefd864cdcb9ba25ca",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/report.md",
+      "destination": "data/candidates/v0/report.md",
+      "sha256": "5cc740b46e15d59ef6bd06bec1835e62e5328bf2484645ec9b83045c96ee38a2",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/sft.metadata.jsonl",
+      "destination": "data/candidates/v0/sft.metadata.jsonl",
+      "sha256": "d3505a8a5f47f09accb60baac11b7e83318f01f8fbe6396aeb40b3a69d473776",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/sft.train.jsonl",
+      "destination": "data/candidates/v0/sft.train.jsonl",
+      "sha256": "f46ea068971210d65c85f528b409f1f299a89eb44dd4644dc9d5877581e5391e",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/sft.validation.jsonl",
+      "destination": "data/candidates/v0/sft.validation.jsonl",
+      "sha256": "a3e7f4200724bb7cf6556c79decbb45ad270add817ff44bafa954b6f396dc621",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/system-prompt.txt",
+      "destination": "data/candidates/v0/system-prompt.txt",
+      "sha256": "5207f612fd42ea985ab3489e68db584278dc95ce4b7d3281eab4b5c62ce0583f",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/tools.json",
+      "destination": "data/candidates/v0/tools.json",
+      "sha256": "e7ffd1b71f3091da35bcfe941ac9a7e742e42a744b962beb7aa91277bc24331e",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final/validation.source-trajectories.jsonl",
+      "destination": "data/candidates/v0/validation.source-trajectories.jsonl",
+      "sha256": "cf217fc8abeb4066e8e03fb8e5edd763b3a7c6e94960c9071032916491477d45",
+      "kind": "moved_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-runs/full-300-20260930-015831/generation/conversations.json",
+      "destination": "data/raw/weather/conversations.json",
+      "sha256": "5aa1a42b57aa356c419e18618bd2411b0d7a2163d0ad0e5b05c6a7db2dfb549e",
+      "kind": "copied_source"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-runs/full-300-20260930-015831/scoring-real/scores.json",
+      "destination": "data/raw/weather/scores.strict.json",
+      "sha256": "39abe93e7d4328026eceaeef3e979940051ccbd60b23bfe987005dd8ce85d32c",
+      "kind": "copied_source"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-runs/full-300-20260930-015831/scoring-c03-relaxed-replay/scores.json",
+      "destination": "data/raw/weather/scores.relaxed-reference.json",
+      "sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d",
+      "kind": "copied_source"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/home-switch-5groups-20261008-013500/run-002-text-client/conversations.json",
+      "destination": "data/raw/home_switch/conversations.json",
+      "sha256": "e6082cb32b5b3a56c4c72521300894c1d7abebfe263a73e48d44e7fffeea9dd3",
+      "kind": "copied_source"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/home-switch-5groups-20261008-013500/run-002-text-client/scores.json",
+      "destination": "data/raw/home_switch/scores.original-reference.json",
+      "sha256": "92d2476527d5b39c91f4298df4b13d44d9b2defee2b4e1ac06df8615cf34f443",
+      "kind": "copied_source"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/home-switch-5groups-20261008-013500/run-002-text-client/revised-current-rules/scores.json",
+      "destination": "data/raw/home_switch/scores.current.json",
+      "sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a",
+      "kind": "copied_source"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/eval_scoring.py",
+      "destination": "vendor/legacy_evaluation/eval_scoring.py",
+      "sha256": "fb52f24b846396e701f0298267c8080ce282e02ce4781d6f9f46f5c3743ca51f",
+      "kind": "copied_dependency"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/weather_scoring.py",
+      "destination": "vendor/legacy_evaluation/weather_scoring.py",
+      "sha256": "55d9eea6292d4bc530b958d6337fcc818ef2f33da7ba4accb95372362b657e01",
+      "kind": "copied_dependency"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/home_switch_scoring.py",
+      "destination": "vendor/legacy_evaluation/home_switch_scoring.py",
+      "sha256": "1e5510e9ae96fc4243d2e64e01ea4df8822f5fea16f35f37eeb9824b28970192",
+      "kind": "copied_dependency"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/home-switch-templates.json",
+      "destination": "vendor/legacy_evaluation/home-switch-templates.json",
+      "sha256": "fc34d6b88a0e49eb814ddb00047f58236b9359516eedd659359d52a89c8f4ecd",
+      "kind": "copied_dependency"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/home_switch_seeds.py",
+      "destination": "archive/upstream/home_switch_seeds.py",
+      "sha256": "9226f7a63f398eeff3a17e5fc09ce0c0d2c7f27ef65eb2a12d7f53ea9d45b82a",
+      "kind": "copied_dependency_original"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/plugins_func/functions/get_weather.py",
+      "destination": "vendor/tool_sources/get_weather.py",
+      "sha256": "fe0fc70e35d76e1ffb920209be46a394169de6ba153aa8470ad6b66d82abf1b2",
+      "kind": "copied_tool_source"
+    },
+    {
+      "source": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/LICENSE",
+      "destination": "vendor/LICENSE.server",
+      "sha256": "65e7d56732b4b42f2efcd0cba4d199d153b3faa9cc6def8bfad90f0d8193d273",
+      "kind": "copied_license"
+    }
+  ],
+  "moved_roots": [
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/prepare_training_data.py",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tests/test_prepare_training_data.py",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/training-data/v1",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/training-data/agent-sft-v1-20261008-final"
+  ],
+  "source_cleanup": "complete_verified_only_prior_turn_training_artifacts_removed",
+  "training_progress_advanced": false,
+  "adaptations": [
+    "Export script resolves local configs and vendored validation modules.",
+    "Seed module retains only unchanged validation functions and constants; server/simulator imports and generation functions removed.",
+    "Tests resolve the standalone scripts and config.",
+    "Original data, selected scores, reference scores, and tool source copied with hashes.",
+    "Historical manifests kept byte-for-byte, including their original provenance paths."
+  ],
+  "original_raw_and_score_files_preserved": true,
+  "verification": {
+    "unit_tests": 13,
+    "isolated_run": true,
+    "byte_identical_artifacts": [
+      "audit.jsonl",
+      "dpo.review.train.jsonl",
+      "dpo.review.validation.jsonl",
+      "quarantine.jsonl",
+      "report.md",
+      "sft.metadata.jsonl",
+      "sft.train.jsonl",
+      "sft.validation.jsonl",
+      "system-prompt.txt",
+      "tools.json",
+      "validation.source-trajectories.jsonl"
+    ],
+    "counts": {
+      "sft_train": 444,
+      "sft_validation": 107,
+      "dpo_review_candidates": 33,
+      "quarantine": 15
+    },
+    "server_imports_required": false
+  }
+}

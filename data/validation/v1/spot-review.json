@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "review_type": "assistant_manual_stratified_spot_review_not_new_model_scoring",
+  "sample_count": 14,
+  "population": 556,
+  "train_sha256": "972f52d4493634f011d1191d882e153a1fcda6267db9adb377fce7a682acdb12",
+  "selection": "按场景、轮数、无调用、取消、双设备、最长轨迹与错误后回读选样；不是随机抽样或全量语义复评。",
+  "finding": "抽查未见明显任务逻辑错误；发现统一提示词禁止 Markdown 与157条原回答存在风格冲突，已按用户选择允许必要列表与强调，保留原始回答。",
+  "markdown_marker_samples": 157,
+  "reasoning_messages": 0,
+  "mode_decision": "思考模式尚待用户确认；CPU格式验证显式使用enable_thinking=false，不代表GPU训练方案已冻结。",
+  "samples": [
+    {
+      "row_index": 30,
+      "id": "home_switch:T03-G001-P1",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "先查书房插座 on，再控制为 off，回读 off 后报告成功。"
+    },
+    {
+      "row_index": 108,
+      "id": "home_switch:T08-G002-P1",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "三轮补齐目标和动作；目标已经 on 时不重复控制。"
+    },
+    {
+      "row_index": 136,
+      "id": "home_switch:T10-G002-P3",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "澄清灯具后，沿用相邻可用状态确认已关闭，不重复控制。"
+    },
+    {
+      "row_index": 150,
+      "id": "home_switch:T11-G002-P2",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "排除一只插座仍有两个候选，继续澄清，没有猜选目标。"
+    },
+    {
+      "row_index": 174,
+      "id": "home_switch:T13-G001-P1",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "双设备先识别已关闭的设备，仅控制仍开启的设备并回读。"
+    },
+    {
+      "row_index": 202,
+      "id": "home_switch:T15-G002-P3",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "双设备处理后遇到指代不清先澄清，明确目标后关闭并回读，未误动另一台。"
+    },
+    {
+      "row_index": 222,
+      "id": "home_switch:T17-G001-P1",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "用户取消后停止操作，没有发出控制。"
+    },
+    {
+      "row_index": 260,
+      "id": "home_switch:T20-G001-P1",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "工具错误后仍回读确认目标已达成；用户要求重试时查到已开启，没有重复控制。"
+    },
+    {
+      "row_index": 273,
+      "id": "weather:S01-G01-P1",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "未指定城市时省略 location；湿度答案来自工具返回，未补造逐日湿度。"
+    },
+    {
+      "row_index": 302,
+      "id": "weather:S03-G01-P3",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "普通天气闲聊直接回复，没有调用工具。"
+    },
+    {
+      "row_index": 354,
+      "id": "weather:S07-G01-P1",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "先澄清模糊日期，再查询并依据报告的具体日期回答。"
+    },
+    {
+      "row_index": 414,
+      "id": "weather:S11-G01-P2",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "省份不足以定位时澄清城市，保留用户已给的江苏用于消歧。"
+    },
+    {
+      "row_index": 507,
+      "id": "weather:S20-G03-P2",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "切换城市后重新查询；按具体日期预报回答，并指出摘要与逐日预报的不一致。"
+    },
+    {
+      "row_index": 541,
+      "id": "weather:S24-G01-P1",
+      "assessment": "未发现明显业务错误",
+      "evidence_summary": "澄清城市期间用户取消，未继续查询。"
+    }
+  ],
+  "limits": [
+    "不是对556条逐条重新评分。",
+    "未运行模型验证扩展到9工具后的行为。",
+    "未验证Unsloth实际GPU batch或训练loss。"
+  ]
+}
