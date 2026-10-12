@@ -1,0 +1,418 @@
+[
+  {
+    "seed_id": "S05-D001-P1",
+    "template_id": "S05",
+    "variable_group_id": "S05-D001",
+    "question_pattern_id": "P1",
+    "default_city": "北京",
+    "target_city": "南京",
+    "target_day": 0,
+    "query_kind": "overview",
+    "date_mode": "omitted",
+    "other_request": "给我讲个笑话",
+    "request_order": "weather_first",
+    "expect_follow": false,
+    "user_turns": [
+      "查南京的天气情况，然后给我讲个笑话。"
+    ],
+    "scenario_ids": [
+      "R04",
+      "T01",
+      "L01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S05-D002-P2",
+    "template_id": "S05",
+    "variable_group_id": "S05-D002",
+    "question_pattern_id": "P2",
+    "default_city": "北京",
+    "target_city": "杭州",
+    "target_day": 0,
+    "query_kind": "overview",
+    "date_mode": "omitted",
+    "other_request": "列出三种颜色",
+    "request_order": "weather_first",
+    "expect_follow": false,
+    "user_turns": [
+      "先查杭州的天气情况，再列出三种颜色。"
+    ],
+    "scenario_ids": [
+      "R04",
+      "T01",
+      "L01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S06-D003-P3",
+    "template_id": "S06",
+    "variable_group_id": "S06-D003",
+    "question_pattern_id": "P3",
+    "default_city": "宁波",
+    "target_city": "杭州",
+    "target_day": null,
+    "query_kind": "temperature",
+    "start_day": 2,
+    "day_count": 3,
+    "expect_follow": false,
+    "user_turns": [
+      "想了解杭州自后天起3天的气温情况。"
+    ],
+    "scenario_ids": [
+      "T03",
+      "L01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false,
+    "target_days": [
+      2,
+      3,
+      4
+    ]
+  },
+  {
+    "seed_id": "S11-D004-P1",
+    "template_id": "S11",
+    "variable_group_id": "S11-D004",
+    "question_pattern_id": "P1",
+    "default_city": "杭州",
+    "target_city": "宁波",
+    "target_day": 0,
+    "province": "浙江",
+    "query_kind": "rain",
+    "expect_follow": true,
+    "user_turns": [
+      "浙江今天的降雨情况怎么样？",
+      "宁波。"
+    ],
+    "scenario_ids": [
+      "L04",
+      "T02",
+      "M01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S11-D005-P2",
+    "template_id": "S11",
+    "variable_group_id": "S11-D005",
+    "question_pattern_id": "P2",
+    "default_city": "北京",
+    "target_city": "深圳",
+    "target_day": 6,
+    "province": "广东",
+    "query_kind": "rain",
+    "expect_follow": true,
+    "user_turns": [
+      "帮我看看6天后广东的降雨情况。",
+      "我问的是深圳。"
+    ],
+    "scenario_ids": [
+      "L04",
+      "T02",
+      "M01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S12-D006-P3",
+    "template_id": "S12",
+    "variable_group_id": "S12-D006",
+    "question_pattern_id": "P3",
+    "default_city": "杭州",
+    "target_city": "朝阳市",
+    "target_day": 2,
+    "ambiguous_name": "朝阳",
+    "target_adm": "辽宁",
+    "query_kind": "temperature",
+    "expect_follow": true,
+    "user_turns": [
+      "我想问朝阳后天的气温情况。",
+      "我说的是辽宁朝阳。"
+    ],
+    "scenario_ids": [
+      "L05",
+      "T02",
+      "M01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S15-D007-P1",
+    "template_id": "S15",
+    "variable_group_id": "S15-D007",
+    "question_pattern_id": "P1",
+    "default_city": "广州",
+    "target_city": "苏州",
+    "target_day": 6,
+    "invalid_location": "火星市",
+    "query_kind": "temperature",
+    "expect_follow": true,
+    "user_turns": [
+      "火星市6天后的气温情况怎么样？",
+      "我说的是苏州。"
+    ],
+    "scenario_ids": [
+      "L08",
+      "T02",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S15-D008-P2",
+    "template_id": "S15",
+    "variable_group_id": "S15-D008",
+    "question_pattern_id": "P2",
+    "default_city": "武汉",
+    "target_city": "南京",
+    "target_day": 2,
+    "invalid_location": "火星市",
+    "query_kind": "temperature",
+    "expect_follow": true,
+    "user_turns": [
+      "帮我查查后天火星市的气温情况。",
+      "更正一下，查南京。"
+    ],
+    "scenario_ids": [
+      "L08",
+      "T02",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S19-D009-P3",
+    "template_id": "S19",
+    "variable_group_id": "S19-D009",
+    "question_pattern_id": "P3",
+    "default_city": "成都",
+    "target_city": "北京",
+    "target_day": 1,
+    "query_kind": "overview",
+    "first_day": 0,
+    "expect_follow": false,
+    "user_turns": [
+      "想知道北京今天的天气情况。",
+      "明天的情况呢？"
+    ],
+    "scenario_ids": [
+      "M02",
+      "T02",
+      "L01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S19-D010-P1",
+    "template_id": "S19",
+    "variable_group_id": "S19-D010",
+    "question_pattern_id": "P1",
+    "default_city": "北京",
+    "target_city": "武汉",
+    "target_day": 4,
+    "query_kind": "overview",
+    "first_day": 6,
+    "expect_follow": false,
+    "user_turns": [
+      "武汉6天后的天气情况怎么样？",
+      "那4天后呢？"
+    ],
+    "scenario_ids": [
+      "M02",
+      "T02",
+      "L01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S20-D011-P2",
+    "template_id": "S20",
+    "variable_group_id": "S20-D011",
+    "question_pattern_id": "P2",
+    "default_city": "上海",
+    "target_city": "南京",
+    "target_day": 2,
+    "first_city": "武汉",
+    "query_kind": "rain",
+    "expect_follow": false,
+    "user_turns": [
+      "查一下后天武汉的降雨情况。",
+      "换成南京看看。"
+    ],
+    "scenario_ids": [
+      "M03",
+      "T02",
+      "L01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S21-D012-P3",
+    "template_id": "S21",
+    "variable_group_id": "S21-D012",
+    "question_pattern_id": "P3",
+    "default_city": "杭州",
+    "target_city": "深圳",
+    "target_day": 4,
+    "query_kind": "temperature",
+    "expect_follow": false,
+    "user_turns": [
+      "我想知道4天后的气温情况。",
+      "深圳的情况呢？"
+    ],
+    "scenario_ids": [
+      "M04",
+      "T02",
+      "L01",
+      "L02",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S21-D013-P1",
+    "template_id": "S21",
+    "variable_group_id": "S21-D013",
+    "question_pattern_id": "P1",
+    "default_city": "成都",
+    "target_city": "上海",
+    "target_day": 6,
+    "query_kind": "overview",
+    "expect_follow": false,
+    "user_turns": [
+      "6天后的天气情况怎么样？",
+      "那上海呢？"
+    ],
+    "scenario_ids": [
+      "M04",
+      "T02",
+      "L01",
+      "L02",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S22-D014-P2",
+    "template_id": "S22",
+    "variable_group_id": "S22-D014",
+    "question_pattern_id": "P2",
+    "default_city": "广州",
+    "target_city": "深圳",
+    "target_day": 3,
+    "requested_field": "minute_rain",
+    "detail_question": "具体哪一分钟开始下雨",
+    "expect_follow": false,
+    "user_turns": [
+      "帮我看看3天后深圳具体哪一分钟开始下雨。"
+    ],
+    "scenario_ids": [
+      "O03",
+      "T02",
+      "L01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S22-D015-P3",
+    "template_id": "S22",
+    "variable_group_id": "S22-D015",
+    "question_pattern_id": "P3",
+    "default_city": "上海",
+    "target_city": "武汉",
+    "target_day": 1,
+    "requested_field": "hourly_rain",
+    "detail_question": "几点下雨",
+    "expect_follow": false,
+    "user_turns": [
+      "想知道武汉明天几点下雨，能确定吗？"
+    ],
+    "scenario_ids": [
+      "O03",
+      "T02",
+      "L01",
+      "F01",
+      "O01",
+      "O02",
+      "O04"
+    ],
+    "target_only": false
+  },
+  {
+    "seed_id": "S24-D016-P1",
+    "template_id": "S24",
+    "variable_group_id": "S24-D016",
+    "question_pattern_id": "P1",
+    "default_city": "宁波",
+    "target_city": null,
+    "target_day": 0,
+    "clarification_kind": "city",
+    "province": "浙江",
+    "cancel_text": "算了。",
+    "expect_follow": true,
+    "user_turns": [
+      "浙江今天的天气怎么样？",
+      "算了。"
+    ],
+    "scenario_ids": [
+      "G02",
+      "L04",
+      "O04"
+    ],
+    "target_only": true
+  }
+]

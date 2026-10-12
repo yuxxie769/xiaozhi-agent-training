@@ -1,0 +1,20 @@
+{
+  "original_training": 556,
+  "original_unchanged_kept": 553,
+  "original_revised_kept": 3,
+  "original_removed": [],
+  "new_planned": 80,
+  "new_generated": 78,
+  "new_generation_errors": 2,
+  "new_training": 50,
+  "total_training": 606,
+  "failed": 51,
+  "review": 20,
+  "duplicates": 0,
+  "new_dispositions": {
+    "passed_sample": 50,
+    "failed_sample": 23,
+    "quarantine": 5,
+    "duplicate": 0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "status": "accepted_on_frozen_cases",
+  "files": {
+    "weather_scoring.py": "27279aa10b51bad55bf647ed7d72d1694a25bf4caa6315b91aafcf51cb153308",
+    "home_switch_scoring.py": "47ca29efdbc913e20c66c445a24b96531ba40a6d0bfb38f5d0c47a21bd1771f9",
+    "eval_scoring.py": "4bc5c72170d2b85c5432a584551f24cd6ad006daf8f9442056994edce4f8b0d3"
+  },
+  "backend": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server",
+  "old_snapshots": "scorer-before",
+  "validation": "scorer-validation/v4/validation.json",
+  "judge_identity": {
+    "provider": "openai",
+    "model": "deepseek-flash",
+    "base_url": "https://api.deepseek.com",
+    "max_tokens": "",
+    "temperature": "",
+    "top_p": "",
+    "frequency_penalty": "",
+    "stream": "",
+    "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+    "default_headers_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+    "allow_message_extras_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+    "fingerprint": "17a29193349e6241ce924d4f80465788b6b4e698d7b558c07538a44440e3be75"
+  },
+  "backend_scoring_code_sha256": {
+    "validate_factuality.py": "79ce193152479e573a292455d59c038b4b650aca640ef3f6e11c0e1b65ed3dc6",
+    "weather_scoring.py": "27279aa10b51bad55bf647ed7d72d1694a25bf4caa6315b91aafcf51cb153308",
+    "home_switch_scoring.py": "47ca29efdbc913e20c66c445a24b96531ba40a6d0bfb38f5d0c47a21bd1771f9",
+    "eval_judge.py": "4bad9622e599c3de5e5dd76ee2152ed73e04c9f3dcce1c0d959638afeff35518",
+    "eval_scoring.py": "4bc5c72170d2b85c5432a584551f24cd6ad006daf8f9442056994edce4f8b0d3"
+  }
+}

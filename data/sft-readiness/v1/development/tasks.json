@@ -1,0 +1,435 @@
+[
+  {
+    "scenario": "weather",
+    "sample_id": "S05-D001-P1",
+    "template_id": "S05",
+    "variant_id": "basic",
+    "user_turns": [
+      "查南京的天气情况，然后给我讲个笑话。"
+    ],
+    "semantic_sha256": "ef88d235336ed4c5d569f3236d615bc90c13bb69d95854adf89775dff9c05d08"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S05-D002-P2",
+    "template_id": "S05",
+    "variant_id": "basic",
+    "user_turns": [
+      "先查杭州的天气情况，再列出三种颜色。"
+    ],
+    "semantic_sha256": "7b441a911ca94edd344762b7070534dac4a10517e1b30a92fb9ec25ff4e6b44d"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S06-D003-P3",
+    "template_id": "S06",
+    "variant_id": "basic",
+    "user_turns": [
+      "想了解杭州自后天起3天的气温情况。"
+    ],
+    "semantic_sha256": "2d5a51a093b45be205de81d7ea5e7f7d793ec67dd51352ab689044ed5f2981c3"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S11-D004-P1",
+    "template_id": "S11",
+    "variant_id": "basic",
+    "user_turns": [
+      "浙江今天的降雨情况怎么样？",
+      "宁波。"
+    ],
+    "semantic_sha256": "b72dc72cdc41125fb858707173f790d4574d79d906914c473ae95adee4de6049"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S11-D005-P2",
+    "template_id": "S11",
+    "variant_id": "basic",
+    "user_turns": [
+      "帮我看看6天后广东的降雨情况。",
+      "我问的是深圳。"
+    ],
+    "semantic_sha256": "b54ed94b4eccd5a53cdf473c0ef0ca94bf9c90a24963fc88dd5e844a3e567c4d"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S12-D006-P3",
+    "template_id": "S12",
+    "variant_id": "basic",
+    "user_turns": [
+      "我想问朝阳后天的气温情况。",
+      "我说的是辽宁朝阳。"
+    ],
+    "semantic_sha256": "77275992d3db1c553a660aef4d381246018b505dfed774ae4b950b5ef7a78fc8"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S15-D007-P1",
+    "template_id": "S15",
+    "variant_id": "basic",
+    "user_turns": [
+      "火星市6天后的气温情况怎么样？",
+      "我说的是苏州。"
+    ],
+    "semantic_sha256": "014d7830fab86b8cde625f8182aa2266950f32469c4affa2c75daf5bac3da449"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S15-D008-P2",
+    "template_id": "S15",
+    "variant_id": "basic",
+    "user_turns": [
+      "帮我查查后天火星市的气温情况。",
+      "更正一下，查南京。"
+    ],
+    "semantic_sha256": "f7ac35c83d8b84503f0e393de1845567cb3dfeb2cf76a6c55b900c60e0a242f8"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S19-D009-P3",
+    "template_id": "S19",
+    "variant_id": "basic",
+    "user_turns": [
+      "想知道北京今天的天气情况。",
+      "明天的情况呢？"
+    ],
+    "semantic_sha256": "73b248762fe8b22cb2cc7eee8dad8ce90469c5bf9d097bb0dbe3f0dafd1ac2bb"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S19-D010-P1",
+    "template_id": "S19",
+    "variant_id": "basic",
+    "user_turns": [
+      "武汉6天后的天气情况怎么样？",
+      "那4天后呢？"
+    ],
+    "semantic_sha256": "c1116248833bd5b326c5b11cde7c10e9836788345c038742abf7e9450888566b"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S20-D011-P2",
+    "template_id": "S20",
+    "variant_id": "basic",
+    "user_turns": [
+      "查一下后天武汉的降雨情况。",
+      "换成南京看看。"
+    ],
+    "semantic_sha256": "c95d7d8a1b9b4c30beff6b1055c6d633c69290707ff4b5dcaa1a74463741fd3e"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S21-D012-P3",
+    "template_id": "S21",
+    "variant_id": "basic",
+    "user_turns": [
+      "我想知道4天后的气温情况。",
+      "深圳的情况呢？"
+    ],
+    "semantic_sha256": "12dce0212beb682877f3be3374a476a9859a660e62b32ca8503d603b5161e5db"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S21-D013-P1",
+    "template_id": "S21",
+    "variant_id": "basic",
+    "user_turns": [
+      "6天后的天气情况怎么样？",
+      "那上海呢？"
+    ],
+    "semantic_sha256": "02f57d167f494aa4a92a3930037ae38215245d6efd381a14d4366c41cefef06e"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S22-D014-P2",
+    "template_id": "S22",
+    "variant_id": "basic",
+    "user_turns": [
+      "帮我看看3天后深圳具体哪一分钟开始下雨。"
+    ],
+    "semantic_sha256": "a22164472125876fe9a29ed3a0e4ce6bbee9c51d7da5976ff4e947af7db85a94"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S22-D015-P3",
+    "template_id": "S22",
+    "variant_id": "basic",
+    "user_turns": [
+      "想知道武汉明天几点下雨，能确定吗？"
+    ],
+    "semantic_sha256": "963a95e917417aeb27de5460ccf346fef72b9bb1ee7fae84cd38518e93429a33"
+  },
+  {
+    "scenario": "weather",
+    "sample_id": "S24-D016-P1",
+    "template_id": "S24",
+    "variant_id": "basic",
+    "user_turns": [
+      "浙江今天的天气怎么样？",
+      "算了。"
+    ],
+    "semantic_sha256": "c5293dbbcf9960d9fad20dbda85b5390db3bb03243dca89670e7e2f0b20d254e"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T03-D001-P1",
+    "template_id": "T03",
+    "variant_id": "basic",
+    "user_turns": [
+      "卧室台灯开着吗？",
+      "那把它关掉。"
+    ],
+    "semantic_sha256": "1adf323c63bd3779491eb5696a2aa0376a453ac3466ad12dfc4eae43a8e2a798"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T04-D002-P2",
+    "template_id": "T04",
+    "variant_id": "basic",
+    "user_turns": [
+      "帮我把阳台植物灯关闭。",
+      "同一只，再关闭一次。"
+    ],
+    "semantic_sha256": "b3f4b32181b4f38ea80d9c343fd8975b65e343150a745244d480beae24f4de71"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T04-D003-P3",
+    "template_id": "T04",
+    "variant_id": "basic",
+    "user_turns": [
+      "请打开客厅风扇电源。",
+      "刚才那只再打开一遍。"
+    ],
+    "semantic_sha256": "32706436518fe8277480ca430021fcb9fb547ba4e85d40e01e643f505e57ac70"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T05-D004-P1",
+    "template_id": "T05",
+    "variant_id": "basic",
+    "user_turns": [
+      "打开书房台灯。",
+      "不，是书房阅读灯。"
+    ],
+    "semantic_sha256": "460635f04fe63b46f27f100fc3dbc864661116ac85abd35f6e68e84bf5f07ace"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T06-D005-P2",
+    "template_id": "T06",
+    "variant_id": "basic",
+    "user_turns": [
+      "帮我把书房阅读灯打开。",
+      "这只现在关闭吧。"
+    ],
+    "semantic_sha256": "aead2a6cbda10787002a7c545c3597d2f1919e68939c37d7b16e2b6c2deab1dd"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T06-D006-P3",
+    "template_id": "T06",
+    "variant_id": "basic",
+    "user_turns": [
+      "请打开阳台植物灯。",
+      "改主意了，把它关闭。"
+    ],
+    "semantic_sha256": "e5b210a690f414241ee879c58d0553edb54950d803c36d1e8992d433000ddd62"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T06-D007-P1",
+    "template_id": "T06",
+    "variant_id": "basic",
+    "user_turns": [
+      "打开书房阅读灯。",
+      "现在把它关掉。"
+    ],
+    "semantic_sha256": "71ea67d19719b7e9431c288411b43c7feb64d0f986cfe912c974d15dce82390a"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T07-D008-P2",
+    "template_id": "T07",
+    "variant_id": "basic",
+    "user_turns": [
+      "帮我关掉灯。",
+      "要关的是书房阅读灯。"
+    ],
+    "semantic_sha256": "8679bbf7f2afac9bb096d9b1cda23b68584845c3d193ab11918c6ecb97b62ce9"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T07-D009-P3",
+    "template_id": "T07",
+    "variant_id": "change_action",
+    "user_turns": [
+      "把灯关闭吧。",
+      "我指书房阅读灯，最终打开。"
+    ],
+    "semantic_sha256": "b22289f3d4e053a068873609133af9bb5d1670d7a980cf22c7ff597d6c0e9a8e"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T08-D010-P1",
+    "template_id": "T08",
+    "variant_id": "missing_both",
+    "user_turns": [
+      "帮我处理一下设备。",
+      "阳台植物灯。",
+      "打开。"
+    ],
+    "semantic_sha256": "ddb2d08a1d3cf72eb6d4e8664018da5070fd0c2780c2aa3b9e0235c02520b2ec"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T08-D011-P2",
+    "template_id": "T08",
+    "variant_id": "basic",
+    "user_turns": [
+      "我想操作书房插座。",
+      "把它打开。"
+    ],
+    "semantic_sha256": "791b7d8d9031d072f8ac4dfce84d9fbf1514086781448139c5ab1ecdb7fa3a5f"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T10-D012-P3",
+    "template_id": "T10",
+    "variant_id": "basic",
+    "user_turns": [
+      "请打开灯。",
+      "就是阳台植物灯那只。"
+    ],
+    "semantic_sha256": "bb0c80d1fa8a652a1f623e0b16a749ab75a5975662d14246dd0f6bf25c263a88"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T10-D013-P1",
+    "template_id": "T10",
+    "variant_id": "basic",
+    "user_turns": [
+      "关闭插座。",
+      "我指的是书房插座。"
+    ],
+    "semantic_sha256": "2b239e269ff9b33fa437a7507dfd5044a2e59b3ae1c12ae52c89d0131b234abd"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T11-D014-P2",
+    "template_id": "T11",
+    "variant_id": "basic",
+    "user_turns": [
+      "帮我把灯打开。",
+      "你刚才列的第二只。"
+    ],
+    "semantic_sha256": "69443898ad25ab28bb1177fda463e9aceffd33e10b1db851c7488727d88616a9"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T11-D015-P3",
+    "template_id": "T11",
+    "variant_id": "basic",
+    "user_turns": [
+      "请关闭灯。",
+      "选列表里的第二项。"
+    ],
+    "semantic_sha256": "af50b7d16feed065c93c7bd0f573a0036d54ba71251ef92b92d2caa66946ef2e"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T12-D016-P1",
+    "template_id": "T12",
+    "variant_id": "basic",
+    "user_turns": [
+      "打开客厅风扇电源，不，关掉。"
+    ],
+    "semantic_sha256": "94f7e3da22262574669e71dd4905250887decb20aa0c1674d928b0fe3115d363"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T12-D017-P2",
+    "template_id": "T12",
+    "variant_id": "basic",
+    "user_turns": [
+      "帮我打开阳台植物灯——说错了，是关闭。"
+    ],
+    "semantic_sha256": "af36480f0cf4b57ccc41ef183b86eca3d8d8461f3a9a9d16121032db36371a2e"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T14-D018-P3",
+    "template_id": "T14",
+    "variant_id": "basic",
+    "user_turns": [
+      "把阳台植物灯和另一只灯都关闭。",
+      "第二只就选书房阅读灯。"
+    ],
+    "semantic_sha256": "836890a37ed9acddc7288259a07ecaabaaf131c7291fc59f9074c2d98eb8b2e9"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T14-D019-P1",
+    "template_id": "T14",
+    "variant_id": "basic",
+    "user_turns": [
+      "关闭卧室床头灯和另一只灯。",
+      "另一只是书房台灯。"
+    ],
+    "semantic_sha256": "3b69b93f4c50753898b8084532ac72a4dd94ed7f0cd786eb6952ccd2acaaa8a5"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T17-D020-P2",
+    "template_id": "T17",
+    "variant_id": "cancel_after_execution",
+    "user_turns": [
+      "帮我把玄关灯开关打开。",
+      "就这样，不要再动了。"
+    ],
+    "semantic_sha256": "fd7568b8d0720919c16a62620b725884d8e01c96d50e3b16d0ad52746836f443"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T17-D021-P3",
+    "template_id": "T17",
+    "variant_id": "no_action",
+    "user_turns": [
+      "嗯，不要关闭书房阅读灯。"
+    ],
+    "semantic_sha256": "25a512e8e51c5a60048e8bed0c35c1a5c44d124c84de7b1fb28633f5f8ac09ed"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T19-D022-P1",
+    "template_id": "T19",
+    "variant_id": "basic",
+    "user_turns": [
+      "关闭阳台植物灯。",
+      "再试一次。"
+    ],
+    "semantic_sha256": "6bee0f91380255016542f9e1a7848f651ce3045e236338bb8d671c73a7be4599"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T19-D023-P2",
+    "template_id": "T19",
+    "variant_id": "basic",
+    "user_turns": [
+      "请打开阳台植物灯，再打开走廊夜灯。",
+      "还是刚才的要求，帮我重新试试。"
+    ],
+    "semantic_sha256": "cd21d9a62adb16acb65b4ba09d472567bd66beeeed9a1843191e28c7096a191b"
+  },
+  {
+    "scenario": "home_switch",
+    "sample_id": "T20-D024-P3",
+    "template_id": "T20",
+    "variant_id": "basic",
+    "user_turns": [
+      "帮我打开阳台植物灯，再讲个笑话。",
+      "请再尝试执行刚才的要求。"
+    ],
+    "semantic_sha256": "0e225ec04f014b592d38b7470f0acabacafa669062a6476ef25ddd052cecf9df"
+  }
+]

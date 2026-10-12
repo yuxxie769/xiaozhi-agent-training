@@ -1,0 +1,26 @@
+[
+  {
+    "scenario": "weather",
+    "version": "original",
+    "returncode": 0,
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/targeted/weather-original-scores/scores.json"
+  },
+  {
+    "scenario": "weather",
+    "version": "corrected",
+    "returncode": 0,
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/targeted/weather-corrected-scores/scores.json"
+  },
+  {
+    "scenario": "home_switch",
+    "version": "original",
+    "returncode": 0,
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/targeted/home_switch-original-scores/scores.json"
+  },
+  {
+    "scenario": "home_switch",
+    "version": "corrected",
+    "returncode": 0,
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/targeted/home_switch-corrected-scores/scores.json"
+  }
+]

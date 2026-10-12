@@ -1,0 +1,355 @@
+[
+  {
+    "preset": "balcony_normal_v1_sft_r1_01",
+    "derived_from": "balcony_normal_v1",
+    "changed_initial_devices": [
+      "light.study_reading",
+      "switch.balcony_grow"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "20cd24286d2047e69f412b36c93a2fcbe53d5aed6bcddcc5809db857e8cbcf34"
+  },
+  {
+    "preset": "balcony_normal_v1_sft_r1_02",
+    "derived_from": "balcony_normal_v1",
+    "changed_initial_devices": [
+      "switch.balcony_grow"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "cf0bdcda5be5ebc91332f5558f9edfee0edd0085e3d819e6f547f1c711dabf49"
+  },
+  {
+    "preset": "balcony_normal_v1_sft_r1_03",
+    "derived_from": "balcony_normal_v1",
+    "changed_initial_devices": [
+      "switch.hall_night"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "6b682aee4133b38abb3c3f479acdce04002f317b5e2517fa29a13af3d7f78844"
+  },
+  {
+    "preset": "balcony_normal_v1_sft_r1_04",
+    "derived_from": "balcony_normal_v1",
+    "changed_initial_devices": [
+      "switch.balcony_grow"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "066b4d44fc102e4741738bb2d1ca539305b27bd72411c8050b709edfd5648de6"
+  },
+  {
+    "preset": "balcony_normal_v1_sft_r1_05",
+    "derived_from": "balcony_normal_v1",
+    "changed_initial_devices": [
+      "switch.hall_night"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "044dac1490926d4b3d8e76aab76de12e0ee0c031e41d9b0f63f219517d24f7bb"
+  },
+  {
+    "preset": "balcony_normal_v1_sft_r1_06",
+    "derived_from": "balcony_normal_v1",
+    "changed_initial_devices": [
+      "light.study_reading"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "8574e456bdd9a62b7ea20a93a271eb1bcc03a59ea99ac1a56f1c7e623782a68b"
+  },
+  {
+    "preset": "balcony_normal_v1_sft_r1_08",
+    "derived_from": "balcony_normal_v1",
+    "changed_initial_devices": [
+      "light.study_reading",
+      "switch.hall_night",
+      "switch.balcony_grow"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "0fc7e04bb42ca4095b5e797fccdf71d770a1d2204989cebcca77dcc652223873"
+  },
+  {
+    "preset": "balcony_offline_recover_v1_sft_r1_03",
+    "derived_from": "balcony_offline_recover_v1",
+    "changed_initial_devices": [],
+    "moved_fault": null,
+    "configuration_sha256": "20dab99128689eb25a548b0575c5c56ab9ca4716512016a4647560b1607e9093"
+  },
+  {
+    "preset": "balcony_offline_recover_v1_sft_r1_05",
+    "derived_from": "balcony_offline_recover_v1",
+    "changed_initial_devices": [
+      "switch.hall_night",
+      "switch.balcony_grow",
+      "light.study_reading"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "ce1b07b3d032c756a7a5050653f9ac2cd234071d2a26df0e3d910b128eea2553"
+  },
+  {
+    "preset": "balcony_offline_recover_v1_sft_r1_07",
+    "derived_from": "balcony_offline_recover_v1",
+    "changed_initial_devices": [
+      "switch.balcony_grow",
+      "switch.hall_night",
+      "light.study_reading"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "eec485d376d1a544d3f804e1f4454773ce5422902c29fa99e745b9c998de93cb"
+  },
+  {
+    "preset": "balcony_read_error_recover_v1_sft_r1_01",
+    "derived_from": "balcony_read_error_recover_v1",
+    "changed_initial_devices": [
+      "switch.hall_night",
+      "switch.balcony_grow"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "35f9fe6c71821551dea00cce8d0d50820617e3f6e783e7c6851ea71cbf838bfc"
+  },
+  {
+    "preset": "balcony_read_error_recover_v1_sft_r1_05",
+    "derived_from": "balcony_read_error_recover_v1",
+    "changed_initial_devices": [],
+    "moved_fault": null,
+    "configuration_sha256": "0136fab53a369d81dc5c88d8af0ab95b3f6a81dce21bc32b1c19c6e93ceaa1f1"
+  },
+  {
+    "preset": "balcony_read_error_recover_v1_sft_r1_07",
+    "derived_from": "balcony_read_error_recover_v1",
+    "changed_initial_devices": [
+      "switch.balcony_grow"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "be9c86b45c3a0e76caeae417eb6c7b780acec90ad2c5f48874bf863ced5dfc10"
+  },
+  {
+    "preset": "balcony_second_device_error_v1_sft_r1_02",
+    "derived_from": "balcony_second_device_error_v1",
+    "changed_initial_devices": [],
+    "moved_fault": {
+      "from": "switch.hall_night",
+      "to": "light.study_reading"
+    },
+    "configuration_sha256": "5bc0c5caada447ffe094e2890ca296c20bb14db843585731c9518acb3a2daabc"
+  },
+  {
+    "preset": "balcony_second_device_error_v1_sft_r1_03",
+    "derived_from": "balcony_second_device_error_v1",
+    "changed_initial_devices": [
+      "switch.balcony_grow",
+      "light.study_reading"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "81666164ba41beb5670c0a08540ba19ba20b80bd57f9a0de9bf8d3cb9455e28c"
+  },
+  {
+    "preset": "balcony_second_device_error_v1_sft_r1_05",
+    "derived_from": "balcony_second_device_error_v1",
+    "changed_initial_devices": [
+      "light.study_reading"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "bb8b937cd27b7d80ae50125ef6f4912f355d06fb0ea46e18d56ba2674554abb1"
+  },
+  {
+    "preset": "balcony_timeout_applied_v1_sft_r1_02",
+    "derived_from": "balcony_timeout_applied_v1",
+    "changed_initial_devices": [],
+    "moved_fault": {
+      "from": "switch.balcony_grow",
+      "to": "light.study_reading"
+    },
+    "configuration_sha256": "2e3f0843ae83914c6fe62bed45bcb93672b6f405db37e350b38d0c45f8244b7f"
+  },
+  {
+    "preset": "balcony_timeout_applied_v1_sft_r1_04",
+    "derived_from": "balcony_timeout_applied_v1",
+    "changed_initial_devices": [
+      "light.study_reading"
+    ],
+    "moved_fault": {
+      "from": "switch.balcony_grow",
+      "to": "switch.hall_night"
+    },
+    "configuration_sha256": "40e901281563230059484be4b4c9fda4a78fd4af2184cb68de630cc8bb532ebf"
+  },
+  {
+    "preset": "balcony_timeout_applied_v1_sft_r1_05",
+    "derived_from": "balcony_timeout_applied_v1",
+    "changed_initial_devices": [
+      "switch.hall_night"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "11300fb2cc4a4abb97b01acdf353e8ec2628760943eab314eac4cc65cc995486"
+  },
+  {
+    "preset": "mixed_normal_v1_sft_r1_01",
+    "derived_from": "mixed_normal_v1",
+    "changed_initial_devices": [
+      "switch.example_study",
+      "light.living_display",
+      "light.bedroom_bedside",
+      "switch.balcony_grow"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "0cd26de3b88c9753e8e06578b35a5272d725c628c2b92edb999858b1ffd36089"
+  },
+  {
+    "preset": "mixed_normal_v1_sft_r1_02",
+    "derived_from": "mixed_normal_v1",
+    "changed_initial_devices": [
+      "light.bedroom_desk",
+      "light.living_display",
+      "light.study_reading",
+      "switch.hall_night",
+      "light.study_desk",
+      "switch.entry_wall",
+      "light.bedroom_bedside"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "f23eb658aac773b6dfae85f75fd35998e622af38a00fe6ca8d5290f84e595216"
+  },
+  {
+    "preset": "mixed_normal_v1_sft_r1_03",
+    "derived_from": "mixed_normal_v1",
+    "changed_initial_devices": [
+      "light.study_desk",
+      "switch.example_study",
+      "switch.living_fan",
+      "light.living_display",
+      "switch.hall_night",
+      "switch.balcony_grow"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "42d10b29291a8d14d5ae8c58d4a99ff0d337e4837ef4621a7fd4ba0b84727101"
+  },
+  {
+    "preset": "mixed_normal_v1_sft_r1_04",
+    "derived_from": "mixed_normal_v1",
+    "changed_initial_devices": [
+      "light.study_desk",
+      "switch.balcony_grow",
+      "light.bedroom_bedside",
+      "light.bedroom_desk",
+      "switch.hall_night",
+      "switch.living_fan"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "4dbbfcf5c1e1c06392540e911c5b67700c8650f26e77cc9b31ccb546fce7234f"
+  },
+  {
+    "preset": "mixed_normal_v1_sft_r1_05",
+    "derived_from": "mixed_normal_v1",
+    "changed_initial_devices": [
+      "light.bedroom_bedside",
+      "switch.hall_night",
+      "switch.balcony_grow",
+      "light.study_desk"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "e610df76409a096a9932c19724a86d2c278bc70867afa268fbef5f86f5888330"
+  },
+  {
+    "preset": "mixed_normal_v1_sft_r1_06",
+    "derived_from": "mixed_normal_v1",
+    "changed_initial_devices": [
+      "light.bedroom_desk",
+      "switch.hall_night",
+      "switch.kitchen_coffee",
+      "switch.living_fan",
+      "switch.entry_wall",
+      "switch.balcony_grow",
+      "light.study_desk",
+      "light.study_reading"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "bb9788786565e38bcec5613ced45c61f1d3ca84bbe3adb98a96f90e60d121743"
+  },
+  {
+    "preset": "mixed_normal_v1_sft_r1_07",
+    "derived_from": "mixed_normal_v1",
+    "changed_initial_devices": [
+      "light.bedroom_desk",
+      "switch.kitchen_coffee",
+      "switch.entry_wall",
+      "light.study_reading",
+      "switch.living_fan"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "39592eac62619ad3151f43c26320fac6b34aa3e4595443f94a4ada33d4937ae0"
+  },
+  {
+    "preset": "study_normal_v1_sft_r1_01",
+    "derived_from": "study_normal_v1",
+    "changed_initial_devices": [
+      "light.bedroom_desk",
+      "light.study_desk",
+      "switch.example_study"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "a54c2a0c1455da65424e4b6aeb48dcfd4fa55b1372895984da73bfabd1bba02d"
+  },
+  {
+    "preset": "study_normal_v1_sft_r1_02",
+    "derived_from": "study_normal_v1",
+    "changed_initial_devices": [
+      "light.bedroom_desk",
+      "light.study_desk",
+      "light.study_reading"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "7b21fe6e66080c828651c69ad23d1eae3055f33f2ebc982ade5241d6af2cb5ff"
+  },
+  {
+    "preset": "study_normal_v1_sft_r1_03",
+    "derived_from": "study_normal_v1",
+    "changed_initial_devices": [
+      "light.bedroom_desk"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "ec29e46560499182b834ec9959c1b8757c0f52c992751a88a567135cda132891"
+  },
+  {
+    "preset": "study_normal_v1_sft_r1_04",
+    "derived_from": "study_normal_v1",
+    "changed_initial_devices": [
+      "switch.example_study",
+      "light.study_desk",
+      "light.study_reading",
+      "light.bedroom_desk"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "4208b36f212156d9358a1b9b29ed26da5268ed29d1b44c723ed07347f4f40bc3"
+  },
+  {
+    "preset": "study_normal_v1_sft_r1_06",
+    "derived_from": "study_normal_v1",
+    "changed_initial_devices": [
+      "light.study_reading",
+      "light.bedroom_desk",
+      "light.study_desk"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "2d7de7384b1a80ffad2e5983525c7f138f048c82fb620dc7ab41876b0ee6ee4f"
+  },
+  {
+    "preset": "study_normal_v1_sft_r1_07",
+    "derived_from": "study_normal_v1",
+    "changed_initial_devices": [
+      "light.bedroom_desk",
+      "light.study_desk",
+      "light.study_reading"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "5302e382d4224aded1d497ed6e52ddc9455b0a02b4d7b0b20392241b528bf2a2"
+  },
+  {
+    "preset": "study_normal_v1_sft_r1_08",
+    "derived_from": "study_normal_v1",
+    "changed_initial_devices": [
+      "switch.example_study",
+      "light.study_desk",
+      "light.study_reading"
+    ],
+    "moved_fault": null,
+    "configuration_sha256": "dc230d4d5033bf6354a1774527eafd8eaf27cba6e62b321ce1e26282bc3a9352"
+  }
+]

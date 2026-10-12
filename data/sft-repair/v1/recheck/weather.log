@@ -1,0 +1,2 @@
+/Users/yuxxie/Documents/tools/anaconda3/envs/xiaozhi-esp32-server/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 8 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

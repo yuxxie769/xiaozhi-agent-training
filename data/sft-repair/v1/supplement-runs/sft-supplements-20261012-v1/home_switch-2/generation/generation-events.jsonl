@@ -1,0 +1,40 @@
+{"event": "sample_generation_started", "seed_id": "T04-R002-P2", "template_id": "T04"}
+{"event": "sample_generation_completed", "seed_id": "T04-R002-P2", "template_id": "T04", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T06-R005-P2", "template_id": "T06"}
+{"event": "sample_generation_completed", "seed_id": "T06-R005-P2", "template_id": "T06", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T06-R008-P2", "template_id": "T06"}
+{"event": "sample_generation_completed", "seed_id": "T06-R008-P2", "template_id": "T06", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T07-R011-P2", "template_id": "T07"}
+{"event": "sample_generation_completed", "seed_id": "T07-R011-P2", "template_id": "T07", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T07-R014-P2", "template_id": "T07"}
+{"event": "sample_generation_completed", "seed_id": "T07-R014-P2", "template_id": "T07", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T07-R017-P2", "template_id": "T07"}
+{"event": "sample_generation_completed", "seed_id": "T07-R017-P2", "template_id": "T07", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T08-R020-P2", "template_id": "T08"}
+{"event": "sample_generation_completed", "seed_id": "T08-R020-P2", "template_id": "T08", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T08-R023-P2", "template_id": "T08"}
+{"event": "sample_generation_completed", "seed_id": "T08-R023-P2", "template_id": "T08", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T08-R026-P2", "template_id": "T08"}
+{"event": "sample_generation_completed", "seed_id": "T08-R026-P2", "template_id": "T08", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T11-R029-P2", "template_id": "T11"}
+{"event": "sample_generation_completed", "seed_id": "T11-R029-P2", "template_id": "T11", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T11-R032-P2", "template_id": "T11"}
+{"event": "sample_generation_completed", "seed_id": "T11-R032-P2", "template_id": "T11", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T11-R035-P2", "template_id": "T11"}
+{"event": "sample_generation_completed", "seed_id": "T11-R035-P2", "template_id": "T11", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T17-R038-P2", "template_id": "T17"}
+{"event": "sample_generation_completed", "seed_id": "T17-R038-P2", "template_id": "T17", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T17-R041-P2", "template_id": "T17"}
+{"event": "sample_generation_completed", "seed_id": "T17-R041-P2", "template_id": "T17", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T19-R044-P2", "template_id": "T19"}
+{"event": "sample_generation_completed", "seed_id": "T19-R044-P2", "template_id": "T19", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T19-R047-P2", "template_id": "T19"}
+{"event": "sample_generation_completed", "seed_id": "T19-R047-P2", "template_id": "T19", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T19-R050-P2", "template_id": "T19"}
+{"event": "sample_generation_completed", "seed_id": "T19-R050-P2", "template_id": "T19", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T20-R053-P2", "template_id": "T20"}
+{"event": "sample_generation_completed", "seed_id": "T20-R053-P2", "template_id": "T20", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T20-R056-P2", "template_id": "T20"}
+{"event": "sample_generation_completed", "seed_id": "T20-R056-P2", "template_id": "T20", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T20-R059-P2", "template_id": "T20"}
+{"event": "sample_generation_completed", "seed_id": "T20-R059-P2", "template_id": "T20", "attempt": 1}

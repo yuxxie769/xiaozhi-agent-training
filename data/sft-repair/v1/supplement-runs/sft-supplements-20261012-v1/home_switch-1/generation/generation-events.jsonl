@@ -1,0 +1,40 @@
+{"event": "sample_generation_started", "seed_id": "T04-R001-P1", "template_id": "T04"}
+{"event": "sample_generation_completed", "seed_id": "T04-R001-P1", "template_id": "T04", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T04-R004-P1", "template_id": "T04"}
+{"event": "sample_generation_completed", "seed_id": "T04-R004-P1", "template_id": "T04", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T06-R007-P1", "template_id": "T06"}
+{"event": "sample_generation_completed", "seed_id": "T06-R007-P1", "template_id": "T06", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T06-R010-P1", "template_id": "T06"}
+{"event": "sample_generation_completed", "seed_id": "T06-R010-P1", "template_id": "T06", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T07-R013-P1", "template_id": "T07"}
+{"event": "sample_generation_completed", "seed_id": "T07-R013-P1", "template_id": "T07", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T07-R016-P1", "template_id": "T07"}
+{"event": "sample_generation_completed", "seed_id": "T07-R016-P1", "template_id": "T07", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T08-R019-P1", "template_id": "T08"}
+{"event": "sample_generation_completed", "seed_id": "T08-R019-P1", "template_id": "T08", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T08-R022-P1", "template_id": "T08"}
+{"event": "sample_generation_error", "seed_id": "T08-R022-P1", "template_id": "T08", "turn": null, "stage": "message_trace", "error_code": "incomplete_home_trace", "exception_type": "GenerationError", "message": "用户轮次与seed不一致", "retryable": false}
+{"event": "sample_generation_started", "seed_id": "T08-R025-P1", "template_id": "T08"}
+{"event": "sample_generation_error", "seed_id": "T08-R025-P1", "template_id": "T08", "turn": null, "stage": "message_trace", "error_code": "incomplete_home_trace", "exception_type": "GenerationError", "message": "用户轮次与seed不一致", "retryable": false}
+{"event": "sample_generation_started", "seed_id": "T11-R028-P1", "template_id": "T11"}
+{"event": "sample_generation_completed", "seed_id": "T11-R028-P1", "template_id": "T11", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T11-R031-P1", "template_id": "T11"}
+{"event": "sample_generation_completed", "seed_id": "T11-R031-P1", "template_id": "T11", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T11-R034-P1", "template_id": "T11"}
+{"event": "sample_generation_completed", "seed_id": "T11-R034-P1", "template_id": "T11", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T17-R037-P1", "template_id": "T17"}
+{"event": "sample_generation_completed", "seed_id": "T17-R037-P1", "template_id": "T17", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T17-R040-P1", "template_id": "T17"}
+{"event": "sample_generation_completed", "seed_id": "T17-R040-P1", "template_id": "T17", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T19-R043-P1", "template_id": "T19"}
+{"event": "sample_generation_completed", "seed_id": "T19-R043-P1", "template_id": "T19", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T19-R046-P1", "template_id": "T19"}
+{"event": "sample_generation_completed", "seed_id": "T19-R046-P1", "template_id": "T19", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T19-R049-P1", "template_id": "T19"}
+{"event": "sample_generation_completed", "seed_id": "T19-R049-P1", "template_id": "T19", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T20-R052-P1", "template_id": "T20"}
+{"event": "sample_generation_completed", "seed_id": "T20-R052-P1", "template_id": "T20", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T20-R055-P1", "template_id": "T20"}
+{"event": "sample_generation_completed", "seed_id": "T20-R055-P1", "template_id": "T20", "attempt": 1}
+{"event": "sample_generation_started", "seed_id": "T20-R058-P1", "template_id": "T20"}
+{"event": "sample_generation_completed", "seed_id": "T20-R058-P1", "template_id": "T20", "attempt": 1}

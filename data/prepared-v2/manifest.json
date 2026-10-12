@@ -1,0 +1,133 @@
+{
+  "schema_version": 2,
+  "status": "SFT 训练数据集已生成，目标模型训练适配待验证。",
+  "framework": "Unsloth + Transformers Trainer (SFT); TRL planned for DPO",
+  "model_family": "Qwen3.5-9B",
+  "checkpoint": {
+    "model_id": "Qwen/Qwen3.5-9B",
+    "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a"
+  },
+  "sources": [
+    {
+      "source_index": 0,
+      "scenario": "weather",
+      "conversations": "weather-conversations.json",
+      "conversations_sha256": "6373a492638f12e901b63b5967045ee020df5e9fbbab36f61bec6dc645094da1",
+      "scores": "weather-scores.json",
+      "scores_sha256": "572ed4ee4ede27f924665ec106476407d188b973a1fe484fed154de2053bb1be",
+      "score_policy": "仅三条问题样本修正版和新增样本采用本轮评分；其余历史评分沿用，未全量重评。",
+      "rubric_version": "mixed_historical_and_revised_factuality",
+      "count": 320,
+      "scored_statuses": {
+        "pass": 300,
+        "fail": 20
+      },
+      "trace_binding": "sha256"
+    },
+    {
+      "source_index": 1,
+      "scenario": "home_switch",
+      "conversations": "home_switch-conversations.json",
+      "conversations_sha256": "da85d6eec90aa231d6623f6affb59b3d0e3f5ce7074907479e024edaa0ff3eac",
+      "scores": "home_switch-scores.json",
+      "scores_sha256": "79532ba47e223f12d9c7324c4eabb24f4ff01ee67f5ff5680c3d7109426175c9",
+      "score_policy": "仅三条问题样本修正版和新增样本采用本轮评分；其余历史评分沿用，未全量重评。",
+      "rubric_version": "mixed_historical_and_revised_factuality",
+      "count": 357,
+      "scored_statuses": {
+        "pass": 325,
+        "fail": 32
+      },
+      "trace_binding": "sha256"
+    }
+  ],
+  "config_sha256": "a50df0a663cb6805f18bb7b7053d5a8d5e3b83e65740c35c26916541217da5ad",
+  "exporter_sha256": "1dbd37e7e18879120180be952a5efd735f4acd9c689ea3fca52b9353237f92fa",
+  "system_prompt_sha256": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+  "weather_tool_source": "../../../../evaluation/weather-tool.json",
+  "weather_tool_source_sha256": "c887ea71da20edaa3c5442289865a4b046782697f2112a74edf54936c514b2db",
+  "weather_tool_provenance": "reconstructed_contract_aligned_with_latest_rules_not_historical_snapshot",
+  "target_tools_source": "../../../../tools.json",
+  "target_tools_sha256": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+  "target_tool_names": [
+    "get_lunar",
+    "get_news_from_newsnow",
+    "get_weather",
+    "handle_exit_intent",
+    "hass_get_state",
+    "hass_set_state",
+    "play_music",
+    "state_hub_snapshot",
+    "task_engine_control"
+  ],
+  "target_tools_provenance_sha256": "92ced4ca2531c3f41e7f3585e0eaecef8e736b24a2209b74cfd96c10d98b13af",
+  "evidence_reviews_sha256": "6df912a765899bae8a9291f286cdcb7d89b04073301135accc11ee330bcf3719",
+  "scoring_sha256": {
+    "eval_scoring.py": "4bc5c72170d2b85c5432a584551f24cd6ad006daf8f9442056994edce4f8b0d3",
+    "home_switch_scoring.py": "47ca29efdbc913e20c66c445a24b96531ba40a6d0bfb38f5d0c47a21bd1771f9",
+    "home_switch_seeds.py": "78643a4535f246ca28adfc40c98c73ae65419edad749808b7a1e754b18ad37b4",
+    "weather_scoring.py": "27279aa10b51bad55bf647ed7d72d1694a25bf4caa6315b91aafcf51cb153308"
+  },
+  "counts": {
+    "home_switch": {
+      "passed_sample": 310,
+      "failed_sample": 31,
+      "quarantine": 16
+    },
+    "weather": {
+      "passed_sample": 296,
+      "failed_sample": 20,
+      "quarantine": 4
+    }
+  },
+  "source_samples": 677,
+  "train_samples": 606,
+  "failed_samples": 51,
+  "quarantine": 20,
+  "duplicates": 0,
+  "quarantine_reasons": {
+    "runtime_injected_messages": 16,
+    "evidence_review:把当前0.0mm扩大成今天没有降雨，整日断言缺少依据。": 1,
+    "evidence_review:第一轮将6天后澄清成往前数第6天，时间方向表述混乱；末轮日期虽正确，仍暂不入库。": 1,
+    "evidence_review:工具只返回城市未匹配，回答却断言该城市并不真实存在，超出该查询的证据范围。": 1,
+    "evidence_review:已承认没有逐小时数据，仍推断下午三点大概率位于偏暖一端；不作为可靠的逐时信息缺失示范。": 1
+  },
+  "evaluation_policy": "测试由独立评估种子生成器负责；不从源轨迹划分测试集。",
+  "training_contract": {
+    "loss_roles": [
+      "assistant"
+    ],
+    "include_assistant_tool_calls": true,
+    "mask_roles": [
+      "system",
+      "user",
+      "tool"
+    ],
+    "mask_tool_definitions": true,
+    "token_masks_verified": false,
+    "target_chat_template_verified": false,
+    "verification_scope": "export_stage_only; subsequent CPU checks are recorded separately in data/validation",
+    "tools_argument_required_in_chat_template": true,
+    "arguments_format": "object",
+    "tools_scope": "all_enabled_non_mcp_server_plugins",
+    "packing": false,
+    "truncation": "reject_overlength_until_reviewed"
+  },
+  "limitations": [
+    "Historical scores and invalid actions use original tool availability; behavior under the unified system and expanded tools has not been re-evaluated.",
+    "Weather tool definition is reconstructed, not a historical snapshot.",
+    "Failed samples retain evidence; possible future DPO use has not been assessed."
+  ],
+  "artifact_sha256": {
+    "audit.jsonl": "8b6c7f25e8d0177d99830565adcc4b6bc2da4a32ba9358ecdb6beadfb21a48d7",
+    "failed.jsonl": "57c953bc3ad0b65f72937c554712a835aabc743695e11a82b656a2f80ff607fa",
+    "inventory.json": "0bc32bc9cbebd18fafac9c4c3940bc7ed159dacbac68bb4711f5ea3502834d65",
+    "metadata.jsonl": "dd3d745b60840aa43d6b70aac4b076f214db69a3190a71ab0a62d23719d5e39e",
+    "report.md": "49b7e9195918b397cdca34fba36ce029f4483c0aaacdd956319c99faa74f90a0",
+    "review.jsonl": "3bc4440c31c9a38a2bbdd38a9b662a22f4f3cb6ecf23f99133a76f28acad1c09",
+    "system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "tools-source.json": "92ced4ca2531c3f41e7f3585e0eaecef8e736b24a2209b74cfd96c10d98b13af",
+    "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "train.jsonl": "9ef402be918d8f12e2b97dbfa6f9fd14d53c65870802d01b8f864e15c86e7b1e"
+  }
+}

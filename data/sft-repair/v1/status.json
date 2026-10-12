@@ -1,0 +1,52 @@
+{
+  "status": "dataset_and_step6_complete",
+  "scorer_validation": {
+    "cases": 16,
+    "repeats": 3,
+    "matched": 48,
+    "planned": 48
+  },
+  "existing_samples_prepared": 556,
+  "existing_samples_rejudged": 3,
+  "existing_samples_edited": 3,
+  "supplement_tasks_generated": 80,
+  "prepared_v2_generated": true,
+  "format_validation_v2_executed": true,
+  "original_artifacts_unchanged": true,
+  "external_destination_approved": true,
+  "approval": "已授权 DeepSeek；最新范围限定为问题样本及新增样本，不继续全量重评。",
+  "full_recheck": {
+    "status": "interrupted_by_user",
+    "reason": "用户要求取消全量重评，只评分有问题的及新样本",
+    "weather_shards_completed": 7,
+    "weather_samples_completed_in_memory": 247,
+    "scores_persisted": false,
+    "home_started": false,
+    "note": "分片评分保存在中途进程内，未形成完整 scores.json；不用于新版训练集，不补跑。"
+  },
+  "existing_samples_to_rejudge": 3,
+  "supplement_seed_tasks_prepared": 80,
+  "corrected_samples_passed": 3,
+  "supplement_conversations_saved": 78,
+  "supplement_generation_errors": 2,
+  "supplement_evidence_reviewed": 78,
+  "supplement_review_flags": 11,
+  "train_samples": 606,
+  "new_training_samples": 50,
+  "original_training_unchanged": 553,
+  "original_training_revised": 3,
+  "supplement_scored": 78,
+  "supplement_automatic_pass": 54,
+  "supplement_automatic_fail": 24,
+  "new_dispositions": {
+    "passed_sample": 50,
+    "failed_sample": 23,
+    "quarantine": 5,
+    "duplicate": 0
+  },
+  "validation": "data/validation/sft-repair-v1/validation.json",
+  "max_tokens": 6848,
+  "training_started": false,
+  "dpo_pairs_created": false,
+  "note": "其余旧评分沿用；全量重评已中止且中途结果未用于新版数据。步骤6为CPU格式验收，未重新训练或评价SFT模型效果。"
+}

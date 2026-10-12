@@ -1,0 +1,6 @@
+{
+  "weather": {
+    "returncode": -15,
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/recheck/weather/scores.json"
+  }
+}

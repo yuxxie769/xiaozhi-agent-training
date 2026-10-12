@@ -1,0 +1,23 @@
+[生成] T04-R001-P1
+[生成] T04-R004-P1
+[生成] T06-R007-P1
+[生成] T06-R010-P1
+[生成] T07-R013-P1
+[生成] T07-R016-P1
+[生成] T08-R019-P1
+[生成] T08-R022-P1
+[生成错误] T08-R022-P1 incomplete_home_trace：用户轮次与seed不一致
+[生成] T08-R025-P1
+[生成错误] T08-R025-P1 incomplete_home_trace：用户轮次与seed不一致
+[生成] T11-R028-P1
+[生成] T11-R031-P1
+[生成] T11-R034-P1
+[生成] T17-R037-P1
+[生成] T17-R040-P1
+[生成] T19-R043-P1
+[生成] T19-R046-P1
+[生成] T19-R049-P1
+[生成] T20-R052-P1
+[生成] T20-R055-P1
+[生成] T20-R058-P1
+生成完成：18/20；报告：/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/sft-supplements-20261012-v1/home_switch-1/generation

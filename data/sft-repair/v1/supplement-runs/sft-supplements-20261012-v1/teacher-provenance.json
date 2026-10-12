@@ -1,0 +1,32 @@
+{
+  "selected_text_client_identity": {
+    "provider": "openai",
+    "model": "deepseek-flash",
+    "base_url": "https://api.deepseek.com",
+    "max_tokens": "",
+    "temperature": "",
+    "top_p": "",
+    "frequency_penalty": "",
+    "stream": "",
+    "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+    "default_headers_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+    "allow_message_extras_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+    "fingerprint": "17a29193349e6241ce924d4f80465788b6b4e698d7b558c07538a44440e3be75"
+  },
+  "explicit_effective_identity": {
+    "provider": "openai",
+    "model": "deepseek-flash",
+    "base_url": "https://api.deepseek.com",
+    "max_tokens": null,
+    "temperature": null,
+    "top_p": null,
+    "frequency_penalty": null,
+    "stream": false,
+    "timeout": 300,
+    "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+    "default_headers_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "allow_message_extras_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+    "fingerprint": "8f95e2d63bc347bb5916a16f88cbd43febebb052a687f96ada22ff20cb5aa5f2"
+  },
+  "note": "空字符串通过原 provider 解析成实际有效参数；身份指纹不同，不冒充原始配置指纹相同。"
+}

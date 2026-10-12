@@ -1,0 +1,206 @@
+{
+  "status": "selected_example_review_complete",
+  "reviewer": "assistant_reading_source_evidence",
+  "selected": 24,
+  "no_issue_observed": 19,
+  "clear_wording_issue": 1,
+  "needs_review": 2,
+  "style_suggestions": 2,
+  "historical_scores_changed": false,
+  "training_data_changed": false,
+  "samples": [
+    {
+      "id": "home_switch:T01-G003-P2",
+      "train_line": 8,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "先读 off、执行开启、回读 on 后确认。"
+    },
+    {
+      "id": "home_switch:T04-G003-P2",
+      "train_line": 53,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "第一次关闭后回读；第二次要求相同动作时确认已达目标，不重复控制。"
+    },
+    {
+      "id": "home_switch:T05-G003-P2",
+      "train_line": 68,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "改口后切换到新设备；两个设备均已达关闭目标，未下发多余控制。"
+    },
+    {
+      "id": "home_switch:T06-G003-P2",
+      "train_line": 83,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "“把它关闭”正确沿用上一轮书房插座；控制后回读 off。"
+    },
+    {
+      "id": "home_switch:T07-G003-P2",
+      "train_line": 98,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "style",
+      "observation": "先列候选、明确目标后判断已关闭；末尾又猜用户是否指另一盏灯，建议精简。",
+      "evidence": {
+        "message_index_zero_based": 8,
+        "quote": "如果其实想关的是卧室台灯",
+        "reason": "用户已明确目标，额外猜测会使示范啰嗦、分散目标。"
+      }
+    },
+    {
+      "id": "home_switch:T08-G004-P2",
+      "train_line": 115,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "依次补齐设备与动作；目标已开启时未重复控制。"
+    },
+    {
+      "id": "home_switch:T10-G003-P2",
+      "train_line": 139,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "澄清后沿用前轮有效读取，关闭正确设备并回读 off。"
+    },
+    {
+      "id": "home_switch:T11-G003-P2",
+      "train_line": 154,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "style",
+      "observation": "“第二只”正确对应自己的列表第二项；末尾又引入其他目标，建议精简。",
+      "evidence": {
+        "message_index_zero_based": 8,
+        "quote": "如果你其实想关的是正在亮着的",
+        "reason": "列表选择已明确，无需再引入其他目标；灯的 on 解释也宜沿用状态用语。"
+      }
+    },
+    {
+      "id": "home_switch:T12-G003-P2",
+      "train_line": 168,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "同轮改口以最后的关闭要求为准；已关闭则不操作。"
+    },
+    {
+      "id": "home_switch:T14-G004-P2",
+      "train_line": 196,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "issue",
+      "observation": "控制对象及最终回读正确，但候选说明把其他房间设备写成“书房内”。",
+      "evidence": {
+        "message_index_zero_based": 4,
+        "quote": "书房内还有书房台灯（当前关闭）、客厅展柜灯",
+        "reason": "preset 明确客厅展柜灯 room=客厅，卧室台灯 room=卧室。候选说明中的房间归属错误。"
+      }
+    },
+    {
+      "id": "home_switch:T17-G003-P2",
+      "train_line": 230,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "明确否定动作后不调用工具。"
+    },
+    {
+      "id": "home_switch:T19-G003-P2",
+      "train_line": 256,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "读取错误时不控制、不自动重试；用户要求重试后重新读取并判断无需控制。"
+    },
+    {
+      "id": "home_switch:T20-G003-P2",
+      "train_line": 267,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "控制报错后不声称成功；用户要求重试后控制并回读确认。"
+    },
+    {
+      "id": "weather:S02-G03-P2",
+      "train_line": 295,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "6 天后映射 10 月 6 日，晴及 13～23° 与对应日期条目一致。"
+    },
+    {
+      "id": "weather:S05-G04-P2",
+      "train_line": 336,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "3 天后气温对应 10 月 3 日 19～22°，并回答了谜语请求。"
+    },
+    {
+      "id": "weather:S06-G03-P2",
+      "train_line": 347,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "连续两天对应 10 月 3、4 日，两组气温准确。"
+    },
+    {
+      "id": "weather:S11-G03-P2",
+      "train_line": 421,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "review",
+      "observation": "城市澄清与日期、温度对应正确；“当天不用带伞”的确定语气建议复核。",
+      "evidence": {
+        "message_index_zero_based": 6,
+        "quote": "当天不用带伞",
+        "reason": "工具只给出多云预报；建议改用有条件的建议。不是新评分失败判定。"
+      }
+    },
+    {
+      "id": "weather:S12-G04-P2",
+      "train_line": 438,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "工具返回同名歧义后澄清行政区，重查北京朝阳，日期气温正确。"
+    },
+    {
+      "id": "weather:S15-G03-P2",
+      "train_line": 464,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "review",
+      "observation": "不存在城市先纠正后重查；日期预报数值正确，但合并了工具开头与明细的不同时间表述，建议复核。",
+      "evidence": {
+        "message_index_zero_based": 8,
+        "quote": "比昨天凉爽很多",
+        "reason": "工具摘要含相对时间与 20°，日期明细给明天 8～21°；示范合并描述，时间归属需要复核，不能直接判为虚构。"
+      }
+    },
+    {
+      "id": "weather:S19-G03-P2",
+      "train_line": 493,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "更换日期时保持北京，复用已有报告，今天与 6 天后的数值正确。"
+    },
+    {
+      "id": "weather:S20-G03-P2",
+      "train_line": 508,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "更换城市后保持明天；指出工具摘要与日期明细冲突，以具体日期为准。"
+    },
+    {
+      "id": "weather:S21-G04-P2",
+      "train_line": 523,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "更换城市仍保持 5 天后，深圳 21～30°、广州 21～29° 对应正确。"
+    },
+    {
+      "id": "weather:S22-G03-P2",
+      "train_line": 535,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "只报告工具已有日预报，明确无法回答降雨持续小时数。"
+    },
+    {
+      "id": "weather:S24-G03-P2",
+      "train_line": 549,
+      "scope": "逐条阅读所选示范的用户、工具调用、工具返回和答复；不代表全量语义复评",
+      "status": "no_issue_observed",
+      "observation": "澄清中用户取消后停止查询。"
+    }
+  ]
+}

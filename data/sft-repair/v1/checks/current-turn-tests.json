@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "tests": {
+    "test_sft_recheck.py": 3,
+    "test_sft_repair_scope.py": 4,
+    "test_prepare_training_data.py": 17,
+    "test_prepared_dataset.py": 2,
+    "test_sft_supplements.py": 3,
+    "test_training_format.py": 8,
+    "test_repaired_dataset.py": 4
+  },
+  "total": 41,
+  "note": "格式测试使用本地tokenizer环境，实际导出复现用后端Python；其他使用python3。后端既有回归记录另见backend-tests.json。"
+}

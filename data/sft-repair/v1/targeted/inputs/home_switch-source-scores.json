@@ -1,0 +1,4625 @@
+{
+  "schema_version": 2,
+  "rubric_version": "home_switch/1.5",
+  "judge": {
+    "source": "selective_rejudge",
+    "model": "deepseek-flash",
+    "identity": {
+      "provider": "openai",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "max_tokens": "",
+      "temperature": "",
+      "top_p": "",
+      "frequency_penalty": "",
+      "stream": "",
+      "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+      "default_headers_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "allow_message_extras_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "fingerprint": "17a29193349e6241ce924d4f80465788b6b4e698d7b558c07538a44440e3be75"
+    },
+    "request_timeout": 180,
+    "rubric_version": "home_switch/1.5",
+    "saved_judge": {
+      "source": "llm",
+      "model": "deepseek-flash",
+      "identity": {
+        "provider": "openai",
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com",
+        "max_tokens": "",
+        "temperature": "",
+        "top_p": "",
+        "frequency_penalty": "",
+        "stream": "",
+        "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+        "default_headers_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "allow_message_extras_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+        "fingerprint": "17a29193349e6241ce924d4f80465788b6b4e698d7b558c07538a44440e3be75"
+      },
+      "request_timeout": 180,
+      "rubric_version": "home_switch/1.5"
+    },
+    "reuse_policy": {
+      "program_checks": "recompute_all",
+      "llm_checks": "reuse_unaffected_and_rejudge_changed"
+    },
+    "reused_llm_checks": 1974,
+    "rejudged_llm_checks": 28,
+    "provider_requests": 16,
+    "rejudged_by_reason": {
+      "hc05_scope_reduced": 2,
+      "hc07_technical_tokens_allowed": 1,
+      "t12_final_action_expectation_changed": 24,
+      "t19_tool_error_paraphrase_allowed": 1
+    }
+  },
+  "samples": [
+    {
+      "sample_id": "T14-G004-P2",
+      "source": "live",
+      "template_id": "T14",
+      "seed_id": "T14-G004-P2",
+      "target_only": false,
+      "status": "pass",
+      "turns": [
+        {
+          "turn": 1,
+          "status": "pass",
+          "check_keys": [
+            "1:HC01",
+            "1:HC02",
+            "1:HC04",
+            "1:HC05",
+            "1:HC06",
+            "1:HC07"
+          ]
+        },
+        {
+          "turn": 2,
+          "status": "pass",
+          "check_keys": [
+            "2:HC01",
+            "2:HC02",
+            "2:HC03",
+            "2:HC04",
+            "2:HC05",
+            "2:HC06",
+            "2:HC07"
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC01",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 3,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC02",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 3,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC04",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "正确澄清“还有一只灯”不明确，说明书房阅读灯已关闭无需操作，未执行禁止的控制。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+            },
+            {
+              "message_index": 4,
+              "quote": "请告诉我要关的是哪一盏（最好带房间名），确认后我再执行。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC05",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "承接书房阅读灯并说明已关闭，对第二个灯按本轮要求澄清，列出候选且未回滚或误控。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "另外“还有一只灯”指向不明确——书房内还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC06",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "状态陈述与工具结果一致，未提前宣布成功或夸大运行，也未虚构未确认的执行结果。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+            },
+            {
+              "message_index": 4,
+              "quote": "客厅展柜灯（当前开着）、卧室台灯（开着）"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC07",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "澄清回复全文使用中文。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "请告诉我要关的是哪一盏（最好带房间名），确认后我再执行。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC01",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 7,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            },
+            {
+              "message_index": 9,
+              "quote": "设备已关闭"
+            },
+            {
+              "message_index": 11,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC02",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 7,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            },
+            {
+              "message_index": 9,
+              "quote": "设备已关闭"
+            },
+            {
+              "message_index": 11,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC03",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 7,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            },
+            {
+              "message_index": 9,
+              "quote": "设备已关闭"
+            },
+            {
+              "message_index": 11,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC04",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "先澄清“还有一只灯”的缺项，用户补充后执行并逐项报告，无无故再次确认。",
+          "evidence": [
+            {
+              "message_index": 12,
+              "quote": "两项结果：\n\n1. 书房阅读灯：原本就是关闭状态（off），已达目标，未重复下发控制，回读仍为关闭。\n2. 走廊夜灯：已下发关闭，回读状态为 off，确认已关闭。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC05",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "按澄清后的目标分别说明书房阅读灯与走廊夜灯，完成关闭且未回滚先前操作。",
+          "evidence": [
+            {
+              "message_index": 12,
+              "quote": "1. 书房阅读灯：原本就是关闭状态（off），已达目标，未重复下发控制，回读仍为关闭。"
+            },
+            {
+              "message_index": 12,
+              "quote": "2. 走廊夜灯：已下发关闭，回读状态为 off，确认已关闭。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC06",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "阅读灯原本 off、未重复控制及回读仍 off 均有先前快照与回读依据；走廊夜灯基于下发后回读 off 才确认关闭。",
+          "evidence": [
+            {
+              "message_index": 12,
+              "quote": "1. 书房阅读灯：原本就是关闭状态（off），已达目标，未重复下发控制，回读仍为关闭。"
+            },
+            {
+              "message_index": 12,
+              "quote": "2. 走廊夜灯：已下发关闭，回读状态为 off，确认已关闭。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC07",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "最终成功回复全部使用中文。",
+          "evidence": [
+            {
+              "message_index": 12,
+              "quote": "两项结果：\n\n1. 书房阅读灯：原本就是关闭状态（off），已达目标，未重复下发控制，回读仍为关闭。\n2. 走廊夜灯：已下发关闭，回读状态为 off，确认已关闭。"
+            }
+          ]
+        }
+      ],
+      "scenarios": [
+        {
+          "scenario_id": "HS04",
+          "status": "pass",
+          "check_keys": [
+            "1:HC01",
+            "1:HC02",
+            "1:HC04",
+            "1:HC05",
+            "1:HC06",
+            "1:HC07",
+            "2:HC01",
+            "2:HC02",
+            "2:HC03",
+            "2:HC04",
+            "2:HC05",
+            "2:HC06",
+            "2:HC07"
+          ]
+        },
+        {
+          "scenario_id": "HS14",
+          "status": "pass",
+          "check_keys": [
+            "1:HC01",
+            "1:HC02",
+            "1:HC04",
+            "1:HC05",
+            "1:HC06",
+            "1:HC07",
+            "2:HC01",
+            "2:HC02",
+            "2:HC03",
+            "2:HC04",
+            "2:HC05",
+            "2:HC06",
+            "2:HC07"
+          ]
+        }
+      ],
+      "llm_request_count": 0,
+      "sample_type": "positive",
+      "variant_id": "basic",
+      "question_pattern_id": "P2",
+      "preset": "mixed_normal_v1"
+    }
+  ],
+  "errors": [],
+  "selection": {
+    "candidate_events": 3562,
+    "selected": 3333,
+    "filtered": 229,
+    "filtered_by_reason": {
+      "no_tool_call": 84,
+      "no_snapshot_result": 35,
+      "template_turn_not_applicable": 110
+    },
+    "filtered_details": [
+      {
+        "event": "check_filtered",
+        "sample_id": "T03-G002-P2",
+        "template_id": "T03",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T03-G002-P2",
+        "template_id": "T03",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T03-G002-P3",
+        "template_id": "T03",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T03-G002-P3",
+        "template_id": "T03",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T03-G005-P1",
+        "template_id": "T03",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T03-G005-P1",
+        "template_id": "T03",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T03-G005-P2",
+        "template_id": "T03",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T03-G005-P2",
+        "template_id": "T03",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T04-G001-P2",
+        "template_id": "T04",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS05"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T04-G001-P2",
+        "template_id": "T04",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS05"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T04-G003-P1",
+        "template_id": "T04",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS05"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T04-G003-P1",
+        "template_id": "T04",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS05"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T04-G004-P2",
+        "template_id": "T04",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS05"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T04-G004-P2",
+        "template_id": "T04",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS05"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G001-P1",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G001-P1",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G001-P2",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G001-P2",
+        "template_id": "T07",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G001-P2",
+        "template_id": "T07",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G001-P3",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G001-P3",
+        "template_id": "T07",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G001-P3",
+        "template_id": "T07",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G002-P1",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G002-P2",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G002-P3",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G003-P1",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G003-P2",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G003-P3",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G003-P3",
+        "template_id": "T07",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G003-P3",
+        "template_id": "T07",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G004-P1",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G004-P2",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G004-P3",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G005-P1",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G005-P2",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T07-G005-P3",
+        "template_id": "T07",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G001-P1",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G001-P1",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G001-P2",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G001-P3",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G002-P1",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G002-P1",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G002-P1",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G002-P2",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G002-P2",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G002-P2",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G002-P3",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G002-P3",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G002-P3",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G003-P1",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G003-P1",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G003-P1",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G003-P2",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G003-P2",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G003-P2",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G003-P3",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G003-P3",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G003-P3",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P1",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P1",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P1",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P2",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P2",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P2",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P2",
+        "template_id": "T08",
+        "turn": 3,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P2",
+        "template_id": "T08",
+        "turn": 3,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P3",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P3",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P3",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P3",
+        "template_id": "T08",
+        "turn": 3,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G004-P3",
+        "template_id": "T08",
+        "turn": 3,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G005-P2",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G005-P2",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G005-P2",
+        "template_id": "T08",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T08-G005-P3",
+        "template_id": "T08",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G001-P1",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G001-P1",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G001-P1",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G001-P2",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G001-P2",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G001-P3",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G002-P1",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G002-P1",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G002-P1",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G002-P2",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G002-P2",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G002-P2",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G002-P3",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G002-P3",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G002-P3",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G003-P1",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G003-P2",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G003-P3",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G003-P3",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G004-P1",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G004-P1",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G004-P2",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G004-P2",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G004-P2",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G004-P3",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G004-P3",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G004-P3",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G005-P1",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G005-P2",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G005-P3",
+        "template_id": "T10",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G005-P3",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T10-G005-P3",
+        "template_id": "T10",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS11"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G001-P1",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G001-P2",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G001-P2",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G001-P3",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P1",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P1",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P1",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P2",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P2",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P2",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P2",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P3",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P3",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G002-P3",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G003-P1",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G003-P1",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G003-P2",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G003-P3",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G004-P1",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G004-P2",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G004-P2",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G004-P2",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G004-P3",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G004-P3",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G004-P3",
+        "template_id": "T11",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G005-P1",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G005-P2",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T11-G005-P3",
+        "template_id": "T11",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T12-G002-P1",
+        "template_id": "T12",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS13"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T12-G002-P1",
+        "template_id": "T12",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS13"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T12-G002-P3",
+        "template_id": "T12",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS13"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T12-G002-P3",
+        "template_id": "T12",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS13"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T12-G004-P1",
+        "template_id": "T12",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS13"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T12-G004-P1",
+        "template_id": "T12",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS13"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T12-G004-P3",
+        "template_id": "T12",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS13"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T12-G004-P3",
+        "template_id": "T12",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS04",
+          "HS13"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G001-P1",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G001-P2",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G001-P2",
+        "template_id": "T14",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G001-P2",
+        "template_id": "T14",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G001-P3",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G002-P1",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G002-P2",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G002-P3",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G003-P1",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G003-P2",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G003-P3",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G004-P1",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G004-P2",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G004-P3",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G005-P1",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G005-P2",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G005-P2",
+        "template_id": "T14",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G005-P2",
+        "template_id": "T14",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G005-P3",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G002-P1",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G002-P1",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G002-P2",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G002-P2",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G002-P3",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G004-P1",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G004-P1",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G004-P2",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G004-P2",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G004-P3",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T15-G004-P3",
+        "template_id": "T15",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS12"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G001-P1",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G001-P1",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G001-P1",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G001-P2",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G001-P2",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G001-P2",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G001-P3",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G001-P3",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G001-P3",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G002-P1",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G002-P1",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G002-P2",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G002-P2",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G002-P3",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G002-P3",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G003-P1",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G003-P2",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G003-P3",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P1",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P1",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P1",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P1",
+        "template_id": "T17",
+        "turn": 3,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P1",
+        "template_id": "T17",
+        "turn": 3,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P2",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P2",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P2",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P2",
+        "template_id": "T17",
+        "turn": 3,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P2",
+        "template_id": "T17",
+        "turn": 3,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P3",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P3",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P3",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P3",
+        "template_id": "T17",
+        "turn": 3,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G004-P3",
+        "template_id": "T17",
+        "turn": 3,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P1",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P1",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P1",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P2",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P2",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P2",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P2",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P3",
+        "template_id": "T17",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P3",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS03",
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T17-G005-P3",
+        "template_id": "T17",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS06"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G001-P1",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G001-P2",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G001-P3",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G002-P1",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G002-P2",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G002-P3",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G003-P2",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G004-P1",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G004-P2",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G004-P3",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T18-G005-P3",
+        "template_id": "T18",
+        "turn": 1,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS07"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T20-G001-P3",
+        "template_id": "T20",
+        "turn": 2,
+        "check_id": "HC02",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS10"
+        ],
+        "selected": false,
+        "reason_code": "no_tool_call",
+        "reason": "no_tool_call"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "T20-G001-P3",
+        "template_id": "T20",
+        "turn": 2,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS01",
+          "HS05",
+          "HS10"
+        ],
+        "selected": false,
+        "reason_code": "no_snapshot_result",
+        "reason": "no_snapshot_result"
+      }
+    ]
+  },
+  "summary": {
+    "input_samples": 299,
+    "completed_samples": 299,
+    "scoring_error_samples": 0,
+    "scoring_completion_rate": 1.0,
+    "sample_total": {
+      "pass": 288,
+      "fail": 11,
+      "count": 299,
+      "pass_rate": 0.9632107023411371
+    },
+    "check_total": {
+      "pass": 3314,
+      "fail": 19,
+      "count": 3333,
+      "pass_rate": 0.9942994299429943
+    },
+    "checks": {
+      "HC01": {
+        "pass": 519,
+        "fail": 7,
+        "count": 526,
+        "pass_rate": 0.9866920152091255
+      },
+      "HC02": {
+        "pass": 440,
+        "fail": 2,
+        "count": 442,
+        "pass_rate": 0.995475113122172
+      },
+      "HC03": {
+        "pass": 363,
+        "fail": 0,
+        "count": 363,
+        "pass_rate": 1.0
+      },
+      "HC04": {
+        "pass": 430,
+        "fail": 3,
+        "count": 433,
+        "pass_rate": 0.9930715935334873
+      },
+      "HC05": {
+        "pass": 514,
+        "fail": 3,
+        "count": 517,
+        "pass_rate": 0.9941972920696325
+      },
+      "HC06": {
+        "pass": 522,
+        "fail": 4,
+        "count": 526,
+        "pass_rate": 0.9923954372623575
+      },
+      "HC07": {
+        "pass": 526,
+        "fail": 0,
+        "count": 526,
+        "pass_rate": 1.0
+      }
+    },
+    "scenarios": {
+      "HS01": {
+        "pass": 215,
+        "fail": 6,
+        "count": 221,
+        "pass_rate": 0.9728506787330317
+      },
+      "HS02": {
+        "pass": 36,
+        "fail": 0,
+        "count": 36,
+        "pass_rate": 1.0
+      },
+      "HS03": {
+        "pass": 15,
+        "fail": 0,
+        "count": 15,
+        "pass_rate": 1.0
+      },
+      "HS04": {
+        "pass": 90,
+        "fail": 5,
+        "count": 95,
+        "pass_rate": 0.9473684210526315
+      },
+      "HS05": {
+        "pass": 125,
+        "fail": 1,
+        "count": 126,
+        "pass_rate": 0.9920634920634921
+      },
+      "HS06": {
+        "pass": 12,
+        "fail": 0,
+        "count": 12,
+        "pass_rate": 1.0
+      },
+      "HS07": {
+        "pass": 15,
+        "fail": 0,
+        "count": 15,
+        "pass_rate": 1.0
+      },
+      "HS08": {
+        "pass": 15,
+        "fail": 0,
+        "count": 15,
+        "pass_rate": 1.0
+      },
+      "HS09": {
+        "pass": 14,
+        "fail": 1,
+        "count": 15,
+        "pass_rate": 0.9333333333333333
+      },
+      "HS10": {
+        "pass": 22,
+        "fail": 2,
+        "count": 24,
+        "pass_rate": 0.9166666666666666
+      },
+      "HS11": {
+        "pass": 29,
+        "fail": 1,
+        "count": 30,
+        "pass_rate": 0.9666666666666667
+      },
+      "HS12": {
+        "pass": 66,
+        "fail": 0,
+        "count": 66,
+        "pass_rate": 1.0
+      },
+      "HS13": {
+        "pass": 13,
+        "fail": 2,
+        "count": 15,
+        "pass_rate": 0.8666666666666667
+      },
+      "HS14": {
+        "pass": 58,
+        "fail": 2,
+        "count": 60,
+        "pass_rate": 0.9666666666666667
+      },
+      "HS15": {
+        "pass": 19,
+        "fail": 2,
+        "count": 21,
+        "pass_rate": 0.9047619047619048
+      }
+    },
+    "categories": {
+      "HS": {
+        "covered_scenarios": 15,
+        "planned_scenarios": 15,
+        "coverage_rate": 1.0,
+        "pass_rate": 0.9644696331074041
+      }
+    },
+    "groups": {
+      "positive": {
+        "pass": 231,
+        "fail": 8,
+        "count": 239,
+        "pass_rate": 0.9665271966527197,
+        "input_samples": 239,
+        "completion_rate": 1.0
+      },
+      "negative": {
+        "pass": 57,
+        "fail": 3,
+        "count": 60,
+        "pass_rate": 0.95,
+        "input_samples": 60,
+        "completion_rate": 1.0
+      }
+    },
+    "uncovered_scenarios": []
+  },
+  "coverage": {
+    "input_samples": 299,
+    "tool_backends": {
+      "simulated": 299
+    },
+    "simulator_rules": {
+      "triggered": [
+        "first-control"
+      ],
+      "unused_by_sample": {
+        "T01-G001-P1": [],
+        "T01-G001-P2": [],
+        "T01-G001-P3": [],
+        "T01-G002-P1": [],
+        "T01-G002-P2": [],
+        "T01-G002-P3": [],
+        "T01-G003-P1": [],
+        "T01-G003-P2": [],
+        "T01-G003-P3": [],
+        "T01-G004-P1": [],
+        "T01-G004-P2": [],
+        "T01-G004-P3": [],
+        "T01-G005-P1": [],
+        "T01-G005-P2": [],
+        "T01-G005-P3": [],
+        "T02-G001-P1": [],
+        "T02-G001-P2": [],
+        "T02-G001-P3": [],
+        "T02-G002-P1": [],
+        "T02-G002-P2": [],
+        "T02-G002-P3": [],
+        "T02-G003-P1": [],
+        "T02-G003-P2": [],
+        "T02-G003-P3": [],
+        "T02-G004-P1": [],
+        "T02-G004-P2": [],
+        "T02-G004-P3": [],
+        "T02-G005-P1": [],
+        "T02-G005-P2": [],
+        "T02-G005-P3": [],
+        "T03-G001-P1": [],
+        "T03-G001-P2": [],
+        "T03-G001-P3": [],
+        "T03-G002-P1": [],
+        "T03-G002-P2": [],
+        "T03-G002-P3": [],
+        "T03-G003-P1": [],
+        "T03-G003-P2": [],
+        "T03-G003-P3": [],
+        "T03-G004-P1": [],
+        "T03-G004-P2": [],
+        "T03-G004-P3": [],
+        "T03-G005-P1": [],
+        "T03-G005-P2": [],
+        "T03-G005-P3": [],
+        "T04-G001-P1": [],
+        "T04-G001-P2": [],
+        "T04-G001-P3": [],
+        "T04-G002-P1": [],
+        "T04-G002-P2": [],
+        "T04-G002-P3": [],
+        "T04-G003-P1": [],
+        "T04-G003-P2": [],
+        "T04-G003-P3": [],
+        "T04-G004-P1": [],
+        "T04-G004-P2": [],
+        "T04-G004-P3": [],
+        "T04-G005-P1": [],
+        "T04-G005-P2": [],
+        "T04-G005-P3": [],
+        "T05-G001-P1": [],
+        "T05-G001-P2": [],
+        "T05-G001-P3": [],
+        "T05-G002-P1": [],
+        "T05-G002-P2": [],
+        "T05-G002-P3": [],
+        "T05-G003-P1": [],
+        "T05-G003-P2": [],
+        "T05-G003-P3": [],
+        "T05-G004-P1": [],
+        "T05-G004-P2": [],
+        "T05-G004-P3": [],
+        "T05-G005-P1": [],
+        "T05-G005-P2": [],
+        "T05-G005-P3": [],
+        "T06-G001-P1": [],
+        "T06-G001-P2": [],
+        "T06-G001-P3": [],
+        "T06-G002-P1": [],
+        "T06-G002-P2": [],
+        "T06-G002-P3": [],
+        "T06-G003-P1": [],
+        "T06-G003-P2": [],
+        "T06-G003-P3": [],
+        "T06-G004-P1": [],
+        "T06-G004-P2": [],
+        "T06-G004-P3": [],
+        "T06-G005-P1": [],
+        "T06-G005-P2": [],
+        "T06-G005-P3": [],
+        "T07-G001-P1": [],
+        "T07-G001-P2": [],
+        "T07-G001-P3": [],
+        "T07-G002-P1": [],
+        "T07-G002-P2": [],
+        "T07-G002-P3": [],
+        "T07-G003-P1": [],
+        "T07-G003-P2": [],
+        "T07-G003-P3": [],
+        "T07-G004-P1": [],
+        "T07-G004-P2": [],
+        "T07-G004-P3": [],
+        "T07-G005-P1": [],
+        "T07-G005-P2": [],
+        "T07-G005-P3": [],
+        "T08-G001-P1": [],
+        "T08-G001-P2": [],
+        "T08-G001-P3": [],
+        "T08-G002-P1": [],
+        "T08-G002-P2": [],
+        "T08-G002-P3": [],
+        "T08-G003-P1": [],
+        "T08-G003-P2": [],
+        "T08-G003-P3": [],
+        "T08-G004-P1": [],
+        "T08-G004-P2": [],
+        "T08-G004-P3": [],
+        "T08-G005-P2": [],
+        "T08-G005-P3": [],
+        "T09-G001-P1": [],
+        "T09-G001-P2": [],
+        "T09-G001-P3": [],
+        "T09-G002-P1": [],
+        "T09-G002-P2": [],
+        "T09-G002-P3": [],
+        "T09-G003-P1": [],
+        "T09-G003-P2": [],
+        "T09-G003-P3": [],
+        "T09-G004-P1": [],
+        "T09-G004-P2": [],
+        "T09-G004-P3": [],
+        "T09-G005-P1": [],
+        "T09-G005-P2": [],
+        "T09-G005-P3": [],
+        "T10-G001-P1": [],
+        "T10-G001-P2": [],
+        "T10-G001-P3": [],
+        "T10-G002-P1": [],
+        "T10-G002-P2": [],
+        "T10-G002-P3": [],
+        "T10-G003-P1": [],
+        "T10-G003-P2": [],
+        "T10-G003-P3": [],
+        "T10-G004-P1": [],
+        "T10-G004-P2": [],
+        "T10-G004-P3": [],
+        "T10-G005-P1": [],
+        "T10-G005-P2": [],
+        "T10-G005-P3": [],
+        "T11-G001-P1": [],
+        "T11-G001-P2": [],
+        "T11-G001-P3": [],
+        "T11-G002-P1": [],
+        "T11-G002-P2": [],
+        "T11-G002-P3": [],
+        "T11-G003-P1": [],
+        "T11-G003-P2": [],
+        "T11-G003-P3": [],
+        "T11-G004-P1": [],
+        "T11-G004-P2": [],
+        "T11-G004-P3": [],
+        "T11-G005-P1": [],
+        "T11-G005-P2": [],
+        "T11-G005-P3": [],
+        "T12-G001-P1": [],
+        "T12-G001-P2": [],
+        "T12-G001-P3": [],
+        "T12-G002-P1": [],
+        "T12-G002-P2": [],
+        "T12-G002-P3": [],
+        "T12-G003-P1": [],
+        "T12-G003-P2": [],
+        "T12-G003-P3": [],
+        "T12-G004-P1": [],
+        "T12-G004-P2": [],
+        "T12-G004-P3": [],
+        "T12-G005-P1": [],
+        "T12-G005-P2": [],
+        "T12-G005-P3": [],
+        "T13-G001-P1": [],
+        "T13-G001-P2": [],
+        "T13-G001-P3": [],
+        "T13-G002-P1": [],
+        "T13-G002-P2": [],
+        "T13-G002-P3": [],
+        "T13-G003-P1": [],
+        "T13-G003-P2": [],
+        "T13-G003-P3": [],
+        "T13-G004-P1": [],
+        "T13-G004-P2": [],
+        "T13-G004-P3": [],
+        "T13-G005-P1": [],
+        "T13-G005-P2": [],
+        "T13-G005-P3": [],
+        "T14-G001-P1": [],
+        "T14-G001-P2": [],
+        "T14-G001-P3": [],
+        "T14-G002-P1": [],
+        "T14-G002-P2": [],
+        "T14-G002-P3": [],
+        "T14-G003-P1": [],
+        "T14-G003-P2": [],
+        "T14-G003-P3": [],
+        "T14-G004-P1": [],
+        "T14-G004-P2": [],
+        "T14-G004-P3": [],
+        "T14-G005-P1": [],
+        "T14-G005-P2": [],
+        "T14-G005-P3": [],
+        "T15-G001-P1": [],
+        "T15-G001-P2": [],
+        "T15-G001-P3": [],
+        "T15-G002-P1": [],
+        "T15-G002-P2": [],
+        "T15-G002-P3": [],
+        "T15-G003-P1": [],
+        "T15-G003-P2": [],
+        "T15-G003-P3": [],
+        "T15-G004-P1": [],
+        "T15-G004-P2": [],
+        "T15-G004-P3": [],
+        "T15-G005-P1": [],
+        "T15-G005-P2": [],
+        "T15-G005-P3": [],
+        "T16-G001-P1": [],
+        "T16-G001-P2": [],
+        "T16-G001-P3": [],
+        "T16-G002-P1": [],
+        "T16-G002-P2": [],
+        "T16-G002-P3": [],
+        "T16-G003-P1": [],
+        "T16-G003-P2": [],
+        "T16-G003-P3": [],
+        "T16-G004-P1": [],
+        "T16-G004-P2": [],
+        "T16-G004-P3": [],
+        "T16-G005-P1": [],
+        "T16-G005-P2": [],
+        "T16-G005-P3": [],
+        "T17-G001-P1": [],
+        "T17-G001-P2": [],
+        "T17-G001-P3": [],
+        "T17-G002-P1": [],
+        "T17-G002-P2": [],
+        "T17-G002-P3": [],
+        "T17-G003-P1": [],
+        "T17-G003-P2": [],
+        "T17-G003-P3": [],
+        "T17-G004-P1": [],
+        "T17-G004-P2": [],
+        "T17-G004-P3": [],
+        "T17-G005-P1": [],
+        "T17-G005-P2": [],
+        "T17-G005-P3": [],
+        "T18-G001-P1": [],
+        "T18-G001-P2": [],
+        "T18-G001-P3": [],
+        "T18-G002-P1": [],
+        "T18-G002-P2": [],
+        "T18-G002-P3": [],
+        "T18-G003-P1": [],
+        "T18-G003-P2": [],
+        "T18-G003-P3": [],
+        "T18-G004-P1": [],
+        "T18-G004-P2": [],
+        "T18-G004-P3": [],
+        "T18-G005-P1": [],
+        "T18-G005-P2": [],
+        "T18-G005-P3": [],
+        "T19-G001-P1": [],
+        "T19-G001-P2": [],
+        "T19-G001-P3": [],
+        "T19-G002-P1": [],
+        "T19-G002-P2": [],
+        "T19-G002-P3": [],
+        "T19-G003-P1": [],
+        "T19-G003-P2": [],
+        "T19-G003-P3": [],
+        "T19-G004-P1": [],
+        "T19-G004-P2": [],
+        "T19-G004-P3": [],
+        "T19-G005-P1": [],
+        "T19-G005-P2": [],
+        "T19-G005-P3": [],
+        "T20-G001-P1": [],
+        "T20-G001-P2": [],
+        "T20-G001-P3": [],
+        "T20-G002-P1": [],
+        "T20-G002-P2": [],
+        "T20-G002-P3": [],
+        "T20-G003-P1": [],
+        "T20-G003-P2": [],
+        "T20-G003-P3": [],
+        "T20-G004-P1": [],
+        "T20-G004-P2": [],
+        "T20-G004-P3": [],
+        "T20-G005-P1": [],
+        "T20-G005-P2": [],
+        "T20-G005-P3": []
+      },
+      "configured_samples": 15,
+      "triggered_samples": 15,
+      "samples_with_unused_rules": 0,
+      "configured_rule_occurrences": 15,
+      "triggered_rule_occurrences": 15,
+      "unused_rule_occurrences": 0,
+      "trigger_rate": 1.0,
+      "cases": [
+        {
+          "preset": "balcony_second_device_error_v1",
+          "rule_id": "first-control",
+          "turn": 1,
+          "entity_id": "switch.hall_night",
+          "entity_name": "走廊夜灯",
+          "action": null,
+          "occurrence": 1,
+          "outcome": "http_403",
+          "apply": false,
+          "after": {},
+          "configured": 12,
+          "triggered": 12,
+          "unused": 0,
+          "trigger_rate": 1.0
+        },
+        {
+          "preset": "balcony_timeout_applied_v1",
+          "rule_id": "first-control",
+          "turn": 1,
+          "entity_id": "switch.balcony_grow",
+          "entity_name": "阳台植物灯",
+          "action": null,
+          "occurrence": 1,
+          "outcome": "ReadTimeout",
+          "apply": true,
+          "after": {},
+          "configured": 3,
+          "triggered": 3,
+          "unused": 0,
+          "trigger_rate": 1.0
+        }
+      ],
+      "unused_details": []
+    },
+    "templates": {
+      "T01": 15,
+      "T02": 15,
+      "T03": 15,
+      "T04": 15,
+      "T05": 15,
+      "T06": 15,
+      "T07": 15,
+      "T08": 14,
+      "T09": 15,
+      "T10": 15,
+      "T11": 15,
+      "T12": 15,
+      "T13": 15,
+      "T14": 15,
+      "T15": 15,
+      "T16": 15,
+      "T17": 15,
+      "T18": 15,
+      "T19": 15,
+      "T20": 15
+    },
+    "template_definitions": 20,
+    "patterns": {
+      "T01:P1": 5,
+      "T01:P2": 5,
+      "T01:P3": 5,
+      "T02:P1": 5,
+      "T02:P2": 5,
+      "T02:P3": 5,
+      "T03:P1": 5,
+      "T03:P2": 5,
+      "T03:P3": 5,
+      "T04:P1": 5,
+      "T04:P2": 5,
+      "T04:P3": 5,
+      "T05:P1": 5,
+      "T05:P2": 5,
+      "T05:P3": 5,
+      "T06:P1": 5,
+      "T06:P2": 5,
+      "T06:P3": 5,
+      "T07:P1": 5,
+      "T07:P2": 5,
+      "T07:P3": 5,
+      "T08:P1": 4,
+      "T08:P2": 5,
+      "T08:P3": 5,
+      "T09:P1": 5,
+      "T09:P2": 5,
+      "T09:P3": 5,
+      "T10:P1": 5,
+      "T10:P2": 5,
+      "T10:P3": 5,
+      "T11:P1": 5,
+      "T11:P2": 5,
+      "T11:P3": 5,
+      "T12:P1": 5,
+      "T12:P2": 5,
+      "T12:P3": 5,
+      "T13:P1": 5,
+      "T13:P2": 5,
+      "T13:P3": 5,
+      "T14:P1": 5,
+      "T14:P2": 5,
+      "T14:P3": 5,
+      "T15:P1": 5,
+      "T15:P2": 5,
+      "T15:P3": 5,
+      "T16:P1": 5,
+      "T16:P2": 5,
+      "T16:P3": 5,
+      "T17:P1": 5,
+      "T17:P2": 5,
+      "T17:P3": 5,
+      "T18:P1": 5,
+      "T18:P2": 5,
+      "T18:P3": 5,
+      "T19:P1": 5,
+      "T19:P2": 5,
+      "T19:P3": 5,
+      "T20:P1": 5,
+      "T20:P2": 5,
+      "T20:P3": 5
+    },
+    "variants": {
+      "T01:basic": 15,
+      "T02:basic": 15,
+      "T03:basic": 15,
+      "T04:basic": 15,
+      "T05:basic": 15,
+      "T06:basic": 15,
+      "T07:basic": 9,
+      "T07:change_action": 6,
+      "T08:basic": 8,
+      "T08:missing_both": 6,
+      "T09:basic": 15,
+      "T10:basic": 15,
+      "T11:basic": 9,
+      "T11:exclude": 6,
+      "T12:basic": 9,
+      "T12:conflict": 6,
+      "T13:basic": 15,
+      "T14:basic": 15,
+      "T15:basic": 9,
+      "T15:ambiguous_reference": 6,
+      "T16:basic": 15,
+      "T17:basic": 6,
+      "T17:cancel_after_execution": 3,
+      "T17:no_action": 3,
+      "T17:change_topic": 3,
+      "T18:basic": 15,
+      "T19:basic": 15,
+      "T20:basic": 9,
+      "T20:query_after_error": 6
+    },
+    "presets": [
+      "balcony_normal_v1",
+      "balcony_offline_recover_v1",
+      "balcony_read_error_recover_v1",
+      "balcony_second_device_error_v1",
+      "balcony_timeout_applied_v1",
+      "mixed_normal_v1",
+      "study_normal_v1"
+    ],
+    "preset_counts": {
+      "study_normal_v1": 99,
+      "balcony_normal_v1": 107,
+      "mixed_normal_v1": 63,
+      "balcony_offline_recover_v1": 6,
+      "balcony_read_error_recover_v1": 9,
+      "balcony_timeout_applied_v1": 3,
+      "balcony_second_device_error_v1": 12
+    },
+    "devices": [
+      "书房台灯",
+      "书房插座",
+      "书房阅读灯",
+      "卧室台灯",
+      "卧室床头灯",
+      "厨房咖啡机插座",
+      "客厅展柜灯",
+      "客厅风扇电源",
+      "玄关灯开关",
+      "走廊夜灯",
+      "阳台植物灯"
+    ],
+    "catalog_devices": [
+      "书房台灯",
+      "书房插座",
+      "书房温度",
+      "书房阅读灯",
+      "入户门磁",
+      "卧室取暖器电源",
+      "卧室台灯",
+      "卧室床头灯",
+      "卧室温度",
+      "厨房咖啡机插座",
+      "客厅展柜灯",
+      "客厅有人状态",
+      "客厅风扇电源",
+      "玄关灯开关",
+      "走廊人体感应",
+      "走廊夜灯",
+      "阳台植物灯",
+      "阳台湿度"
+    ]
+  },
+  "failure_summary": {
+    "completed_samples": 299,
+    "failed_samples": 11,
+    "by_check": [
+      {
+        "check_id": "HC01",
+        "name": "工具调用行为",
+        "failed_results": 7,
+        "affected_samples": 7,
+        "affected_sample_rate": 0.023411371237458192
+      },
+      {
+        "check_id": "HC02",
+        "name": "工具参数与设备",
+        "failed_results": 2,
+        "affected_samples": 2,
+        "affected_sample_rate": 0.006688963210702341
+      },
+      {
+        "check_id": "HC04",
+        "name": "对话处理",
+        "failed_results": 3,
+        "affected_samples": 3,
+        "affected_sample_rate": 0.010033444816053512
+      },
+      {
+        "check_id": "HC05",
+        "name": "需求与上下文",
+        "failed_results": 3,
+        "affected_samples": 3,
+        "affected_sample_rate": 0.010033444816053512
+      },
+      {
+        "check_id": "HC06",
+        "name": "回复有据",
+        "failed_results": 4,
+        "affected_samples": 3,
+        "affected_sample_rate": 0.010033444816053512
+      }
+    ],
+    "by_template": [
+      {
+        "template_id": "T01",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T02",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T03",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T04",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T05",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T06",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T07",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T08",
+        "input": 14,
+        "completed": 14,
+        "scoring_errors": 0,
+        "pass": 12,
+        "fail": 2,
+        "pass_rate": 0.8571428571428571
+      },
+      {
+        "template_id": "T09",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 14,
+        "fail": 1,
+        "pass_rate": 0.9333333333333333
+      },
+      {
+        "template_id": "T10",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T11",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T12",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 13,
+        "fail": 2,
+        "pass_rate": 0.8666666666666667
+      },
+      {
+        "template_id": "T13",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T14",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 14,
+        "fail": 1,
+        "pass_rate": 0.9333333333333333
+      },
+      {
+        "template_id": "T15",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T16",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 13,
+        "fail": 2,
+        "pass_rate": 0.8666666666666667
+      },
+      {
+        "template_id": "T17",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T18",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 15,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "T19",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 14,
+        "fail": 1,
+        "pass_rate": 0.9333333333333333
+      },
+      {
+        "template_id": "T20",
+        "input": 15,
+        "completed": 15,
+        "scoring_errors": 0,
+        "pass": 13,
+        "fail": 2,
+        "pass_rate": 0.8666666666666667
+      }
+    ],
+    "by_preset": [
+      {
+        "preset": "balcony_normal_v1",
+        "input": 107,
+        "completed": 107,
+        "scoring_errors": 0,
+        "pass": 102,
+        "fail": 5,
+        "pass_rate": 0.9532710280373832
+      },
+      {
+        "preset": "balcony_offline_recover_v1",
+        "input": 6,
+        "completed": 6,
+        "scoring_errors": 0,
+        "pass": 6,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "preset": "balcony_read_error_recover_v1",
+        "input": 9,
+        "completed": 9,
+        "scoring_errors": 0,
+        "pass": 8,
+        "fail": 1,
+        "pass_rate": 0.8888888888888888
+      },
+      {
+        "preset": "balcony_second_device_error_v1",
+        "input": 12,
+        "completed": 12,
+        "scoring_errors": 0,
+        "pass": 10,
+        "fail": 2,
+        "pass_rate": 0.8333333333333334
+      },
+      {
+        "preset": "balcony_timeout_applied_v1",
+        "input": 3,
+        "completed": 3,
+        "scoring_errors": 0,
+        "pass": 3,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "preset": "mixed_normal_v1",
+        "input": 63,
+        "completed": 63,
+        "scoring_errors": 0,
+        "pass": 62,
+        "fail": 1,
+        "pass_rate": 0.9841269841269841
+      },
+      {
+        "preset": "study_normal_v1",
+        "input": 99,
+        "completed": 99,
+        "scoring_errors": 0,
+        "pass": 97,
+        "fail": 2,
+        "pass_rate": 0.9797979797979798
+      }
+    ],
+    "check_combinations": [
+      {
+        "checks": "HC01",
+        "samples": 3
+      },
+      {
+        "checks": "HC01 + HC02",
+        "samples": 2
+      },
+      {
+        "checks": "HC01 + HC04 + HC05",
+        "samples": 2
+      },
+      {
+        "checks": "HC06",
+        "samples": 2
+      },
+      {
+        "checks": "HC04 + HC06",
+        "samples": 1
+      },
+      {
+        "checks": "HC05",
+        "samples": 1
+      }
+    ]
+  },
+  "subset_provenance": {
+    "source_scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a",
+    "note": "沿用旧检查项作为重评输入；原汇总属于完整来源批次。"
+  }
+}

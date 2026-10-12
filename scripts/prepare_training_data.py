@@ -349,7 +349,7 @@ def render_report(inventory, summary):
     lines.append("")
     for reason, count in sorted(summary["quarantine_reasons"].items()):
         lines.append(f"- 待复核：`{reason}`，{count} 条。原文保留在 raw，通过 review.jsonl 的 source_index 和 source_sample_id 回查。")
-    lines += ["", "本次统一工具：" + "、".join(summary["target_tool_names"]) + "。", "", "评分采用最新修订版本。本次读取并校验已有评分、检查项和证据，没有重新调用模型评分。", "",
+    lines += ["", "本次统一工具：" + "、".join(summary["target_tool_names"]) + "。", "", "本导出步骤只读取并校验评分，不调用模型。各来源的评分沿用或更新范围见 manifest.json 的 score_policy；不能把导出成功理解为全量按新版规则重评。", "",
               "未通过样本可能可用于后续 DPO rejected；当前不做适用性评估或配对。", "",
               "输入不追加元数据日期、时区；家居目录保留原始 system 可见文本。全部训练样本使用 tools.json 中相同的完整非 MCP 工具列表，原工具范围仅用于历史评分追溯。定义与来源记录在 tools-source.json 和 manifest.json。", "",
               "下一阶段直接使用 train.jsonl 验证 Qwen3.5-9B 模板渲染、工具定义和 assistant-only 损失标签，通过后冻结版本并试跑。",
@@ -363,6 +363,23 @@ def write_json(path, value):
 
 def write_jsonl(path, rows):
     path.write_text("".join(canonical(row) + "\n" for row in rows), encoding="utf-8")
+
+
+def check_evidence_review(entry, reviews):
+    """逐条证据核对独立于模型评分：只能隔离样本，不能把评分失败改成通过。"""
+    review = reviews.get(entry["id"])
+    if review is None:
+        if entry.get("require_evidence_review"):
+            raise DataError("missing_evidence_review")
+        return
+    if review.get("source_sample_sha256") != digest(entry["sample"]):
+        raise DataError("evidence_review_source_mismatch")
+    if not isinstance(review.get("reason"), str) or not review["reason"].strip():
+        raise DataError("missing_evidence_review_reason")
+    if review.get("decision") == "quarantine":
+        raise DataError("evidence_review:" + review["reason"])
+    if review.get("decision") != "accept":
+        raise DataError("invalid_evidence_review_decision")
 
 
 def prepare(config_path, output):
@@ -389,6 +406,10 @@ def prepare(config_path, output):
     provenance_path = resolve(config["target_tools_provenance"]) if config.get("target_tools_provenance") else None
     weather_source = resolve(config["weather_tool_source"])
     weather_tool = weather_definition(weather_source)
+    reviews_path = resolve(config["evidence_reviews"]) if config.get("evidence_reviews") else None
+    reviews = read_json(reviews_path) if reviews_path else {}
+    if not isinstance(reviews, dict):
+        raise DataError("invalid_evidence_reviews")
     source_manifest, entries = [], []
     for source_index, source in enumerate(config["sources"]):
         scenario = source["scenario"]
@@ -417,6 +438,7 @@ def prepare(config_path, output):
                 "scenario": scenario, "sample": sample, "tools": tools,
                 "source_index": source_index, "source_sample_id": sample["sample_id"],
                 "score": scores.get(sample["sample_id"]),
+                "require_evidence_review": source.get("require_evidence_review", False),
                 "id": f"{scenario}:{sample['sample_id']}",
                 "group": f"{scenario}:{sample.get('seed', {}).get('template_id', MISSING)}",
             })
@@ -467,6 +489,10 @@ def prepare(config_path, output):
             system = session_system(sample, prompt, entry["scenario"])
             row = {"messages": [{"role": "system", "content": system}] + messages, "tools": copy.deepcopy(target_tools)}
             record["normalized_sha256"] = digest(row)
+            if not failures:
+                check_evidence_review(entry, reviews)
+            if entry["id"] in reviews:
+                record["evidence_review"] = copy.deepcopy(reviews[entry["id"]])
             if failures:
                 record["disposition"] = "failed_sample"
                 failed.append({**record, "trajectory": row, "failed_checks": failures,
@@ -505,6 +531,7 @@ def prepare(config_path, output):
         "target_tools_source": config["target_tools"], "target_tools_sha256": file_hash(target_path),
         "target_tool_names": sorted(target_definitions),
         "target_tools_provenance_sha256": file_hash(provenance_path) if provenance_path else None,
+        "evidence_reviews_sha256": file_hash(reviews_path) if reviews_path else None,
         "scoring_sha256": {p.name: file_hash(p) for p in sorted((PROJECT_ROOT / "evaluation").glob("*.py"))},
         "counts": counts, "source_samples": len(entries), "train_samples": len(dataset),
         "failed_samples": len(failed), "quarantine": len(quarantine),

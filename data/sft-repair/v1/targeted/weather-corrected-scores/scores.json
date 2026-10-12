@@ -1,0 +1,1020 @@
+{
+  "schema_version": 2,
+  "rubric_version": "2.0",
+  "judge": {
+    "source": "llm",
+    "model": "deepseek-flash",
+    "identity": {
+      "provider": "openai",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "max_tokens": "",
+      "temperature": "",
+      "top_p": "",
+      "frequency_penalty": "",
+      "stream": "",
+      "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+      "default_headers_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "allow_message_extras_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "fingerprint": "17a29193349e6241ce924d4f80465788b6b4e698d7b558c07538a44440e3be75"
+    },
+    "request_timeout": 180,
+    "rubric_version": "2.0"
+  },
+  "samples": [
+    {
+      "sample_id": "S11-G03-P2",
+      "source": "live",
+      "template_id": "S11",
+      "seed_id": "S11-G03-P2",
+      "target_only": false,
+      "status": "pass",
+      "turns": [
+        {
+          "turn": 1,
+          "status": "pass",
+          "check_keys": [
+            "1:C04",
+            "1:C07"
+          ]
+        },
+        {
+          "turn": 2,
+          "status": "pass",
+          "check_keys": [
+            "2:C01",
+            "2:C02",
+            "2:C03",
+            "2:C04",
+            "2:C05",
+            "2:C06",
+            "2:C07"
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "sample_id": "S11-G03-P2",
+          "turn": 1,
+          "check_id": "C04",
+          "scenario_ids": [
+            "L04",
+            "F01"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "用户只给省份四川，助手按要求先询问具体城市，未擅自补全或直接查询，符合澄清动作。",
+          "evidence": [
+            {
+              "message_index": 2,
+              "quote": "四川范围比较大，不同城市降雨差别也不小，方便说一下具体是哪个城市吗？比如成都、绵阳、宜宾，我按你说的城市来查三天后的降雨情况。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S11-G03-P2",
+          "turn": 1,
+          "check_id": "C07",
+          "scenario_ids": [
+            "O04"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "答复主体为中文，仅保留四川、成都、绵阳、宜宾等必要地名，符合语言要求。",
+          "evidence": [
+            {
+              "message_index": 2,
+              "quote": "四川范围比较大，不同城市降雨差别也不小，方便说一下具体是哪个城市吗？比如成都、绵阳、宜宾，我按你说的城市来查三天后的降雨情况。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S11-G03-P2",
+          "turn": 2,
+          "check_id": "C01",
+          "scenario_ids": [
+            "L04",
+            "T02",
+            "F01"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "工具调用行为符合调用模式",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "[{\"id\": \"call_00_9jy1jT371gRHE0SNMH531837\", \"function\": {\"arguments\": \"{\\\"location\\\": \\\"成都\\\", \\\"adm\\\": \\\"四川\\\", \\\"lang\\\": \\\"zh_CN\\\"}\", \"name\": \"get_weather\"}, \"type\": \"function\", \"index\": 0}]"
+            }
+          ]
+        },
+        {
+          "sample_id": "S11-G03-P2",
+          "turn": 2,
+          "check_id": "C02",
+          "scenario_ids": [
+            "L04",
+            "T02",
+            "F01"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "所有天气调用参数符合工具定义和本轮已知信息",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "[{\"id\": \"call_00_9jy1jT371gRHE0SNMH531837\", \"function\": {\"arguments\": \"{\\\"location\\\": \\\"成都\\\", \\\"adm\\\": \\\"四川\\\", \\\"lang\\\": \\\"zh_CN\\\"}\", \"name\": \"get_weather\"}, \"type\": \"function\", \"index\": 0}]"
+            }
+          ]
+        },
+        {
+          "sample_id": "S11-G03-P2",
+          "turn": 2,
+          "check_id": "C03",
+          "scenario_ids": [
+            "O02"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "答复包含报告城市名或省略“市”后的同名城市",
+          "evidence": [
+            {
+              "message_index": 5,
+              "quote": "您查询的位置是：成都市\n\n当前天气: 今晚多云。明天阴，比昨天凉爽一些（25°），空气一般。\n详细参数：\n  · 西南风: 1级\n  · 相对湿度: 87%\n  · 紫外线: 最弱\n  · 体感温度: 25°\n  · 能见度: 16km\n  · 降水量: 0.0mm\n  · 大气压: 956hPa\n\n未来7天预报：\n今天09月30日: 阴，气温 19°~25°\n周四10月01日: 多云，气温 18°~24°\n周五10月02日: 多云，气温 18°~23°\n周六10月03日: 多云，气温 17°~23°\n周日10月04日: 小雨，气温 15°~22°\n周一10月05日: 多云，气温 15°~23°\n周二10月06日: 晴，气温 15°~24°\n\n（如需某一天的具体天气，请告诉我日期）"
+            },
+            {
+              "message_index": 6,
+              "quote": "成都市，三天后是10月3日周六：多云，气温17°到23°，这条多云预报没有给出当天的降雨概率，不能据此保证不会下雨；如果长时间外出，建议备把伞。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S11-G03-P2",
+          "turn": 2,
+          "check_id": "C04",
+          "scenario_ids": [
+            "L04",
+            "F01"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "按要求调用工具并回答成都10月3日天气，无擅自补全或多余澄清。",
+          "evidence": [
+            {
+              "message_index": 6,
+              "quote": "成都市，三天后是10月3日周六：多云，气温17°到23°"
+            }
+          ]
+        },
+        {
+          "sample_id": "S11-G03-P2",
+          "turn": 2,
+          "check_id": "C05",
+          "scenario_ids": [
+            "T02",
+            "M01",
+            "F01",
+            "O01",
+            "O02"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "已回应成都、10月3日及降雨情况，并说明报告缺少降雨概率。",
+          "evidence": [
+            {
+              "message_index": 6,
+              "quote": "这条多云预报没有给出当天的降雨概率，不能据此保证不会下雨"
+            }
+          ]
+        },
+        {
+          "sample_id": "S11-G03-P2",
+          "turn": 2,
+          "check_id": "C06",
+          "scenario_ids": [
+            "O01"
+          ],
+          "method": "llm",
+          "rule_revision": "weather-factuality/2026-10-12.1",
+          "status": "pass",
+          "reason": "城市、日期、天气与气温均与工具报告一致，并正确说明缺少降雨概率。",
+          "evidence": [
+            {
+              "message_index": 6,
+              "quote": "三天后是10月3日周六：多云，气温17°到23°"
+            },
+            {
+              "message_index": 6,
+              "quote": "不能据此保证不会下雨"
+            }
+          ]
+        },
+        {
+          "sample_id": "S11-G03-P2",
+          "turn": 2,
+          "check_id": "C07",
+          "scenario_ids": [
+            "O04"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "答复主体为中文。",
+          "evidence": [
+            {
+              "message_index": 6,
+              "quote": "如果长时间外出，建议备把伞。"
+            }
+          ]
+        }
+      ],
+      "scenarios": [
+        {
+          "scenario_id": "L04",
+          "status": "pass",
+          "check_keys": [
+            "1:C04",
+            "2:C01",
+            "2:C02",
+            "2:C04"
+          ]
+        },
+        {
+          "scenario_id": "T02",
+          "status": "pass",
+          "check_keys": [
+            "2:C01",
+            "2:C02",
+            "2:C05"
+          ]
+        },
+        {
+          "scenario_id": "M01",
+          "status": "pass",
+          "check_keys": [
+            "2:C05"
+          ]
+        },
+        {
+          "scenario_id": "F01",
+          "status": "pass",
+          "check_keys": [
+            "1:C04",
+            "2:C01",
+            "2:C02",
+            "2:C04",
+            "2:C05"
+          ]
+        },
+        {
+          "scenario_id": "O01",
+          "status": "pass",
+          "check_keys": [
+            "2:C05",
+            "2:C06"
+          ]
+        },
+        {
+          "scenario_id": "O02",
+          "status": "pass",
+          "check_keys": [
+            "2:C03",
+            "2:C05"
+          ]
+        },
+        {
+          "scenario_id": "O04",
+          "status": "pass",
+          "check_keys": [
+            "1:C07",
+            "2:C07"
+          ]
+        }
+      ],
+      "llm_request_count": 2
+    },
+    {
+      "sample_id": "S15-G03-P2",
+      "source": "live",
+      "template_id": "S15",
+      "seed_id": "S15-G03-P2",
+      "target_only": false,
+      "status": "pass",
+      "turns": [
+        {
+          "turn": 1,
+          "status": "pass",
+          "check_keys": [
+            "1:C02",
+            "1:C04",
+            "1:C06",
+            "1:C07"
+          ]
+        },
+        {
+          "turn": 2,
+          "status": "pass",
+          "check_keys": [
+            "2:C01",
+            "2:C02",
+            "2:C03",
+            "2:C04",
+            "2:C05",
+            "2:C06",
+            "2:C07"
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 1,
+          "check_id": "C02",
+          "scenario_ids": [
+            "L08",
+            "T02",
+            "F01"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "所有天气调用参数符合工具定义和本轮已知信息",
+          "evidence": [
+            {
+              "message_index": 2,
+              "quote": "[{\"id\": \"call_00_ghK8izMprlJby2KF099G6556\", \"function\": {\"arguments\": \"{\\\"location\\\": \\\"海底市\\\", \\\"lang\\\": \\\"zh_CN\\\"}\", \"name\": \"get_weather\"}, \"type\": \"function\", \"index\": 0}]"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 1,
+          "check_id": "C04",
+          "scenario_ids": [
+            "L08",
+            "F01"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "工具返回城市未找到后，答复按要求请用户确认或补充具体城市，未擅自猜测或补全天气信息。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "抱歉，我没能找到叫“海底市”的城市，可能名字不太准确。请告诉我具体的城市名称，如果有重名的话再补上所属省份或上级城市，我马上帮你查今天的天气。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 1,
+          "check_id": "C06",
+          "scenario_ids": [
+            "L08",
+            "O01"
+          ],
+          "method": "llm",
+          "rule_revision": "weather-factuality/2026-10-12.1",
+          "status": "pass",
+          "reason": "答复只说明未能找到该城市并请求更正地点，没有添加任何天气事实，符合工具返回的city_not_found限制。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "抱歉，我没能找到叫“海底市”的城市，可能名字不太准确。请告诉我具体的城市名称，如果有重名的话再补上所属省份或上级城市，我马上帮你查今天的天气。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 1,
+          "check_id": "C07",
+          "scenario_ids": [
+            "O04"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "答复主体使用中文，城市名和必要表达均为中文，符合语言要求。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "抱歉，我没能找到叫“海底市”的城市，可能名字不太准确。请告诉我具体的城市名称，如果有重名的话再补上所属省份或上级城市，我马上帮你查今天的天气。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 2,
+          "check_id": "C01",
+          "scenario_ids": [
+            "L08",
+            "T02",
+            "F01"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "工具调用行为符合调用模式",
+          "evidence": [
+            {
+              "message_index": 6,
+              "quote": "[{\"id\": \"call_00_DrAntFxRh8iVdLfmFaw52241\", \"function\": {\"arguments\": \"{\\\"lang\\\": \\\"zh_CN\\\", \\\"location\\\": \\\"北京\\\"}\", \"name\": \"get_weather\"}, \"type\": \"function\", \"index\": 0}]"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 2,
+          "check_id": "C02",
+          "scenario_ids": [
+            "L08",
+            "T02",
+            "F01"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "所有天气调用参数符合工具定义和本轮已知信息",
+          "evidence": [
+            {
+              "message_index": 6,
+              "quote": "[{\"id\": \"call_00_DrAntFxRh8iVdLfmFaw52241\", \"function\": {\"arguments\": \"{\\\"lang\\\": \\\"zh_CN\\\", \\\"location\\\": \\\"北京\\\"}\", \"name\": \"get_weather\"}, \"type\": \"function\", \"index\": 0}]"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 2,
+          "check_id": "C03",
+          "scenario_ids": [
+            "O02"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "答复包含报告城市名或省略“市”后的同名城市",
+          "evidence": [
+            {
+              "message_index": 7,
+              "quote": "您查询的位置是：北京市\n\n当前天气: 今晚雾。明天晴，比昨天凉爽很多（20°），风很大, 空气不错。\n详细参数：\n  · 北风: 5级\n  · 相对湿度: 31%\n  · 紫外线: 弱\n  · 体感温度: 18°\n  · 能见度: 30km\n  · 降水量: 0.0mm\n  · 大气压: 1009hPa\n\n未来7天预报：\n今天09月30日: 晴，气温 10°~20°\n周四10月01日: 晴，气温 8°~21°\n周五10月02日: 多云，气温 11°~21°\n周六10月03日: 多云，气温 9°~21°\n周日10月04日: 晴，气温 10°~22°\n周一10月05日: 多云，气温 10°~24°\n周二10月06日: 晴，气温 13°~23°\n\n（如需某一天的具体天气，请告诉我日期）"
+            },
+            {
+              "message_index": 8,
+              "quote": "北京市今天（09月30日）天气：晴，气温 10°~20°。报告摘要提到今晚雾；当前参数为：北风5级，相对湿度31%，体感温度18°，能见度30km，降水量0.0mm，气压1009hPa，紫外线弱。\n\n10月01日的日预报为晴，8°~21°。\n\n未来几天：10月02日多云 11°~21°，10月03日多云 9°~21°，10月04日晴 10°~22°，10月05日多云 10°~24°，10月06日晴 13°~23°。需要哪一天的详情可以再告诉我。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 2,
+          "check_id": "C04",
+          "scenario_ids": [
+            "L08",
+            "F01"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "正确调用天气工具并直接回答北京今天的天气，未添加不必要澄清或编造。",
+          "evidence": [
+            {
+              "message_index": 8,
+              "quote": "北京市今天（09月30日）天气：晴，气温 10°~20°。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 2,
+          "check_id": "C05",
+          "scenario_ids": [
+            "T02",
+            "F01",
+            "O01",
+            "O02"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "答复覆盖用户要求的北京和今天09月30日天气，并给出了天气概况。",
+          "evidence": [
+            {
+              "message_index": 8,
+              "quote": "北京市今天（09月30日）天气：晴，气温 10°~20°。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 2,
+          "check_id": "C06",
+          "scenario_ids": [
+            "L08",
+            "O01"
+          ],
+          "method": "llm",
+          "rule_revision": "weather-factuality/2026-10-12.1",
+          "status": "pass",
+          "reason": "答复中的今天天气、日期、气温和各项参数均与工具报告一致，没有事实错误或编造。",
+          "evidence": [
+            {
+              "message_index": 8,
+              "quote": "北京市今天（09月30日）天气：晴，气温 10°~20°。"
+            },
+            {
+              "message_index": 7,
+              "quote": "今天09月30日: 晴，气温 10°~20°"
+            }
+          ]
+        },
+        {
+          "sample_id": "S15-G03-P2",
+          "turn": 2,
+          "check_id": "C07",
+          "scenario_ids": [
+            "O04"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "答复主体使用中文，城市名和数值单位保留，符合语言要求。",
+          "evidence": [
+            {
+              "message_index": 8,
+              "quote": "北京市今天（09月30日）天气：晴，气温 10°~20°。"
+            }
+          ]
+        }
+      ],
+      "scenarios": [
+        {
+          "scenario_id": "L08",
+          "status": "pass",
+          "check_keys": [
+            "1:C02",
+            "1:C04",
+            "1:C06",
+            "2:C01",
+            "2:C02",
+            "2:C04",
+            "2:C06"
+          ]
+        },
+        {
+          "scenario_id": "T02",
+          "status": "pass",
+          "check_keys": [
+            "1:C02",
+            "2:C01",
+            "2:C02",
+            "2:C05"
+          ]
+        },
+        {
+          "scenario_id": "F01",
+          "status": "pass",
+          "check_keys": [
+            "1:C02",
+            "1:C04",
+            "2:C01",
+            "2:C02",
+            "2:C04",
+            "2:C05"
+          ]
+        },
+        {
+          "scenario_id": "O01",
+          "status": "pass",
+          "check_keys": [
+            "1:C06",
+            "2:C05",
+            "2:C06"
+          ]
+        },
+        {
+          "scenario_id": "O02",
+          "status": "pass",
+          "check_keys": [
+            "2:C03",
+            "2:C05"
+          ]
+        },
+        {
+          "scenario_id": "O04",
+          "status": "pass",
+          "check_keys": [
+            "1:C07",
+            "2:C07"
+          ]
+        }
+      ],
+      "llm_request_count": 2
+    }
+  ],
+  "errors": [],
+  "selection": {
+    "candidate_events": 27,
+    "selected": 20,
+    "filtered": 7,
+    "filtered_by_reason": {
+      "template_turn_not_applicable": 6,
+      "no_weather_call": 1
+    },
+    "filtered_details": [
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-G03-P2",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L04",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-G03-P2",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "L04",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-G03-P2",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-G03-P2",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "M01",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-G03-P2",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-G03-P2",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L08",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-G03-P2",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "F01",
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      }
+    ]
+  },
+  "summary": {
+    "input_samples": 2,
+    "completed_samples": 2,
+    "scoring_error_samples": 0,
+    "scoring_completion_rate": 1.0,
+    "sample_total": {
+      "pass": 2,
+      "fail": 0,
+      "count": 2,
+      "pass_rate": 1.0
+    },
+    "check_total": {
+      "pass": 20,
+      "fail": 0,
+      "count": 20,
+      "pass_rate": 1.0
+    },
+    "checks": {
+      "C01": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "C02": {
+        "pass": 3,
+        "fail": 0,
+        "count": 3,
+        "pass_rate": 1.0
+      },
+      "C03": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "C04": {
+        "pass": 4,
+        "fail": 0,
+        "count": 4,
+        "pass_rate": 1.0
+      },
+      "C05": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "C06": {
+        "pass": 3,
+        "fail": 0,
+        "count": 3,
+        "pass_rate": 1.0
+      },
+      "C07": {
+        "pass": 4,
+        "fail": 0,
+        "count": 4,
+        "pass_rate": 1.0
+      }
+    },
+    "scenarios": {
+      "R01": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "R02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "R03": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "R04": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T01": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T02": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "T03": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T04": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T05": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T06": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T07": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L01": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L04": {
+        "pass": 1,
+        "fail": 0,
+        "count": 1,
+        "pass_rate": 1.0
+      },
+      "L05": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L06": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L08": {
+        "pass": 1,
+        "fail": 0,
+        "count": 1,
+        "pass_rate": 1.0
+      },
+      "F01": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "F02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "M01": {
+        "pass": 1,
+        "fail": 0,
+        "count": 1,
+        "pass_rate": 1.0
+      },
+      "M02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "M03": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "M04": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "O01": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "O02": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "O03": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "O04": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "G02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      }
+    },
+    "categories": {
+      "R": {
+        "covered_scenarios": 0,
+        "planned_scenarios": 4,
+        "coverage_rate": 0.0,
+        "pass_rate": null
+      },
+      "T": {
+        "covered_scenarios": 1,
+        "planned_scenarios": 7,
+        "coverage_rate": 0.14285714285714285,
+        "pass_rate": 1.0
+      },
+      "L": {
+        "covered_scenarios": 2,
+        "planned_scenarios": 6,
+        "coverage_rate": 0.3333333333333333,
+        "pass_rate": 1.0
+      },
+      "F": {
+        "covered_scenarios": 1,
+        "planned_scenarios": 2,
+        "coverage_rate": 0.5,
+        "pass_rate": 1.0
+      },
+      "M": {
+        "covered_scenarios": 1,
+        "planned_scenarios": 4,
+        "coverage_rate": 0.25,
+        "pass_rate": 1.0
+      },
+      "O": {
+        "covered_scenarios": 3,
+        "planned_scenarios": 4,
+        "coverage_rate": 0.75,
+        "pass_rate": 1.0
+      },
+      "G": {
+        "covered_scenarios": 0,
+        "planned_scenarios": 1,
+        "coverage_rate": 0.0,
+        "pass_rate": null
+      }
+    }
+  },
+  "failure_summary": {
+    "completed_samples": 2,
+    "failed_samples": 0,
+    "by_check": [],
+    "by_template": [
+      {
+        "template_id": "S11",
+        "input": 1,
+        "completed": 1,
+        "scoring_errors": 0,
+        "pass": 1,
+        "fail": 0,
+        "pass_rate": 1.0
+      },
+      {
+        "template_id": "S15",
+        "input": 1,
+        "completed": 1,
+        "scoring_errors": 0,
+        "pass": 1,
+        "fail": 0,
+        "pass_rate": 1.0
+      }
+    ],
+    "check_combinations": []
+  }
+}

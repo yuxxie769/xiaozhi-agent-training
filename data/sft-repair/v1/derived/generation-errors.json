@@ -1,0 +1,28 @@
+[
+  {
+    "event": "sample_generation_error",
+    "seed_id": "T08-R022-P1",
+    "template_id": "T08",
+    "turn": null,
+    "stage": "message_trace",
+    "error_code": "incomplete_home_trace",
+    "exception_type": "GenerationError",
+    "message": "用户轮次与seed不一致",
+    "retryable": false,
+    "scenario": "home_switch",
+    "shard": "home_switch-1"
+  },
+  {
+    "event": "sample_generation_error",
+    "seed_id": "T08-R025-P1",
+    "template_id": "T08",
+    "turn": null,
+    "stage": "message_trace",
+    "error_code": "incomplete_home_trace",
+    "exception_type": "GenerationError",
+    "message": "用户轮次与seed不一致",
+    "retryable": false,
+    "scenario": "home_switch",
+    "shard": "home_switch-1"
+  }
+]

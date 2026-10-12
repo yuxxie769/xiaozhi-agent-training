@@ -11,6 +11,7 @@ from zoneinfo import ZoneInfo
 
 
 VERSION = "2.0"
+FACTUALITY_REVISION = "weather-factuality/2026-10-12.1"
 CHECKS = {
     "C01": {"name": "工具调用行为", "method": "rule"},
     "C02": {"name": "工具参数正确性", "method": "rule"},
@@ -28,7 +29,8 @@ CHECKS = {
     "C06": {
         "name": "答复事实有据",
         "method": "llm",
-        "rubric": "用户可见答复中的每项具体天气事实必须由该答复之前的工具结果支持。数值错位、无报告编造、把湿度当降水概率或工具报错后继续编造均失败。只说明限制且不添加天气事实可以通过。",
+        "revision": FACTUALITY_REVISION,
+        "rubric": "用户可见答复中的每项具体天气事实必须由该答复之前的工具结果支持。逐项核对城市、具体日期与字段：当前温度、逐日最高最低温、相对日期不可串用；报告摘要的相对时间有歧义时，不能擅自把比较结论移到另一天。明确引用具体日期明细，或说明冲突与限制，可以通过。区分报告内容、条件性建议与事实断言：多云、晴或未提供降雨字段不能证明不会下雨；无依据说肯定无雨、不会下雨或直接断言当天不用带伞均失败。准确说预报为多云、预报未提示降雨，或注明不确定性的出行建议可以通过，不能仅因出现带伞等词就判错。数值错位、无报告编造、把湿度当降水概率或工具报错后继续编造均失败。只说明限制且不添加天气事实可以通过。失败须引用错误主张及其之前的相关工具原文，并解释依据缺失或归属冲突；没有工具返回时引用前序请求并说明缺少依据。",
     },
     "C07": {
         "name": "回复语言符合要求",
@@ -646,6 +648,8 @@ def plan_checks(sample, state):
                 "scenario_ids": scenario_ids,
                 "method": CHECKS[check_id]["method"],
             }
+            if check_id == "C06":
+                checks[key]["rule_revision"] = FACTUALITY_REVISION
             events.append({"event": "check_selected", **base_event, "selected": True})
             if CHECKS[check_id]["method"] == "llm":
                 requests.append(
@@ -653,6 +657,9 @@ def plan_checks(sample, state):
                         "key": key,
                         "turn": number,
                         "check_id": check_id,
+                        **({"rule_revision": FACTUALITY_REVISION,
+                            "evidence_policy": "claim_and_basis_v1"}
+                           if check_id == "C06" else {}),
                         "expected": expected,
                         "context": {
                             field: sample["context"][field]

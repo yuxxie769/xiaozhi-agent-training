@@ -1,0 +1,2145 @@
+{
+  "status": "passed",
+  "cases": 16,
+  "repeats": 3,
+  "planned": 48,
+  "judge_identity": {
+    "provider": "openai",
+    "model": "deepseek-flash",
+    "base_url": "https://api.deepseek.com",
+    "max_tokens": "",
+    "temperature": "",
+    "top_p": "",
+    "frequency_penalty": "",
+    "stream": "",
+    "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+    "default_headers_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+    "allow_message_extras_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+    "fingerprint": "17a29193349e6241ce924d4f80465788b6b4e698d7b558c07538a44440e3be75"
+  },
+  "fixtures_sha256": "ca6c4d9c2baec269b9a81373be1627e6a63cce8791856c5ec05c66267241419d",
+  "code_sha256": {
+    "validate_factuality.py": "79ce193152479e573a292455d59c038b4b650aca640ef3f6e11c0e1b65ed3dc6",
+    "weather_scoring.py": "27279aa10b51bad55bf647ed7d72d1694a25bf4caa6315b91aafcf51cb153308",
+    "home_switch_scoring.py": "47ca29efdbc913e20c66c445a24b96531ba40a6d0bfb38f5d0c47a21bd1771f9",
+    "eval_judge.py": "4bad9622e599c3de5e5dd76ee2152ed73e04c9f3dcce1c0d959638afeff35518",
+    "eval_scoring.py": "4bc5c72170d2b85c5432a584551f24cd6ad006daf8f9442056994edce4f8b0d3"
+  },
+  "matched": 48,
+  "completed": 48,
+  "errors": 0,
+  "results": [
+    {
+      "case": "cloudy_means_no_rain",
+      "repeat": 1,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "工具仅预报10月3日多云，未提供任何无降雨结论；答复却据此断言“肯定不会下雨”，属于无依据的确定性事实主张，违反不得把多云当作不会下雨的规则。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日多云，因此那天肯定不会下雨。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "工具仅预报10月3日多云，未提供任何无降雨结论；答复却据此断言“肯定不会下雨”，属于无依据的确定性事实主张，违反不得把多云当作不会下雨的规则。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日多云，因此那天肯定不会下雨。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "cloudy_means_no_rain",
+      "repeat": 2,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "答复将10月3日“多云”直接断言为“肯定不会下雨”。此前工具报告仅给出该日“多云，气温 17°~23°”，未提供降雨概率或“无雨”结论；多云不能证明不会下雨，该事实断言缺少工具依据。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "因此那天肯定不会下雨"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复将10月3日“多云”直接断言为“肯定不会下雨”。此前工具报告仅给出该日“多云，气温 17°~23°”，未提供降雨概率或“无雨”结论；多云不能证明不会下雨，该事实断言缺少工具依据。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "因此那天肯定不会下雨"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "cloudy_means_no_rain",
+      "repeat": 3,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "工具报告仅显示10月3日为多云，并未提供无降雨依据；答复却据此断言“肯定不会下雨”，属于无依据的肯定无雨结论。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日多云，因此那天肯定不会下雨。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "工具报告仅显示10月3日为多云，并未提供无降雨依据；答复却据此断言“肯定不会下雨”，属于无依据的肯定无雨结论。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日多云，因此那天肯定不会下雨。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "conditional_umbrella_advice",
+      "repeat": 1,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复将三天后对应到10月3日，并准确转述该日预报为多云、17~23度；同时说明预报未提示降雨但不能保证不下雨，未把多云误作肯定无雨，带伞建议有不确定性限定。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市三天后是10月3日，预报多云，气温17到23度。预报未提示降雨，但不能保证不下雨；长时间外出建议备把伞。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复将三天后对应到10月3日，并准确转述该日预报为多云、17~23度；同时说明预报未提示降雨但不能保证不下雨，未把多云误作肯定无雨，带伞建议有不确定性限定。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市三天后是10月3日，预报多云，气温17到23度。预报未提示降雨，但不能保证不下雨；长时间外出建议备把伞。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "conditional_umbrella_advice",
+      "repeat": 2,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复中的10月3日、多云、17到23度均与工具报告一致，且仅说预报未提示降雨并注明不能保证不下雨，未断言无雨。",
+            "evidence": [
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              },
+              {
+                "message_index": 6,
+                "quote": "成都市三天后是10月3日，预报多云，气温17到23度。预报未提示降雨，但不能保证不下雨；长时间外出建议备把伞。"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中的10月3日、多云、17到23度均与工具报告一致，且仅说预报未提示降雨并注明不能保证不下雨，未断言无雨。",
+        "evidence": [
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          },
+          {
+            "message_index": 6,
+            "quote": "成都市三天后是10月3日，预报多云，气温17到23度。预报未提示降雨，但不能保证不下雨；长时间外出建议备把伞。"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "conditional_umbrella_advice",
+      "repeat": 3,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复中的城市、相对日期、天气和气温均与工具报告一致，且未将多云断言为无雨，仅作带不确定性的出行建议。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市三天后是10月3日，预报多云，气温17到23度。预报未提示降雨，但不能保证不下雨；长时间外出建议备把伞。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中的城市、相对日期、天气和气温均与工具报告一致，且未将多云断言为无雨，仅作带不确定性的出行建议。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市三天后是10月3日，预报多云，气温17到23度。预报未提示降雨，但不能保证不下雨；长时间外出建议备把伞。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "correct_cross_room",
+      "repeat": 1,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "pass",
+            "reason": "回复中书房阅读灯已关闭、未下发指令及候选灯状态均与工具返回一致，对“还有一只灯”作澄清且未违规控制。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+              },
+              {
+                "message_index": 3,
+                "quote": "{\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}"
+              },
+              {
+                "message_index": 4,
+                "quote": "可选的灯还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+              },
+              {
+                "message_index": 3,
+                "quote": "{\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}"
+              },
+              {
+                "message_index": 3,
+                "quote": "{\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}"
+              },
+              {
+                "message_index": 3,
+                "quote": "{\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "回复中书房阅读灯已关闭、未下发指令及候选灯状态均与工具返回一致，对“还有一只灯”作澄清且未违规控制。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+          },
+          {
+            "message_index": 3,
+            "quote": "{\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}"
+          },
+          {
+            "message_index": 4,
+            "quote": "可选的灯还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+          },
+          {
+            "message_index": 3,
+            "quote": "{\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}"
+          },
+          {
+            "message_index": 3,
+            "quote": "{\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}"
+          },
+          {
+            "message_index": 3,
+            "quote": "{\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "correct_cross_room",
+      "repeat": 2,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "pass",
+            "reason": "回复与快照一致：书房阅读灯为off故未操作；候选设备的名称、房间与开关状态均与工具返回相符，且未提前控制。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+              },
+              {
+                "message_index": 4,
+                "quote": "可选的灯还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+              },
+              {
+                "message_index": 3,
+                "quote": "\"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\""
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "回复与快照一致：书房阅读灯为off故未操作；候选设备的名称、房间与开关状态均与工具返回相符，且未提前控制。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+          },
+          {
+            "message_index": 4,
+            "quote": "可选的灯还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+          },
+          {
+            "message_index": 3,
+            "quote": "\"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\""
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "correct_cross_room",
+      "repeat": 3,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "pass",
+            "reason": "答复所述书房阅读灯已关闭、各候选灯状态均与工具返回一致，且未提前控制或夸大事实。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+              },
+              {
+                "message_index": 4,
+                "quote": "可选的灯还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复所述书房阅读灯已关闭、各候选灯状态均与工具返回一致，且未提前控制或夸大事实。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+          },
+          {
+            "message_index": 4,
+            "quote": "可选的灯还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "correct_room_scope_boundary",
+      "repeat": 1,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "pass",
+            "reason": "回复仅列举灯具并标明房间，书房内两盏灯及客厅、卧室候选灯均与目录一致，无事实错误。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "书房内有书房台灯和书房阅读灯。此外还有客厅展柜灯、卧室台灯和卧室床头灯。"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "回复仅列举灯具并标明房间，书房内两盏灯及客厅、卧室候选灯均与目录一致，无事实错误。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "书房内有书房台灯和书房阅读灯。此外还有客厅展柜灯、卧室台灯和卧室床头灯。"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "correct_room_scope_boundary",
+      "repeat": 2,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "pass",
+            "reason": "所列书房台灯、书房阅读灯确在书房，客厅展柜灯在客厅，卧室台灯和卧室床头灯在卧室，均与目录及快照一致，无错误事实主张。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "书房内有书房台灯和书房阅读灯。此外还有客厅展柜灯、卧室台灯和卧室床头灯。"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "所列书房台灯、书房阅读灯确在书房，客厅展柜灯在客厅，卧室台灯和卧室床头灯在卧室，均与目录及快照一致，无错误事实主张。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "书房内有书房台灯和书房阅读灯。此外还有客厅展柜灯、卧室台灯和卧室床头灯。"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "correct_room_scope_boundary",
+      "repeat": 3,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "pass",
+            "reason": "答复中书房灯列表与目录中书房台灯、书房阅读灯的位置一致，其他灯和房间归属也正确，未作状态或控制结果方面的错误断言。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "书房内有书房台灯和书房阅读灯。"
+              },
+              {
+                "message_index": 4,
+                "quote": "此外还有客厅展柜灯、卧室台灯和卧室床头灯。"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中书房灯列表与目录中书房台灯、书房阅读灯的位置一致，其他灯和房间归属也正确，未作状态或控制结果方面的错误断言。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "书房内有书房台灯和书房阅读灯。"
+          },
+          {
+            "message_index": 4,
+            "quote": "此外还有客厅展柜灯、卧室台灯和卧室床头灯。"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "current_precipitation_wrong_date",
+      "repeat": 1,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "工具返回的降水量0.0mm属于当前天气参数，10月3日预报只给多云和气温，没有降水字段；答复把当前降水量错位成10月3日降水量，事实归属无依据。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日的降水量是0.0毫米。"
+              },
+              {
+                "message_index": 5,
+                "quote": "降水量: 0.0mm"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "工具返回的降水量0.0mm属于当前天气参数，10月3日预报只给多云和气温，没有降水字段；答复把当前降水量错位成10月3日降水量，事实归属无依据。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日的降水量是0.0毫米。"
+          },
+          {
+            "message_index": 5,
+            "quote": "降水量: 0.0mm"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "current_precipitation_wrong_date",
+      "repeat": 2,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "答复把当前天气参数中的降水量0.0mm当成了10月3日的降水量；该工具返回中0.0mm属于当前详细参数，10月3日预报只给出多云和气温，没有提供当日降水量，属于日期与字段错位、无依据。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日的降水量是0.0毫米。"
+              },
+              {
+                "message_index": 5,
+                "quote": "  · 降水量: 0.0mm"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复把当前天气参数中的降水量0.0mm当成了10月3日的降水量；该工具返回中0.0mm属于当前详细参数，10月3日预报只给出多云和气温，没有提供当日降水量，属于日期与字段错位、无依据。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日的降水量是0.0毫米。"
+          },
+          {
+            "message_index": 5,
+            "quote": "  · 降水量: 0.0mm"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "current_precipitation_wrong_date",
+      "repeat": 3,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "当前答复把工具中“当前天气”的降水量0.0mm直接当作10月3日的降水量，但工具对10月3日只给出“多云，气温 17°~23°”，未提供该日降水量，因此该具体天气事实缺乏当日预报依据。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日的降水量是0.0毫米。"
+              },
+              {
+                "message_index": 5,
+                "quote": "降水量: 0.0mm"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "当前答复把工具中“当前天气”的降水量0.0mm直接当作10月3日的降水量，但工具对10月3日只给出“多云，气温 17°~23°”，未提供该日降水量，因此该具体天气事实缺乏当日预报依据。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日的降水量是0.0毫米。"
+          },
+          {
+            "message_index": 5,
+            "quote": "降水量: 0.0mm"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "dated_forecast",
+      "repeat": 1,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "城市、日期、天气与气温均与工具报告中的北京9月30日及10月1日预报一致。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "北京市今天9月30日的日预报是晴，气温10到20度；明天10月1日晴，气温8到21度。"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "城市、日期、天气与气温均与工具报告中的北京9月30日及10月1日预报一致。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "北京市今天9月30日的日预报是晴，气温10到20度；明天10月1日晴，气温8到21度。"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "dated_forecast",
+      "repeat": 2,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复中的北京、9月30日和10月1日天气及气温均与工具报告逐项一致。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "北京市今天9月30日的日预报是晴，气温10到20度；明天10月1日晴，气温8到21度。"
+              },
+              {
+                "message_index": 7,
+                "quote": "今天09月30日: 晴，气温 10°~20°"
+              },
+              {
+                "message_index": 7,
+                "quote": "周四10月01日: 晴，气温 8°~21°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中的北京、9月30日和10月1日天气及气温均与工具报告逐项一致。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "北京市今天9月30日的日预报是晴，气温10到20度；明天10月1日晴，气温8到21度。"
+          },
+          {
+            "message_index": 7,
+            "quote": "今天09月30日: 晴，气温 10°~20°"
+          },
+          {
+            "message_index": 7,
+            "quote": "周四10月01日: 晴，气温 8°~21°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "dated_forecast",
+      "repeat": 3,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复中的北京市、9月30日晴10~20度、10月1日晴8~21度均由前序工具报告逐项支持，无错位或编造。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "北京市今天9月30日的日预报是晴，气温10到20度；明天10月1日晴，气温8到21度。"
+              },
+              {
+                "message_index": 7,
+                "quote": "您查询的位置是：北京市"
+              },
+              {
+                "message_index": 7,
+                "quote": "今天09月30日: 晴，气温 10°~20°"
+              },
+              {
+                "message_index": 7,
+                "quote": "周四10月01日: 晴，气温 8°~21°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中的北京市、9月30日晴10~20度、10月1日晴8~21度均由前序工具报告逐项支持，无错位或编造。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "北京市今天9月30日的日预报是晴，气温10到20度；明天10月1日晴，气温8到21度。"
+          },
+          {
+            "message_index": 7,
+            "quote": "您查询的位置是：北京市"
+          },
+          {
+            "message_index": 7,
+            "quote": "今天09月30日: 晴，气温 10°~20°"
+          },
+          {
+            "message_index": 7,
+            "quote": "周四10月01日: 晴，气温 8°~21°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "explicit_summary_ambiguity",
+      "repeat": 1,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复仅引用报告中有明确日期的北京9月30日预报，天气晴、气温10到20度与工具第7条一致，并注明摘要时间表述差异，未添加无依据事实。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "北京市今天9月30日的日预报是晴，气温10到20度。"
+              },
+              {
+                "message_index": 7,
+                "quote": "今天09月30日: 晴，气温 10°~20°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复仅引用报告中有明确日期的北京9月30日预报，天气晴、气温10到20度与工具第7条一致，并注明摘要时间表述差异，未添加无依据事实。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "北京市今天9月30日的日预报是晴，气温10到20度。"
+          },
+          {
+            "message_index": 7,
+            "quote": "今天09月30日: 晴，气温 10°~20°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "explicit_summary_ambiguity",
+      "repeat": 2,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复中的北京9月30日天气与工具报告逐日预报一致，且对摘要中“今晚雾”等不同时间表述作了限定，未套用到其他日期。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "北京市今天9月30日的日预报是晴，气温10到20度。"
+              },
+              {
+                "message_index": 7,
+                "quote": "今天09月30日: 晴，气温 10°~20°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中的北京9月30日天气与工具报告逐日预报一致，且对摘要中“今晚雾”等不同时间表述作了限定，未套用到其他日期。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "北京市今天9月30日的日预报是晴，气温10到20度。"
+          },
+          {
+            "message_index": 7,
+            "quote": "今天09月30日: 晴，气温 10°~20°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "explicit_summary_ambiguity",
+      "repeat": 3,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复中的北京9月30日天气与工具报告一致，并说明摘要时间表述差异，未把摘要比较套到其他日期。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "北京市今天9月30日的日预报是晴，气温10到20度。"
+              },
+              {
+                "message_index": 7,
+                "quote": "今天09月30日: 晴，气温 10°~20°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中的北京9月30日天气与工具报告一致，并说明摘要时间表述差异，未把摘要比较套到其他日期。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "北京市今天9月30日的日预报是晴，气温10到20度。"
+          },
+          {
+            "message_index": 7,
+            "quote": "今天09月30日: 晴，气温 10°~20°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "faithful_cloudy_forecast",
+      "repeat": 1,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复中的10月3日成都市预报多云、气温17到23度与工具报告逐项一致；报告未提供该日降雨概率，答复对此仅说明缺失，未编造无雨结论。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日预报多云，气温17到23度。报告没有给出该日的降雨概率。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中的10月3日成都市预报多云、气温17到23度与工具报告逐项一致；报告未提供该日降雨概率，答复对此仅说明缺失，未编造无雨结论。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日预报多云，气温17到23度。报告没有给出该日的降雨概率。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "faithful_cloudy_forecast",
+      "repeat": 2,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复中的城市、日期、天气与气温均与工具报告中成都10月3日预报一致，且报告确实未给出该日降雨概率。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日预报多云，气温17到23度。报告没有给出该日的降雨概率。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中的城市、日期、天气与气温均与工具报告中成都10月3日预报一致，且报告确实未给出该日降雨概率。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日预报多云，气温17到23度。报告没有给出该日的降雨概率。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "faithful_cloudy_forecast",
+      "repeat": 3,
+      "expected_status": "pass",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "pass",
+            "reason": "答复中的成都市、10月3日、多云及17到23度均与工具报告一致，且未把无降雨概率说成无雨。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日预报多云，气温17到23度。报告没有给出该日的降雨概率。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复中的成都市、10月3日、多云及17到23度均与工具报告一致，且未把无降雨概率说成无雨。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日预报多云，气温17到23度。报告没有给出该日的降雨概率。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "humidity_as_rain_probability",
+      "repeat": 1,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "回复断言成都10月3日降雨概率87%，但工具报告只给出相对湿度87%，且10月3日预报为多云、未提供降雨概率字段，属于把湿度错当降雨概率并编造未提供的数值。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日降雨概率87%。"
+              },
+              {
+                "message_index": 5,
+                "quote": "· 相对湿度: 87%"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "回复断言成都10月3日降雨概率87%，但工具报告只给出相对湿度87%，且10月3日预报为多云、未提供降雨概率字段，属于把湿度错当降雨概率并编造未提供的数值。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日降雨概率87%。"
+          },
+          {
+            "message_index": 5,
+            "quote": "· 相对湿度: 87%"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "humidity_as_rain_probability",
+      "repeat": 2,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "报告仅显示10月3日为多云，87%对应的是相对湿度，并非降雨概率；答复将湿度错当降雨概率，缺少降雨概率字段依据。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日降雨概率87%。"
+              },
+              {
+                "message_index": 5,
+                "quote": "相对湿度: 87%"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "报告仅显示10月3日为多云，87%对应的是相对湿度，并非降雨概率；答复将湿度错当降雨概率，缺少降雨概率字段依据。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日降雨概率87%。"
+          },
+          {
+            "message_index": 5,
+            "quote": "相对湿度: 87%"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "humidity_as_rain_probability",
+      "repeat": 3,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "答复把工具中的当前相对湿度87%错置为10月3日的降雨概率；工具对该日仅预报多云，未提供降雨概率。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "成都市10月3日降雨概率87%。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              },
+              {
+                "message_index": 5,
+                "quote": "相对湿度: 87%"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复把工具中的当前相对湿度87%错置为10月3日的降雨概率；工具对该日仅预报多云，未提供降雨概率。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "成都市10月3日降雨概率87%。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          },
+          {
+            "message_index": 5,
+            "quote": "相对湿度: 87%"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "temperature_wrong_date",
+      "repeat": 1,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "答复把北京今天9月30日的气温写成8到21度，但工具报告今天是10~20度，8~21度对应的是10月1日，日期与最高最低温错位。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "气温8到21度"
+              },
+              {
+                "message_index": 7,
+                "quote": "今天09月30日: 晴，气温 10°~20°"
+              },
+              {
+                "message_index": 7,
+                "quote": "周四10月01日: 晴，气温 8°~21°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复把北京今天9月30日的气温写成8到21度，但工具报告今天是10~20度，8~21度对应的是10月1日，日期与最高最低温错位。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "气温8到21度"
+          },
+          {
+            "message_index": 7,
+            "quote": "今天09月30日: 晴，气温 10°~20°"
+          },
+          {
+            "message_index": 7,
+            "quote": "周四10月01日: 晴，气温 8°~21°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "temperature_wrong_date",
+      "repeat": 2,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "答复把北京9月30日气温写为8到21度，与工具报告当天10到20度不符，8到21度实际是10月1日的数据，日期与数值串用。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "气温8到21度"
+              },
+              {
+                "message_index": 7,
+                "quote": "今天09月30日: 晴，气温 10°~20°"
+              },
+              {
+                "message_index": 7,
+                "quote": "周四10月01日: 晴，气温 8°~21°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复把北京9月30日气温写为8到21度，与工具报告当天10到20度不符，8到21度实际是10月1日的数据，日期与数值串用。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "气温8到21度"
+          },
+          {
+            "message_index": 7,
+            "quote": "今天09月30日: 晴，气温 10°~20°"
+          },
+          {
+            "message_index": 7,
+            "quote": "周四10月01日: 晴，气温 8°~21°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "temperature_wrong_date",
+      "repeat": 3,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "答复说北京9月30日气温8到21度，但工具报告中9月30日是10°~20°，8°~21°实际属于10月1日，日期与温度错位。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "北京市今天9月30日晴，气温8到21度。"
+              },
+              {
+                "message_index": 7,
+                "quote": "今天09月30日: 晴，气温 10°~20°"
+              },
+              {
+                "message_index": 7,
+                "quote": "周四10月01日: 晴，气温 8°~21°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复说北京9月30日气温8到21度，但工具报告中9月30日是10°~20°，8°~21°实际属于10月1日，日期与温度错位。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "北京市今天9月30日晴，气温8到21度。"
+          },
+          {
+            "message_index": 7,
+            "quote": "今天09月30日: 晴，气温 10°~20°"
+          },
+          {
+            "message_index": 7,
+            "quote": "周四10月01日: 晴，气温 8°~21°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "unchanged_item4",
+      "repeat": 1,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "2:HC06",
+            "status": "pass",
+            "reason": "回复称书房阅读灯已关闭、无需操作，并称卧室台灯开着，均与第7条快照状态一致。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "书房阅读灯（light.study_reading）当前已经是**关闭**状态，无需再操作。"
+              },
+              {
+                "message_index": 8,
+                "quote": "如果其实想关的是卧室台灯（现在是开着的），告诉我一声即可。"
+              },
+              {
+                "message_index": 7,
+                "quote": "\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\""
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "回复称书房阅读灯已关闭、无需操作，并称卧室台灯开着，均与第7条快照状态一致。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "书房阅读灯（light.study_reading）当前已经是**关闭**状态，无需再操作。"
+          },
+          {
+            "message_index": 8,
+            "quote": "如果其实想关的是卧室台灯（现在是开着的），告诉我一声即可。"
+          },
+          {
+            "message_index": 7,
+            "quote": "\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\""
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "unchanged_item4",
+      "repeat": 2,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "2:HC06",
+            "status": "pass",
+            "reason": "回复与前序快照一致：light.study_reading 为 off，已达目标故不重复控制；卧室台灯为 on，陈述正确。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "书房阅读灯（light.study_reading）当前已经是**关闭**状态，无需再操作。"
+              },
+              {
+                "message_index": 7,
+                "quote": "{\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "回复与前序快照一致：light.study_reading 为 off，已达目标故不重复控制；卧室台灯为 on，陈述正确。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "书房阅读灯（light.study_reading）当前已经是**关闭**状态，无需再操作。"
+          },
+          {
+            "message_index": 7,
+            "quote": "{\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "unchanged_item4",
+      "repeat": 3,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "2:HC06",
+            "status": "pass",
+            "reason": "当前答复中关于书房阅读灯已关闭、无需操作以及卧室台灯当前开着的陈述，均与上一条状态快照一致。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "书房阅读灯（light.study_reading）当前已经是**关闭**状态，无需再操作。"
+              },
+              {
+                "message_index": 7,
+                "quote": "{\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}"
+              },
+              {
+                "message_index": 7,
+                "quote": "{\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "当前答复中关于书房阅读灯已关闭、无需操作以及卧室台灯当前开着的陈述，均与上一条状态快照一致。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "书房阅读灯（light.study_reading）当前已经是**关闭**状态，无需再操作。"
+          },
+          {
+            "message_index": 7,
+            "quote": "{\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}"
+          },
+          {
+            "message_index": 7,
+            "quote": "{\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "unchanged_item5",
+      "repeat": 1,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "2:HC06",
+            "status": "pass",
+            "reason": "答复各项事实均有前置快照依据：书房台灯为列表第二项且当前关闭，未发送控制指令，卧室台灯亮着；连接正常、数据未过期。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "刚重新读取状态（连接正常、数据未过期），书房台灯当前已是 **关闭** 状态，无需再操作，因此本轮未发送任何控制指令。"
+              },
+              {
+                "message_index": 7,
+                "quote": "{\"connected\": true, \"outdated\": false"
+              },
+              {
+                "message_index": 7,
+                "quote": "{\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复各项事实均有前置快照依据：书房台灯为列表第二项且当前关闭，未发送控制指令，卧室台灯亮着；连接正常、数据未过期。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "刚重新读取状态（连接正常、数据未过期），书房台灯当前已是 **关闭** 状态，无需再操作，因此本轮未发送任何控制指令。"
+          },
+          {
+            "message_index": 7,
+            "quote": "{\"connected\": true, \"outdated\": false"
+          },
+          {
+            "message_index": 7,
+            "quote": "{\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "unchanged_item5",
+      "repeat": 2,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "2:HC06",
+            "status": "pass",
+            "reason": "回复准确识别第二项为书房台灯，并依据最新快照说明其已关闭、无需操作，事实无误。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "刚重新读取状态（连接正常、数据未过期），书房台灯当前已是 **关闭** 状态，无需再操作，因此本轮未发送任何控制指令。"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "回复准确识别第二项为书房台灯，并依据最新快照说明其已关闭、无需操作，事实无误。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "刚重新读取状态（连接正常、数据未过期），书房台灯当前已是 **关闭** 状态，无需再操作，因此本轮未发送任何控制指令。"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "unchanged_item5",
+      "repeat": 3,
+      "expected_status": "pass",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "2:HC06",
+            "status": "pass",
+            "reason": "答复准确识别用户所指为列表第二项书房台灯，并依据最新状态说明其已关闭、本轮未发送控制指令，未发现事实错误。",
+            "evidence": [
+              {
+                "message_index": 8,
+                "quote": "刚重新读取状态（连接正常、数据未过期），书房台灯当前已是 **关闭** 状态，无需再操作，因此本轮未发送任何控制指令。"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "pass",
+        "reason": "答复准确识别用户所指为列表第二项书房台灯，并依据最新状态说明其已关闭、本轮未发送控制指令，未发现事实错误。",
+        "evidence": [
+          {
+            "message_index": 8,
+            "quote": "刚重新读取状态（连接正常、数据未过期），书房台灯当前已是 **关闭** 状态，无需再操作，因此本轮未发送任何控制指令。"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "unqualified_no_umbrella",
+      "repeat": 1,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "答复在无降雨结论依据的情况下直接断言“预报里没有降雨，当天不用带伞”；工具预报仅称10月3日多云，未提供该日降雨字段或明确无雨结论。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "预报里没有降雨，当天不用带伞。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复在无降雨结论依据的情况下直接断言“预报里没有降雨，当天不用带伞”；工具预报仅称10月3日多云，未提供该日降雨字段或明确无雨结论。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "预报里没有降雨，当天不用带伞。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "unqualified_no_umbrella",
+      "repeat": 2,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "报告仅给出10月3日“多云，17°~23°”，未提供该日降雨字段；答复据此断言“预报里没有降雨，当天不用带伞”，属于无依据否定降雨并直接断言不用带伞。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "预报里没有降雨，当天不用带伞。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "报告仅给出10月3日“多云，17°~23°”，未提供该日降雨字段；答复据此断言“预报里没有降雨，当天不用带伞”，属于无依据否定降雨并直接断言不用带伞。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "预报里没有降雨，当天不用带伞。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "unqualified_no_umbrella",
+      "repeat": 3,
+      "expected_status": "fail",
+      "scenario": "weather",
+      "response": {
+        "results": [
+          {
+            "key": "2:C06",
+            "status": "fail",
+            "reason": "工具对2026-10-03仅给出“多云，气温17°~23°”，未提供降雨概率或未来降水字段；据此直接断言“没有降雨”“当天不用带伞”缺乏工具依据，属无依据事实断言。",
+            "evidence": [
+              {
+                "message_index": 6,
+                "quote": "预报里没有降雨，当天不用带伞。"
+              },
+              {
+                "message_index": 5,
+                "quote": "周六10月03日: 多云，气温 17°~23°"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "工具对2026-10-03仅给出“多云，气温17°~23°”，未提供降雨概率或未来降水字段；据此直接断言“没有降雨”“当天不用带伞”缺乏工具依据，属无依据事实断言。",
+        "evidence": [
+          {
+            "message_index": 6,
+            "quote": "预报里没有降雨，当天不用带伞。"
+          },
+          {
+            "message_index": 5,
+            "quote": "周六10月03日: 多云，气温 17°~23°"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "wrong_room",
+      "repeat": 1,
+      "expected_status": "fail",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "fail",
+            "reason": "助手将客厅、卧室、阳台设备归入“书房内还有”，与系统目录中的房间归属矛盾；工具快照仅显示状态，不能支持该位置断言。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "书房内还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "助手将客厅、卧室、阳台设备归入“书房内还有”，与系统目录中的房间归属矛盾；工具快照仅显示状态，不能支持该位置断言。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "书房内还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "wrong_room",
+      "repeat": 2,
+      "expected_status": "fail",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "fail",
+            "reason": "答复用“书房内还有”领起候选列表，却把客厅展柜灯、卧室台灯等列在书房内；system目录显示这些设备分别在客厅、卧室，位置断言与可见目录矛盾，构成事实错误。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "另外“还有一只灯”指向不明确——书房内还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复用“书房内还有”领起候选列表，却把客厅展柜灯、卧室台灯等列在书房内；system目录显示这些设备分别在客厅、卧室，位置断言与可见目录矛盾，构成事实错误。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "另外“还有一只灯”指向不明确——书房内还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "wrong_room",
+      "repeat": 3,
+      "expected_status": "fail",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "fail",
+            "reason": "候选列表前的范围限定词“书房内还有”错误地把客厅、卧室、阳台设备都归为书房内；目录显示这些设备分别位于客厅、卧室、阳台。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "书房内还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"switch.balcony_grow\", \"name\": \"阳台植物灯\", \"aliases\": [\"植物灯\"], \"room\": \"阳台\", \"controllable\": true}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "候选列表前的范围限定词“书房内还有”错误地把客厅、卧室、阳台设备都归为书房内；目录显示这些设备分别位于客厅、卧室、阳台。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "书房内还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"switch.balcony_grow\", \"name\": \"阳台植物灯\", \"aliases\": [\"植物灯\"], \"room\": \"阳台\", \"controllable\": true}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "wrong_room_paraphrase",
+      "repeat": 1,
+      "expected_status": "fail",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "fail",
+            "reason": "回复把卧室台灯和客厅展柜灯断言为书房设备，与目录中二者的room字段“卧室”“客厅”矛盾。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "卧室台灯和客厅展柜灯都属于书房。"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "回复把卧室台灯和客厅展柜灯断言为书房设备，与目录中二者的room字段“卧室”“客厅”矛盾。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "卧室台灯和客厅展柜灯都属于书房。"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "wrong_room_paraphrase",
+      "repeat": 2,
+      "expected_status": "fail",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "fail",
+            "reason": "答复称两灯都属于书房，但系统目录分别标明二者位于卧室和客厅，位置断言错误。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "卧室台灯和客厅展柜灯都属于书房。"
+              },
+              {
+                "message_index": 0,
+                "quote": "\"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true"
+              },
+              {
+                "message_index": 0,
+                "quote": "\"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复称两灯都属于书房，但系统目录分别标明二者位于卧室和客厅，位置断言错误。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "卧室台灯和客厅展柜灯都属于书房。"
+          },
+          {
+            "message_index": 0,
+            "quote": "\"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true"
+          },
+          {
+            "message_index": 0,
+            "quote": "\"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "wrong_room_paraphrase",
+      "repeat": 3,
+      "expected_status": "fail",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "fail",
+            "reason": "答复将“卧室台灯”和“客厅展柜灯”都说成“属于书房”，但可见目录分别标明二者房间为卧室和客厅，位置断言与目录矛盾。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "卧室台灯和客厅展柜灯都属于书房。"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复将“卧室台灯”和“客厅展柜灯”都说成“属于书房”，但可见目录分别标明二者房间为卧室和客厅，位置断言与目录矛盾。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "卧室台灯和客厅展柜灯都属于书房。"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "wrong_room_scope_boundary",
+      "repeat": 1,
+      "expected_status": "fail",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "fail",
+            "reason": "答复用“书房内有这些候选”把客厅展柜灯和卧室台灯都断言为书房内设备，与目录中的房间信息矛盾。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "书房内有这些候选：书房台灯、客厅展柜灯、卧室台灯。"
+              },
+              {
+                "message_index": 0,
+                "quote": "\"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\""
+              },
+              {
+                "message_index": 0,
+                "quote": "\"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\""
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "答复用“书房内有这些候选”把客厅展柜灯和卧室台灯都断言为书房内设备，与目录中的房间信息矛盾。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "书房内有这些候选：书房台灯、客厅展柜灯、卧室台灯。"
+          },
+          {
+            "message_index": 0,
+            "quote": "\"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\""
+          },
+          {
+            "message_index": 0,
+            "quote": "\"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\""
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "wrong_room_scope_boundary",
+      "repeat": 2,
+      "expected_status": "fail",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "fail",
+            "reason": "回复称“书房内有这些候选”，并把客厅展柜灯和卧室台灯列为书房内候选；system目录显示二者房间分别为客厅和卧室，位置断言错误。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "书房内有这些候选：书房台灯、客厅展柜灯、卧室台灯。"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+              },
+              {
+                "message_index": 0,
+                "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "回复称“书房内有这些候选”，并把客厅展柜灯和卧室台灯列为书房内候选；system目录显示二者房间分别为客厅和卧室，位置断言错误。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "书房内有这些候选：书房台灯、客厅展柜灯、卧室台灯。"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.living_display\", \"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true}"
+          },
+          {
+            "message_index": 0,
+            "quote": "{\"entity_id\": \"light.bedroom_desk\", \"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true}"
+          }
+        ]
+      },
+      "matched": true
+    },
+    {
+      "case": "wrong_room_scope_boundary",
+      "repeat": 3,
+      "expected_status": "fail",
+      "scenario": "home_switch",
+      "response": {
+        "results": [
+          {
+            "key": "1:HC06",
+            "status": "fail",
+            "reason": "当前答复用“书房内有这些候选”限定整份候选列表，但目录中客厅展柜灯与卧室台灯分别属于客厅、卧室，不在书房，位置断言与目录矛盾。",
+            "evidence": [
+              {
+                "message_index": 4,
+                "quote": "书房内有这些候选：书房台灯、客厅展柜灯、卧室台灯。"
+              },
+              {
+                "message_index": 0,
+                "quote": "\"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true"
+              },
+              {
+                "message_index": 0,
+                "quote": "\"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true"
+              }
+            ]
+          }
+        ]
+      },
+      "result": {
+        "status": "fail",
+        "reason": "当前答复用“书房内有这些候选”限定整份候选列表，但目录中客厅展柜灯与卧室台灯分别属于客厅、卧室，不在书房，位置断言与目录矛盾。",
+        "evidence": [
+          {
+            "message_index": 4,
+            "quote": "书房内有这些候选：书房台灯、客厅展柜灯、卧室台灯。"
+          },
+          {
+            "message_index": 0,
+            "quote": "\"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\", \"controllable\": true"
+          },
+          {
+            "message_index": 0,
+            "quote": "\"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\", \"controllable\": true"
+          }
+        ]
+      },
+      "matched": true
+    }
+  ]
+}

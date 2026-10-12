@@ -1,0 +1,24 @@
+{
+  "status": "running",
+  "planned": 80,
+  "input_sha256": {
+    "generation-report.json": "71614df5205c106ba47868f82ef89c6388b15e877bd42be7efab09ab6196a19d",
+    "home_switch-1-seeds.json": "d5d08215ca9f307cef88c4350d20d0900f255232c8cf40acd13fb93c3a9ecc08",
+    "home_switch-2-seeds.json": "770739defa77102f40da9bc4e1451db8828f00ac016a29f7d61ea99cb15f9d89",
+    "home_switch-3-seeds.json": "99916898f266e7ec6f7dee33300dea97b7d3ab7960cd09d667340df4b4f0499c",
+    "home_switch-seeds.json": "dc2fb32d0d845a1be59d533cf04aaa516dc3c2f3493da0f72695f02149e3cd0d",
+    "preset-lineage.json": "03814d7ae505b67c9b4d8bcb201e3a4f61f3be7b31efb61ff9e07e8900039119",
+    "preset-snapshots.json": "400f8119dd17d72494549f4154cecc0c6329751e92a03e50ec6ece9dc60e0579",
+    "system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "weather-1-seeds.json": "db92eee091396303e3b71342a77107c6217c88f84473cfee2f6302a4b6849ca8",
+    "weather-seeds.json": "db92eee091396303e3b71342a77107c6217c88f84473cfee2f6302a4b6849ca8"
+  },
+  "generation_retries": 0,
+  "shards": [
+    "weather-1",
+    "home_switch-1",
+    "home_switch-2",
+    "home_switch-3"
+  ]
+}

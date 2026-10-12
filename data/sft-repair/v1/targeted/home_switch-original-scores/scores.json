@@ -1,0 +1,731 @@
+{
+  "schema_version": 2,
+  "rubric_version": "home_switch/1.5",
+  "judge": {
+    "source": "llm",
+    "model": "deepseek-flash",
+    "identity": {
+      "provider": "openai",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "max_tokens": "",
+      "temperature": "",
+      "top_p": "",
+      "frequency_penalty": "",
+      "stream": "",
+      "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+      "default_headers_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "allow_message_extras_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "fingerprint": "17a29193349e6241ce924d4f80465788b6b4e698d7b558c07538a44440e3be75"
+    },
+    "request_timeout": 180,
+    "rubric_version": "home_switch/1.5"
+  },
+  "samples": [
+    {
+      "sample_id": "T14-G004-P2",
+      "source": "live",
+      "template_id": "T14",
+      "seed_id": "T14-G004-P2",
+      "target_only": false,
+      "status": "fail",
+      "turns": [
+        {
+          "turn": 1,
+          "status": "fail",
+          "check_keys": [
+            "1:HC01",
+            "1:HC02",
+            "1:HC04",
+            "1:HC05",
+            "1:HC06",
+            "1:HC07"
+          ]
+        },
+        {
+          "turn": 2,
+          "status": "pass",
+          "check_keys": [
+            "2:HC01",
+            "2:HC02",
+            "2:HC03",
+            "2:HC04",
+            "2:HC05",
+            "2:HC06",
+            "2:HC07"
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC01",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 3,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC02",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 3,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC04",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "用户第二个目标指代不明，助手说明第一盏阅读灯已关闭无需操作，并请用户补充具体灯具，属正确澄清且未控制。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC05",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "正确承接第一盏灯已关闭、第二盏指代不明，分项说明并请求澄清，未执行禁止的控制。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+            },
+            {
+              "message_index": 4,
+              "quote": "请告诉我要关的是哪一盏（最好带房间名），确认后我再执行。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC06",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "rule_revision": "home-factuality/2026-10-12.2",
+          "status": "fail",
+          "reason": "候选列表前的“书房内还有”覆盖了客厅展柜灯、卧室台灯等非书房设备，与目录中这些设备所属房间矛盾，构成位置事实错误。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "书房内还有书房台灯（当前关闭）、客厅展柜灯（当前开着）、卧室台灯（开着）、卧室床头灯（关闭）、阳台植物灯（关闭）等多个候选。"
+            },
+            {
+              "message_index": 0,
+              "quote": "\"name\": \"客厅展柜灯\", \"aliases\": [\"展柜灯\"], \"room\": \"客厅\""
+            },
+            {
+              "message_index": 0,
+              "quote": "\"name\": \"卧室台灯\", \"aliases\": [], \"room\": \"卧室\""
+            },
+            {
+              "message_index": 0,
+              "quote": "\"name\": \"阳台植物灯\", \"aliases\": [\"植物灯\"], \"room\": \"阳台\""
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 1,
+          "check_id": "HC07",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "回复使用中文，括号中的 off 属允许保留的协议状态标识。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "我读到的状态：书房阅读灯目前已经是关闭（off），无需再操作，所以我没有对它下发指令。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC01",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 7,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            },
+            {
+              "message_index": 9,
+              "quote": "设备已关闭"
+            },
+            {
+              "message_index": 11,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC02",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 7,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            },
+            {
+              "message_index": 9,
+              "quote": "设备已关闭"
+            },
+            {
+              "message_index": 11,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC03",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "program",
+          "status": "pass",
+          "reason": "本轮实际工具记录符合检查要求",
+          "evidence": [
+            {
+              "message_index": 7,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            },
+            {
+              "message_index": 9,
+              "quote": "设备已关闭"
+            },
+            {
+              "message_index": 11,
+              "quote": "{\"connected\": true, \"outdated\": false, \"highlight\": [{\"entity_id\": \"binary_sensor.entry_door\", \"n\": \"入户门磁\", \"s\": \"on\", \"dc\": \"door\"}, {\"entity_id\": \"light.bedroom_desk\", \"n\": \"卧室台灯\", \"s\": \"on\"}, {\"entity_id\": \"light.living_display\", \"n\": \"客厅展柜灯\", \"s\": \"on\"}, {\"entity_id\": \"switch.example_study\", \"n\": \"书房插座\", \"s\": \"on\"}, {\"entity_id\": \"switch.living_fan\", \"n\": \"客厅风扇电源\", \"s\": \"on\"}, {\"entity_id\": \"binary_sensor.hall_motion\", \"n\": \"走廊人体感应\", \"s\": \"off\", \"dc\": \"motion\"}, {\"entity_id\": \"light.bedroom_bedside\", \"n\": \"卧室床头灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_desk\", \"n\": \"书房台灯\", \"s\": \"off\"}, {\"entity_id\": \"light.study_reading\", \"n\": \"书房阅读灯\", \"s\": \"off\"}, {\"entity_id\": \"sensor.balcony_humidity\", \"n\": \"阳台湿度\", \"s\": \"68\", \"dc\": \"humidity\", \"u\": \"%\"}, {\"entity_id\": \"sensor.bedroom_temperature\", \"n\": \"卧室温度\", \"s\": \"23.7\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"sensor.living_presence_text\", \"n\": \"客厅有人状态\", \"s\": \"有人\"}, {\"entity_id\": \"sensor.study_temperature\", \"n\": \"书房温度\", \"s\": \"24\", \"dc\": \"temperature\", \"u\": \"℃\"}, {\"entity_id\": \"switch.balcony_grow\", \"n\": \"阳台植物灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.bedroom_heater\", \"n\": \"卧室取暖器电源\", \"s\": \"off\"}, {\"entity_id\": \"switch.entry_wall\", \"n\": \"玄关灯开关\", \"s\": \"off\"}, {\"entity_id\": \"switch.hall_night\", \"n\": \"走廊夜灯\", \"s\": \"off\"}, {\"entity_id\": \"switch.kitchen_coffee\", \"n\": \"厨房咖啡机插座\", \"s\": \"off\"}], \"fields\": {\"connected\": \"Whether the connection with Home Assistant has been established.\", \"outdated\": \"Whether the current data is offline/expired.\", \"highlight\": \"Key status list (compressed and sorted according to cropping rules; only includes entities with expose_to_llm=true).\", \"highlight[].entity_id\": \"Home Assistant entity ID; use this value as the entity_id argument for entity-specific tools.\", \"highlight[].n\": \"Entity readable name.\", \"highlight[].s\": \"Current state of the entity.\", \"highlight[].dc\": \"Entity type.\", \"highlight[].u\": \"unit_of_measurement of state.\", \"notes\": \"Alert shall be given if the connected or outdated is false.\"}}"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC04",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "正确承接用户对“还有一只灯”的澄清，未再追问；阅读灯已达目标不重复控制，夜灯按澄清完成关闭。",
+          "evidence": [
+            {
+              "message_index": 12,
+              "quote": "1. 书房阅读灯：原本就是关闭状态（off），已达目标，未重复下发控制，回读仍为关闭。"
+            },
+            {
+              "message_index": 12,
+              "quote": "2. 走廊夜灯：已下发关闭，回读状态为 off，确认已关闭。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC05",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "按用户澄清后的两个目标分别报告：阅读灯已达关闭目标，夜灯完成关闭，未回滚先前状态。",
+          "evidence": [
+            {
+              "message_index": 12,
+              "quote": "1. 书房阅读灯：原本就是关闭状态（off），已达目标，未重复下发控制，回读仍为关闭。"
+            },
+            {
+              "message_index": 12,
+              "quote": "2. 走廊夜灯：已下发关闭，回读状态为 off，确认已关闭。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC06",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "rule_revision": "home-factuality/2026-10-12.2",
+          "status": "pass",
+          "reason": "陈述与前置快照及工具返回一致：阅读灯此前和回读均为 off 且未下发控制；夜灯已下发关闭且回读为 off。",
+          "evidence": [
+            {
+              "message_index": 12,
+              "quote": "1. 书房阅读灯：原本就是关闭状态（off），已达目标，未重复下发控制，回读仍为关闭。"
+            },
+            {
+              "message_index": 12,
+              "quote": "2. 走廊夜灯：已下发关闭，回读状态为 off，确认已关闭。"
+            }
+          ]
+        },
+        {
+          "sample_id": "T14-G004-P2",
+          "template_id": "T14",
+          "turn": 2,
+          "check_id": "HC07",
+          "scenario_ids": [
+            "HS04",
+            "HS14"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "回复使用中文，仅保留 off 等协议状态标识。",
+          "evidence": [
+            {
+              "message_index": 12,
+              "quote": "2. 走廊夜灯：已下发关闭，回读状态为 off，确认已关闭。"
+            }
+          ]
+        }
+      ],
+      "scenarios": [
+        {
+          "scenario_id": "HS04",
+          "status": "fail",
+          "check_keys": [
+            "1:HC01",
+            "1:HC02",
+            "1:HC04",
+            "1:HC05",
+            "1:HC06",
+            "1:HC07",
+            "2:HC01",
+            "2:HC02",
+            "2:HC03",
+            "2:HC04",
+            "2:HC05",
+            "2:HC06",
+            "2:HC07"
+          ]
+        },
+        {
+          "scenario_id": "HS14",
+          "status": "fail",
+          "check_keys": [
+            "1:HC01",
+            "1:HC02",
+            "1:HC04",
+            "1:HC05",
+            "1:HC06",
+            "1:HC07",
+            "2:HC01",
+            "2:HC02",
+            "2:HC03",
+            "2:HC04",
+            "2:HC05",
+            "2:HC06",
+            "2:HC07"
+          ]
+        }
+      ],
+      "llm_request_count": 2,
+      "sample_type": "positive",
+      "variant_id": "basic",
+      "question_pattern_id": "P2",
+      "preset": "mixed_normal_v1"
+    }
+  ],
+  "errors": [],
+  "selection": {
+    "candidate_events": 14,
+    "selected": 13,
+    "filtered": 1,
+    "filtered_by_reason": {
+      "template_turn_not_applicable": 1
+    },
+    "filtered_details": [
+      {
+        "event": "check_filtered",
+        "sample_id": "T14-G004-P2",
+        "template_id": "T14",
+        "turn": 1,
+        "check_id": "HC03",
+        "scenario_ids": [
+          "HS04",
+          "HS14"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "template_turn_not_applicable"
+      }
+    ]
+  },
+  "summary": {
+    "input_samples": 1,
+    "completed_samples": 1,
+    "scoring_error_samples": 0,
+    "scoring_completion_rate": 1.0,
+    "sample_total": {
+      "pass": 0,
+      "fail": 1,
+      "count": 1,
+      "pass_rate": 0.0
+    },
+    "check_total": {
+      "pass": 12,
+      "fail": 1,
+      "count": 13,
+      "pass_rate": 0.9230769230769231
+    },
+    "checks": {
+      "HC01": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "HC02": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "HC03": {
+        "pass": 1,
+        "fail": 0,
+        "count": 1,
+        "pass_rate": 1.0
+      },
+      "HC04": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "HC05": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "HC06": {
+        "pass": 1,
+        "fail": 1,
+        "count": 2,
+        "pass_rate": 0.5
+      },
+      "HC07": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      }
+    },
+    "scenarios": {
+      "HS01": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS03": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS04": {
+        "pass": 0,
+        "fail": 1,
+        "count": 1,
+        "pass_rate": 0.0
+      },
+      "HS05": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS06": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS07": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS08": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS09": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS10": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS11": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS12": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS13": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS14": {
+        "pass": 0,
+        "fail": 1,
+        "count": 1,
+        "pass_rate": 0.0
+      },
+      "HS15": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      }
+    },
+    "categories": {
+      "HS": {
+        "covered_scenarios": 2,
+        "planned_scenarios": 15,
+        "coverage_rate": 0.13333333333333333,
+        "pass_rate": 0.0
+      }
+    },
+    "groups": {
+      "positive": {
+        "pass": 0,
+        "fail": 1,
+        "count": 1,
+        "pass_rate": 0.0,
+        "input_samples": 1,
+        "completion_rate": 1.0
+      },
+      "negative": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null,
+        "input_samples": 0,
+        "completion_rate": null
+      }
+    },
+    "uncovered_scenarios": [
+      "HS01",
+      "HS02",
+      "HS03",
+      "HS05",
+      "HS06",
+      "HS07",
+      "HS08",
+      "HS09",
+      "HS10",
+      "HS11",
+      "HS12",
+      "HS13",
+      "HS15"
+    ]
+  },
+  "coverage": {
+    "input_samples": 1,
+    "tool_backends": {
+      "simulated": 1
+    },
+    "simulator_rules": {
+      "triggered": [],
+      "unused_by_sample": {
+        "T14-G004-P2": []
+      },
+      "configured_samples": 0,
+      "triggered_samples": 0,
+      "samples_with_unused_rules": 0,
+      "configured_rule_occurrences": 0,
+      "triggered_rule_occurrences": 0,
+      "unused_rule_occurrences": 0,
+      "trigger_rate": null,
+      "cases": [],
+      "unused_details": []
+    },
+    "templates": {
+      "T14": 1
+    },
+    "template_definitions": 20,
+    "patterns": {
+      "T14:P2": 1
+    },
+    "variants": {
+      "T14:basic": 1
+    },
+    "presets": [
+      "mixed_normal_v1"
+    ],
+    "preset_counts": {
+      "mixed_normal_v1": 1
+    },
+    "devices": [
+      "书房阅读灯",
+      "走廊夜灯"
+    ],
+    "catalog_devices": [
+      "书房台灯",
+      "书房插座",
+      "书房温度",
+      "书房阅读灯",
+      "入户门磁",
+      "卧室取暖器电源",
+      "卧室台灯",
+      "卧室床头灯",
+      "卧室温度",
+      "厨房咖啡机插座",
+      "客厅展柜灯",
+      "客厅有人状态",
+      "客厅风扇电源",
+      "玄关灯开关",
+      "走廊人体感应",
+      "走廊夜灯",
+      "阳台植物灯",
+      "阳台湿度"
+    ]
+  },
+  "failure_summary": {
+    "completed_samples": 1,
+    "failed_samples": 1,
+    "by_check": [
+      {
+        "check_id": "HC06",
+        "name": "回复有据",
+        "failed_results": 1,
+        "affected_samples": 1,
+        "affected_sample_rate": 1.0
+      }
+    ],
+    "by_template": [
+      {
+        "template_id": "T14",
+        "input": 1,
+        "completed": 1,
+        "scoring_errors": 0,
+        "pass": 0,
+        "fail": 1,
+        "pass_rate": 0.0
+      }
+    ],
+    "by_preset": [
+      {
+        "preset": "mixed_normal_v1",
+        "input": 1,
+        "completed": 1,
+        "scoring_errors": 0,
+        "pass": 0,
+        "fail": 1,
+        "pass_rate": 0.0
+      }
+    ],
+    "check_combinations": [
+      {
+        "checks": "HC06",
+        "samples": 1
+      }
+    ]
+  }
+}

@@ -143,6 +143,20 @@ def apply_judgments(checks, requests, response):
                     "validation": "current_reply_not_cited",
                 },
             )
+        # New factuality rules require both the claim and an earlier source.
+        # This validates provenance only; semantic correctness remains the judge's job.
+        if status == "fail" and request.get("evidence_policy") == "claim_and_basis_v1":
+            claims = [p["message_index"] for p in proof
+                      if p["message_index"] in request["reply_indices"]]
+            bases = [p["message_index"] for p in proof
+                     if request["messages"][p["message_index"]]["role"]
+                     in {"system", "tool", "user"}]
+            if not bases or not any(basis < claim for basis in bases for claim in claims):
+                raise ScoringError(
+                    "judge_response", "missing_factuality_basis",
+                    "事实判错必须同时引用错误主张及其之前的依据", True,
+                    {"key": key, "reply_indices": claims, "basis_indices": bases},
+                )
         updates[key] = {"status": status, "reason": reason, "evidence": proof}
     for key, update in updates.items():
         checks[key].update(update)

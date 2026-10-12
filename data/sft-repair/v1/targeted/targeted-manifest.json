@@ -1,0 +1,15 @@
+{
+  "planned_originals": 3,
+  "planned_corrections": 3,
+  "input_sha256": {
+    "home_switch-conversations.json": "8adbdbfa8364217e8f5ae976623258d92902152bf40cd7deb86193292543b9cd",
+    "home_switch-corrected.json": "1422f27f36ddeed36b98992ec0f1f251e1185779b80d91fbfb83e4d00d44f3b1",
+    "home_switch-source-scores.json": "0dad43c26eb0d278abb459359ddd464ab5e3f58f5e7c89bcca6e5f4978646cdc",
+    "weather-conversations.json": "a6183b0f3695a1c76efb983b489a81a0066dbd9fb591c0935a6c1c46b317d0bb",
+    "weather-corrected.json": "c6c222d2b15f83b8939cd4624030c4f3d110ad34b7477b9188d82ac41a2eb929",
+    "weather-source-scores.json": "8f95371a34bff8d95039df6d7c3ee1d02e4b60780efbe834a418c80835b9d7fd"
+  },
+  "edits_sha256": "30892e6ca22e334e6fb44f32a1e76a125a67d6ed37b69e57d3a2f4a95868c799",
+  "unchanged_old_training_samples": 553,
+  "policy": "其余旧评分沿用；4、5 不改；不恢复全量重评。"
+}

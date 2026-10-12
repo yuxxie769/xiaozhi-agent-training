@@ -1,0 +1,6 @@
+{
+  "scenario": "home_switch",
+  "shard": "home_switch-1",
+  "generation_returncode": 1,
+  "scoring_returncode": 0
+}

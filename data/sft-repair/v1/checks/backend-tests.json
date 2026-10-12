@@ -1,0 +1,38 @@
+[
+  {
+    "suite": "test_factuality_revision.py",
+    "python": "/Users/yuxxie/Documents/tools/anaconda3/envs/xiaozhi-esp32-server/bin/python",
+    "returncode": 0,
+    "log": "/private/tmp/sft-repair-test_factuality_revision.py.log"
+  },
+  {
+    "suite": "test_selective_rejudge.py",
+    "python": "/Users/yuxxie/Documents/tools/anaconda3/envs/xiaozhi-esp32-server/bin/python",
+    "returncode": 0,
+    "log": "/private/tmp/sft-repair-test_selective_rejudge.py.log"
+  },
+  {
+    "suite": "test_weather_scoring.py",
+    "python": "/Users/yuxxie/Documents/tools/anaconda3/envs/xiaozhi-esp32-server/bin/python",
+    "returncode": 0,
+    "log": "/private/tmp/sft-repair-test_weather_scoring.py.log"
+  },
+  {
+    "suite": "test_home_switch_evaluation.py",
+    "python": "/Users/yuxxie/Documents/tools/anaconda3/envs/xiaozhi-esp32-server/bin/python",
+    "returncode": 0,
+    "log": "/private/tmp/sft-repair-test_home_switch_evaluation.py.log"
+  },
+  {
+    "suite": "test_model_eval.py",
+    "python": "/Users/yuxxie/Documents/tools/anaconda3/envs/xiaozhi-esp32-server/bin/python",
+    "returncode": 0,
+    "log": "/private/tmp/sft-repair-test_model_eval.py.log"
+  },
+  {
+    "suite": "test_weather_eval_protocol.py",
+    "python": "python3",
+    "returncode": 0,
+    "log": "/private/tmp/sft-repair-test_weather_eval_protocol.py.log"
+  }
+]

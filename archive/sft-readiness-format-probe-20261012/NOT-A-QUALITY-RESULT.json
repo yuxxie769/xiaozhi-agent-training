@@ -1,0 +1,3 @@
+{
+  "reason": "Initial diagnostic omitted JSON-string adapter required by historical weather scorer. Apparent C02 failures are representation mismatch, not bad training examples. Superseded by data/sft-readiness/v1/training-audit."
+}

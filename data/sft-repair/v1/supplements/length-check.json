@@ -1,0 +1,314 @@
+[
+  {
+    "id": "home_switch:T04-R001-P1",
+    "tokens": 5217
+  },
+  {
+    "id": "home_switch:T04-R004-P1",
+    "tokens": 5255
+  },
+  {
+    "id": "home_switch:T06-R007-P1",
+    "tokens": 4192
+  },
+  {
+    "id": "home_switch:T06-R010-P1",
+    "tokens": 4047
+  },
+  {
+    "id": "home_switch:T07-R013-P1",
+    "structure_error": "runtime_injected_messages"
+  },
+  {
+    "id": "home_switch:T07-R016-P1",
+    "tokens": 4113
+  },
+  {
+    "id": "home_switch:T08-R019-P1",
+    "tokens": 5306
+  },
+  {
+    "id": "home_switch:T11-R028-P1",
+    "tokens": 3865
+  },
+  {
+    "id": "home_switch:T11-R031-P1",
+    "tokens": 4197
+  },
+  {
+    "id": "home_switch:T11-R034-P1",
+    "tokens": 3892
+  },
+  {
+    "id": "home_switch:T17-R037-P1",
+    "tokens": 3377
+  },
+  {
+    "id": "home_switch:T17-R040-P1",
+    "tokens": 3758
+  },
+  {
+    "id": "home_switch:T19-R043-P1",
+    "tokens": 4377
+  },
+  {
+    "id": "home_switch:T19-R046-P1",
+    "tokens": 4403
+  },
+  {
+    "id": "home_switch:T19-R049-P1",
+    "tokens": 3823
+  },
+  {
+    "id": "home_switch:T20-R052-P1",
+    "tokens": 4122
+  },
+  {
+    "id": "home_switch:T20-R055-P1",
+    "tokens": 4333
+  },
+  {
+    "id": "home_switch:T20-R058-P1",
+    "tokens": 4434
+  },
+  {
+    "id": "home_switch:T04-R002-P2",
+    "tokens": 4126
+  },
+  {
+    "id": "home_switch:T06-R005-P2",
+    "tokens": 4529
+  },
+  {
+    "id": "home_switch:T06-R008-P2",
+    "tokens": 4810
+  },
+  {
+    "id": "home_switch:T07-R011-P2",
+    "tokens": 5294
+  },
+  {
+    "id": "home_switch:T07-R014-P2",
+    "tokens": 3717
+  },
+  {
+    "id": "home_switch:T07-R017-P2",
+    "tokens": 3766
+  },
+  {
+    "id": "home_switch:T08-R020-P2",
+    "tokens": 3876
+  },
+  {
+    "id": "home_switch:T08-R023-P2",
+    "tokens": 5338
+  },
+  {
+    "id": "home_switch:T08-R026-P2",
+    "tokens": 3828
+  },
+  {
+    "id": "home_switch:T11-R029-P2",
+    "tokens": 4116
+  },
+  {
+    "id": "home_switch:T11-R032-P2",
+    "tokens": 3883
+  },
+  {
+    "id": "home_switch:T11-R035-P2",
+    "tokens": 3735
+  },
+  {
+    "id": "home_switch:T17-R038-P2",
+    "tokens": 3845
+  },
+  {
+    "id": "home_switch:T17-R041-P2",
+    "tokens": 3402
+  },
+  {
+    "id": "home_switch:T19-R044-P2",
+    "tokens": 4390
+  },
+  {
+    "id": "home_switch:T19-R047-P2",
+    "tokens": 4405
+  },
+  {
+    "id": "home_switch:T19-R050-P2",
+    "tokens": 4271
+  },
+  {
+    "id": "home_switch:T20-R053-P2",
+    "tokens": 4593
+  },
+  {
+    "id": "home_switch:T20-R056-P2",
+    "tokens": 4181
+  },
+  {
+    "id": "home_switch:T20-R059-P2",
+    "tokens": 4584
+  },
+  {
+    "id": "home_switch:T04-R003-P3",
+    "tokens": 3736
+  },
+  {
+    "id": "home_switch:T06-R006-P3",
+    "tokens": 4521
+  },
+  {
+    "id": "home_switch:T06-R009-P3",
+    "tokens": 4174
+  },
+  {
+    "id": "home_switch:T07-R012-P3",
+    "tokens": 4119
+  },
+  {
+    "id": "home_switch:T07-R015-P3",
+    "tokens": 3807
+  },
+  {
+    "id": "home_switch:T07-R018-P3",
+    "tokens": 4577
+  },
+  {
+    "id": "home_switch:T08-R021-P3",
+    "tokens": 3747
+  },
+  {
+    "id": "home_switch:T08-R024-P3",
+    "tokens": 3829
+  },
+  {
+    "id": "home_switch:T11-R027-P3",
+    "tokens": 3713
+  },
+  {
+    "id": "home_switch:T11-R030-P3",
+    "tokens": 3893
+  },
+  {
+    "id": "home_switch:T11-R033-P3",
+    "tokens": 3771
+  },
+  {
+    "id": "home_switch:T11-R036-P3",
+    "tokens": 3898
+  },
+  {
+    "id": "home_switch:T17-R039-P3",
+    "tokens": 3320
+  },
+  {
+    "id": "home_switch:T17-R042-P3",
+    "tokens": 4052
+  },
+  {
+    "id": "home_switch:T19-R045-P3",
+    "tokens": 3980
+  },
+  {
+    "id": "home_switch:T19-R048-P3",
+    "tokens": 4197
+  },
+  {
+    "id": "home_switch:T20-R051-P3",
+    "tokens": 4498
+  },
+  {
+    "id": "home_switch:T20-R054-P3",
+    "tokens": 4177
+  },
+  {
+    "id": "home_switch:T20-R057-P3",
+    "tokens": 4527
+  },
+  {
+    "id": "home_switch:T20-R060-P3",
+    "tokens": 4118
+  },
+  {
+    "id": "weather:S11-R001-P1",
+    "tokens": 3686
+  },
+  {
+    "id": "weather:S11-R002-P2",
+    "tokens": 3529
+  },
+  {
+    "id": "weather:S11-R003-P3",
+    "tokens": 3585
+  },
+  {
+    "id": "weather:S11-R004-P1",
+    "tokens": 3615
+  },
+  {
+    "id": "weather:S11-R005-P2",
+    "tokens": 3579
+  },
+  {
+    "id": "weather:S15-R006-P3",
+    "tokens": 3745
+  },
+  {
+    "id": "weather:S15-R007-P1",
+    "tokens": 3567
+  },
+  {
+    "id": "weather:S15-R008-P2",
+    "tokens": 3727
+  },
+  {
+    "id": "weather:S15-R009-P3",
+    "tokens": 3717
+  },
+  {
+    "id": "weather:S15-R010-P1",
+    "tokens": 3640
+  },
+  {
+    "id": "weather:S20-R011-P2",
+    "tokens": 3961
+  },
+  {
+    "id": "weather:S20-R012-P3",
+    "tokens": 3918
+  },
+  {
+    "id": "weather:S20-R013-P1",
+    "tokens": 3900
+  },
+  {
+    "id": "weather:S20-R014-P2",
+    "tokens": 3940
+  },
+  {
+    "id": "weather:S20-R015-P3",
+    "tokens": 3861
+  },
+  {
+    "id": "weather:S22-R016-P1",
+    "tokens": 3547
+  },
+  {
+    "id": "weather:S22-R017-P2",
+    "tokens": 3498
+  },
+  {
+    "id": "weather:S22-R018-P3",
+    "tokens": 3587
+  },
+  {
+    "id": "weather:S22-R019-P1",
+    "tokens": 3568
+  },
+  {
+    "id": "weather:S22-R020-P2",
+    "tokens": 3557
+  }
+]

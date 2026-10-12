@@ -17,6 +17,7 @@ from home_switch_seeds import (
     target,
 )
 
+FACTUALITY_REVISION = "home-factuality/2026-10-12.2"
 CHECKS = {
     f"HC{i:02}": {"name": name, "method": "program" if i <= 3 else "llm", "rule": rule}
     for i, name, rule in [
@@ -48,7 +49,7 @@ CHECKS = {
         (
             6,
             "回复有据",
-            "逐句只根据该句之前的可见消息与工具结果。state_hub_snapshot返回tool_error时，可概括为当前无法读取状态、状态服务暂不可用或无法确认；除非工具明确给出，不能扩展为Home Assistant断线、设备离线、权限不足或设备不存在。不能提前宣布成功，不能把电源开启夸大为电器运行，不能把未确认说成确定未执行；配置初态和隐藏规则不是事实证据。",
+            "逐句核对整段答复的全部事实，任一句错误即本项失败；控制动作或其他句子正确不能抵消错误。尤其检查候选列表前的范围限定词（例如“房间内还有”）是否覆盖列表中每个设备，不能只检查设备名称和开关状态而漏掉位置断言。只根据该句之前的可见消息与工具结果。设备名称、房间、别名以模型可见system目录及可见工具结果为依据；将客厅或卧室设备说成书房内设备属于事实错误，正确跨房间列举可以通过。静态目录只证明设备身份，不证明实时开关状态。state_hub_snapshot返回tool_error时，可概括为当前无法读取状态、状态服务暂不可用或无法确认；除非工具明确给出，不能扩展为Home Assistant断线、设备离线、权限不足或设备不存在。不能提前宣布成功，不能把电源开启夸大为电器运行，不能把未确认说成确定未执行；配置初态和隐藏规则不是事实证据。已正确选择目标后的额外追问不单独构成本项事实错误；仍逐项核对其中的事实。失败须引用错误主张及其之前的目录或工具原文，并说明矛盾或依据缺失；没有相关返回时引用前序请求并说明缺少依据。",
         ),
         (
             7,
@@ -57,6 +58,7 @@ CHECKS = {
         ),
     ]
 }
+CHECKS["HC06"]["revision"] = FACTUALITY_REVISION
 ALL = set(CHECKS)
 SCENARIO_CHECKS = {f"HS{i:02}": set(ALL) for i in range(1, 16)}
 for i, ids in {
@@ -407,6 +409,8 @@ def plan_checks(sample, state):
                 continue
             key = f"{n}:{cid}"
             checks[key] = {**base, "method": CHECKS[cid]["method"]}
+            if cid == "HC06":
+                checks[key]["rule_revision"] = FACTUALITY_REVISION
             events.append({"event": "check_selected", **base, "selected": True})
             if CHECKS[cid]["method"] == "llm":
                 requests.append(
@@ -414,6 +418,9 @@ def plan_checks(sample, state):
                         "key": key,
                         "turn": n,
                         "check_id": cid,
+                        **({"rule_revision": FACTUALITY_REVISION,
+                            "evidence_policy": "claim_and_basis_v1"}
+                           if cid == "HC06" else {}),
                         "expected": _judge_expected(cid, expected),
                         "messages": [
                             {**message, "message_index": index}

@@ -1,0 +1,579 @@
+[
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T04",
+    "variable_group_id": "T04-R003",
+    "preset": "balcony_normal_v1_sft_r1_06",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "switch.hall_night",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "seed_id": "T04-R003-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "请打开走廊夜灯。",
+      "刚才那只再打开一遍。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS05"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T06",
+    "variable_group_id": "T06-R006",
+    "preset": "balcony_normal_v1_sft_r1_02",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "light.study_reading",
+          "desired_state": "off"
+        }
+      ]
+    },
+    "first_target": {
+      "devices": [
+        {
+          "entity_id": "light.study_reading",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "seed_id": "T06-R006-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "请打开书房阅读灯。",
+      "改主意了，把它关闭。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS05",
+      "HS12"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T06",
+    "variable_group_id": "T06-R009",
+    "preset": "study_normal_v1_sft_r1_04",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "light.study_reading",
+          "desired_state": "off"
+        }
+      ]
+    },
+    "first_target": {
+      "devices": [
+        {
+          "entity_id": "light.study_reading",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "seed_id": "T06-R009-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "请打开书房阅读灯。",
+      "改主意了，把它关闭。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS05",
+      "HS12"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T07",
+    "variable_group_id": "T07-R012",
+    "preset": "balcony_normal_v1_sft_r1_06",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "switch.balcony_grow",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "variant_id": "change_action",
+    "first_target": {
+      "devices": [
+        {
+          "entity_id": null,
+          "desired_state": "off"
+        }
+      ]
+    },
+    "seed_id": "T07-R012-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "把灯关闭吧。",
+      "我指阳台植物灯，最终打开。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS04",
+      "HS05"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T07",
+    "variable_group_id": "T07-R015",
+    "preset": "study_normal_v1_sft_r1_03",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "light.study_reading",
+          "desired_state": "off"
+        }
+      ]
+    },
+    "seed_id": "T07-R015-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "把灯关闭吧。",
+      "我指的是书房阅读灯。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS04"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T07",
+    "variable_group_id": "T07-R018",
+    "preset": "mixed_normal_v1_sft_r1_05",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "switch.example_study",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "variant_id": "change_action",
+    "first_target": {
+      "devices": [
+        {
+          "entity_id": null,
+          "desired_state": "off"
+        }
+      ]
+    },
+    "seed_id": "T07-R018-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "把插座关闭吧。",
+      "我指书房插座，最终打开。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS04",
+      "HS05"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T08",
+    "variable_group_id": "T08-R021",
+    "preset": "study_normal_v1_sft_r1_02",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "light.study_desk",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "seed_id": "T08-R021-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "帮我处理一下书房台灯。",
+      "需要打开。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS04"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T08",
+    "variable_group_id": "T08-R024",
+    "preset": "study_normal_v1_sft_r1_01",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "switch.example_study",
+          "desired_state": "off"
+        }
+      ]
+    },
+    "variant_id": "missing_both",
+    "seed_id": "T08-R024-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "帮我弄一下设备。",
+      "就是书房插座。",
+      "需要关闭。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS04"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T11",
+    "variable_group_id": "T11-R027",
+    "preset": "balcony_normal_v1_sft_r1_03",
+    "target": {
+      "devices": [
+        {
+          "entity_id": null,
+          "desired_state": "off"
+        }
+      ]
+    },
+    "target_selector": {
+      "kind": "displayed_index",
+      "index": 2
+    },
+    "seed_id": "T11-R027-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "请关闭灯。",
+      "选列表里的第二项。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS04",
+      "HS12"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T11",
+    "variable_group_id": "T11-R030",
+    "preset": "mixed_normal_v1_sft_r1_05",
+    "target": {
+      "devices": [
+        {
+          "entity_id": null,
+          "desired_state": "off"
+        }
+      ]
+    },
+    "variant_id": "exclude",
+    "target_selector": {
+      "kind": "exclude",
+      "entity_id": "switch.kitchen_coffee"
+    },
+    "seed_id": "T11-R030-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "请关闭插座。",
+      "厨房咖啡机插座不选，要剩下的那只。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS04",
+      "HS12"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T11",
+    "variable_group_id": "T11-R033",
+    "preset": "study_normal_v1_sft_r1_06",
+    "target": {
+      "devices": [
+        {
+          "entity_id": null,
+          "desired_state": "off"
+        }
+      ]
+    },
+    "target_selector": {
+      "kind": "displayed_index",
+      "index": 2
+    },
+    "seed_id": "T11-R033-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "请关闭灯。",
+      "选列表里的第二项。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS04",
+      "HS12"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T11",
+    "variable_group_id": "T11-R036",
+    "preset": "mixed_normal_v1_sft_r1_01",
+    "target": {
+      "devices": [
+        {
+          "entity_id": null,
+          "desired_state": "on"
+        }
+      ]
+    },
+    "variant_id": "exclude",
+    "target_selector": {
+      "kind": "exclude",
+      "entity_id": "switch.kitchen_coffee"
+    },
+    "seed_id": "T11-R036-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "请打开插座。",
+      "厨房咖啡机插座不选，要剩下的那只。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS04",
+      "HS12"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T17",
+    "variable_group_id": "T17-R039",
+    "preset": "study_normal_v1_sft_r1_03",
+    "target": {
+      "devices": []
+    },
+    "variant_id": "no_action",
+    "seed_id": "T17-R039-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "嗯，不要关闭卧室台灯。"
+    ],
+    "scenario_ids": [
+      "HS03"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T17",
+    "variable_group_id": "T17-R042",
+    "preset": "balcony_normal_v1_sft_r1_02",
+    "target": {
+      "devices": []
+    },
+    "variant_id": "cancel_after_execution",
+    "first_target": {
+      "devices": [
+        {
+          "entity_id": "light.study_reading",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "seed_id": "T17-R042-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "请打开书房阅读灯。",
+      "后面不用操作了。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS03",
+      "HS06"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T19",
+    "variable_group_id": "T19-R045",
+    "preset": "balcony_read_error_recover_v1_sft_r1_07",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "switch.balcony_grow",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "request_form": "mixed",
+    "other_request": "讲个笑话",
+    "seed_id": "T19-R045-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "帮我打开阳台植物灯，再讲个笑话。",
+      "请重新尝试刚才的操作。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS05",
+      "HS08",
+      "HS10",
+      "HS15"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T19",
+    "variable_group_id": "T19-R048",
+    "preset": "balcony_offline_recover_v1_sft_r1_07",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "switch.balcony_grow",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "request_form": "mixed",
+    "other_request": "讲个笑话",
+    "seed_id": "T19-R048-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "帮我打开阳台植物灯，再讲个笑话。",
+      "请重新尝试刚才的操作。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS05",
+      "HS08",
+      "HS10",
+      "HS15"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T20",
+    "variable_group_id": "T20-R051",
+    "preset": "balcony_timeout_applied_v1_sft_r1_05",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "switch.balcony_grow",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "seed_id": "T20-R051-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "帮我打开阳台植物灯。",
+      "请再尝试执行刚才的要求。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS05",
+      "HS09",
+      "HS10"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T20",
+    "variable_group_id": "T20-R054",
+    "preset": "balcony_timeout_applied_v1_sft_r1_02",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "light.study_reading",
+          "desired_state": null
+        }
+      ]
+    },
+    "variant_id": "query_after_error",
+    "first_target": {
+      "devices": [
+        {
+          "entity_id": "light.study_reading",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "seed_id": "T20-R054-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "帮我打开书房阅读灯。",
+      "先别重试，告诉我它当前开还是关。"
+    ],
+    "scenario_ids": [
+      "HS02",
+      "HS05",
+      "HS09",
+      "HS12"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T20",
+    "variable_group_id": "T20-R057",
+    "preset": "balcony_second_device_error_v1_sft_r1_05",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "switch.hall_night",
+          "desired_state": "off"
+        }
+      ]
+    },
+    "seed_id": "T20-R057-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "帮我关闭走廊夜灯。",
+      "请再尝试执行刚才的要求。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS05",
+      "HS09",
+      "HS10"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T20",
+    "variable_group_id": "T20-R060",
+    "preset": "balcony_timeout_applied_v1_sft_r1_04",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "switch.hall_night",
+          "desired_state": null
+        }
+      ]
+    },
+    "variant_id": "query_after_error",
+    "first_target": {
+      "devices": [
+        {
+          "entity_id": "switch.hall_night",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "seed_id": "T20-R060-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "帮我打开走廊夜灯。",
+      "先别重试，告诉我它当前开还是关。"
+    ],
+    "scenario_ids": [
+      "HS02",
+      "HS05",
+      "HS09",
+      "HS12"
+    ]
+  }
+]

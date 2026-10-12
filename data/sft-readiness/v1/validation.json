@@ -1,0 +1,21 @@
+{
+  "status": "offline_verified",
+  "model_requests": 0,
+  "planned_trajectories": 160,
+  "executed_trajectories": 0,
+  "tests": {
+    "new_diagnostic_tests": 15,
+    "existing_seed_generation_tests": 14,
+    "existing_backend_entry_tests": 6,
+    "total_passed": 35
+  },
+  "audit_repeat_check": "samples.jsonl and review-examples.json byte-identical on rerun",
+  "development_repeat_check": "seeds regenerated identically from recorded exclusion files and random seed",
+  "prepared_artifact_checksums": "unchanged and verified against bound manifest",
+  "implementation_sha256": {
+    "scripts/audit_sft_demonstrations.py": "c1c7889bb4f81553c3515cf6b267b98e31650c2f78e5d5de3dda18b1f008c762",
+    "scripts/prepare_sft_diagnostics.py": "902b761dfae51a74c801dc6921ae6b6721f55b65ef2724952cdf057b5dacdaef",
+    "scripts/run_sft_diagnostics.py": "919243f29975c45167eaa08570a4113303d83c2eb112a9f42d2aa1a5afd4da1a",
+    "tests/test_sft_diagnostics.py": "a6e33e8b1661815b7d6523b58cfa76ce5f42f7ec1df50c9dd58f83e4be12b7fa"
+  }
+}

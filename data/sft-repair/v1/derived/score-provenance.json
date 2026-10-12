@@ -1,0 +1,4064 @@
+[
+  {
+    "id": "weather:S01-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S01-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S02-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S03-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S04-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S05-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S06-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S07-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S08-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S09-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S10-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G03-P2",
+    "kind": "corrected_rescored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/targeted/weather-corrected-scores/scores.json",
+    "scores_sha256": "c4e29487bf006a180ec8ef846f2e404d60a44b4efb207140738cfba29c68d7ea"
+  },
+  {
+    "id": "weather:S11-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S12-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S13-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G03-P2",
+    "kind": "corrected_rescored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/targeted/weather-corrected-scores/scores.json",
+    "scores_sha256": "c4e29487bf006a180ec8ef846f2e404d60a44b4efb207140738cfba29c68d7ea"
+  },
+  {
+    "id": "weather:S15-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S15-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S17-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S19-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S20-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S21-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S22-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G01-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G01-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G01-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G02-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G02-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G02-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G03-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G03-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G03-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G04-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G04-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G04-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G05-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G05-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S24-G05-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/weather/scores.current.json",
+    "scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+  },
+  {
+    "id": "weather:S11-R001-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S11-R002-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S11-R003-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S11-R004-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S11-R005-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S15-R006-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S15-R007-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S15-R008-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S15-R009-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S15-R010-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S20-R011-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S20-R012-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S20-R013-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S20-R014-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S20-R015-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S22-R016-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S22-R017-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S22-R018-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S22-R019-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "weather:S22-R020-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/weather-1/scoring/scores.json",
+    "scores_sha256": "6b22ea08c45934a71592775f2bde59f24bc979aa796f57abb2add58cb593ef6d"
+  },
+  {
+    "id": "home_switch:T01-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T01-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T02-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T03-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T05-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T06-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T07-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T08-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T09-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T10-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T11-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T12-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T13-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G004-P2",
+    "kind": "corrected_rescored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/targeted/home_switch-corrected-scores/scores.json",
+    "scores_sha256": "afecda80d1cd62b94c618657e3cd6f2e206f31960ec8dbd23a7ae30652d3617a"
+  },
+  {
+    "id": "home_switch:T14-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T14-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T15-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T16-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T17-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T18-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T19-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G001-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G001-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G001-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G002-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G002-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G002-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G003-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G003-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G003-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G004-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G004-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G004-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G005-P1",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G005-P2",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T20-G005-P3",
+    "kind": "historical_reused",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/raw/home_switch/scores.current.json",
+    "scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+  },
+  {
+    "id": "home_switch:T04-R001-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T04-R004-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T06-R007-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T06-R010-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T07-R013-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T07-R016-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T08-R019-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T11-R028-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T11-R031-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T11-R034-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T17-R037-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T17-R040-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T19-R043-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T19-R046-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T19-R049-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T20-R052-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T20-R055-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T20-R058-P1",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-1/scoring/scores.json",
+    "scores_sha256": "cafba8fa497b63608c4113d802f710d12f02c23df2975760ff3cfaded7d3971b"
+  },
+  {
+    "id": "home_switch:T04-R002-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T06-R005-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T06-R008-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T07-R011-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T07-R014-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T07-R017-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T08-R020-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T08-R023-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T08-R026-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T11-R029-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T11-R032-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T11-R035-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T17-R038-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T17-R041-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T19-R044-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T19-R047-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T19-R050-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T20-R053-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T20-R056-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T20-R059-P2",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-2/scoring/scores.json",
+    "scores_sha256": "b2c2148f41ab753c5af540126b3841f35fabd9fcdde8cc9762805b0609b87705"
+  },
+  {
+    "id": "home_switch:T04-R003-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T06-R006-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T06-R009-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T07-R012-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T07-R015-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T07-R018-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T08-R021-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T08-R024-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T11-R027-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T11-R030-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T11-R033-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T11-R036-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T17-R039-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T17-R042-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T19-R045-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T19-R048-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T20-R051-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T20-R054-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T20-R057-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  },
+  {
+    "id": "home_switch:T20-R060-P3",
+    "kind": "new_scored",
+    "scores": "/Users/yuxxie/Documents/GitHub/xiaozhi-agent-training/data/sft-repair/v1/supplement-runs/sft-supplements-20261012-v1/home_switch-3/scoring/scores.json",
+    "scores_sha256": "d1287bed4d25c68b917225773a2b1e070bf8bd06c59dbdda12c533b2dbf4b7d3"
+  }
+]

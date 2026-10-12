@@ -1,0 +1,170 @@
+{
+  "status": "offline_audit_complete",
+  "prepared_binding": {
+    "prepared_directory": "data/prepared",
+    "manifest_sha256": "7ed5805e4d0d1f3e2221fdf98b9b58b0d9b1c8dd6ded0a6a0b02bdc4176f670a",
+    "target_tool_names": [
+      "get_lunar",
+      "get_news_from_newsnow",
+      "get_weather",
+      "handle_exit_intent",
+      "hass_get_state",
+      "hass_set_state",
+      "play_music",
+      "state_hub_snapshot",
+      "task_engine_control"
+    ],
+    "artifact_sha256": {
+      "audit.jsonl": "90b0f9e7af959aeacb0bb770a43d8fcd5bd04265f1b3981e5a8112f6b14cf492",
+      "inventory.json": "ca5c9ba3632eb47fb92d258f805b6ea9204af584ee676f72f399842d9e45c9e8",
+      "metadata.jsonl": "9ffd0de642e7b0a521a0ea9d1aa318056c5cad163c838eeaabc98dbc2bf662e5",
+      "system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+      "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+      "train.jsonl": "972f52d4493634f011d1191d882e153a1fcda6267db9adb377fce7a682acdb12"
+    },
+    "source_samples": 599,
+    "training_samples": 556,
+    "quota_population": "exported_training_samples"
+  },
+  "total": 556,
+  "scenarios": {
+    "home_switch": 273,
+    "weather": 283
+  },
+  "checks_rerun": 1982,
+  "deterministic_failed_samples": [],
+  "scoring_format_adapter": "Argument objects serialized to JSON strings in memory only; train.jsonl unchanged",
+  "historical_scores_reused_not_rescored": 556,
+  "topics": {
+    "home_reference": {
+      "name": "多轮指代、改口和列表选择",
+      "samples": 84,
+      "semantic_groups": 28,
+      "distinct_user_dialogues": 75,
+      "templates": {
+        "T03": 15,
+        "T04": 15,
+        "T05": 15,
+        "T06": 15,
+        "T11": 15,
+        "T15": 9
+      },
+      "variants": {
+        "basic": 75,
+        "exclude": 6,
+        "ambiguous_reference": 3
+      },
+      "deterministic_failures": 0
+    },
+    "home_clarify": {
+      "name": "缺少设备或动作时澄清",
+      "samples": 71,
+      "semantic_groups": 25,
+      "distinct_user_dialogues": 63,
+      "templates": {
+        "T07": 15,
+        "T08": 12,
+        "T10": 15,
+        "T11": 15,
+        "T14": 14
+      },
+      "variants": {
+        "basic": 54,
+        "change_action": 6,
+        "missing_both": 5,
+        "exclude": 6
+      },
+      "deterministic_failures": 0
+    },
+    "home_control": {
+      "name": "按需控制、回读和停止",
+      "samples": 82,
+      "semantic_groups": 28,
+      "distinct_user_dialogues": 70,
+      "templates": {
+        "T01": 15,
+        "T03": 15,
+        "T04": 15,
+        "T06": 15,
+        "T12": 13,
+        "T15": 9
+      },
+      "variants": {
+        "basic": 75,
+        "conflict": 4,
+        "ambiguous_reference": 3
+      },
+      "deterministic_failures": 0
+    },
+    "home_cancel_error": {
+      "name": "取消、状态不可用和控制错误",
+      "samples": 51,
+      "semantic_groups": 18,
+      "distinct_user_dialogues": 43,
+      "templates": {
+        "T17": 15,
+        "T18": 12,
+        "T19": 11,
+        "T20": 13
+      },
+      "variants": {
+        "basic": 37,
+        "cancel_after_execution": 3,
+        "no_action": 3,
+        "change_topic": 3,
+        "query_after_error": 5
+      },
+      "deterministic_failures": 0
+    },
+    "weather_dates": {
+      "name": "日期对应及多轮城市、日期切换",
+      "samples": 86,
+      "semantic_groups": 30,
+      "distinct_user_dialogues": 86,
+      "templates": {
+        "S02": 15,
+        "S06": 15,
+        "S19": 15,
+        "S20": 13,
+        "S21": 14,
+        "S22": 14
+      },
+      "variants": {
+        "basic": 86
+      },
+      "deterministic_failures": 0
+    },
+    "weather_context": {
+      "name": "组合请求、澄清、更正和取消",
+      "samples": 69,
+      "semantic_groups": 25,
+      "distinct_user_dialogues": 69,
+      "templates": {
+        "S05": 11,
+        "S11": 15,
+        "S12": 14,
+        "S15": 14,
+        "S24": 15
+      },
+      "variants": {
+        "basic": 69
+      },
+      "deterministic_failures": 0
+    }
+  },
+  "manual_review_selected": 24,
+  "scorer_sha256": {
+    "weather": "55d9eea6292d4bc530b958d6337fcc818ef2f33da7ba4accb95372362b657e01",
+    "home_switch": "1e5510e9ae96fc4243d2e64e01ea4df8822f5fea16f35f37eeb9824b28970192"
+  },
+  "limits": [
+    "Historical semantic pass labels are not new semantic verification.",
+    "Coverage counts overlap across topics and do not prove capability.",
+    "This audits local prepared data, not unprovided GPU training logs or checkpoint lineage."
+  ],
+  "example_review_file": "example-review.json",
+  "example_review_sha256": "071a161c1fd7b760ff205acf83519c1b539e3e38f5ba59fc8b23d55b2d45e733",
+  "example_review_scope": "24 selected examples reviewed by assistant; not a new full semantic scoring run",
+  "auditor_sha256": "c1c7889bb4f81553c3515cf6b267b98e31650c2f78e5d5de3dda18b1f008c762",
+  "review_examples_sha256": "06e6ebfd5711bab21d0b0245d941bd7cf3c8dfa78a34e791107cf43c69ba80b6"
+}

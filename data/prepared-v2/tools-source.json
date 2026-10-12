@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "scope": "当前管理端设备配置和本地开放规则合并后的非 MCP 服务端插件",
+  "captured_on": "2026-10-09",
+  "configuration_context_source": "home-switch-5groups-20261008-013500/run-002-text-client/generation-config.snapshot.json",
+  "mcp_excluded": true,
+  "mcp_required_wrappers_excluded": true,
+  "dynamic_device_iot_included": false,
+  "dynamic_device_iot_note": "本批文本客户端未提供设备 IoT 描述，不虚构设备工具。",
+  "selection_config": {
+    "selected_module": {
+      "Intent": "Intent_function_call"
+    },
+    "Intent": {
+      "Intent_function_call": {
+        "functions": [
+          "get_weather",
+          "hass_get_state",
+          "hass_set_state",
+          "get_news_from_newsnow",
+          "play_music"
+        ]
+      }
+    },
+    "plugins": {
+      "get_weather": {},
+      "hass_get_state": {},
+      "hass_set_state": {},
+      "get_news_from_newsnow": {},
+      "play_music": {},
+      "scheduled_greeting": {},
+      "proactive_speech_gate": {},
+      "task_engine": {},
+      "task_engine_control": {
+        "expose_to_llm": true
+      },
+      "confirm_event": {
+        "expose_to_llm": false,
+        "expose_wrappers_to_llm": true,
+        "wrappers": {
+          "wake_check": {}
+        }
+      },
+      "expect_reply_followup": {},
+      "state_hub": {},
+      "state_hub_snapshot": {
+        "expose_to_llm": true
+      }
+    }
+  },
+  "definitions": [
+    {
+      "name": "get_lunar",
+      "source": "plugins_func/functions/get_time.py",
+      "source_sha256": "12abb2ab35d5affa23a225447792afcc5392410a48baf7242ea74e4d621bde85"
+    },
+    {
+      "name": "get_news_from_newsnow",
+      "source": "plugins_func/functions/get_news_from_newsnow.py",
+      "source_sha256": "5facd7dc54245744ecf7dcb658b63dfc325c64e10afe2e7eb7ba83ebd31a39f0"
+    },
+    {
+      "name": "get_weather",
+      "source": "plugins_func/functions/get_weather.py",
+      "source_sha256": "fe0fc70e35d76e1ffb920209be46a394169de6ba153aa8470ad6b66d82abf1b2",
+      "description_override": "沿用项目已确认的最新城市名评分规则，允许省略末尾市；参数保持当前 server 定义。"
+    },
+    {
+      "name": "handle_exit_intent",
+      "source": "plugins_func/functions/handle_exit_intent.py",
+      "source_sha256": "4eb5570daa55dda7f1b92a4fe4333dd7c7319a327ce4fa402714a797102920be"
+    },
+    {
+      "name": "hass_get_state",
+      "source": "plugins_func/functions/hass_get_state.py",
+      "source_sha256": "7a81f601058300b6f2520c77f2891b2477322c4d156859b81a97e7f5048356b8"
+    },
+    {
+      "name": "hass_set_state",
+      "source": "plugins_func/functions/hass_set_state.py",
+      "source_sha256": "2c3a9b833de8512639ac493cb30c5e8bf5c93f215f1a83af749cf324a174fcdc"
+    },
+    {
+      "name": "play_music",
+      "source": "plugins_func/functions/play_music.py",
+      "source_sha256": "060400310e8d812049d7e22d771387ae65bdcddde348944b6d228fd1b8c85662"
+    },
+    {
+      "name": "state_hub_snapshot",
+      "source": "plugins_func/functions/state_hub_snapshot.py",
+      "source_sha256": "4c905c7542d3105d1de19acfc3462a7671402b6d42cb1ec4e47930048bdd3809"
+    },
+    {
+      "name": "task_engine_control",
+      "source": "plugins_func/functions/task_engine_control.py",
+      "source_sha256": "62512967e5187bc7375e35958369a41abc0d961d952fd1722ea21c045868cb88"
+    }
+  ],
+  "weather_description_policy": "沿用最新修订评分口径，恢复定义不视为历史快照。"
+}

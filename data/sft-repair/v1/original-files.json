@@ -1,0 +1,17 @@
+{
+  "data/raw/weather/conversations.json": "5aa1a42b57aa356c419e18618bd2411b0d7a2163d0ad0e5b05c6a7db2dfb549e",
+  "data/raw/weather/scores.current.json": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d",
+  "data/raw/home_switch/conversations.json": "e6082cb32b5b3a56c4c72521300894c1d7abebfe263a73e48d44e7fffeea9dd3",
+  "data/raw/home_switch/scores.current.json": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a",
+  "data/prepared/metadata.jsonl": "9ffd0de642e7b0a521a0ea9d1aa318056c5cad163c838eeaabc98dbc2bf662e5",
+  "data/prepared/train.jsonl": "972f52d4493634f011d1191d882e153a1fcda6267db9adb377fce7a682acdb12",
+  "data/prepared/review.jsonl": "f8745fbf24079bd186d40b966112965cd5473ccc88b667420f2f4cdd821c870f",
+  "data/prepared/system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+  "data/prepared/report.md": "4cfaecd888467fb38c885f44866433c3c796851ec66948c9ff9f747bc65853b8",
+  "data/prepared/tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+  "data/prepared/manifest.json": "7ed5805e4d0d1f3e2221fdf98b9b58b0d9b1c8dd6ded0a6a0b02bdc4176f670a",
+  "data/prepared/inventory.json": "ca5c9ba3632eb47fb92d258f805b6ea9204af584ee676f72f399842d9e45c9e8",
+  "data/prepared/audit.jsonl": "90b0f9e7af959aeacb0bb770a43d8fcd5bd04265f1b3981e5a8112f6b14cf492",
+  "data/prepared/failed.jsonl": "31b05b373d24632e0ffb7755a5d5f516207bb1f3a574ae6d98be149d4da5cbd3",
+  "data/prepared/tools-source.json": "92ced4ca2531c3f41e7f3585e0eaecef8e736b24a2209b74cfd96c10d98b13af"
+}

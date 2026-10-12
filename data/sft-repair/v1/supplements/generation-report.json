@@ -1,0 +1,112 @@
+{
+  "purpose": "sft_supplement_not_test",
+  "random_seed": 20261012,
+  "baseline": {
+    "prepared_directory": "data/prepared",
+    "manifest_sha256": "7ed5805e4d0d1f3e2221fdf98b9b58b0d9b1c8dd6ded0a6a0b02bdc4176f670a",
+    "target_tool_names": [
+      "get_lunar",
+      "get_news_from_newsnow",
+      "get_weather",
+      "handle_exit_intent",
+      "hass_get_state",
+      "hass_set_state",
+      "play_music",
+      "state_hub_snapshot",
+      "task_engine_control"
+    ],
+    "artifact_sha256": {
+      "audit.jsonl": "90b0f9e7af959aeacb0bb770a43d8fcd5bd04265f1b3981e5a8112f6b14cf492",
+      "inventory.json": "ca5c9ba3632eb47fb92d258f805b6ea9204af584ee676f72f399842d9e45c9e8",
+      "metadata.jsonl": "9ffd0de642e7b0a521a0ea9d1aa318056c5cad163c838eeaabc98dbc2bf662e5",
+      "system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+      "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+      "train.jsonl": "972f52d4493634f011d1191d882e153a1fcda6267db9adb377fce7a682acdb12"
+    },
+    "source_samples": 599,
+    "training_samples": 556,
+    "quota_population": "exported_training_samples"
+  },
+  "scenarios": {
+    "home_switch": {
+      "tasks": 60,
+      "template_counts": {
+        "T04": 4,
+        "T06": 6,
+        "T07": 8,
+        "T08": 8,
+        "T11": 10,
+        "T17": 6,
+        "T19": 8,
+        "T20": 10
+      },
+      "excluded_records": 503,
+      "excluded_files": [
+        {
+          "path": "data/evaluation-seeds/v1/home_switch-seeds.json",
+          "sha256": "71fb3cada261e712165378f068d47bdf77aea90df3a4eccb4d7ec7a56d084126",
+          "seeds": 60
+        },
+        {
+          "path": "data/evaluation-seeds/v2/home_switch-seeds.json",
+          "sha256": "71fb3cada261e712165378f068d47bdf77aea90df3a4eccb4d7ec7a56d084126",
+          "seeds": 60
+        },
+        {
+          "path": "data/evaluation-seeds/v3/home_switch-seeds.json",
+          "sha256": "71fb3cada261e712165378f068d47bdf77aea90df3a4eccb4d7ec7a56d084126",
+          "seeds": 60
+        },
+        {
+          "path": "data/sft-readiness/v1/development/home_switch-seeds.json",
+          "sha256": "b5af2cbaa9161a169c03495c9bf660dadf98572789304f95efe5da5db925103a",
+          "seeds": 24
+        }
+      ],
+      "grounded_overlap": 0,
+      "internal_duplicates": 0
+    },
+    "weather": {
+      "tasks": 20,
+      "template_counts": {
+        "S11": 5,
+        "S15": 5,
+        "S20": 5,
+        "S22": 5
+      },
+      "excluded_records": 496,
+      "excluded_files": [
+        {
+          "path": "data/evaluation-seeds/v1/weather-seeds.json",
+          "sha256": "1ee4bb163b23d16d6b50a6af7f818f0c488d5b7133b132a8d46af9cbeb15f636",
+          "seeds": 60
+        },
+        {
+          "path": "data/evaluation-seeds/v2/weather-seeds.json",
+          "sha256": "1ee4bb163b23d16d6b50a6af7f818f0c488d5b7133b132a8d46af9cbeb15f636",
+          "seeds": 60
+        },
+        {
+          "path": "data/evaluation-seeds/v3/weather-seeds.json",
+          "sha256": "1ee4bb163b23d16d6b50a6af7f818f0c488d5b7133b132a8d46af9cbeb15f636",
+          "seeds": 60
+        },
+        {
+          "path": "data/sft-readiness/v1/development/weather-seeds.json",
+          "sha256": "557d712a56cf02bddb40205ca91be0720e483af52aa78ebc0d688c1b4a953833",
+          "seeds": 16
+        }
+      ],
+      "grounded_overlap": 0,
+      "internal_duplicates": 0
+    }
+  },
+  "artifact_sha256": {
+    "home_switch-seeds.json": "dc2fb32d0d845a1be59d533cf04aaa516dc3c2f3493da0f72695f02149e3cd0d",
+    "preset-lineage.json": "03814d7ae505b67c9b4d8bcb201e3a4f61f3be7b31efb61ff9e07e8900039119",
+    "preset-snapshots.json": "400f8119dd17d72494549f4154cecc0c6329751e92a03e50ec6ece9dc60e0579",
+    "system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "weather-seeds.json": "db92eee091396303e3b71342a77107c6217c88f84473cfee2f6302a4b6849ca8"
+  }
+}

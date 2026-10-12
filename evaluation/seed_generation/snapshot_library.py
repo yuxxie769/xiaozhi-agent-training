@@ -37,6 +37,22 @@ class Library:
             if any(key in config for key in ("initial", "rules", "turns"))
         }
 
+    @classmethod
+    def from_snapshots(cls, snapshots):
+        """Load explicit new-task presets without inventing source conversations."""
+        if not isinstance(snapshots, dict) or not snapshots:
+            raise PresetError("preset 快照必须是非空映射")
+        instance = cls.__new__(cls)
+        instance._presets = copy.deepcopy(snapshots)
+        for name, config in instance._presets.items():
+            if config.get("preset") != name or not config.get("devices"):
+                raise PresetError("preset 名称或设备目录无效")
+        instance._special = {
+            name for name, config in instance._presets.items()
+            if any(key in config for key in ("initial", "rules", "turns"))
+        }
+        return instance
+
     def resolve(self, preset):
         if not isinstance(preset, str) or preset not in self._presets:
             raise PresetError(f"未知 preset：{preset}")

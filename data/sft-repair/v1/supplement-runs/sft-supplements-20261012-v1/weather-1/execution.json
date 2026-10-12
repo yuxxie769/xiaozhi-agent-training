@@ -1,0 +1,6 @@
+{
+  "scenario": "weather",
+  "shard": "weather-1",
+  "generation_returncode": 0,
+  "scoring_returncode": 0
+}

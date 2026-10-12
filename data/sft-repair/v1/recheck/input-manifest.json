@@ -1,0 +1,39 @@
+{
+  "status": "prepared_not_sent",
+  "planned_samples": 556,
+  "sources": {
+    "weather": {
+      "count": 283,
+      "original_conversations_sha256": "5aa1a42b57aa356c419e18618bd2411b0d7a2163d0ad0e5b05c6a7db2dfb549e",
+      "original_scores_sha256": "1748fb701cf0aa75f6fb70b2485534743d006472ea2b6f3367e3cd848d23092d"
+    },
+    "home_switch": {
+      "count": 273,
+      "original_conversations_sha256": "e6082cb32b5b3a56c4c72521300894c1d7abebfe263a73e48d44e7fffeea9dd3",
+      "original_scores_sha256": "37f3e4803467ad49d136c545c30fc5bda52b2cffef528a0b5d0fb51fd264dd6a"
+    }
+  },
+  "validation_sha256": "1fc5fd65dbc6d15d2fe8d8fe5dda038d5c8f55c73160fb8e9db9c3293482cac9",
+  "judge_identity": {
+    "provider": "openai",
+    "model": "deepseek-flash",
+    "base_url": "https://api.deepseek.com",
+    "max_tokens": "",
+    "temperature": "",
+    "top_p": "",
+    "frequency_penalty": "",
+    "stream": "",
+    "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+    "default_headers_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+    "allow_message_extras_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+    "fingerprint": "17a29193349e6241ce924d4f80465788b6b4e698d7b558c07538a44440e3be75"
+  },
+  "baseline_manifest_sha256": "7ed5805e4d0d1f3e2221fdf98b9b58b0d9b1c8dd6ded0a6a0b02bdc4176f670a",
+  "input_sha256": {
+    "home_switch-conversations.json": "e02686eed1c3493a7587d9abb9481cbe2e2d9b20759fd7c4802592799dc2ad90",
+    "home_switch-source-scores.json": "783680044b34e31a9f4e2e009c582c8b2ea6993c1bfa64913bf782933af8c0e9",
+    "weather-conversations.json": "4ae28c9deffd180db8b1d3845ba7a3f4df9affb4f2f18717f9dcd944f951ad4d",
+    "weather-source-scores.json": "23a032802d0c41d3e04faddb4e19fa0057a4dc9840b164906eab9d874bffdd1c"
+  },
+  "historical_judge_note": "家居保留完整模型指纹；天气旧评分只记录 deepseek-flash 名称，不能证明旧请求参数完全一致。"
+}

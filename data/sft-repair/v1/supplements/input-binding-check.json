@@ -1,0 +1,626 @@
+[
+  {
+    "id": "home_switch:T04-R001-P1",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T04-R004-P1",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T06-R007-P1",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T06-R010-P1",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T07-R013-P1",
+    "tools": 9,
+    "calls": 5,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T07-R016-P1",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T08-R019-P1",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R028-P1",
+    "tools": 9,
+    "calls": 0,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R031-P1",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R034-P1",
+    "tools": 9,
+    "calls": 0,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T17-R037-P1",
+    "tools": 9,
+    "calls": 0,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T17-R040-P1",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T19-R043-P1",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T19-R046-P1",
+    "tools": 9,
+    "calls": 5,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T19-R049-P1",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R052-P1",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R055-P1",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R058-P1",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T04-R002-P2",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T06-R005-P2",
+    "tools": 9,
+    "calls": 5,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T06-R008-P2",
+    "tools": 9,
+    "calls": 6,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T07-R011-P2",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T07-R014-P2",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T07-R017-P2",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T08-R020-P2",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T08-R023-P2",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T08-R026-P2",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R029-P2",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R032-P2",
+    "tools": 9,
+    "calls": 0,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R035-P2",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T17-R038-P2",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T17-R041-P2",
+    "tools": 9,
+    "calls": 0,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T19-R044-P2",
+    "tools": 9,
+    "calls": 6,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T19-R047-P2",
+    "tools": 9,
+    "calls": 6,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T19-R050-P2",
+    "tools": 9,
+    "calls": 6,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R053-P2",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R056-P2",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R059-P2",
+    "tools": 9,
+    "calls": 5,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T04-R003-P3",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T06-R006-P3",
+    "tools": 9,
+    "calls": 6,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T06-R009-P3",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T07-R012-P3",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T07-R015-P3",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T07-R018-P3",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T08-R021-P3",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T08-R024-P3",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R027-P3",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R030-P3",
+    "tools": 9,
+    "calls": 0,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R033-P3",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T11-R036-P3",
+    "tools": 9,
+    "calls": 0,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T17-R039-P3",
+    "tools": 9,
+    "calls": 0,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T17-R042-P3",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T19-R045-P3",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T19-R048-P3",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R051-P3",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R054-P3",
+    "tools": 9,
+    "calls": 4,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R057-P3",
+    "tools": 9,
+    "calls": 5,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "home_switch:T20-R060-P3",
+    "tools": 9,
+    "calls": 3,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "verified",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S11-R001-P1",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S11-R002-P2",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S11-R003-P3",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S11-R004-P1",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S11-R005-P2",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S15-R006-P3",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S15-R007-P1",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S15-R008-P2",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S15-R009-P3",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S15-R010-P1",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S20-R011-P2",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S20-R012-P3",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S20-R013-P1",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S20-R014-P2",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S20-R015-P3",
+    "tools": 9,
+    "calls": 2,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S22-R016-P1",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S22-R017-P2",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S22-R018-P3",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S22-R019-P1",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  },
+  {
+    "id": "weather:S22-R020-P2",
+    "tools": 9,
+    "calls": 1,
+    "model": "deepseek-flash",
+    "catalog_and_preset": "not_applicable",
+    "system_matches_input": true
+  }
+]

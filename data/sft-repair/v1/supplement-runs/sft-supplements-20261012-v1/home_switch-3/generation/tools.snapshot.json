@@ -1,0 +1,265 @@
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "get_lunar",
+      "description": "用于具体日期的阴历/农历和黄历信息。用户可以指定查询内容，如：阴历日期、天干地支、节气、生肖、星座、八字、宜忌等。如果没有指定查询内容，则默认查询干支年和农历日期。对于'今天农历是多少'、'今天农历日期'这样的基本查询，请直接使用context中的信息，不要调用此工具。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "要查询的日期，格式为YYYY-MM-DD，例如2024-01-01。如果不提供，则使用当前日期"
+          },
+          "query": {
+            "type": "string",
+            "description": "要查询的内容，例如阴历日期、天干地支、节日、节气、生肖、星座、八字、宜忌等"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_news_from_newsnow",
+      "description": "获取最新新闻，随机选择一条新闻进行播报。用户可以选择不同的新闻源，标准的名称是：V2EX、知乎、微博、联合早报、酷安、MKTNews、华尔街见闻、36氪、抖音、虎扑、百度贴吧、今日头条、IT之家、澎湃新闻、卫星通讯社、参考消息、远景论坛、财联社、雪球、格隆汇、法布财经、Solidot、Hacker News、Product Hunt、Github、哔哩哔哩、快手、靠谱新闻、金十数据、百度热搜、牛客、少数派、稀土掘金、凤凰网、虫部落例如用户要求百度新闻，其实就是百度热搜。如果没有指定，默认从澎湃新闻获取。用户可以要求获取详细内容，此时会获取新闻的详细内容。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "新闻源的标准中文名称，例如V2EX、知乎、微博、联合早报、酷安、MKTNews、华尔街见闻、36氪、抖音、虎扑、百度贴吧、今日头条、IT之家、澎湃新闻、卫星通讯社、参考消息、远景论坛、财联社、雪球、格隆汇、法布财经、Solidot、Hacker News、Product Hunt、Github、哔哩哔哩、快手、靠谱新闻、金十数据、百度热搜、牛客、少数派、稀土掘金、凤凰网、虫部落等。可选参数，如果不提供则使用默认新闻源"
+          },
+          "detail": {
+            "type": "boolean",
+            "description": "是否获取详细内容，默认为false。如果为true，则获取上一条新闻的详细内容"
+          },
+          "lang": {
+            "type": "string",
+            "description": "返回用户使用的语言code，例如zh_CN/zh_HK/en_US/ja_JP等，默认zh_CN"
+          }
+        },
+        "required": [
+          "lang"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "get_weather",
+      "description": "只在用户询问当前或未来七天的天气时调用；普通闲聊中提到天气时不要调用。用户明确说出城市时，将城市名填入location；同时明确说出省份或上级城市时，填入adm用于消歧，不要自行猜测上级地区。地点是省份、含糊地名或无法确定具体城市时先反问。用户没说地点时省略location，工具会使用当前智能体天气配置中的default_location；不要把上下文城市填入location。用户没说日期时按今天理解。工具返回当前天气和未来七天预报，不接收日期参数；只根据报告中确实存在的日期回答。回复时使用报告第一行的城市名，允许省略末尾的“市”，不要翻译或改成其他地点。若返回need_city、ambiguous_city或city_not_found，向用户追问具体城市或上级地区，再根据下一轮回答重新调用本工具；若返回fetch_error，说明暂时无法查询，不要编造天气。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "用户明确提出的城市名，如杭州、朝阳。未说城市时不要传此参数，由工具使用当前智能体配置的默认城市。"
+          },
+          "adm": {
+            "type": "string",
+            "description": "用户明确提供的上级省份或城市，仅用于重名地区消歧，例如辽宁；不要猜测。"
+          },
+          "lang": {
+            "type": "string",
+            "description": "返回用户使用的语言code，例如zh_CN/zh_HK/en_US/ja_JP等，默认zh_CN"
+          }
+        },
+        "required": [
+          "lang"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "handle_exit_intent",
+      "description": "当用户想结束对话或需要退出系统时调用",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "say_goodbye": {
+            "type": "string",
+            "description": "和用户友好结束对话的告别语"
+          }
+        },
+        "required": [
+          "say_goodbye"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "hass_get_state",
+      "description": "获取homeassistant里设备的状态,包括查询灯光亮度、颜色、色温,媒体播放器的音量,设备的暂停、继续操作",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "entity_id": {
+            "type": "string",
+            "description": "需要操作的设备id,homeassistant里的entity_id"
+          }
+        },
+        "required": [
+          "entity_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "hass_set_state",
+      "description": "设置homeassistant里设备的状态,包括开、关,调整灯光亮度、颜色、色温,调整播放器的音量,设备的暂停、继续、静音操作",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "description": "需要操作的动作,打开设备:turn_on,关闭设备:turn_off,增加亮度:brightness_up,降低亮度:brightness_down,设置亮度:brightness_value,增加音量:volume_up,降低音量:volume_down,设置音量:volume_set,设置色温:set_kelvin,设置颜色:set_color,设备暂停:pause,设备继续:continue,静音/取消静音:volume_mute"
+              },
+              "input": {
+                "type": "integer",
+                "description": "只有在设置音量,设置亮度时候才需要,有效值为1-100,对应音量和亮度的1%-100%"
+              },
+              "is_muted": {
+                "type": "string",
+                "description": "只有在设置静音操作时才需要,设置静音的时候该值为true,取消静音时该值为false"
+              },
+              "rgb_color": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "description": "只有在设置颜色时需要,这里填目标颜色的rgb值"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "entity_id": {
+            "type": "string",
+            "description": "需要操作的设备id,homeassistant里的entity_id"
+          }
+        },
+        "required": [
+          "state",
+          "entity_id"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "play_music",
+      "description": "唱歌、听歌、播放音乐的方法。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "song_name": {
+            "type": "string",
+            "description": "歌曲名称，如果用户没有指定具体歌名则为'random', 明确指定的时返回音乐的名字 示例: ```用户:播放两只老虎\n参数：两只老虎``` ```用户:播放音乐 \n参数：random ```"
+          }
+        },
+        "required": [
+          "song_name"
+        ]
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "state_hub_snapshot",
+      "description": "获取 Home Assistant State Hub 的实体状态摘要，返回已订阅且允许暴露的实体名称、实际 entity_id 和当前状态。可先用名称找到 entity_id，再将该 ID 传给 hass_set_state；需要复核状态时再次调用本工具。摘要可能不包含全部 HA 实体，本工具不执行控制。",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "max_highlight": {
+            "type": "integer",
+            "description": "最多返回多少条 highlight（1-80，默认 30）"
+          }
+        },
+        "required": []
+      }
+    }
+  },
+  {
+    "type": "function",
+    "function": {
+      "name": "task_engine_control",
+      "description": "Control-plane API for Task Engine. Supports wake_up attempt correction and reminder creation. For op='wake_up_mark_ok', this tool does not accept fabricated evidence: when verify_mode='vision_confirm', pass a real tool_call_id from wake_check.For op='create_reminder', this tool can be used to set up reminders for various future events.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "op": {
+            "type": "string",
+            "description": "Operation name.",
+            "enum": [
+              "wake_up_mark_ok",
+              "create_reminder"
+            ]
+          },
+          "instance_id": {
+            "type": "integer",
+            "description": "Required for wake_up_mark_ok. Task engine instance_id from [Task Engine Binding]."
+          },
+          "attempt_id": {
+            "type": "integer",
+            "description": "Required for wake_up_mark_ok. Task engine attempt_id from [Task Engine Binding]."
+          },
+          "verify_mode": {
+            "type": "string",
+            "description": "Required for wake_up_mark_ok. Evidence mode: user_confirm or vision_confirm.",
+            "enum": [
+              "user_confirm",
+              "vision_confirm"
+            ]
+          },
+          "user_quote": {
+            "type": "string",
+            "description": "Required when verify_mode='user_confirm'. Must be a short exact quote from a recent user message."
+          },
+          "vision_tool_call_id": {
+            "type": "string",
+            "description": "Required when verify_mode='vision_confirm'. Must be a real tool_call_id from dialogue tool_calls (the id returned by wake_check)."
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional audit note."
+          },
+          "reminder_text": {
+            "type": "string",
+            "description": "Required for create_reminder. Reminder content text."
+          },
+          "planned_at_ms": {
+            "type": "integer",
+            "description": "Required for create_reminder. Absolute UNIX epoch milliseconds in the user's/local timezone context. Do not treat local wall-clock time as UTC when converting."
+          },
+          "reminder_id": {
+            "type": "string",
+            "description": "Optional idempotency key for create_reminder."
+          },
+          "window_minutes": {
+            "type": "integer",
+            "description": "Optional reminder retry window minutes for create_reminder."
+          }
+        },
+        "required": [
+          "op"
+        ]
+      }
+    }
+  }
+]

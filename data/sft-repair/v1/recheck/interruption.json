@@ -1,0 +1,9 @@
+{
+  "status": "interrupted_by_user",
+  "reason": "用户要求取消全量重评，只评分有问题的及新样本",
+  "weather_shards_completed": 7,
+  "weather_samples_completed_in_memory": 247,
+  "scores_persisted": false,
+  "home_started": false,
+  "note": "分片评分保存在中途进程内，未形成完整 scores.json；不用于新版训练集，不补跑。"
+}

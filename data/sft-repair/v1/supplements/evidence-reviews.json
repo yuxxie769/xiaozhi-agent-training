@@ -1,0 +1,1672 @@
+{
+  "home_switch:T04-R001-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "876b29c2f421a85e7f3a8de5dc74f166be8c6f6d597d94c9170c91cf34b50e0e",
+    "reason": "风扇off→on并回读；再打开时不重复控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T04-R004-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "a12de0dfab784429d5f49ffecd6a9f71c2ef598b47ac769555f766363c47bb30",
+    "reason": "植物灯已经on，第二轮重新查询后仍未重复控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T06-R007-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "58f0d8492a275944747905573d1eb36512e65a7403cbe9f0f5f1a1b5f4024f18",
+    "reason": "书房插座初始on未重发，指代关闭后查询404，再用快照确认off。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T06-R010-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "06bfb32546302b45b693a2c1127aa40c525ff793c02101a82bbae53bdebd1944",
+    "reason": "阅读灯已on，随后指代关闭并回读off。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T07-R013-P1": {
+    "decision": "quarantine",
+    "source_sample_sha256": "05a5e727fec9c4aab3be3afde88d8683630a99891e5101fce8dfe55315e35ab9",
+    "reason": "插座候选表述遗漏风扇插座；且含运行器注入用户提示，按既有规则隔离。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "source": "home_switch-1/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 2,
+        "quote": "家里有两路可控制的插座"
+      },
+      {
+        "message_index": 0,
+        "quote": "风扇插座"
+      },
+      {
+        "message_index": 14,
+        "quote": "[系统提示]"
+      }
+    ]
+  },
+  "home_switch:T07-R016-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "e49b2692b2eddd9a6a3698bb33ffb1ee9e65e77be9cf390ba1645a5b9f695739",
+    "reason": "澄清后按改口打开阅读灯，回读on。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T08-R019-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "8a35f6f32f05b73734fdfb666b01764aef47c11809b3daeffd8bfcf8f1bcec0f",
+    "reason": "只给设备先查询并询问动作，明确打开后才控制和回读。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T11-R028-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "112f1d0ec74bb54ee337bf6733426418b7c33040f015dde9200ba8768258a97f",
+    "reason": "排除咖啡机后仍剩两个插座候选，继续澄清。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T11-R031-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "2b7b92abfc5cd6dea46d6fc5e83bddc45173cece38796541286eb4a3e2422f09",
+    "reason": "第二项夜灯正确，单设备回读404后快照off确认。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T11-R034-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "ec8d9bb57c0f88d0b108064320d8a92c40287e09eaf69b8d33d004e0c75d2ac3",
+    "reason": "排除书房插座仍两候选，继续澄清。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T17-R037-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "a60bd069ba6ac8559e3c8bd3db659a5b1fb7031d760d97fc4ada616fe421c3c6",
+    "reason": "目标不明时澄清，取消后未控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T17-R040-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "bb7e9af0a459ac52250dcfd982cc7c37614ab23f90d189d91408eb684e971e96",
+    "reason": "先澄清灯后切换笑话，未把后续好的误当控制授权。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T19-R043-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "f6f2a7fbc81441dd104c4c046b5d8a6b9eb0fb2e730f36164a7e81a5a3aa6b01",
+    "reason": "失联过期时停止，用户重试后读取恢复，夜灯关闭并回读。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T19-R046-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "9bebb2d60c212438e205fdb45aa8391120c3a5c9fd9d8caa97c47cefe2feb129",
+    "reason": "读失败时停止，重试恢复后阅读灯on→off并回读。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T19-R049-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "6a091d3599f8395e3b5aba1875465b169aa3b822dfefd493e436734522da0ed5",
+    "reason": "读取错误不控制，重试目标已on不重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T20-R052-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "a1b5436e0d7142283d18eaa24f41fbfab4f49b883397f92b10a89b10b7bf9b37",
+    "reason": "403后报告失败，用户只问状态时仅查询并回答on。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T20-R055-P1": {
+    "decision": "quarantine",
+    "source_sample_sha256": "3e79330fbcc66aeebd584d3cf4a695d10da00a0b744d3ff9f9fa144ae75063ba",
+    "reason": "控制报错且回读404后仍断言目前关闭，未确认状态时使用了控制前状态。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-1/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 8,
+        "quote": "目前是关闭状态"
+      },
+      {
+        "message_index": 5,
+        "quote": "tool_error"
+      },
+      {
+        "message_index": 7,
+        "quote": "错误码: 404"
+      }
+    ]
+  },
+  "home_switch:T20-R058-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "0dbf1d398c07da6b2d42da07588912b36ad6acf17670f35fd8fddd8b0bf3533c",
+    "reason": "工具报错但回读on，查询当前状态时仍只读。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-1/generation/conversations.json"
+  },
+  "home_switch:T04-R002-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "899c19681efaa8dbbb4d35a314c07f760f5c0d85cb7a2ed248946d42db7499a6",
+    "reason": "阅读灯on→off并回读；重复关闭未重发。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T06-R005-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "31d94033858327ac9fc500506cced3677de0645688471e0dc73bc1a5b73ea3b9",
+    "reason": "卧室台灯off→on，指代改口后on→off，均回读。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T06-R008-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "1dea39aad0b89d9dc087d405c64327587df8ff667581336f7cc0a7992c0cfe0e",
+    "reason": "植物灯开→改口关，目标与回读对应。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T07-R011-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "c4aaa5693719c5bfe541d6d10056d6631649c2be734b8819a68aaff57841185f",
+    "reason": "插座歧义先澄清，咖啡机插座on→off并回读。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T07-R014-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "bd54766b82db5f0e2d0e8ba4151c8bb466832180e9a42346280b563bb0b842de",
+    "reason": "先澄清，阅读灯已on，改口打开未重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T07-R017-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "e1e58b94efb592a817c7c313347b18f69f7cbd01808797ed64593a4710f4df4d",
+    "reason": "灯具状态列表与快照一致，澄清夜灯已off后未重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T08-R020-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "fcec038b2c11b24a66d33066c66f41747774f465debae6ce36339125ec977584",
+    "reason": "设备与动作分三轮补全，台灯已on未重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T08-R023-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "5c9a30f0549c584124df33328fb75b0487403f221175a5fbbdb90397638ccfb2",
+    "reason": "咖啡机插座先查询及澄清动作，再控制回读；正确区分插座通电与咖啡机运行。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T08-R026-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "5b4aeb1973d07a5e441d6b058ebb43d6a1a1405ae6bede04d5c0969e86e04119",
+    "reason": "三轮分别补齐目标动作，阅读灯已on不重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T11-R029-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "c772010805167f6114fed12ee31ef1534539725366b2a35ac2138978599d6691",
+    "reason": "第二项夜灯与前轮列表一致，关闭并回读。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T11-R032-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "5e8907b15e1edb22297b156d9e5322ab907293a9a1a02dfc564bcf5fee820869",
+    "reason": "排除咖啡机仍两候选，继续澄清。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T11-R035-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "e1350ca0230ffc5fb6c2be477e5998e9413701651507b960ccf85e6edc2f1d0b",
+    "reason": "第二项植物灯已off，未重复控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T17-R038-P2": {
+    "decision": "quarantine",
+    "source_sample_sha256": "04134e08d76ae5feee354271bed2ff8cee219aa2b56792be38a0ca835ae844df",
+    "reason": "用户仅要求不要再动设备，却调用退出意图工具结束交互，停止设备操作和结束会话范围不一致。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-2/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 7,
+        "quote": "就这样，不要再动了。"
+      },
+      {
+        "message_index": 8,
+        "quote": "handle_exit_intent"
+      }
+    ]
+  },
+  "home_switch:T17-R041-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "55d3375a4eeb8c808a52befedb649a9819c9992efea8bcbe5205840bf5fe1900",
+    "reason": "取消后无控制，目录房间对应正确。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T19-R044-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "112f3357c35b3c00498e11f05b0e18a0af8350fa29af96f63ad4eebaf9627002",
+    "reason": "快照错误和单设备404时未控制；重试植物灯off→on，夜灯已on无需重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T19-R047-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "acee6bae5ed1c1dd6fcf50f34a6ecde161b979784a3d3a47403075ababf321de",
+    "reason": "读失败不控制，重试只关闭仍on的植物灯，夜灯已off不重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T19-R050-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "af2acd3160bb0486f748ba785eb186bf0f5405465e77434eb96712c192801dd0",
+    "reason": "植物灯已on，阅读灯打开返回成功但回读404；明确结果未确认，没有虚构回读成功。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T20-R053-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "ecc77331c8feec7da9e7c7ebbeb4013ac629a5d063a5e0778e352c7f5963b652",
+    "reason": "控制返回错误但回读实际on，完成笑话；重试只查询不重发。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T20-R056-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "df6bd3abea4e375cdf2e09b65b58d137cdbf0613b0842b2a41b9116cca3b3f1d",
+    "reason": "403后说状态应仍开启，随后只查询并据on回答，没有重复控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T20-R059-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "f2892f6a54cbfdfd665b914122cbbebcb364cfa06963d2fb283d1ce4d9eb6b92",
+    "reason": "403后如实报告并讲笑话，重试读取后关闭并回读off。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "source": "home_switch-2/generation/conversations.json"
+  },
+  "home_switch:T04-R003-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "85e0d967b45759ce3d7db5db416a2292ad2a610328eb42dc969acf2570c3b25b",
+    "reason": "夜灯已经on，连续两轮均未重复控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T06-R006-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "69e9bba55e7efa31013aaef6fefa85cc8a1fbb7df0a62648625680b73bc15818",
+    "reason": "单设备查询404后快照读取成功；阅读灯开→改口关，各有回读。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T06-R009-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "569a2d2f2d2b89e71229f82af18f300b3e22651da5be952ddc7374de7e092496",
+    "reason": "阅读灯已on不重复，随后关闭并回读；其他灯状态引用此前快照。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T07-R012-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "3ca5ea663adae002697368e2a4d211c28eb7c8787507941fc1fe06245243822c",
+    "reason": "先澄清灯，按最后指令打开植物灯并回读。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T07-R015-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "b6628e67ad75c94707172e16998af88eaae8cbfcfa49f8d826d24c5c676354ce",
+    "reason": "三盏灯均off且没有擅自控制；确认阅读灯后仍未重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T07-R018-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "88ea7881fe2d03036cb5e4107f9491435d8d7ac5df783bf13cbd1c4582761717",
+    "reason": "插座澄清、按最后打开处理，书房插座已on。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T08-R021-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "4f92485985dc34d94e49cb9add0c62008515d6a8f485309e3ff372532e1ef931",
+    "reason": "动作缺失先澄清，台灯已on未重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T08-R024-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "a26ad72fed479166ab0660d827608df85fd47eebb2a5fc2a72fcde5cb253f23e",
+    "reason": "书房插座目标关闭且已off，未受确认打开的问句影响。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T11-R027-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "51e8f64c2e479476e15938a8746ac905fa49cfca759c54fd9ee4624600fac5e1",
+    "reason": "列表第二项植物灯已off，无重复控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T11-R030-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "dcf8aee157af098486f1382843bf32f44d4af0eeebe321b7864fee1adf047881",
+    "reason": "排除咖啡机后两个候选，未猜目标。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T11-R033-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "485b8a5389ba2ad8f31ad74ec970919b045bad8c0559559040193fe2ab854a0d",
+    "reason": "第二项卧室台灯已off，未关闭其他亮灯。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T11-R036-P3": {
+    "decision": "quarantine",
+    "source_sample_sha256": "e01fd3da4866ab3a23b0922e46c408c892d22f9b1e0caddd72c094ddb6982238",
+    "reason": "把目录中的植物灯加入插座候选，但名称和别名未给出插座依据，候选范围存疑。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "home_switch-3/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 2,
+        "quote": "阳台植物灯"
+      },
+      {
+        "message_index": 0,
+        "quote": "植物灯"
+      }
+    ]
+  },
+  "home_switch:T17-R039-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "6263fceb847d0eb5e3117bc10c8f3dc6d213537a62da269721e3c5d730d47c58",
+    "reason": "否定关闭时没有工具调用。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T17-R042-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "049669f6592f4755b3a96b2147f750e294880d3117b06a97eaac9a3e39aa226b",
+    "reason": "先打开并回读，取消后没有继续控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T19-R045-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "f304a6876ce94553979ddbf3dc10f930694cb0f728cf98379da0121035800820",
+    "reason": "读失败时未控制但完成笑话；重试发现植物灯已on，未重发。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T19-R048-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "6800e1b435e04230959f50b6d818d68fa09bd3e74e9870adb682ddec74ae0e25",
+    "reason": "失联过期不控制，笑话照常；重试植物灯已on不重复。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T20-R051-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "f03237b9951e79961199fde5980b046e817e1b8b2799d11f2df35ba7fa5397a8",
+    "reason": "错误工具返回后快照实际on，成功结论依据回读；重试达标不重发。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T20-R054-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "9ab9d1b3023f13c7718067c0f9ed4ee7e4ff4afe06b759e20f226331fa8c9a3d",
+    "reason": "控制报错但回读on，随后明确援引上一轮回读且未再次控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T20-R057-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "2c9d4f644158ce28ec410f1539961ed0fd7b073af1569a86bf83dab21c472e40",
+    "reason": "403后用户明确重试，重新读取、关闭、回读off；故障原因仅为推测。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "home_switch:T20-R060-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "d940447bfb967992d9ecfef048fa4b1888759b2098043da47d25cfaf148b6383",
+    "reason": "工具报错后回读on，用户禁止重试时明确引用刚才回读，无后续控制。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "source": "home_switch-3/generation/conversations.json"
+  },
+  "weather:S11-R001-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "9e6fd761b65fb8894ff78440acdc3a7582b479eb6252b49dbd72f5a805c89e95",
+    "reason": "浙江先澄清到杭州；10月12日和逐日温度、当前参数分别对应返回。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S11-R002-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "9b35c2acece208ff60ec3d9fd80b243d912bd5bfa9a317b2afaf858af46c5ce7",
+    "reason": "浙江澄清到宁波，4天后10月16日小雨20–27，带伞建议有小雨预报依据。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S11-R003-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "0ba9afee162fbc74eeb9ee5960943ce9981f6b601665a89aec3fcffea55c44ae",
+    "reason": "江苏澄清到南京，10月15日阴18–23，风力明确标为当前参考值。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S11-R004-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "b48d109444a7c1e46da97cc9baf8f3e9ad05a7820c25b5a9dd86f03e166c0503",
+    "reason": "宁波10月16日小雨20–27；风力湿度明确标为今天参考，未冒充未来字段。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S11-R005-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "97eb2d122d2d0a4b5c5d598a49302fdaddc6a8d88394ff1a1e544db95c71faa8",
+    "reason": "深圳10月16日多云24–31；今日参考与目标日期单列，未保证无雨。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S15-R006-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "28ed973b93f0437e38ef0dc730c3f941d698950bcd2e6f3214fe4cf4d45e18c7",
+    "reason": "城市未找到后改上海；10月12日19–25和当前23各有对应字段。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S15-R007-P1": {
+    "decision": "accept",
+    "source_sample_sha256": "021de23960ae3106be4b7c1a4d559be9c7e2e1734ca4f2c86e080920c0dabbe1",
+    "reason": "武汉10月14日小雨16–26，明确没有雨量数值；未猜造降雨量。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S15-R008-P2": {
+    "decision": "quarantine",
+    "source_sample_sha256": "2991f846c1f7f5f5ced41f68e2142ab4c9021014dcbd5ee6db0bc3831af09070",
+    "reason": "把当前0.0mm扩大成今天没有降雨，整日断言缺少依据。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "weather-1/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 8,
+        "quote": "没有降雨"
+      },
+      {
+        "message_index": 7,
+        "quote": "降水量: 0.0mm"
+      },
+      {
+        "message_index": 7,
+        "quote": "今天10月12日: 晴"
+      }
+    ]
+  },
+  "weather:S15-R009-P3": {
+    "decision": "quarantine",
+    "source_sample_sha256": "ab255a963a3baec68469111697648df44454430e4748bec09bc5e4d2b3da901a",
+    "reason": "第一轮将6天后澄清成往前数第6天，时间方向表述混乱；末轮日期虽正确，仍暂不入库。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "weather-1/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 4,
+        "quote": "往前数的第6天"
+      },
+      {
+        "message_index": 1,
+        "quote": "6天后"
+      }
+    ]
+  },
+  "weather:S15-R010-P1": {
+    "decision": "quarantine",
+    "source_sample_sha256": "b57b2435257d13be1530d5d6042560eb7289b7afa731f21b67c12555606c1d55",
+    "reason": "工具只返回城市未匹配，回答却断言该城市并不真实存在，超出该查询的证据范围。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "weather-1/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 4,
+        "quote": "并不是一个真实存在的城市名"
+      },
+      {
+        "message_index": 3,
+        "quote": "city_not_found"
+      }
+    ]
+  },
+  "weather:S20-R011-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "0d6fb10996feea594c02a1fad6f76d7ec0c5646ec1774f7343a6f80638a45ecc",
+    "reason": "切换成都至苏州仍保持10月17日；阴16–21和多云22–29与各自返回一致。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S20-R012-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "cca533d6339c94d9fbb50cad278e15cddced1f5b00ee6751369c37a6e937239b",
+    "reason": "武汉、北京均保持10月16日，18–23与12–21及温差分别正确。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S20-R013-P1": {
+    "decision": "quarantine",
+    "source_sample_sha256": "31d33be7428d6347564c6ad206ee3f0e97b19ed31630accb420f4e69136e642b",
+    "reason": "回答后天深圳时将当前紫外线中等混入目标日期；另有阴天不用担心降雨的无依据推断。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "weather-1/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 8,
+        "quote": "紫外线中等"
+      },
+      {
+        "message_index": 7,
+        "quote": "紫外线: 中等"
+      },
+      {
+        "message_index": 4,
+        "quote": "不用特别担心降雨"
+      },
+      {
+        "message_index": 3,
+        "quote": "周三10月14日: 阴"
+      }
+    ]
+  },
+  "weather:S20-R014-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "a5be45be6464258050bb0946401b63004d3c7505fa26378c0f401494c0c4dbf8",
+    "reason": "广州至杭州保持10月14日，23–33与18–25分别对应，风力均标为今天参考。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S20-R015-P3": {
+    "decision": "accept",
+    "source_sample_sha256": "43ac9582c2a09592c05da998f90c36d489ab40ce1496add9ca44f0ed20f05c08",
+    "reason": "北京至杭州保持10月13日，8–22与19–27分别对应。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S22-R016-P1": {
+    "decision": "quarantine",
+    "source_sample_sha256": "648bf410dad1fce8f724b77c50b1c720910bb365c1004e1b627fd4e5e2b5b933",
+    "reason": "已承认没有逐小时数据，仍推断下午三点大概率位于偏暖一端；不作为可靠的逐时信息缺失示范。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "weather-1/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 4,
+        "quote": "下午三点大概率处于偏暖一端"
+      },
+      {
+        "message_index": 3,
+        "quote": "周五10月16日: 阴，气温 21°~26°"
+      }
+    ]
+  },
+  "weather:S22-R017-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "36def274d75c15d2b7823ca6f464661f56e7463b90251bf202761359c3eb0330",
+    "reason": "武汉10月18日小雨17–22，明确无降水概率百分比，未编造数值。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "weather-1/generation/conversations.json"
+  },
+  "weather:S22-R018-P3": {
+    "decision": "quarantine",
+    "source_sample_sha256": "0a6ecffec07681230c059a6936fcda5de0fb25bb3871beaad4438d5ed0ee54b4",
+    "reason": "10月18日晴被扩展成没有降雨；说明缺小时数据不能消除前面的确定性无雨结论。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "weather-1/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 4,
+        "quote": "没有降雨"
+      },
+      {
+        "message_index": 3,
+        "quote": "周日10月18日: 晴，气温 22°~30°"
+      }
+    ]
+  },
+  "weather:S22-R019-P1": {
+    "decision": "quarantine",
+    "source_sample_sha256": "5e10496bd3b2168a72e6381b5239f103ab90beca4c44869f70d6f46ebf1838b4",
+    "reason": "把当前0.0mm与晴天预报扩展成今天没有降雨、不存在持续时长的问题。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "weather-1/generation/conversations.json",
+    "evidence": [
+      {
+        "message_index": 4,
+        "quote": "没有降雨"
+      },
+      {
+        "message_index": 3,
+        "quote": "降水量: 0.0mm"
+      }
+    ]
+  },
+  "weather:S22-R020-P2": {
+    "decision": "accept",
+    "source_sample_sha256": "9ec3fd97077c62a4db1b56c589b417aa1ed5e4c4711483c2a39e2779c0df8862",
+    "reason": "南京10月14日多云16–25；明确无逐日降水概率，未编造百分比。",
+    "reviewer": "Codex",
+    "method": "逐条阅读用户请求、助手答复、工具调用及返回；快照使用完整状态与变化对照。非额外模型评分调用。",
+    "reviewed_message_indices": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source": "weather-1/generation/conversations.json"
+  }
+}
