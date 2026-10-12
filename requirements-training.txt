@@ -1,10 +1,14 @@
 # 先按服务器驱动安装匹配的 CUDA PyTorch/torchvision，再安装本文件。
-# 这是依赖范围，不是已经验证的 GPU 锁定环境；成功试跑后记录实际版本。
-unsloth
-unsloth_zoo
-transformers>=5,<6
-datasets>=4
-peft
-accelerate
-bitsandbytes
-Pillow
+# 下列版本已在 RTX 4080 SUPER 32GB、Python 3.12.3、torch 2.8.0+cu128 上完成 GPU smoke。
+unsloth==2026.10.3
+unsloth_zoo==2026.10.3
+# RTX 4080 服务器预装 torch 2.8.0+cu128；新版 xformers 会强制换成 torch/CUDA 13。
+xformers==0.0.32.post2
+# 0.18 需要 torch>=2.11，会让 Transformers 在当前 torch 2.8 环境导入失败。
+torchao==0.13.0
+transformers==5.17.0
+datasets==4.8.5
+peft==0.21.2
+accelerate==1.15.0
+bitsandbytes==0.50.2
+Pillow==11.3.0

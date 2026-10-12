@@ -47,6 +47,48 @@ def load_local_tokenizer(path):
     return tokenizer
 
 
+def verify_local_model_dir(path, snapshot):
+    """逐文件核对本地底座与固定 revision 的官方 SHA-256。"""
+    path = Path(path).resolve()
+    if not path.is_dir():
+        raise ValueError(f"本地模型目录不存在:{path}")
+    for name, record in snapshot["files"].items():
+        candidate = path / name
+        if not candidate.is_file() or sha256(candidate) != record["sha256"]:
+            raise ValueError(f"local_model_snapshot_mismatch:{name}")
+    weights = snapshot.get("weights")
+    index_record = weights.get("index") if isinstance(weights, dict) else None
+    expected_files = weights.get("files") if isinstance(weights, dict) else None
+    if not isinstance(index_record, dict) or not isinstance(expected_files, dict):
+        raise ValueError("固定快照缺少官方权重哈希")
+    index_path = path / index_record.get("name", "")
+    if (not index_path.is_file() or index_path.stat().st_size != index_record.get("bytes")
+            or sha256(index_path) != index_record.get("sha256")):
+        raise ValueError("local_model_weight_index_mismatch")
+    index = json.loads(index_path.read_text(encoding="utf-8"))
+    shards = sorted(set(index.get("weight_map", {}).values()))
+    if not shards:
+        raise ValueError("本地模型权重索引为空")
+    if set(shards) != set(expected_files):
+        raise ValueError("local_model_weight_set_mismatch")
+    files = {}
+    for name in shards:
+        # 官方分片都在模型目录根部；拒绝索引借助相对路径读取目录外文件。
+        if Path(name).name != name or not name.endswith(".safetensors"):
+            raise ValueError(f"invalid_local_weight_path:{name}")
+        candidate = path / name
+        record = expected_files[name]
+        if (not candidate.is_file() or candidate.stat().st_size != record.get("bytes")
+                or sha256(candidate) != record.get("sha256")):
+            raise ValueError(f"local_model_weight_mismatch:{name}")
+        files[name] = record
+    return {
+        "local_model_dir": str(path),
+        "weight_index_sha256": index_record["sha256"],
+        "weight_files": files,
+    }
+
+
 def load_base_model(snapshot, config):
     """固定官方底座；不允许自动换成另一个仓库的量化镜像。
 
@@ -56,8 +98,12 @@ def load_base_model(snapshot, config):
     from unsloth import FastLanguageModel
     import torch
 
+    local_dir = snapshot.get("local_model_dir")
+    source_args = ({"model_name": local_dir, "local_files_only": True} if local_dir else {
+        "model_name": snapshot["model_id"], "revision": snapshot["revision"]
+    })
     return FastLanguageModel.from_pretrained(
-        model_name=snapshot["model_id"], revision=snapshot["revision"],
+        **source_args,
         use_exact_model_name=True, trust_remote_code=False,
         max_seq_length=config.max_seq_length, dtype=torch.bfloat16,
         load_in_4bit=False, load_in_16bit=True, full_finetuning=False,
@@ -131,13 +177,25 @@ def run_gpu_training(config, snapshot, tokenizer, rows, features, records, outpu
     model = FastLanguageModel.get_peft_model(
         model, r=config.lora_rank, lora_alpha=config.lora_alpha,
         target_modules=targets, lora_dropout=0, bias="none",
+        # Qwen3.5 由 VLM 加载器转成纯文本模型后，Unsloth 仍会将显式
+        # 完整路径再经过模态筛选；关闭 vision 筛选会错误清空这些路径。
+        # 这里打开筛选的允许集，真正目标仍由上面排除 visual/vision
+        # 的完整路径唯一确定，并在注入后逐个反查。
+        finetune_vision_layers=True, finetune_language_layers=True,
+        finetune_attention_modules=True, finetune_mlp_modules=True,
         use_gradient_checkpointing="unsloth", random_state=config.seed,
     )
     model.config.use_cache = False
+    attached = sorted(name for name, layer in model.named_modules() if hasattr(layer, "lora_A"))
+    unexpected = [name for name in attached if not any(name.endswith(target) for target in targets)]
+    missing = [target for target in targets if not any(name.endswith(target) for name in attached)]
+    if unexpected or missing or len(attached) != len(targets):
+        raise ValueError(f"lora_target_mismatch:unexpected={unexpected[:3]},missing={missing[:3]}")
     trainable = [(name, parameter.numel()) for name, parameter in model.named_parameters() if parameter.requires_grad]
     if not trainable or any("lora_" not in name for name, _ in trainable):
         raise ValueError("只能训练 LoRA 参数，检测到底座或其他参数可训练")
-    write_json(output / "lora-modules.json", {"target_modules": targets, "trainable_parameters": sum(n for _, n in trainable)})
+    write_json(output / "lora-modules.json", {"target_modules": targets, "attached_modules": attached,
+               "trainable_parameters": sum(n for _, n in trainable)})
     model.print_trainable_parameters()
 
     class FiniteTrainingCallback(TrainerCallback):
@@ -202,14 +260,21 @@ def main():
     parser.add_argument("--mode", choices=("preflight", "smoke", "train"), default="preflight")
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--resume-from-checkpoint", type=Path)
+    parser.add_argument("--model-dir", type=Path,
+                        help="已下载的固定 Qwen3.5-9B 目录；提供后禁止联网获取底座")
     args = parser.parse_args()
     config, prepared, tokenizer_dir = load_config(args.config)
     output = args.output_dir.resolve()
     rows, metadata, snapshot = check_inputs(prepared, tokenizer_dir)
+    model_source = {"model_id": snapshot["model_id"], "revision": snapshot["revision"],
+                    "enable_thinking": False, "max_seq_length": config.max_seq_length}
+    if args.model_dir:
+        model_source.update(verify_local_model_dir(args.model_dir, snapshot))
     resume = args.resume_from_checkpoint.resolve() if args.resume_from_checkpoint else None
     fingerprint = {"config": asdict(config), "mode": args.mode,
                    "prepared_manifest_sha256": sha256(prepared / "manifest.json"),
                    "tokenizer_snapshot_sha256": sha256(tokenizer_dir / "snapshot.json"),
+                   "model_source": model_source,
                    "scripts": {name: sha256(Path(__file__).with_name(name))
                                for name in ("train_sft.py", "sft_data.py", "training_format.py")}}
     if resume:
@@ -254,12 +319,11 @@ def main():
         write_json(output / "sample-lengths.json", records)
         for name in ("tools.json", "system-prompt.txt"):
             shutil.copy2(prepared / name, output / name)
-        write_json(output / "model-source.json", {"model_id": snapshot["model_id"], "revision": snapshot["revision"],
-                   "enable_thinking": False, "max_seq_length": config.max_seq_length})
+        write_json(output / "model-source.json", model_source)
         if args.mode == "preflight":
             result = {"status": "cpu_preflight_passed", "training_started": False}
         else:
-            result = run_gpu_training(config, snapshot, tokenizer, rows, features, records,
+            result = run_gpu_training(config, model_source, tokenizer, rows, features, records,
                                       output, args.mode, resume)
         write_json(output / "status.json", result)
         print(json.dumps(result, ensure_ascii=False))

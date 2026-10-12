@@ -7,5 +7,7 @@ __pycache__/
 models/
 checkpoints/
 outputs/
+runs/
+unsloth_compiled_cache/
 wandb/
 .DS_Store

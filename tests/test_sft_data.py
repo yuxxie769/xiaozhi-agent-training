@@ -10,7 +10,8 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from sft_data import (AssistantOnlyCollator, TrainConfig, assert_batch_preserved,
-                      check_inputs, load_config, read_jsonl, select_smoke_indices)
+                      check_inputs, load_config, read_jsonl, select_smoke_indices, sha256)
+from train_sft import verify_local_model_dir
 
 
 class SFTInputTests(unittest.TestCase):
@@ -49,6 +50,35 @@ class SFTInputTests(unittest.TestCase):
                 stream.write('{}\n')
             with self.assertRaisesRegex(ValueError, "prepared_artifact_changed:train.jsonl"):
                 check_inputs(prepared, ROOT / "tokenizer")
+
+    def test_local_model_must_match_snapshot_and_contain_all_shards(self):
+        snapshot = json.loads((ROOT / "tokenizer/snapshot.json").read_text())
+        with tempfile.TemporaryDirectory() as directory:
+            model = Path(directory) / "model"
+            model.mkdir()
+            for name in snapshot["files"]:
+                shutil.copy2(ROOT / "tokenizer" / name, model / name)
+            first = model / "weights-1.safetensors"
+            second = model / "weights-2.safetensors"
+            first.write_bytes(b"first")
+            second.write_bytes(b"second")
+            index = model / "model.safetensors.index.json"
+            index.write_text(json.dumps({
+                "weight_map": {"a": "weights-1.safetensors", "b": "weights-2.safetensors"}
+            }))
+            snapshot["weights"] = {
+                "index": {"name": index.name, "bytes": index.stat().st_size,
+                          "sha256": sha256(index)},
+                "files": {path.name: {"bytes": path.stat().st_size, "sha256": sha256(path)}
+                          for path in (first, second)},
+            }
+            result = verify_local_model_dir(model, snapshot)
+            self.assertEqual(result["local_model_dir"], str(model.resolve()))
+            self.assertEqual(set(result["weight_files"]),
+                             {"weights-1.safetensors", "weights-2.safetensors"})
+            (model / "config.json").write_text("{}")
+            with self.assertRaisesRegex(ValueError, "local_model_snapshot_mismatch:config.json"):
+                verify_local_model_dir(model, snapshot)
 
 
 @unittest.skipUnless(importlib.util.find_spec("torch"), "需要 PyTorch CPU 或 GPU 环境")

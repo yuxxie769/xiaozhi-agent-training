@@ -44,7 +44,7 @@ def main():
     if not torch.cuda.is_available() or torch.cuda.device_count() != 1 or not torch.cuda.is_bf16_supported():
         raise ValueError("请提供一张支持 BF16 的 NVIDIA GPU")
     config = SimpleNamespace(max_seq_length=source["max_seq_length"], seed=20261009)
-    # 显式加载相同 revision 的底座，再挂载适配器，避免 PEFT 默认加载移动的 main。
+    # 显式加载训练记录的同一底座，再挂载适配器；本地路径不可用移动的 main 代替。
     model, loaded = load_base_model(source, config)
     tokenizer = AutoTokenizer.from_pretrained(adapter, local_files_only=True, trust_remote_code=False)
     tools = json.loads((run / "tools.json").read_text())
