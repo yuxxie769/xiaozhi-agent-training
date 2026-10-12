@@ -1,0 +1,185 @@
+{
+  "run_id": "qwen35-9b-sft-r2-20261010-1700",
+  "status": "incomplete",
+  "created_at": "2026-10-10T09:52:37.220861+00:00",
+  "backend_directory": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r2-20261010-1700",
+  "initial_run_sha256": "40f4212ccead933aaa0d06d3570338ad1841605e563adf50456329583275874d",
+  "recovery_method": "Retry all 60 weather conversations with unchanged scorer; reuse completed 47 home reports; rebuild mixed overview with original backend score_mixed and launcher accounting records.",
+  "summary": {
+    "planned": 120,
+    "generated": 107,
+    "completed": 107,
+    "generation_error_samples": 13,
+    "scoring_error_samples": 0,
+    "pass": 71,
+    "fail": 36,
+    "runtime_error_samples": 13,
+    "runtime_error_events": 1,
+    "pass_rate": 0.6635514018691588,
+    "completion_rate": 0.8916666666666667
+  },
+  "source_accounting_sha256": {
+    "weather": "b57e4ebe700f8eb5e1dac8255a5de0007f70555d3793ac1df9253b9992ad26f2",
+    "home_switch": "1aa8194d71703d7a280f9a24e89e712419823b5e0259c9febab4ef5aaf3054c7"
+  },
+  "failed_generation_samples": [
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T03-E001-P1",
+      "template_id": "T03",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T06-E001-P2",
+      "template_id": "T06",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T06-E001-P3",
+      "template_id": "T06",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T07-E001-P2",
+      "template_id": "T07",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T08-E001-P3",
+      "template_id": "T08",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T09-E001-P2",
+      "template_id": "T09",
+      "turn": null,
+      "stage": "message_trace",
+      "error_code": "incomplete_home_trace",
+      "exception_type": "GenerationError",
+      "message": "用户轮次没有可见答复",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T10-E001-P2",
+      "template_id": "T10",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T10-E001-P3",
+      "template_id": "T10",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T13-E001-P2",
+      "template_id": "T13",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T14-E001-P1",
+      "template_id": "T14",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T14-E001-P2",
+      "template_id": "T14",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T14-E001-P3",
+      "template_id": "T14",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T16-E001-P3",
+      "template_id": "T16",
+      "turn": null,
+      "stage": "message_trace",
+      "error_code": "incomplete_home_trace",
+      "exception_type": "GenerationError",
+      "message": "原始工具返回记录缺失或重复",
+      "retryable": false
+    }
+  ],
+  "returned_report_sha256": {
+    "scoring-report.md": "12d756276301525eade7458c5a71cb261ded3e54509387f248a72cee1af08a1a",
+    "scores.json": "bd8a7fa9ba6bf5099c72eb5594f3c536ac8a7a347100bcdb947265e4abb5dbd5",
+    "scoring-failures.md": "d2e015ce9945d05784f7793e342099e32f1b445de0f66c95a8013eac7af4a0e3",
+    "weather/scoring-report.md": "ccf9b2cf2e3ec4364415448f6e44d4291cde3ef1f6e6672b3af3071fafdc071e",
+    "weather/scores.json": "a27d5bf9a0f0e13a6dd737f501e55a39be5bb8d713d0fb51d45bbd5a9bd5e637",
+    "weather/scoring-config.snapshot.json": "5b318a547234485fda63c9621d5cbd0d2fee6d3375ab8ba33bcb714fc1d6d97c",
+    "weather/scoring-failures.md": "48a34e53a361b55f3e63cdb93bb60268f9627de0b8a0d8099d8b317c28b3e851",
+    "weather/scoring-models.snapshot.json": "fd3f956a5426464dbc6a0534ec176fe8ef3f75be6373c921f700fa32abeb1378",
+    "home_switch/scoring-report.md": "038e3837ea5b32392f42ab6f235b62adbdb38b8c45eaa522f12e6faaa2fbf40e",
+    "home_switch/scores.json": "a1d9bf952475bb5a146887f2d8b2a76efafdfa601a793e9d1656711650a3f1d0",
+    "home_switch/scoring-config.snapshot.json": "5b318a547234485fda63c9621d5cbd0d2fee6d3375ab8ba33bcb714fc1d6d97c",
+    "home_switch/scoring-failures.md": "6e6e03d1479e928c532ee9abc91c25e63909e2456475426b0a5362511bc884ab",
+    "home_switch/scoring-models.snapshot.json": "fd3f956a5426464dbc6a0534ec176fe8ef3f75be6373c921f700fa32abeb1378"
+  }
+}

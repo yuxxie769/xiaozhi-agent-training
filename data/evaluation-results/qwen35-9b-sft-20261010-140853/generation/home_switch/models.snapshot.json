@@ -1,0 +1,16 @@
+{
+  "generator": {
+    "source": "explicit",
+    "identity": {
+      "provider": "openai",
+      "model": "xiaozhi-sft",
+      "base_url": "http://127.0.0.1:6006/v1",
+      "max_tokens": 3000,
+      "stream": false,
+      "timeout": 120,
+      "extra_body_sha256": "ddfbc286defff8c075c38c443580598c0e76fb5cd1264b7e6b0c03e72393b3ab",
+      "fingerprint": "d20b97c2df9ca15efee4ad2597e7cf00133c4c50ad754bf8fdc1e8466776e69f"
+    },
+    "config_file": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-qwen-local.json"
+  }
+}

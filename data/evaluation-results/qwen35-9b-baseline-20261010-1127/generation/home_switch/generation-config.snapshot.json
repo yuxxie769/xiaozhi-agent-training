@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "connection": {
+    "device_id": "02:7A:4C:91:6E:2B",
+    "client_id": "xiaozhi-text-client"
+  },
+  "models": {
+    "generator": {
+      "source": "explicit",
+      "identity": {
+        "provider": "openai",
+        "model": "/autodl-fs/data/qwen3.5-9b",
+        "base_url": "http://127.0.0.1:6006/v1",
+        "max_tokens": 3000,
+        "stream": false,
+        "timeout": 120,
+        "extra_body_sha256": "ddfbc286defff8c075c38c443580598c0e76fb5cd1264b7e6b0c03e72393b3ab",
+        "fingerprint": "74de76675f5de825f5ac010f75ea309b6268584e16616acfecba80cad4f6a427"
+      },
+      "config_file": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-qwen-local.json"
+    }
+  },
+  "generation": {
+    "model": "generator",
+    "timeout": 180,
+    "retries": 0
+  },
+  "scoring": {
+    "model": "text_client_current",
+    "timeout": 180,
+    "retries": 1
+  }
+}

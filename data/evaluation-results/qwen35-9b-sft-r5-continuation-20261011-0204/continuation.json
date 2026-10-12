@@ -1,0 +1,336 @@
+{
+  "status": "incomplete",
+  "parent_run": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-20261010-2117",
+  "started_at": "2026-10-10T18:04:10.183692+00:00",
+  "missing_seed_ids": [
+    "T15-E001-P2",
+    "T15-E001-P3",
+    "T16-E001-P1",
+    "T16-E001-P2",
+    "T16-E001-P3",
+    "T17-E001-P1",
+    "T17-E001-P2",
+    "T17-E001-P3",
+    "T18-E001-P1",
+    "T18-E001-P2",
+    "T18-E001-P3",
+    "T19-E001-P1",
+    "T19-E001-P2",
+    "T19-E001-P3",
+    "T20-E001-P1",
+    "T20-E001-P2",
+    "T20-E001-P3"
+  ],
+  "input_sha256": {
+    "missing-home-seeds.json": "1ed178efe9710c443f4bf2a05144aca8249ed019622895fd50e30d334b99985b",
+    "preset-snapshots.json": "fac4144b92cc5b8a2057a031337b18064a71c22d0f7f3e3d2898850b24f8d82f",
+    "home_switch-seeds.json": "71fb3cada261e712165378f068d47bdf77aea90df3a4eccb4d7ec7a56d084126",
+    "system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "weather-seeds.json": "1ee4bb163b23d16d6b50a6af7f818f0c488d5b7133b132a8d46af9cbeb15f636",
+    "seed-generation-report.json": "c2f4816fb045320557fd6e5ec3af896de5ad4900691f3d49a9021d8a764b60b0"
+  },
+  "generation": {
+    "planned": 17,
+    "saved": 15,
+    "failed": 2,
+    "errors_by_code": {
+      "incomplete_home_trace": 2
+    }
+  },
+  "backend_code_sha256": {
+    "core/connection.py": "e3c79314291119d026ecfb0f0c4cccff587dede1804ff24a707b4d91bba22a53",
+    "core/evaluation.py": "e2a1752a7b45e7696d5f9f3c925f3fc71e87e72e035973772467f5485ff12ded",
+    "core/evaluation_model.py": "5c2f06b24a6df9b65de9d5da6960e1c3ac4d37b8fbdac43964af5a7c9614761c",
+    "core/home_switch_simulator/__init__.py": "9704549848239bcc7095323ec57a30e9e6e6bb533d37b45fd6d4c7c52662d934",
+    "core/home_switch_simulator/__main__.py": "d2500fb64ae5603b9d97e6878a852cf299e2a79218a0812c0dc4380d895e6f5b",
+    "core/home_switch_simulator/simulator.py": "17f4307b25cf1c81a9ab72eb6d5758f5c366cb27816d1f20209cb3e8db693372",
+    "core/model_eval.py": "804bbf382832d5d7625f2d176063a0aed13ae10f0972db40df707f0c1de7aeb7",
+    "text-client/audit_home_switch_error_suite.py": "0740683ddb18c7ce5b8ae6a7058d53e2891df3664c7f1f4285fd3b79db499320",
+    "text-client/build_weather_scoring_samples.py": "a4f678b91364a65507028293d106e92fdc52e8027f3ef8cf95c1dd6ee190533f",
+    "text-client/eval_config.py": "974df82b3f6acaa6cfd7cf42a889995cc355bcaad42a34f559fa8645f874bedb",
+    "text-client/eval_generation.py": "9d720c25355b2ef975890834995a5639ad354bcdbf228849fcd040bbf9d43b7e",
+    "text-client/eval_judge.py": "2875c3fc4fdbcf4fb1746b80d816713d29ce0ce25d7639193c7afe1481f2a3d1",
+    "text-client/eval_scoring.py": "fb52f24b846396e701f0298267c8080ce282e02ce4781d6f9f46f5c3743ca51f",
+    "text-client/generate_conversations.py": "74f0883a229e5ac5395878ae0c9cecb1c9044f28f4603bdcc7d64ca5f9c66ad8",
+    "text-client/generate_seeds.py": "e5f9398ba2c4d538c7bc435b39c3af9f4eab85bcb4e20e7f10cb5cda0662fe6a",
+    "text-client/generate_weather_conversations.py": "329b35a13c4baf43e3b3e806c1e8df592a4ccb8a4a28b4726e2203552d57ba61",
+    "text-client/generate_weather_seeds.py": "056593c1524ce8018c9e3c4c1fe0bd2f06b214668fd1a96fb594b6e1fdead6ea",
+    "text-client/home_switch_scoring.py": "1e5510e9ae96fc4243d2e64e01ea4df8822f5fea16f35f37eeb9824b28970192",
+    "text-client/home_switch_seeds.py": "9226f7a63f398eeff3a17e5fc09ce0c0d2c7f27ef65eb2a12d7f53ea9d45b82a",
+    "text-client/home_switch_tool_contracts.py": "c4dec27cbe42d1f47af80d3bf406dc7a82ca976f4d30085d5fccfb5e3b7c73fa",
+    "text-client/prepare_home_switch_error_suite.py": "c229d719a3b61a74df819e8a07c07ca451656d9800be91d2dd06280c0d7c769a",
+    "text-client/render_score_report.py": "9fe7332644c64d5d8970d5bd80ae22c9be8384e1f6131a845bb6efb6b36b3fc6",
+    "text-client/revise_scores.py": "9a09e611a4e24a56dd9be4ca892eb38d10166024d0c60d032ec673edc19f9e08",
+    "text-client/score_results.py": "111af5c8022973ff4a7dab988e7a972eea83209b446c0b5c3f656c92a67139cc",
+    "text-client/score_weather_results.py": "729faaa204eeb1b9f83938d2167db7dc3f56b1b4d7452204604e6b3511ae3afa",
+    "text-client/weather_judge.py": "c4b544417dd029e90b26c19464dc58bc84b9368dbb0eaed58efce0d9b546cf13",
+    "text-client/weather_scoring.py": "55d9eea6292d4bc530b958d6337fcc818ef2f33da7ba4accb95372362b657e01",
+    "text-client/workflow_test.py": "b0740a7491feede8ddb874d1eec737b8ebf063e466789353038a9493eb05877e"
+  },
+  "generation_returncode": 1,
+  "scoring_returncode": 0,
+  "new_scoring_summary": {
+    "input_samples": 15,
+    "completed_samples": 15,
+    "scoring_error_samples": 0,
+    "scoring_completion_rate": 1.0,
+    "sample_total": {
+      "pass": 9,
+      "fail": 6,
+      "count": 15,
+      "pass_rate": 0.6
+    },
+    "check_total": {
+      "pass": 175,
+      "fail": 11,
+      "count": 186,
+      "pass_rate": 0.9408602150537635
+    },
+    "checks": {
+      "HC01": {
+        "pass": 25,
+        "fail": 4,
+        "count": 29,
+        "pass_rate": 0.8620689655172413
+      },
+      "HC02": {
+        "pass": 20,
+        "fail": 1,
+        "count": 21,
+        "pass_rate": 0.9523809523809523
+      },
+      "HC03": {
+        "pass": 20,
+        "fail": 0,
+        "count": 20,
+        "pass_rate": 1.0
+      },
+      "HC04": {
+        "pass": 28,
+        "fail": 1,
+        "count": 29,
+        "pass_rate": 0.9655172413793104
+      },
+      "HC05": {
+        "pass": 28,
+        "fail": 1,
+        "count": 29,
+        "pass_rate": 0.9655172413793104
+      },
+      "HC06": {
+        "pass": 25,
+        "fail": 4,
+        "count": 29,
+        "pass_rate": 0.8620689655172413
+      },
+      "HC07": {
+        "pass": 29,
+        "fail": 0,
+        "count": 29,
+        "pass_rate": 1.0
+      }
+    },
+    "scenarios": {
+      "HS01": {
+        "pass": 10,
+        "fail": 2,
+        "count": 12,
+        "pass_rate": 0.8333333333333334
+      },
+      "HS02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS03": {
+        "pass": 3,
+        "fail": 0,
+        "count": 3,
+        "pass_rate": 1.0
+      },
+      "HS04": {
+        "pass": 2,
+        "fail": 1,
+        "count": 3,
+        "pass_rate": 0.6666666666666666
+      },
+      "HS05": {
+        "pass": 9,
+        "fail": 2,
+        "count": 11,
+        "pass_rate": 0.8181818181818182
+      },
+      "HS06": {
+        "pass": 3,
+        "fail": 0,
+        "count": 3,
+        "pass_rate": 1.0
+      },
+      "HS07": {
+        "pass": 3,
+        "fail": 0,
+        "count": 3,
+        "pass_rate": 1.0
+      },
+      "HS08": {
+        "pass": 1,
+        "fail": 2,
+        "count": 3,
+        "pass_rate": 0.3333333333333333
+      },
+      "HS09": {
+        "pass": 2,
+        "fail": 1,
+        "count": 3,
+        "pass_rate": 0.6666666666666666
+      },
+      "HS10": {
+        "pass": 3,
+        "fail": 3,
+        "count": 6,
+        "pass_rate": 0.5
+      },
+      "HS11": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS12": {
+        "pass": 1,
+        "fail": 1,
+        "count": 2,
+        "pass_rate": 0.5
+      },
+      "HS13": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "HS14": {
+        "pass": 0,
+        "fail": 2,
+        "count": 2,
+        "pass_rate": 0.0
+      },
+      "HS15": {
+        "pass": 1,
+        "fail": 0,
+        "count": 1,
+        "pass_rate": 1.0
+      }
+    },
+    "categories": {
+      "HS": {
+        "covered_scenarios": 12,
+        "planned_scenarios": 15,
+        "coverage_rate": 0.8,
+        "pass_rate": 0.6931818181818182
+      }
+    },
+    "groups": {
+      "positive": {
+        "pass": 1,
+        "fail": 2,
+        "count": 3,
+        "pass_rate": 0.3333333333333333,
+        "input_samples": 3,
+        "completion_rate": 1.0
+      },
+      "negative": {
+        "pass": 8,
+        "fail": 4,
+        "count": 12,
+        "pass_rate": 0.6666666666666666,
+        "input_samples": 12,
+        "completion_rate": 1.0
+      }
+    },
+    "uncovered_scenarios": [
+      "HS02",
+      "HS11",
+      "HS13"
+    ]
+  },
+  "finished_at": "2026-10-10T18:12:01.104843+00:00",
+  "summary": {
+    "planned": 120,
+    "generated": 119,
+    "completed": 119,
+    "generation_error_samples": 1,
+    "scoring_error_samples": 0,
+    "pass": 74,
+    "fail": 45,
+    "runtime_error_samples": 1,
+    "runtime_error_events": 1,
+    "pass_rate": 0.6218487394957983,
+    "completion_rate": 0.9916666666666667
+  },
+  "merged_at": "2026-10-10T18:12:21.881388+00:00",
+  "source_files": {
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-20261010-2117/scoring/weather/scores.json": "db76ff32b17e0a23888036af4ca9954fdcce47b6281e8b822d32863d9d41582b",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-20261010-2117/scoring/home_switch/scores.json": "92715324d76779011848a453c18dfb4c834b6cb26061a91808a08ccaef3ad976",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-continuation-20261011-0204/scoring-new/home_switch/scores.json": "f3b46c2d7e36a1f3fcb157116ad26eacec3284ebee4909c675e54cf20effa672",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-continuation-20261011-0204/retry-scoring/home_switch/scores.json": "d65ade44922902a33485f93aedea9c33c85b8a5eaec53a5ee39d2d57a0f7b997",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-continuation-20261011-0204/retry-generation/home_switch/conversations.json": "7d4559718073b921dce0f2425afc12c496e4276598a6783e4cc70e64d0e4bbfc",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-20261010-2117/generation/home_switch/conversations.json": "854cb71efb826af4e59919db507693020dc2c562372424011d2149a57ac99bbd",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-continuation-20261011-0204/generation/home_switch/conversations.json": "e246633bb73e6da56ee7b0ea65799a5e9f463b30a6aab08a30adb67e7b78823a",
+    "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-20261010-2117/generation/weather/conversations.json": "b30f588af90ec6b0b4e7387cb4f19951eb649d25045831070e80ef892018e50a"
+  },
+  "checks": {
+    "disjoint_sample_ids": true,
+    "scores_match_trajectories": true,
+    "unchanged_old_sample_scores": true,
+    "same_judge_and_rubric": true,
+    "same_model_configuration": true,
+    "same_seed_prompt_tools_presets": true
+  },
+  "remaining_seed_ids": [
+    "T16-E001-P2"
+  ],
+  "returned_file_sha256": {
+    "scoring-report.md": "27640f04977d2e34f46cb521a4b1197a4104016974d006bf88c5f168a802ee8a",
+    "scores.json": "60a672d0c3e0849b103f3fa8bb35e1344e77ba7df56a3e1ce0a4c222f7107cb3",
+    "scoring-failures.md": "d2e015ce9945d05784f7793e342099e32f1b445de0f66c95a8013eac7af4a0e3",
+    "RUN-NOTE.md": "962546715a78e33a671069f2d6763dedd0272a77cc9cec03e6992b62565b9089",
+    "retry-generation/models.snapshot.json": "e80eccc7e00da04c80ce59f9c821e7b136c24fef274b456b086f3eea64ec49e9",
+    "retry-generation/generation-report.md": "8ffaf66cf7af511c3a057e4d81b658090fc2721b4b8176737267be287a3de8c8",
+    "retry-generation/environment.snapshot.json": "c9f0477911a53e10779e210e7bb7fa8faefa90d0afd644d34207f62f89b72cb7",
+    "retry-generation/tools.snapshot.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "retry-generation/presets.snapshot.json": "185fe0211c4362dc9542ecb5d10342e8b8b85cc70c73ad14d81dbd35d3f77ca5",
+    "retry-generation/seeds.snapshot.json": "d73f57ed54f201c59b7f1fb7bb86dc7f562ee696e0530016fa4491b448eec61d",
+    "retry-generation/generation-config.snapshot.json": "0355ca72dfa3c7728ff98b11aff7a8740169f72c6279e3061bb08853d2c95649",
+    "retry-generation/generation-report.json": "aa95fae7974947bb94b954775a183472e17cfda80a264128b92cebb47bd9d220",
+    "continuation-generation/models.snapshot.json": "e80eccc7e00da04c80ce59f9c821e7b136c24fef274b456b086f3eea64ec49e9",
+    "continuation-generation/generation-report.md": "9112a89662320c47294fe3e2aa27b750ba62785170f055f1803c609310dda943",
+    "continuation-generation/environment.snapshot.json": "c9f0477911a53e10779e210e7bb7fa8faefa90d0afd644d34207f62f89b72cb7",
+    "continuation-generation/tools.snapshot.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "continuation-generation/presets.snapshot.json": "8ffc78c70031551ec7376ead2f4636f30298be856e45e8fdb68241909b66ff57",
+    "continuation-generation/seeds.snapshot.json": "1ed178efe9710c443f4bf2a05144aca8249ed019622895fd50e30d334b99985b",
+    "continuation-generation/generation-config.snapshot.json": "0355ca72dfa3c7728ff98b11aff7a8740169f72c6279e3061bb08853d2c95649",
+    "continuation-generation/generation-report.json": "f60b3388463d12c9980c75cfcd4917b4efa778f90db328ad30b6cf5678445745",
+    "continuation-scoring/scoring-report.md": "d4f5580c20b1ff1b350f9b098f99563d16872afe8bcf7b220221ae84560e5792",
+    "continuation-scoring/scores.json": "f3b46c2d7e36a1f3fcb157116ad26eacec3284ebee4909c675e54cf20effa672",
+    "continuation-scoring/scoring-config.snapshot.json": "5b318a547234485fda63c9621d5cbd0d2fee6d3375ab8ba33bcb714fc1d6d97c",
+    "continuation-scoring/scoring-failures.md": "2ef7cd595e6d3391af2d563092c7a2c4700dd5f8c784cd8bbdb896ec8d70775c",
+    "continuation-scoring/scoring-models.snapshot.json": "fd3f956a5426464dbc6a0534ec176fe8ef3f75be6373c921f700fa32abeb1378",
+    "retry-scoring/scoring-report.md": "6bd762647d8d993e15ed6ab2182e8cde7515950b3b57fbcd4a3787ed874adc2a",
+    "retry-scoring/scores.json": "d65ade44922902a33485f93aedea9c33c85b8a5eaec53a5ee39d2d57a0f7b997",
+    "retry-scoring/scoring-config.snapshot.json": "5b318a547234485fda63c9621d5cbd0d2fee6d3375ab8ba33bcb714fc1d6d97c",
+    "retry-scoring/scoring-failures.md": "b8384ab9e31b9d1acc5bb603b90807c86765c1417f70e7058020918f0f0ccf7f",
+    "retry-scoring/scoring-models.snapshot.json": "fd3f956a5426464dbc6a0534ec176fe8ef3f75be6373c921f700fa32abeb1378",
+    "weather/scoring-report.md": "d0503c4267e00df18fd08b8a3ed1d1943ece788b415738b601e8690b42b60f48",
+    "weather/scores.json": "db76ff32b17e0a23888036af4ca9954fdcce47b6281e8b822d32863d9d41582b",
+    "weather/scoring-config.snapshot.json": "5b318a547234485fda63c9621d5cbd0d2fee6d3375ab8ba33bcb714fc1d6d97c",
+    "weather/scoring-failures.md": "1d5b04422ac23588d05bbd3b5c4f2192ab50f5fd79e888e419b83772d9a2d8f7",
+    "weather/scoring-models.snapshot.json": "fd3f956a5426464dbc6a0534ec176fe8ef3f75be6373c921f700fa32abeb1378",
+    "home_switch/scoring-report.md": "2fc3a725ad8d69424c3d27e08117b32abb861b724225a7f6148c643128cb9762",
+    "home_switch/scores.json": "cba34ff9250e8a113a38854b970df46ebeb62a076c1f4633c6974a338c7bf962",
+    "home_switch/scoring-config.snapshot.json": "5b318a547234485fda63c9621d5cbd0d2fee6d3375ab8ba33bcb714fc1d6d97c",
+    "home_switch/scoring-failures.md": "3a3bd8ca9e65191a63296362a7cb2360f4f63d105aa35d3591275e4c18f7d708",
+    "home_switch/scoring-models.snapshot.json": "fd3f956a5426464dbc6a0534ec176fe8ef3f75be6373c921f700fa32abeb1378"
+  }
+}

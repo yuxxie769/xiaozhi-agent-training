@@ -1,0 +1,258 @@
+{
+  "balcony_normal_v1": {
+    "description": "阳台与走廊：植物灯关闭、夜灯开启，正常开关",
+    "schema_version": 1,
+    "library_version": "home-switch-presets/2",
+    "preset": "balcony_normal_v1",
+    "devices": {
+      "switch.balcony_grow": {
+        "name": "阳台植物灯",
+        "aliases": [
+          "植物灯"
+        ],
+        "room": "阳台",
+        "state": "off",
+        "controllable": true
+      },
+      "switch.hall_night": {
+        "name": "走廊夜灯",
+        "aliases": [
+          "夜灯"
+        ],
+        "room": "走廊",
+        "state": "on",
+        "controllable": true
+      },
+      "light.study_reading": {
+        "name": "书房阅读灯",
+        "aliases": [
+          "阅读灯"
+        ],
+        "room": "书房",
+        "state": "off",
+        "controllable": true
+      },
+      "sensor.balcony_humidity": {
+        "name": "阳台湿度",
+        "room": "阳台",
+        "state": "68",
+        "dc": "humidity",
+        "u": "%",
+        "aliases": [],
+        "controllable": false
+      },
+      "binary_sensor.entry_door": {
+        "name": "入户门磁",
+        "room": "玄关",
+        "state": "on",
+        "dc": "door",
+        "aliases": [],
+        "controllable": false
+      }
+    },
+    "candidates": [
+      "switch.balcony_grow",
+      "switch.hall_night",
+      "light.study_reading"
+    ]
+  },
+  "study_normal_v1": {
+    "description": "书房目录：插座开启，阅读灯关闭",
+    "schema_version": 1,
+    "library_version": "home-switch-presets/2",
+    "preset": "study_normal_v1",
+    "devices": {
+      "switch.example_study": {
+        "name": "书房插座",
+        "aliases": [
+          "书桌电源"
+        ],
+        "room": "书房",
+        "state": "on",
+        "controllable": true
+      },
+      "light.study_reading": {
+        "name": "书房阅读灯",
+        "aliases": [
+          "阅读灯"
+        ],
+        "room": "书房",
+        "state": "off",
+        "controllable": true
+      },
+      "light.study_desk": {
+        "name": "书房台灯",
+        "room": "书房",
+        "state": "off",
+        "aliases": [],
+        "controllable": true
+      },
+      "light.bedroom_desk": {
+        "name": "卧室台灯",
+        "room": "卧室",
+        "state": "on",
+        "aliases": [],
+        "controllable": true
+      },
+      "sensor.study_temperature": {
+        "name": "书房温度",
+        "room": "书房",
+        "state": "24",
+        "dc": "temperature",
+        "u": "℃",
+        "aliases": [],
+        "controllable": false
+      },
+      "binary_sensor.hall_motion": {
+        "name": "走廊人体感应",
+        "room": "走廊",
+        "state": "off",
+        "dc": "motion",
+        "aliases": [],
+        "controllable": false
+      }
+    },
+    "candidates": [
+      "switch.example_study",
+      "light.study_reading",
+      "light.study_desk",
+      "light.bedroom_desk"
+    ]
+  },
+  "balcony_offline_recover_v1": {
+    "description": "离线且列表为空；第二轮恢复",
+    "candidates": [
+      "switch.balcony_grow"
+    ],
+    "initial": {
+      "connected": false,
+      "outdated": true,
+      "hidden": [
+        "switch.balcony_grow",
+        "switch.hall_night",
+        "light.study_reading",
+        "sensor.balcony_humidity",
+        "binary_sensor.entry_door"
+      ]
+    },
+    "turns": {
+      "2": {
+        "connected": true,
+        "outdated": false,
+        "hidden": []
+      }
+    },
+    "schema_version": 1,
+    "library_version": "home-switch-presets/2",
+    "preset": "balcony_offline_recover_v1",
+    "devices": {
+      "switch.balcony_grow": {
+        "name": "阳台植物灯",
+        "aliases": [
+          "植物灯"
+        ],
+        "room": "阳台",
+        "state": "off",
+        "controllable": true
+      },
+      "switch.hall_night": {
+        "name": "走廊夜灯",
+        "aliases": [
+          "夜灯"
+        ],
+        "room": "走廊",
+        "state": "on",
+        "controllable": true
+      },
+      "light.study_reading": {
+        "name": "书房阅读灯",
+        "aliases": [
+          "阅读灯"
+        ],
+        "room": "书房",
+        "state": "off",
+        "controllable": true
+      },
+      "sensor.balcony_humidity": {
+        "name": "阳台湿度",
+        "room": "阳台",
+        "state": "68",
+        "dc": "humidity",
+        "u": "%",
+        "aliases": [],
+        "controllable": false
+      },
+      "binary_sensor.entry_door": {
+        "name": "入户门磁",
+        "room": "玄关",
+        "state": "on",
+        "dc": "door",
+        "aliases": [],
+        "controllable": false
+      }
+    }
+  },
+  "balcony_second_device_error_v1": {
+    "description": "两个设备：植物灯正常，夜灯首次控制 HTTP 403；不回滚植物灯",
+    "candidates": [
+      "switch.balcony_grow",
+      "switch.hall_night"
+    ],
+    "rules": [
+      {
+        "id": "first-control",
+        "entity_id": "switch.hall_night",
+        "outcome": "http_403"
+      }
+    ],
+    "schema_version": 1,
+    "library_version": "home-switch-presets/2",
+    "preset": "balcony_second_device_error_v1",
+    "devices": {
+      "switch.balcony_grow": {
+        "name": "阳台植物灯",
+        "aliases": [
+          "植物灯"
+        ],
+        "room": "阳台",
+        "state": "off",
+        "controllable": true
+      },
+      "switch.hall_night": {
+        "name": "走廊夜灯",
+        "aliases": [
+          "夜灯"
+        ],
+        "room": "走廊",
+        "state": "on",
+        "controllable": true
+      },
+      "light.study_reading": {
+        "name": "书房阅读灯",
+        "aliases": [
+          "阅读灯"
+        ],
+        "room": "书房",
+        "state": "off",
+        "controllable": true
+      },
+      "sensor.balcony_humidity": {
+        "name": "阳台湿度",
+        "room": "阳台",
+        "state": "68",
+        "dc": "humidity",
+        "u": "%",
+        "aliases": [],
+        "controllable": false
+      },
+      "binary_sensor.entry_door": {
+        "name": "入户门磁",
+        "room": "玄关",
+        "state": "on",
+        "dc": "door",
+        "aliases": [],
+        "controllable": false
+      }
+    }
+  }
+}

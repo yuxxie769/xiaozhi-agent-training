@@ -1,0 +1,3230 @@
+{
+  "schema_version": 2,
+  "rubric_version": "2.0",
+  "judge": {
+    "source": "llm",
+    "model": "deepseek-flash",
+    "identity": {
+      "provider": "openai",
+      "model": "deepseek-flash",
+      "base_url": "https://api.deepseek.com",
+      "max_tokens": "",
+      "temperature": "",
+      "top_p": "",
+      "frequency_penalty": "",
+      "stream": "",
+      "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+      "default_headers_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "allow_message_extras_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "fingerprint": "17a29193349e6241ce924d4f80465788b6b4e698d7b558c07538a44440e3be75"
+    },
+    "request_timeout": 180,
+    "rubric_version": "2.0"
+  },
+  "samples": [
+    {
+      "sample_id": "S01-E001-P1",
+      "source": "live",
+      "template_id": "S01",
+      "seed_id": "S01-E001-P1",
+      "target_only": false,
+      "status": "pass",
+      "turns": [
+        {
+          "turn": 1,
+          "status": "pass",
+          "check_keys": [
+            "1:C01",
+            "1:C02",
+            "1:C03",
+            "1:C04",
+            "1:C05",
+            "1:C06",
+            "1:C07"
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "sample_id": "S01-E001-P1",
+          "turn": 1,
+          "check_id": "C01",
+          "scenario_ids": [
+            "L02",
+            "F01"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "工具调用行为符合调用模式",
+          "evidence": [
+            {
+              "message_index": 2,
+              "quote": "[{\"id\": \"chatcmpl-tool-b65c26df70e93cd7\", \"function\": {\"arguments\": \"{\\\"lang\\\": \\\"zh_CN\\\"}\", \"name\": \"get_weather\"}, \"type\": \"function\", \"index\": 0}]"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P1",
+          "turn": 1,
+          "check_id": "C02",
+          "scenario_ids": [
+            "L02",
+            "F01"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "所有天气调用参数符合工具定义和本轮已知信息",
+          "evidence": [
+            {
+              "message_index": 2,
+              "quote": "[{\"id\": \"chatcmpl-tool-b65c26df70e93cd7\", \"function\": {\"arguments\": \"{\\\"lang\\\": \\\"zh_CN\\\"}\", \"name\": \"get_weather\"}, \"type\": \"function\", \"index\": 0}]"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P1",
+          "turn": 1,
+          "check_id": "C03",
+          "scenario_ids": [
+            "O02"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "答复包含报告城市名或省略“市”后的同名城市",
+          "evidence": [
+            {
+              "message_index": 3,
+              "quote": "您查询的位置是：南京市\n\n当前天气: 今天白天晴，夜晚多云，温度和昨天差不多，现在25°，空气一般。\n详细参数：\n  · 西南风: 2级\n  · 相对湿度: 59%\n  · 紫外线: 弱\n  · 体感温度: 28°\n  · 能见度: 12km\n  · 降水量: 0.0mm\n  · 大气压: 1016hPa\n\n未来7天预报：\n今天10月10日: 晴，气温 16°~27°\n周日10月11日: 晴，气温 15°~26°\n周一10月12日: 晴，气温 15°~25°\n周二10月13日: 多云，气温 17°~26°\n周三10月14日: 阴，气温 15°~25°\n周四10月15日: 阴，气温 16°~23°\n周五10月16日: 小雨，气温 19°~22°\n\n（如需某一天的具体天气，请告诉我日期）"
+            },
+            {
+              "message_index": 4,
+              "quote": "南京市目前没有降雨。今天白天晴、夜晚多云，降水量 0.0mm。未来几天里，10月10日到14日都是晴或阴/多云，15日也是阴天，要到16日（周五）预报是小雨，气温19°~22°。其他日子看起来没有降雨。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P1",
+          "turn": 1,
+          "check_id": "C04",
+          "scenario_ids": [
+            "T01",
+            "F01"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "按要求调用天气工具并以默认城市南京直接回答降雨问题，无多余澄清或编造。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "南京市目前没有降雨。今天白天晴、夜晚多云，降水量 0.0mm。未来几天里，10月10日到14日都是晴或阴/多云，15日也是阴天，要到16日（周五）预报是小雨，气温19°~22°。其他日子看起来没有降雨。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P1",
+          "turn": 1,
+          "check_id": "C05",
+          "scenario_ids": [
+            "T01",
+            "F01",
+            "O01",
+            "O02"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "使用默认城市南京回答今日及未来降雨情况，覆盖用户降雨询问。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "南京市目前没有降雨。今天白天晴、夜晚多云，降水量 0.0mm。未来几天里，10月10日到14日都是晴或阴/多云，15日也是阴天，要到16日（周五）预报是小雨，气温19°~22°。其他日子看起来没有降雨。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P1",
+          "turn": 1,
+          "check_id": "C06",
+          "scenario_ids": [
+            "O01"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "雨情、天气现象、降水量及16日气温均与工具报告一致，无编造或错位。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "南京市目前没有降雨。今天白天晴、夜晚多云，降水量 0.0mm。未来几天里，10月10日到14日都是晴或阴/多云，15日也是阴天，要到16日（周五）预报是小雨，气温19°~22°。其他日子看起来没有降雨。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P1",
+          "turn": 1,
+          "check_id": "C07",
+          "scenario_ids": [
+            "O04"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "答复主体为中文，仅保留城市名、日期、数字与单位。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "南京市目前没有降雨。今天白天晴、夜晚多云，降水量 0.0mm。未来几天里，10月10日到14日都是晴或阴/多云，15日也是阴天，要到16日（周五）预报是小雨，气温19°~22°。其他日子看起来没有降雨。"
+            }
+          ]
+        }
+      ],
+      "scenarios": [
+        {
+          "scenario_id": "T01",
+          "status": "pass",
+          "check_keys": [
+            "1:C04",
+            "1:C05"
+          ]
+        },
+        {
+          "scenario_id": "L02",
+          "status": "pass",
+          "check_keys": [
+            "1:C01",
+            "1:C02"
+          ]
+        },
+        {
+          "scenario_id": "F01",
+          "status": "pass",
+          "check_keys": [
+            "1:C01",
+            "1:C02",
+            "1:C04",
+            "1:C05"
+          ]
+        },
+        {
+          "scenario_id": "O01",
+          "status": "pass",
+          "check_keys": [
+            "1:C05",
+            "1:C06"
+          ]
+        },
+        {
+          "scenario_id": "O02",
+          "status": "pass",
+          "check_keys": [
+            "1:C03",
+            "1:C05"
+          ]
+        },
+        {
+          "scenario_id": "O04",
+          "status": "pass",
+          "check_keys": [
+            "1:C07"
+          ]
+        }
+      ],
+      "llm_request_count": 1
+    },
+    {
+      "sample_id": "S01-E001-P2",
+      "source": "live",
+      "template_id": "S01",
+      "seed_id": "S01-E001-P2",
+      "target_only": false,
+      "status": "fail",
+      "turns": [
+        {
+          "turn": 1,
+          "status": "fail",
+          "check_keys": [
+            "1:C01",
+            "1:C02",
+            "1:C03",
+            "1:C04",
+            "1:C05",
+            "1:C06",
+            "1:C07"
+          ]
+        }
+      ],
+      "checks": [
+        {
+          "sample_id": "S01-E001-P2",
+          "turn": 1,
+          "check_id": "C01",
+          "scenario_ids": [
+            "L02",
+            "F01"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "工具调用行为符合调用模式",
+          "evidence": [
+            {
+              "message_index": 2,
+              "quote": "[{\"id\": \"chatcmpl-tool-9819f6c584e759fd\", \"function\": {\"arguments\": \"{\\\"lang\\\": \\\"zh_CN\\\"}\", \"name\": \"get_weather\"}, \"type\": \"function\", \"index\": 0}]"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P2",
+          "turn": 1,
+          "check_id": "C02",
+          "scenario_ids": [
+            "L02",
+            "F01"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "所有天气调用参数符合工具定义和本轮已知信息",
+          "evidence": [
+            {
+              "message_index": 2,
+              "quote": "[{\"id\": \"chatcmpl-tool-9819f6c584e759fd\", \"function\": {\"arguments\": \"{\\\"lang\\\": \\\"zh_CN\\\"}\", \"name\": \"get_weather\"}, \"type\": \"function\", \"index\": 0}]"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P2",
+          "turn": 1,
+          "check_id": "C03",
+          "scenario_ids": [
+            "O02"
+          ],
+          "method": "rule",
+          "status": "pass",
+          "reason": "答复包含报告城市名或省略“市”后的同名城市",
+          "evidence": [
+            {
+              "message_index": 3,
+              "quote": "您查询的位置是：南京市\n\n当前天气: 今天白天晴，夜晚多云，温度和昨天差不多，现在25°，空气一般。\n详细参数：\n  · 西南风: 2级\n  · 相对湿度: 59%\n  · 紫外线: 弱\n  · 体感温度: 28°\n  · 能见度: 12km\n  · 降水量: 0.0mm\n  · 大气压: 1016hPa\n\n未来7天预报：\n今天10月10日: 晴，气温 16°~27°\n周日10月11日: 晴，气温 15°~26°\n周一10月12日: 晴，气温 15°~25°\n周二10月13日: 多云，气温 17°~26°\n周三10月14日: 阴，气温 15°~25°\n周四10月15日: 阴，气温 16°~23°\n周五10月16日: 小雨，气温 19°~22°\n\n（如需某一天的具体天气，请告诉我日期）"
+            },
+            {
+              "message_index": 4,
+              "quote": "南京市目前没有降雨，当前降水量0.0毫米，空气一般，湿度59%，体感28°。\n\n未来7天里，今天10月10日到周三10月14日都是晴天到阴天，没有降雨；要到周五10月16日才出现小雨，气温19°~22°。周日、周一、周二都是晴天，中雨沿线还没报。想看具体哪天的天气可以再告诉我。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P2",
+          "turn": 1,
+          "check_id": "C04",
+          "scenario_ids": [
+            "T01",
+            "F01"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "按expected.action直接回答了降雨情况，未用澄清阻塞请求，主要动作正确。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "南京市目前没有降雨，当前降水量0.0毫米，空气一般，湿度59%，体感28°。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P2",
+          "turn": 1,
+          "check_id": "C05",
+          "scenario_ids": [
+            "T01",
+            "F01",
+            "O01",
+            "O02"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "覆盖了城市南京、默认日期今天及降雨问题，并补充了未来7天的降雨情况。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "未来7天里，今天10月10日到周三10月14日都是晴天到阴天，没有降雨；要到周五10月16日才出现小雨，气温19°~22°。"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P2",
+          "turn": 1,
+          "check_id": "C06",
+          "scenario_ids": [
+            "O01"
+          ],
+          "method": "llm",
+          "status": "fail",
+          "reason": "周二10月13日工具报告为多云，回复却称周二都是晴天；且“中雨沿线还没报”在工具结果中无依据。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "周日、周一、周二都是晴天，中雨沿线还没报。"
+            },
+            {
+              "message_index": 3,
+              "quote": "周二10月13日: 多云，气温 17°~26°"
+            }
+          ]
+        },
+        {
+          "sample_id": "S01-E001-P2",
+          "turn": 1,
+          "check_id": "C07",
+          "scenario_ids": [
+            "O04"
+          ],
+          "method": "llm",
+          "status": "pass",
+          "reason": "答复主体使用中文，仅保留必要的城市名、数字和单位。",
+          "evidence": [
+            {
+              "message_index": 4,
+              "quote": "南京市目前没有降雨，当前降水量0.0毫米，空气一般，湿度59%，体感28°。"
+            }
+          ]
+        }
+      ],
+      "scenarios": [
+        {
+          "scenario_id": "T01",
+          "status": "pass",
+          "check_keys": [
+            "1:C04",
+            "1:C05"
+          ]
+        },
+        {
+          "scenario_id": "L02",
+          "status": "pass",
+          "check_keys": [
+            "1:C01",
+            "1:C02"
+          ]
+        },
+        {
+          "scenario_id": "F01",
+          "status": "pass",
+          "check_keys": [
+            "1:C01",
+            "1:C02",
+            "1:C04",
+            "1:C05"
+          ]
+        },
+        {
+          "scenario_id": "O01",
+          "status": "fail",
+          "check_keys": [
+            "1:C05",
+            "1:C06"
+          ]
+        },
+        {
+          "scenario_id": "O02",
+          "status": "pass",
+          "check_keys": [
+            "1:C03",
+            "1:C05"
+          ]
+        },
+        {
+          "scenario_id": "O04",
+          "status": "pass",
+          "check_keys": [
+            "1:C07"
+          ]
+        }
+      ],
+      "llm_request_count": 1
+    }
+  ],
+  "errors": [
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S01-E001-P3",
+      "template_id": "S01",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S02-E001-P1",
+      "template_id": "S02",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S02-E001-P2",
+      "template_id": "S02",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S02-E001-P3",
+      "template_id": "S02",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S03-E001-P1",
+      "template_id": "S03",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S03-E001-P2",
+      "template_id": "S03",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S03-E001-P3",
+      "template_id": "S03",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S04-E001-P1",
+      "template_id": "S04",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S04-E001-P2",
+      "template_id": "S04",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S04-E001-P3",
+      "template_id": "S04",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S05-E001-P1",
+      "template_id": "S05",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S05-E001-P2",
+      "template_id": "S05",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S05-E001-P3",
+      "template_id": "S05",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S06-E001-P1",
+      "template_id": "S06",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S06-E001-P2",
+      "template_id": "S06",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S06-E001-P3",
+      "template_id": "S06",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S07-E001-P1",
+      "template_id": "S07",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S07-E001-P2",
+      "template_id": "S07",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S07-E001-P3",
+      "template_id": "S07",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S08-E001-P1",
+      "template_id": "S08",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S08-E001-P2",
+      "template_id": "S08",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S08-E001-P3",
+      "template_id": "S08",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S09-E001-P1",
+      "template_id": "S09",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S09-E001-P2",
+      "template_id": "S09",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S09-E001-P3",
+      "template_id": "S09",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S10-E001-P1",
+      "template_id": "S10",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S10-E001-P2",
+      "template_id": "S10",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S10-E001-P3",
+      "template_id": "S10",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S11-E001-P1",
+      "template_id": "S11",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S11-E001-P2",
+      "template_id": "S11",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S11-E001-P3",
+      "template_id": "S11",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S12-E001-P1",
+      "template_id": "S12",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S12-E001-P2",
+      "template_id": "S12",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S12-E001-P3",
+      "template_id": "S12",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S13-E001-P1",
+      "template_id": "S13",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S13-E001-P2",
+      "template_id": "S13",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S13-E001-P3",
+      "template_id": "S13",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S15-E001-P1",
+      "template_id": "S15",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S15-E001-P2",
+      "template_id": "S15",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S15-E001-P3",
+      "template_id": "S15",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S17-E001-P1",
+      "template_id": "S17",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S17-E001-P2",
+      "template_id": "S17",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S17-E001-P3",
+      "template_id": "S17",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S19-E001-P1",
+      "template_id": "S19",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S19-E001-P2",
+      "template_id": "S19",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S19-E001-P3",
+      "template_id": "S19",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S20-E001-P1",
+      "template_id": "S20",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S20-E001-P2",
+      "template_id": "S20",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S20-E001-P3",
+      "template_id": "S20",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S21-E001-P1",
+      "template_id": "S21",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S21-E001-P2",
+      "template_id": "S21",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S21-E001-P3",
+      "template_id": "S21",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S22-E001-P1",
+      "template_id": "S22",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S22-E001-P2",
+      "template_id": "S22",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S22-E001-P3",
+      "template_id": "S22",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S24-E001-P1",
+      "template_id": "S24",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S24-E001-P2",
+      "template_id": "S24",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    },
+    {
+      "event": "sample_scoring_error",
+      "sample_id": "S24-E001-P3",
+      "template_id": "S24",
+      "stage": "judge_response",
+      "error_code": "invalid_judge_json",
+      "exception_type": "ScoringError",
+      "message": "本轮评分响应无效",
+      "retryable": true,
+      "details": {
+        "turn": 1,
+        "response_length": 0
+      },
+      "judge_diagnostics": [
+        {
+          "turn": 1,
+          "response_length": 0,
+          "response_excerpt": ""
+        }
+      ]
+    }
+  ],
+  "selection": {
+    "candidate_events": 540,
+    "selected": 464,
+    "filtered": 76,
+    "filtered_by_reason": {
+      "no_weather_call": 20,
+      "no_new_weather_report": 8,
+      "template_turn_not_applicable": 48
+    },
+    "filtered_details": [
+      {
+        "event": "check_filtered",
+        "sample_id": "S01-E001-P3",
+        "template_id": "S01",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "L02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S01-E001-P3",
+        "template_id": "S01",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "no_new_weather_report",
+        "reason": "当前轮没有新的正常天气报告；沿用已有报告不重复检查城市名"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P1",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P1",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P1",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P1",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T04",
+          "T02",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P1",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P2",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P2",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P2",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P2",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T04",
+          "T02",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P2",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P3",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P3",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P3",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P3",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T04",
+          "T02",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S07-E001-P3",
+        "template_id": "S07",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S08-E001-P1",
+        "template_id": "S08",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "T05"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S08-E001-P2",
+        "template_id": "S08",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "T05"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S08-E001-P3",
+        "template_id": "S08",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "T05"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S09-E001-P2",
+        "template_id": "S09",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "T06"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S09-E001-P3",
+        "template_id": "S09",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "T06"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S10-E001-P1",
+        "template_id": "S10",
+        "turn": 2,
+        "check_id": "C02",
+        "scenario_ids": [
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S10-E001-P1",
+        "template_id": "S10",
+        "turn": 2,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "no_new_weather_report",
+        "reason": "当前轮没有新的正常天气报告；沿用已有报告不重复检查城市名"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S10-E001-P2",
+        "template_id": "S10",
+        "turn": 2,
+        "check_id": "C02",
+        "scenario_ids": [
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S10-E001-P2",
+        "template_id": "S10",
+        "turn": 2,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "no_new_weather_report",
+        "reason": "当前轮没有新的正常天气报告；沿用已有报告不重复检查城市名"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S10-E001-P3",
+        "template_id": "S10",
+        "turn": 2,
+        "check_id": "C02",
+        "scenario_ids": [
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S10-E001-P3",
+        "template_id": "S10",
+        "turn": 2,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "no_new_weather_report",
+        "reason": "当前轮没有新的正常天气报告；沿用已有报告不重复检查城市名"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P1",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L04",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P1",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P1",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "M01",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P1",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P2",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L04",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P2",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P2",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "M01",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P2",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P3",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L04",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P3",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "L04",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P3",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P3",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "M01",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S11-E001-P3",
+        "template_id": "S11",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P1",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L05",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P1",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P1",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "M01",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P1",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P2",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L05",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P2",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P2",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "M01",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P2",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P3",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L05",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P3",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P3",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "M01",
+          "F01",
+          "O01",
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S12-E001-P3",
+        "template_id": "S12",
+        "turn": 1,
+        "check_id": "C06",
+        "scenario_ids": [
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-E001-P1",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L08",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-E001-P1",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "F01",
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-E001-P2",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L08",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-E001-P2",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "L08",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-E001-P2",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "F01",
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-E001-P3",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L08",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-E001-P3",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "L08",
+          "T02",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S15-E001-P3",
+        "template_id": "S15",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02",
+          "F01",
+          "O01"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S17-E001-P1",
+        "template_id": "S17",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S17-E001-P2",
+        "template_id": "S17",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S17-E001-P3",
+        "template_id": "S17",
+        "turn": 1,
+        "check_id": "C05",
+        "scenario_ids": [
+          "T02"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S19-E001-P1",
+        "template_id": "S19",
+        "turn": 2,
+        "check_id": "C02",
+        "scenario_ids": [
+          "M02",
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S19-E001-P1",
+        "template_id": "S19",
+        "turn": 2,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "no_new_weather_report",
+        "reason": "当前轮没有新的正常天气报告；沿用已有报告不重复检查城市名"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S19-E001-P2",
+        "template_id": "S19",
+        "turn": 2,
+        "check_id": "C02",
+        "scenario_ids": [
+          "M02",
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S19-E001-P2",
+        "template_id": "S19",
+        "turn": 2,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "no_new_weather_report",
+        "reason": "当前轮没有新的正常天气报告；沿用已有报告不重复检查城市名"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S19-E001-P3",
+        "template_id": "S19",
+        "turn": 2,
+        "check_id": "C02",
+        "scenario_ids": [
+          "M02",
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S19-E001-P3",
+        "template_id": "S19",
+        "turn": 2,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "no_new_weather_report",
+        "reason": "当前轮没有新的正常天气报告；沿用已有报告不重复检查城市名"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S21-E001-P1",
+        "template_id": "S21",
+        "turn": 2,
+        "check_id": "C02",
+        "scenario_ids": [
+          "M04",
+          "T02",
+          "L01",
+          "F01"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S21-E001-P1",
+        "template_id": "S21",
+        "turn": 2,
+        "check_id": "C03",
+        "scenario_ids": [
+          "O02"
+        ],
+        "selected": false,
+        "reason_code": "no_new_weather_report",
+        "reason": "当前轮没有新的正常天气报告；沿用已有报告不重复检查城市名"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S24-E001-P1",
+        "template_id": "S24",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S24-E001-P2",
+        "template_id": "S24",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S24-E001-P2",
+        "template_id": "S24",
+        "turn": 1,
+        "check_id": "C02",
+        "scenario_ids": [
+          "L04"
+        ],
+        "selected": false,
+        "reason_code": "no_weather_call",
+        "reason": "当前轮没有发生get_weather调用"
+      },
+      {
+        "event": "check_filtered",
+        "sample_id": "S24-E001-P3",
+        "template_id": "S24",
+        "turn": 1,
+        "check_id": "C01",
+        "scenario_ids": [
+          "L04"
+        ],
+        "selected": false,
+        "reason_code": "template_turn_not_applicable",
+        "reason": "模板逐轮计划未选择该检查项"
+      }
+    ]
+  },
+  "summary": {
+    "input_samples": 60,
+    "completed_samples": 2,
+    "scoring_error_samples": 58,
+    "scoring_completion_rate": 0.03333333333333333,
+    "sample_total": {
+      "pass": 1,
+      "fail": 1,
+      "count": 2,
+      "pass_rate": 0.5
+    },
+    "check_total": {
+      "pass": 13,
+      "fail": 1,
+      "count": 14,
+      "pass_rate": 0.9285714285714286
+    },
+    "checks": {
+      "C01": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "C02": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "C03": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "C04": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "C05": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "C06": {
+        "pass": 1,
+        "fail": 1,
+        "count": 2,
+        "pass_rate": 0.5
+      },
+      "C07": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      }
+    },
+    "scenarios": {
+      "R01": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "R02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "R03": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "R04": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T01": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "T02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T03": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T04": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T05": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T06": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "T07": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L01": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L02": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "L04": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L05": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L06": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "L08": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "F01": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "F02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "M01": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "M02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "M03": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "M04": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "O01": {
+        "pass": 1,
+        "fail": 1,
+        "count": 2,
+        "pass_rate": 0.5
+      },
+      "O02": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "O03": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      },
+      "O04": {
+        "pass": 2,
+        "fail": 0,
+        "count": 2,
+        "pass_rate": 1.0
+      },
+      "G02": {
+        "pass": 0,
+        "fail": 0,
+        "count": 0,
+        "pass_rate": null
+      }
+    },
+    "categories": {
+      "R": {
+        "covered_scenarios": 0,
+        "planned_scenarios": 4,
+        "coverage_rate": 0.0,
+        "pass_rate": null
+      },
+      "T": {
+        "covered_scenarios": 1,
+        "planned_scenarios": 7,
+        "coverage_rate": 0.14285714285714285,
+        "pass_rate": 1.0
+      },
+      "L": {
+        "covered_scenarios": 1,
+        "planned_scenarios": 6,
+        "coverage_rate": 0.16666666666666666,
+        "pass_rate": 1.0
+      },
+      "F": {
+        "covered_scenarios": 1,
+        "planned_scenarios": 2,
+        "coverage_rate": 0.5,
+        "pass_rate": 1.0
+      },
+      "M": {
+        "covered_scenarios": 0,
+        "planned_scenarios": 4,
+        "coverage_rate": 0.0,
+        "pass_rate": null
+      },
+      "O": {
+        "covered_scenarios": 3,
+        "planned_scenarios": 4,
+        "coverage_rate": 0.75,
+        "pass_rate": 0.8333333333333334
+      },
+      "G": {
+        "covered_scenarios": 0,
+        "planned_scenarios": 1,
+        "coverage_rate": 0.0,
+        "pass_rate": null
+      }
+    }
+  },
+  "failure_summary": {
+    "completed_samples": 2,
+    "failed_samples": 1,
+    "by_check": [
+      {
+        "check_id": "C06",
+        "name": "答复事实有据",
+        "failed_results": 1,
+        "affected_samples": 1,
+        "affected_sample_rate": 0.5
+      }
+    ],
+    "by_template": [
+      {
+        "template_id": "S01",
+        "input": 3,
+        "completed": 2,
+        "scoring_errors": 1,
+        "pass": 1,
+        "fail": 1,
+        "pass_rate": 0.5
+      },
+      {
+        "template_id": "S02",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S03",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S04",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S05",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S06",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S07",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S08",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S09",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S10",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S11",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S12",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S13",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S15",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S17",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S19",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S20",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S21",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S22",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      },
+      {
+        "template_id": "S24",
+        "input": 3,
+        "completed": 0,
+        "scoring_errors": 3,
+        "pass": 0,
+        "fail": 0,
+        "pass_rate": null
+      }
+    ],
+    "check_combinations": [
+      {
+        "checks": "C06",
+        "samples": 1
+      }
+    ]
+  }
+}

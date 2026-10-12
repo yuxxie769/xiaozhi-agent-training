@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "connection": {
+    "device_id": "02:7A:4C:91:6E:2B",
+    "client_id": "xiaozhi-text-client"
+  },
+  "models": {
+    "text_client_explicit": {
+      "source": "explicit",
+      "identity": {
+        "provider": "openai",
+        "model": "deepseek-flash",
+        "base_url": "https://api.deepseek.com",
+        "max_tokens": null,
+        "temperature": null,
+        "top_p": null,
+        "frequency_penalty": null,
+        "stream": false,
+        "timeout": 300,
+        "extra_body_sha256": "31b37f04c6c1c8be2d816dcd4f435f778264d7fbbf32d9b143ae3a929993620e",
+        "allow_message_extras_sha256": "fcbcf165908dd18a9e49f7ff27810176db8e9f63b4352213741664245224f8aa",
+        "fingerprint": "09afd02ca272ee3cd0e62d8870f733c1034985834b564ee1f98a75e80f8c3860"
+      }
+    }
+  },
+  "generation": {
+    "model": "text_client_explicit",
+    "timeout": 180,
+    "retries": 0
+  },
+  "scoring": {
+    "model": "text_client_current",
+    "timeout": 180,
+    "retries": 1
+  }
+}

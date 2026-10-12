@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "run_id": "qwen35-9b-sft-r5-20261010-2117",
+  "stage": "sft",
+  "environment": "model_eval",
+  "status": "incomplete",
+  "started_at": "2026-10-10T13:16:58.173084+00:00",
+  "backend_directory": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-20261010-2117",
+  "backend_python": "/Users/yuxxie/Documents/tools/anaconda3/envs/xiaozhi-esp32-server/bin/python",
+  "eval_config_path": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/text-client/evaluation.formal.local.json",
+  "eval_config_sha256": "30594aa6f6856c502aa987d9e1722a8032acd681559ca1be82d55fa76fdcdc0f",
+  "prepared_data": {
+    "prepared_directory": "data/prepared",
+    "manifest_sha256": "7ed5805e4d0d1f3e2221fdf98b9b58b0d9b1c8dd6ded0a6a0b02bdc4176f670a",
+    "target_tool_names": [
+      "get_lunar",
+      "get_news_from_newsnow",
+      "get_weather",
+      "handle_exit_intent",
+      "hass_get_state",
+      "hass_set_state",
+      "play_music",
+      "state_hub_snapshot",
+      "task_engine_control"
+    ],
+    "artifact_sha256": {
+      "audit.jsonl": "90b0f9e7af959aeacb0bb770a43d8fcd5bd04265f1b3981e5a8112f6b14cf492",
+      "inventory.json": "ca5c9ba3632eb47fb92d258f805b6ea9204af584ee676f72f399842d9e45c9e8",
+      "metadata.jsonl": "9ffd0de642e7b0a521a0ea9d1aa318056c5cad163c838eeaabc98dbc2bf662e5",
+      "system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+      "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+      "train.jsonl": "972f52d4493634f011d1191d882e153a1fcda6267db9adb377fce7a682acdb12"
+    },
+    "source_samples": 599,
+    "training_samples": 556,
+    "quota_population": "exported_training_samples"
+  },
+  "backend_version": {
+    "git_commit": "837c0a86d83f75ced5a8265628f7bf0f7f3cdf0b",
+    "code_sha256": {
+      "core/connection.py": "e3c79314291119d026ecfb0f0c4cccff587dede1804ff24a707b4d91bba22a53",
+      "core/evaluation.py": "e2a1752a7b45e7696d5f9f3c925f3fc71e87e72e035973772467f5485ff12ded",
+      "core/evaluation_model.py": "5c2f06b24a6df9b65de9d5da6960e1c3ac4d37b8fbdac43964af5a7c9614761c",
+      "core/home_switch_simulator/__init__.py": "9704549848239bcc7095323ec57a30e9e6e6bb533d37b45fd6d4c7c52662d934",
+      "core/home_switch_simulator/__main__.py": "d2500fb64ae5603b9d97e6878a852cf299e2a79218a0812c0dc4380d895e6f5b",
+      "core/home_switch_simulator/simulator.py": "17f4307b25cf1c81a9ab72eb6d5758f5c366cb27816d1f20209cb3e8db693372",
+      "core/model_eval.py": "804bbf382832d5d7625f2d176063a0aed13ae10f0972db40df707f0c1de7aeb7",
+      "text-client/audit_home_switch_error_suite.py": "0740683ddb18c7ce5b8ae6a7058d53e2891df3664c7f1f4285fd3b79db499320",
+      "text-client/build_weather_scoring_samples.py": "a4f678b91364a65507028293d106e92fdc52e8027f3ef8cf95c1dd6ee190533f",
+      "text-client/eval_config.py": "974df82b3f6acaa6cfd7cf42a889995cc355bcaad42a34f559fa8645f874bedb",
+      "text-client/eval_generation.py": "9d720c25355b2ef975890834995a5639ad354bcdbf228849fcd040bbf9d43b7e",
+      "text-client/eval_judge.py": "2875c3fc4fdbcf4fb1746b80d816713d29ce0ce25d7639193c7afe1481f2a3d1",
+      "text-client/eval_scoring.py": "fb52f24b846396e701f0298267c8080ce282e02ce4781d6f9f46f5c3743ca51f",
+      "text-client/generate_conversations.py": "74f0883a229e5ac5395878ae0c9cecb1c9044f28f4603bdcc7d64ca5f9c66ad8",
+      "text-client/generate_seeds.py": "e5f9398ba2c4d538c7bc435b39c3af9f4eab85bcb4e20e7f10cb5cda0662fe6a",
+      "text-client/generate_weather_conversations.py": "329b35a13c4baf43e3b3e806c1e8df592a4ccb8a4a28b4726e2203552d57ba61",
+      "text-client/generate_weather_seeds.py": "056593c1524ce8018c9e3c4c1fe0bd2f06b214668fd1a96fb594b6e1fdead6ea",
+      "text-client/home_switch_scoring.py": "1e5510e9ae96fc4243d2e64e01ea4df8822f5fea16f35f37eeb9824b28970192",
+      "text-client/home_switch_seeds.py": "9226f7a63f398eeff3a17e5fc09ce0c0d2c7f27ef65eb2a12d7f53ea9d45b82a",
+      "text-client/home_switch_tool_contracts.py": "c4dec27cbe42d1f47af80d3bf406dc7a82ca976f4d30085d5fccfb5e3b7c73fa",
+      "text-client/prepare_home_switch_error_suite.py": "c229d719a3b61a74df819e8a07c07ca451656d9800be91d2dd06280c0d7c769a",
+      "text-client/render_score_report.py": "9fe7332644c64d5d8970d5bd80ae22c9be8384e1f6131a845bb6efb6b36b3fc6",
+      "text-client/revise_scores.py": "9a09e611a4e24a56dd9be4ca892eb38d10166024d0c60d032ec673edc19f9e08",
+      "text-client/score_results.py": "111af5c8022973ff4a7dab988e7a972eea83209b446c0b5c3f656c92a67139cc",
+      "text-client/score_weather_results.py": "729faaa204eeb1b9f83938d2167db7dc3f56b1b4d7452204604e6b3511ae3afa",
+      "text-client/weather_judge.py": "c4b544417dd029e90b26c19464dc58bc84b9368dbb0eaed58efce0d9b546cf13",
+      "text-client/weather_scoring.py": "55d9eea6292d4bc530b958d6337fcc818ef2f33da7ba4accb95372362b657e01",
+      "text-client/workflow_test.py": "b0740a7491feede8ddb874d1eec737b8ebf063e466789353038a9493eb05877e"
+    }
+  },
+  "launcher_sha256": "bacf95afdcf75532457722e24fccadf6f798da49385e6203a76a1428f5a7497d",
+  "input_sha256": {
+    "home_switch-seeds.json": "71fb3cada261e712165378f068d47bdf77aea90df3a4eccb4d7ec7a56d084126",
+    "preset-snapshots.json": "fac4144b92cc5b8a2057a031337b18064a71c22d0f7f3e3d2898850b24f8d82f",
+    "seed-generation-report.json": "c2f4816fb045320557fd6e5ec3af896de5ad4900691f3d49a9021d8a764b60b0",
+    "system-prompt.txt": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "tools.json": "3b7c926bb75ca30d85fb9594a2d61a694bfbfe6dadc90a806559b534acb0068a",
+    "weather-seeds.json": "1ee4bb163b23d16d6b50a6af7f818f0c488d5b7133b132a8d46af9cbeb15f636"
+  },
+  "generation": {
+    "weather": {
+      "scenario": "weather",
+      "planned": 60,
+      "saved": 60,
+      "process_returncode": 0,
+      "generation_report": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-20261010-2117/generation/weather/generation-report.json"
+    },
+    "home_switch": {
+      "scenario": "home_switch",
+      "planned": 60,
+      "saved": 43,
+      "process_returncode": -2,
+      "generation_report": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r5-20261010-2117/generation/home_switch/generation-report.json"
+    }
+  },
+  "scoring_returncode": 1,
+  "summary": {
+    "planned": 120,
+    "generated": 103,
+    "completed": 103,
+    "generation_error_samples": 17,
+    "scoring_error_samples": 0,
+    "pass": 64,
+    "fail": 39,
+    "runtime_error_samples": 17,
+    "runtime_error_events": 1,
+    "pass_rate": 0.6213592233009708,
+    "completion_rate": 0.8583333333333333
+  },
+  "finished_at": "2026-10-10T13:58:53.940351+00:00",
+  "returned_report_sha256": {
+    "RUN-NOTE.md": "8e29268cdbe994d477c4abf40ed3f0544f61de037ba61696cf01c4a1d3edf47b",
+    "generation/home_switch/generation-config.snapshot.json": "0355ca72dfa3c7728ff98b11aff7a8740169f72c6279e3061bb08853d2c95649",
+    "generation/home_switch/models.snapshot.json": "e80eccc7e00da04c80ce59f9c821e7b136c24fef274b456b086f3eea64ec49e9",
+    "generation/weather/generation-config.snapshot.json": "0355ca72dfa3c7728ff98b11aff7a8740169f72c6279e3061bb08853d2c95649",
+    "generation/weather/generation-report.json": "de772161480190a5da6a66aa3ff64e592aac6cec257d7e6913f07b0c3503f8c9",
+    "generation/weather/generation-report.md": "7def9745a270ec2c97d9401e77a53aa00261b88dc61d6d35b66d74b466fa40d4",
+    "generation/weather/models.snapshot.json": "e80eccc7e00da04c80ce59f9c821e7b136c24fef274b456b086f3eea64ec49e9",
+    "home_switch/scores.json": "92715324d76779011848a453c18dfb4c834b6cb26061a91808a08ccaef3ad976",
+    "home_switch/scoring-config.snapshot.json": "5b318a547234485fda63c9621d5cbd0d2fee6d3375ab8ba33bcb714fc1d6d97c",
+    "home_switch/scoring-failures.md": "68593388b7d5fec057c325df04d2b27a6e4dcb2913851be7822a898f717d1ef6",
+    "home_switch/scoring-models.snapshot.json": "fd3f956a5426464dbc6a0534ec176fe8ef3f75be6373c921f700fa32abeb1378",
+    "home_switch/scoring-report.md": "75dac443aabd59aaa9c14a91cba59e69b0b0cc460fc9736da18bf6a04e826584",
+    "scores.json": "269006d3e8f2579f1fb104bd1a1310ff2e685f0100bdca749fcf7d3a5993eb2e",
+    "scoring-failures.md": "d2e015ce9945d05784f7793e342099e32f1b445de0f66c95a8013eac7af4a0e3",
+    "scoring-report.md": "b5135b186bfb922ddaba24569bdefb3b6550ebe2e37d52bff21c87569f1df810",
+    "verification.json": "4201d0b3b93deeb84f1863f54fea7902c804a1b363ff0508486ab7b8ddb3e0cc",
+    "weather/scores.json": "db76ff32b17e0a23888036af4ca9954fdcce47b6281e8b822d32863d9d41582b",
+    "weather/scoring-config.snapshot.json": "5b318a547234485fda63c9621d5cbd0d2fee6d3375ab8ba33bcb714fc1d6d97c",
+    "weather/scoring-failures.md": "1d5b04422ac23588d05bbd3b5c4f2192ab50f5fd79e888e419b83772d9a2d8f7",
+    "weather/scoring-models.snapshot.json": "fd3f956a5426464dbc6a0534ec176fe8ef3f75be6373c921f700fa32abeb1378",
+    "weather/scoring-report.md": "d0503c4267e00df18fd08b8a3ed1d1943ece788b415738b601e8690b42b60f48"
+  },
+  "interruption": {
+    "reason": "model_gateway_502_then_local_endpoint_unavailable",
+    "endpoint": "http://127.0.0.1:6006",
+    "home_generation_stopped": true,
+    "scoring_completed": 103,
+    "missing_home_samples": 17,
+    "note": "RUN-NOTE.md"
+  }
+}

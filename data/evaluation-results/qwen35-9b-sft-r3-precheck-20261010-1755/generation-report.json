@@ -1,0 +1,80 @@
+{
+  "schema_version": 2,
+  "run_id": "qwen35-9b-sft-r3-precheck-20261010-1755",
+  "generated_at": "2026-10-10T17:55:24.095808+08:00",
+  "scenario": "home_switch",
+  "planned": 2,
+  "started": 2,
+  "succeeded": 1,
+  "saved": 1,
+  "failed": 1,
+  "success_rate": 0.5,
+  "output": "tmp/model-eval-runs/qwen35-9b-sft-r3-precheck-20261010-1755/conversations.json",
+  "runtime": {
+    "timezone": "Asia/Shanghai",
+    "retries": 0,
+    "timeout_seconds": 180,
+    "system_prompt_mode": "eval_override",
+    "system_prompt_sha256": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "llm_mode": "eval_override",
+    "llm_model": "xiaozhi-sft",
+    "llm_base_url": "http://127.0.0.1:6006/v1",
+    "environment": "model_eval"
+  },
+  "errors_by_stage": {
+    "model_request": 1
+  },
+  "errors_by_code": {
+    "model_response_error": 1
+  },
+  "errors": [
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T06-E001-P2",
+      "template_id": "T06",
+      "turn": null,
+      "stage": "model_request",
+      "error_code": "model_response_error",
+      "exception_type": "GenerationError",
+      "message": "对话模型服务响应异常",
+      "retryable": false
+    }
+  ],
+  "coverage": {
+    "templates": {
+      "T03": 1
+    },
+    "tool_backend": "simulated",
+    "fault_injection": "simulator_records",
+    "scenario_ids": [
+      "HS01",
+      "HS02",
+      "HS05",
+      "HS12"
+    ]
+  },
+  "sample_groups": {
+    "planned": {
+      "positive": 2
+    },
+    "completed": {
+      "positive": 1
+    }
+  },
+  "models": {
+    "generator": {
+      "source": "explicit",
+      "identity": {
+        "provider": "openai",
+        "model": "xiaozhi-sft",
+        "base_url": "http://127.0.0.1:6006/v1",
+        "max_tokens": 3000,
+        "stream": false,
+        "timeout": 120,
+        "extra_body_sha256": "ddfbc286defff8c075c38c443580598c0e76fb5cd1264b7e6b0c03e72393b3ab",
+        "fingerprint": "d20b97c2df9ca15efee4ad2597e7cf00133c4c50ad754bf8fdc1e8466776e69f"
+      },
+      "config_file": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-qwen-local.json"
+    }
+  }
+}

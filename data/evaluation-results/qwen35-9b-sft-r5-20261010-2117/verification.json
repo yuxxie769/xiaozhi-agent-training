@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "planned": 120,
+    "generated": 103,
+    "completed": 103,
+    "generation_error_samples": 17,
+    "scoring_error_samples": 0,
+    "pass": 64,
+    "fail": 39,
+    "runtime_error_samples": 17,
+    "runtime_error_events": 1,
+    "pass_rate": 0.6213592233009708,
+    "completion_rate": 0.8583333333333333
+  },
+  "missing_seed_ids": {
+    "weather": [],
+    "home_switch": [
+      "T15-E001-P2",
+      "T15-E001-P3",
+      "T16-E001-P1",
+      "T16-E001-P2",
+      "T16-E001-P3",
+      "T17-E001-P1",
+      "T17-E001-P2",
+      "T17-E001-P3",
+      "T18-E001-P1",
+      "T18-E001-P2",
+      "T18-E001-P3",
+      "T19-E001-P1",
+      "T19-E001-P2",
+      "T19-E001-P3",
+      "T20-E001-P1",
+      "T20-E001-P2",
+      "T20-E001-P3"
+    ]
+  },
+  "generated_scored_pairs_match": true,
+  "seed_model_tool_checks_pass": true,
+  "original_returned_files_verified": 19,
+  "inputs_and_backend_code_match_r2": true,
+  "model_health_at_start": 200,
+  "long_request_probe": {
+    "input_tokens": 5779,
+    "max_tokens": 3000,
+    "http_status": 200
+  },
+  "last_model_health": "connection refused on 127.0.0.1:6006"
+}

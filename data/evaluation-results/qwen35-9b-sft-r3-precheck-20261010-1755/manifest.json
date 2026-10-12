@@ -1,0 +1,16 @@
+{
+  "run_id": "qwen35-9b-sft-r3-precheck-20261010-1755",
+  "kind": "generation_precheck",
+  "status": "incomplete",
+  "planned": 2,
+  "generated": 1,
+  "full_evaluation_started": false,
+  "backend_directory": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r3-precheck-20261010-1755",
+  "sha256": {
+    "models.snapshot.json": "e80eccc7e00da04c80ce59f9c821e7b136c24fef274b456b086f3eea64ec49e9",
+    "generation-report.md": "abba4c48f1dab643de1b11b76b71774aa5d80bc3115d032cb78a201e449d442f",
+    "generation-config.snapshot.json": "0355ca72dfa3c7728ff98b11aff7a8740169f72c6279e3061bb08853d2c95649",
+    "RUN-NOTE.md": "06c6884a7da610442a8bf6d983b111d8341269a90dea1e2c61e11be523e7e23a",
+    "generation-report.json": "c5145f8214d3291aee7ffd539374acdc1151f205f181ee18bdc71797166eebcd"
+  }
+}

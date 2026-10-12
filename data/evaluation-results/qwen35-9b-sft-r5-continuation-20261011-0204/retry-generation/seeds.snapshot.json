@@ -1,0 +1,50 @@
+[
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T16",
+    "variable_group_id": "T16-E001",
+    "preset": "study_normal_v1",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "light.bedroom_desk",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "other_request": "讲个笑话",
+    "seed_id": "T16-E001-P2",
+    "question_pattern_id": "P2",
+    "user_turns": [
+      "帮我把卧室台灯打开，另外讲个笑话。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS15"
+    ]
+  },
+  {
+    "design_version": "home_switch/1.5",
+    "template_id": "T16",
+    "variable_group_id": "T16-E001",
+    "preset": "study_normal_v1",
+    "target": {
+      "devices": [
+        {
+          "entity_id": "light.bedroom_desk",
+          "desired_state": "on"
+        }
+      ]
+    },
+    "other_request": "讲个笑话",
+    "seed_id": "T16-E001-P3",
+    "question_pattern_id": "P3",
+    "user_turns": [
+      "请完成两件事：打开卧室台灯，然后讲个笑话。"
+    ],
+    "scenario_ids": [
+      "HS01",
+      "HS15"
+    ]
+  }
+]

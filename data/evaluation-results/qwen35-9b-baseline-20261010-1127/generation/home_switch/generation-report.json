@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "run_id": "home_switch",
+  "generated_at": "2026-10-10T11:34:31.570264+08:00",
+  "scenario": "home_switch",
+  "planned": 60,
+  "started": 60,
+  "succeeded": 60,
+  "saved": 60,
+  "failed": 0,
+  "success_rate": 1.0,
+  "output": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-baseline-20261010-1127/generation/home_switch/conversations.json",
+  "runtime": {
+    "timezone": "Asia/Shanghai",
+    "retries": 0,
+    "timeout_seconds": 180,
+    "system_prompt_mode": "eval_override",
+    "system_prompt_sha256": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "llm_mode": "eval_override",
+    "llm_model": "/autodl-fs/data/qwen3.5-9b",
+    "llm_base_url": "http://127.0.0.1:6006/v1",
+    "environment": "model_eval"
+  },
+  "errors_by_stage": {},
+  "errors_by_code": {},
+  "errors": [],
+  "coverage": {
+    "templates": {
+      "T01": 3,
+      "T02": 3,
+      "T03": 3,
+      "T04": 3,
+      "T05": 3,
+      "T06": 3,
+      "T07": 3,
+      "T08": 3,
+      "T09": 3,
+      "T10": 3,
+      "T11": 3,
+      "T12": 3,
+      "T13": 3,
+      "T14": 3,
+      "T15": 3,
+      "T16": 3,
+      "T17": 3,
+      "T18": 3,
+      "T19": 3,
+      "T20": 3
+    },
+    "tool_backend": "simulated",
+    "fault_injection": "simulator_records",
+    "scenario_ids": [
+      "HS01",
+      "HS02",
+      "HS03",
+      "HS04",
+      "HS05",
+      "HS06",
+      "HS07",
+      "HS08",
+      "HS09",
+      "HS10",
+      "HS11",
+      "HS12",
+      "HS13",
+      "HS14",
+      "HS15"
+    ]
+  },
+  "sample_groups": {
+    "planned": {
+      "positive": 48,
+      "negative": 12
+    },
+    "completed": {
+      "positive": 48,
+      "negative": 12
+    }
+  },
+  "models": {
+    "generator": {
+      "source": "explicit",
+      "identity": {
+        "provider": "openai",
+        "model": "/autodl-fs/data/qwen3.5-9b",
+        "base_url": "http://127.0.0.1:6006/v1",
+        "max_tokens": 3000,
+        "stream": false,
+        "timeout": 120,
+        "extra_body_sha256": "ddfbc286defff8c075c38c443580598c0e76fb5cd1264b7e6b0c03e72393b3ab",
+        "fingerprint": "74de76675f5de825f5ac010f75ea309b6268584e16616acfecba80cad4f6a427"
+      },
+      "config_file": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-qwen-local.json"
+    }
+  }
+}
