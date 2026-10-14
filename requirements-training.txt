@@ -12,3 +12,4 @@ peft==0.21.2
 accelerate==1.15.0
 bitsandbytes==0.50.2
 Pillow==11.3.0
+wandb==0.30.0

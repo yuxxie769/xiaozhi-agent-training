@@ -32,6 +32,10 @@ class TrainConfig:
     save_total_limit: int
     smoke_samples: int
     smoke_steps: int
+    oversample_ids_file: str | None = None
+    oversample_factor: int = 1
+    wandb_project: str | None = None
+    wandb_run_name: str | None = None
 
     def __post_init__(self):
         if self.enable_thinking is not False:
@@ -48,6 +52,12 @@ class TrainConfig:
                 raise ValueError(f"{name} 必须为有限正数")
         if not 0 <= self.warmup_ratio < 1 or not 0 <= self.weight_decay < 1:
             raise ValueError("warmup_ratio、weight_decay 必须在 [0, 1) 内")
+        if type(self.oversample_factor) is not int or self.oversample_factor < 1:
+            raise ValueError("oversample_factor 必须是正整数")
+        if (self.oversample_ids_file is None) != (self.oversample_factor == 1):
+            raise ValueError("仅在提供 oversample_ids_file 时将 oversample_factor 设为大于 1")
+        if (self.wandb_project is None) != (self.wandb_run_name is None):
+            raise ValueError("wandb_project 与 wandb_run_name 必须同时提供或同时省略")
 
 
 def sha256(path):
