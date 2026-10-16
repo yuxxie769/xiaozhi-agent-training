@@ -1,0 +1,721 @@
+{
+  "schema_version": 2,
+  "run_id": "home_switch",
+  "generated_at": "2026-10-13T01:45:48.068090+08:00",
+  "scenario": "home_switch",
+  "planned": 60,
+  "started": 60,
+  "succeeded": 0,
+  "saved": 0,
+  "failed": 60,
+  "success_rate": 0.0,
+  "output": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/model-eval-runs/qwen35-9b-sft-r6-20261013-014546/generation/home_switch/conversations.json",
+  "runtime": {
+    "timezone": "Asia/Shanghai",
+    "retries": 0,
+    "timeout_seconds": 180,
+    "system_prompt_mode": "eval_override",
+    "system_prompt_sha256": "76a6618cfa39d3a6fca541ffff27e2ccaca65f36c29b9db6b5fb719b57be4009",
+    "llm_mode": "eval_override",
+    "llm_model": "xiaozhi-sft",
+    "llm_base_url": "http://127.0.0.1:6006/v1",
+    "environment": "model_eval"
+  },
+  "errors_by_stage": {
+    "conversation": 60
+  },
+  "errors_by_code": {
+    "conversation_connect_failed": 60
+  },
+  "errors": [
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T01-E001-P1",
+      "template_id": "T01",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T01-E001-P2",
+      "template_id": "T01",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T01-E001-P3",
+      "template_id": "T01",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T02-E001-P1",
+      "template_id": "T02",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T02-E001-P2",
+      "template_id": "T02",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T02-E001-P3",
+      "template_id": "T02",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T03-E001-P1",
+      "template_id": "T03",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T03-E001-P2",
+      "template_id": "T03",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T03-E001-P3",
+      "template_id": "T03",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T04-E001-P1",
+      "template_id": "T04",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T04-E001-P2",
+      "template_id": "T04",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T04-E001-P3",
+      "template_id": "T04",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T05-E001-P1",
+      "template_id": "T05",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T05-E001-P2",
+      "template_id": "T05",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T05-E001-P3",
+      "template_id": "T05",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T06-E001-P1",
+      "template_id": "T06",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T06-E001-P2",
+      "template_id": "T06",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T06-E001-P3",
+      "template_id": "T06",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T07-E001-P1",
+      "template_id": "T07",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T07-E001-P2",
+      "template_id": "T07",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T07-E001-P3",
+      "template_id": "T07",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T08-E001-P1",
+      "template_id": "T08",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T08-E001-P2",
+      "template_id": "T08",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T08-E001-P3",
+      "template_id": "T08",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T09-E001-P1",
+      "template_id": "T09",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T09-E001-P2",
+      "template_id": "T09",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T09-E001-P3",
+      "template_id": "T09",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T10-E001-P1",
+      "template_id": "T10",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T10-E001-P2",
+      "template_id": "T10",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T10-E001-P3",
+      "template_id": "T10",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T11-E001-P1",
+      "template_id": "T11",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T11-E001-P2",
+      "template_id": "T11",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T11-E001-P3",
+      "template_id": "T11",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T12-E001-P1",
+      "template_id": "T12",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T12-E001-P2",
+      "template_id": "T12",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T12-E001-P3",
+      "template_id": "T12",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T13-E001-P1",
+      "template_id": "T13",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T13-E001-P2",
+      "template_id": "T13",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T13-E001-P3",
+      "template_id": "T13",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T14-E001-P1",
+      "template_id": "T14",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T14-E001-P2",
+      "template_id": "T14",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T14-E001-P3",
+      "template_id": "T14",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T15-E001-P1",
+      "template_id": "T15",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T15-E001-P2",
+      "template_id": "T15",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T15-E001-P3",
+      "template_id": "T15",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T16-E001-P1",
+      "template_id": "T16",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T16-E001-P2",
+      "template_id": "T16",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T16-E001-P3",
+      "template_id": "T16",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T17-E001-P1",
+      "template_id": "T17",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T17-E001-P2",
+      "template_id": "T17",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T17-E001-P3",
+      "template_id": "T17",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T18-E001-P1",
+      "template_id": "T18",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T18-E001-P2",
+      "template_id": "T18",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T18-E001-P3",
+      "template_id": "T18",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T19-E001-P1",
+      "template_id": "T19",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T19-E001-P2",
+      "template_id": "T19",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T19-E001-P3",
+      "template_id": "T19",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T20-E001-P1",
+      "template_id": "T20",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T20-E001-P2",
+      "template_id": "T20",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    },
+    {
+      "event": "sample_generation_error",
+      "seed_id": "T20-E001-P3",
+      "template_id": "T20",
+      "turn": null,
+      "stage": "conversation",
+      "error_code": "conversation_connect_failed",
+      "exception_type": "GenerationError",
+      "message": "对话连接或协议失败：URLError",
+      "retryable": true
+    }
+  ],
+  "coverage": {
+    "templates": {},
+    "tool_backend": "simulated",
+    "fault_injection": "simulator_records",
+    "scenario_ids": []
+  },
+  "sample_groups": {
+    "planned": {
+      "positive": 48,
+      "negative": 12
+    },
+    "completed": {}
+  },
+  "models": {
+    "generator": {
+      "source": "explicit",
+      "identity": {
+        "provider": "openai",
+        "model": "xiaozhi-sft",
+        "base_url": "http://127.0.0.1:6006/v1",
+        "max_tokens": 3000,
+        "stream": false,
+        "timeout": 120,
+        "extra_body_sha256": "ddfbc286defff8c075c38c443580598c0e76fb5cd1264b7e6b0c03e72393b3ab",
+        "fingerprint": "d20b97c2df9ca15efee4ad2597e7cf00133c4c50ad754bf8fdc1e8466776e69f"
+      },
+      "config_file": "/Users/yuxxie/Documents/GitHub/xiaozhi-esp32-server/main/xiaozhi-server/tmp/weather-eval-qwen-local.json"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "incomplete",
+  "summary": {
+    "planned": 120,
+    "generated": 0,
+    "completed": 0,
+    "generation_error_samples": 120,
+    "scoring_error_samples": 0,
+    "pass": 0,
+    "fail": 0,
+    "runtime_error_samples": 120,
+    "runtime_error_events": 2,
+    "pass_rate": null,
+    "completion_rate": 0.0
+  },
+  "scenarios": {
+    "weather": {
+      "planned": 60,
+      "generated": 0,
+      "completed": 0,
+      "generation_error_samples": 60,
+      "scoring_error_samples": 0,
+      "pass": 0,
+      "fail": 0,
+      "pass_rate": null,
+      "completion_rate": 0.0
+    },
+    "home_switch": {
+      "planned": 60,
+      "generated": 0,
+      "completed": 0,
+      "generation_error_samples": 60,
+      "scoring_error_samples": 0,
+      "pass": 0,
+      "fail": 0,
+      "pass_rate": null,
+      "completion_rate": 0.0
+    }
+  },
+  "samples": [],
+  "errors": [
+    {
+      "stage": "generation",
+      "scenario": "weather",
+      "error_code": "generation_process_failed"
+    },
+    {
+      "stage": "generation",
+      "scenario": "home_switch",
+      "error_code": "generation_process_failed"
+    }
+  ]
+}
