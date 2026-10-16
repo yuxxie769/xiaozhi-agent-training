@@ -38,6 +38,18 @@ def package_versions():
     return versions
 
 
+def configure_wandb(config):
+    """按显式训练配置设置 W&B；拒绝缺少凭据，不继承旧项目名。"""
+    if not config.wandb_project:
+        return False
+    if not os.environ.get("WANDB_API_KEY"):
+        raise ValueError("配置启用了 W&B，但环境缺少 WANDB_API_KEY")
+    os.environ["WANDB_PROJECT"] = config.wandb_project
+    os.environ["WANDB_LOG_MODEL"] = "false"
+    os.environ["WANDB_WATCH"] = "false"
+    return True
+
+
 def load_local_tokenizer(path):
     from transformers import AutoTokenizer
 
@@ -271,7 +283,12 @@ def run_gpu_training(config, snapshot, tokenizer, rows, features, records, outpu
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--config", type=Path, default=ROOT / "train-sft.json")
+    parser.add_argument(
+        "--config",
+        type=Path,
+        required=True,
+        help="显式选择训练配置，避免默认使用已经归档的旧数据版本",
+    )
     parser.add_argument("--mode", choices=("preflight", "smoke", "train"), default="preflight")
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--resume-from-checkpoint", type=Path)
@@ -329,12 +346,7 @@ def main():
                 raise ValueError("本配置要求原生 BF16，不自动降成 FP16")
             if int(importlib.metadata.version("transformers").split(".")[0]) < 5:
                 raise ValueError("Qwen3.5 GPU 训练需要 Transformers 5；旧 CPU 验证环境不能训练")
-            if config.wandb_project:
-                if not os.environ.get("WANDB_API_KEY"):
-                    raise ValueError("配置启用了 W&B，但环境缺少 WANDB_API_KEY")
-                os.environ.setdefault("WANDB_PROJECT", config.wandb_project)
-                os.environ.setdefault("WANDB_LOG_MODEL", "false")
-                os.environ.setdefault("WANDB_WATCH", "false")
+            configure_wandb(config)
             write_json(output / "gpu.json", {"name": torch.cuda.get_device_name(0),
                        "total_gib": torch.cuda.get_device_properties(0).total_memory / 2**30,
                        "torch_cuda": torch.version.cuda})

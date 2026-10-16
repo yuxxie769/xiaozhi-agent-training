@@ -185,6 +185,27 @@ def verify_run(run: Path):
                 raise RuntimeError(f"checkpoint missing {name}: {checkpoint}")
 
 
+def latest_resumable_checkpoint(run: Path):
+    """返回最近的完整 Trainer checkpoint；不猜测或修补残缺目录。"""
+    candidates = []
+    for checkpoint in run.glob("checkpoint-*"):
+        try:
+            step = int(checkpoint.name.removeprefix("checkpoint-"))
+        except ValueError:
+            continue
+        required = ("trainer_state.json", "optimizer.pt", "scheduler.pt")
+        if not all((checkpoint / name).is_file() for name in required):
+            continue
+        try:
+            state = read_json(checkpoint / "trainer_state.json")
+        except (OSError, ValueError, TypeError):
+            continue
+        if state.get("global_step") != step:
+            continue
+        candidates.append((step, checkpoint))
+    return max(candidates, default=(None, None))[1]
+
+
 def replace_workspace_link(name: str, target: Path):
     link = ROOT / "runs" / name
     if link.is_symlink():
@@ -215,21 +236,43 @@ def run_suite(shared: Path):
         for experiment in EXPERIMENTS:
             name = experiment["name"]
             output = shared / "runs" / name
+            resume = None
+            training_needed = True
             if output.exists():
                 record = run_record(shared, experiment)
                 if record["state"] == "complete":
                     replace_workspace_link(name, output)
                     continue
-                raise RuntimeError(f"refusing to overwrite incomplete output: {output}")
+                status_file = output / "status.json"
+                status = read_json(status_file) if status_file.is_file() else {}
+                if (status.get("status") == "gpu_training_completed_reload_pending"
+                        and record["final_adapter_present"]):
+                    # 训练已经完成但加载检查尚未执行；不要从最后一步重复启动 Trainer。
+                    verify_run(output)
+                    training_needed = False
+                else:
+                    resume = latest_resumable_checkpoint(output)
+                    if resume is None:
+                        raise RuntimeError(
+                            f"incomplete output has no resumable checkpoint; preserve it for review: {output}"
+                        )
             write_queue_status(shared, "running", current=name)
             log = shared / "logs" / f"{name}.log"
-            run_command([
-                sys.executable, str(ROOT / "scripts" / "train_sft.py"),
-                "--config", str(ROOT / experiment["config"]),
-                "--mode", "train", "--output-dir", str(output),
-                "--model-dir", str(MODEL_DIR),
-            ], log)
+            if training_needed:
+                command = [
+                    sys.executable, str(ROOT / "scripts" / "train_sft.py"),
+                    "--config", str(ROOT / experiment["config"]),
+                    "--mode", "train", "--output-dir", str(output),
+                    "--model-dir", str(MODEL_DIR),
+                ]
+                if resume is not None:
+                    command.extend(["--resume-from-checkpoint", str(resume)])
+                run_command(command, log)
             verify_run(output)
+            if (output / "reload-check.json").exists():
+                raise RuntimeError(
+                    f"existing reload check is not successful; preserve it for review: {output / 'reload-check.json'}"
+                )
             run_command([
                 sys.executable, str(ROOT / "scripts" / "check_sft_adapter.py"),
                 "--run-dir", str(output), "--output", str(output / "reload-check.json"),

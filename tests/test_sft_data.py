@@ -3,15 +3,17 @@ import importlib.util
 import json
 from pathlib import Path
 import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from sft_data import (AssistantOnlyCollator, TrainConfig, assert_batch_preserved,
                       check_inputs, load_config, read_jsonl, select_smoke_indices, sha256)
-from train_sft import verify_local_model_dir
+from train_sft import configure_wandb, training_argument_values, verify_local_model_dir
 
 
 class SFTInputTests(unittest.TestCase):
@@ -41,6 +43,35 @@ class SFTInputTests(unittest.TestCase):
         _, prepared, tokenizer = load_config(ROOT / "train-sft.json")
         self.assertEqual(prepared, ROOT / "data/prepared")
         self.assertEqual(tokenizer, ROOT / "tokenizer")
+
+    def test_current_training_config_uses_repaired_data_and_expected_epoch_steps(self):
+        config, prepared, _ = load_config(ROOT / "train-sft-v5.json")
+        ids = json.loads((ROOT / config.oversample_ids_file).read_text())["ids"]
+        metadata = [json.loads(line) for line in (prepared / "metadata.jsonl").read_text().splitlines()]
+        self.assertEqual(len(metadata), 606)
+        self.assertEqual(len(ids), 53)
+        self.assertTrue(set(ids) <= {row["id"] for row in metadata})
+        effective = len(metadata) + (config.oversample_factor - 1) * len(ids)
+        self.assertEqual(effective, 712)
+        args = training_argument_values(config, "/tmp/unused", "train", effective)
+        self.assertEqual(args["save_steps"], 89)
+        self.assertEqual(args["save_total_limit"], 3)
+
+    def test_wandb_config_overrides_stale_server_project(self):
+        config, _, _ = load_config(ROOT / "train-sft-v5.json")
+        with patch.dict("os.environ", {"WANDB_API_KEY": "test", "WANDB_PROJECT": "stale"}, clear=True):
+            self.assertTrue(configure_wandb(config))
+            self.assertEqual(__import__("os").environ["WANDB_PROJECT"], config.wandb_project)
+            self.assertEqual(__import__("os").environ["WANDB_LOG_MODEL"], "false")
+
+    def test_training_cli_requires_explicit_config(self):
+        result = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/train_sft.py"),
+             "--mode", "preflight", "--output-dir", "/tmp/not-created-by-argparse"],
+            cwd=ROOT, capture_output=True, text=True,
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("--config", result.stderr)
 
     def test_tampered_training_artifact_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:

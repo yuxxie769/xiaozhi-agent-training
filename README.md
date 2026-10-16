@@ -4,10 +4,10 @@
 
 当前产物：
 
-- `data/prepared/train.jsonl`：556 条 SFT 样本，每条包含 messages 和 9 个非 MCP 工具。
-- `data/prepared/failed.jsonl`、`review.jsonl`：28 条未通过、15 条待复核。
+- `data/prepared-v2/train.jsonl`：606 条 SFT 样本，每条包含 messages 和 9 个非 MCP 工具。
+- `data/prepared-v2/failed.jsonl`、`review.jsonl`：新版未通过与待复核样本。
 - `data/evaluation-seeds/v3/`：天气、家居各 60 条测试种子，已完成原模型基线评测。
-- `train-sft.json`：训练参数；`system-prompt.txt`、`tools.json`：提示词与工具定义。
+- `train-sft-v3.json`、`train-sft-v4.json`、`train-sft-v5.json`：当前三组正式训练参数；训练命令必须显式指定配置。
 
 按 [训练说明](训练说明.md) 操作：**准备环境 → 步骤 6 格式验证 → 原模型基线评测 → 试跑与加载检查 → 正式训练 → SFT 复测。**
 
