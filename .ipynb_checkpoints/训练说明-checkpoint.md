@@ -1,0 +1,125 @@
+# 非思考 SFT 训练说明
+
+训练数据仍是现有 556 条。**Qwen3.5-9B 的 Unsloth/CUDA smoke 和适配器重载已在 32GB RTX 4080 SUPER 上通过。** 正式训练仍等原模型业务基线补齐后再开始。
+
+**操作顺序：准备环境 → 步骤 6 格式验证 → 原模型基线评测 → 试跑 → 重新加载检查 → 正式训练 → SFT 复测。**
+
+## 1 准备服务器环境
+
+建议 Linux、Python 3.11/3.12，在独立虚拟环境中操作。先通过 [PyTorch 安装页面](https://pytorch.org/get-started/locally/) 按驱动选择 CUDA 版 torch 和 torchvision，再安装项目依赖：
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+# 在这里执行与服务器驱动匹配的 PyTorch / torchvision 安装命令。
+python -m pip install -r requirements-training.txt
+python -m pip check
+nvidia-smi
+```
+
+Qwen3.5 GPU 训练需要 Transformers 5，不能直接使用之前仅验证 tokenizer 的 4.57.6 环境。`requirements-training.txt` 已锁定本次 smoke 通过的上层包；PyTorch/torchvision 仍需按服务器 CUDA 单独安装。本次是 Python 3.12.3、torch 2.8.0+cu128、Transformers 5.17.0、Unsloth 2026.10.3。不要在运行过程中升级依赖。
+
+## 2 按顺序运行
+
+下列格式验证、训练和加载命令在训练服务器的项目根目录执行；业务评测由后端运行。现有训练数据无需重新生成；每次检查使用新输出目录。
+
+**第 1 步：执行总文档的步骤 6，验证模板、工具、长度和训练标签。此步骤必须保留。**
+
+```bash
+python scripts/validate_training_format.py --prepared-dir data/prepared --tokenizer-dir tokenizer --output-dir data/validation/v3 --thinking-mode non-thinking
+```
+
+查看输出目录里的 `report.md`、`rendered-example.txt` 和 `learned-example.txt`，确认模型输入和实际学习内容符合预期后，先完成原模型基线评测。已有 v2 时改用新版本号。
+
+**第 2 步：原模型基线评测，是正式训练前的必要步骤。**
+
+GPU 服务器先提供固定 Qwen3.5-9B 原模型接口，不加载 LoRA。由本项目的调用入口调度后端已有生成与评分流程，跑天气 60 条、家居 60 条；完整轨迹、评分和报告保存在后端 `main/xiaozhi-server/tmp/` 的新批次目录。
+
+调用入口尚待实现。当前后端 checkout 只有天气生成与评分入口，家居评测入口缺失；还需对齐完整 9 工具，并补齐可重复的天气返回与家居 preset 校验，才能作为正式对比基线。接入分工和结果位置见 [项目总文档第 7 节](项目总文档.md#7-原模型基线评测试跑与正式训练)。这里暂不提供尚不存在的运行命令。
+
+基线完成后记录后端结果目录。单卡上先停掉评测推理服务、释放显存，再进行下面的训练试跑。
+
+**第 3 步：小规模试跑。** 使用 8 条样本（含两个场景的最长轨迹），训练 5 个优化步骤。传入本地底座后不会重新下载；首次运行仍可能编译所需内核。
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python scripts/train_sft.py --mode smoke --model-dir /autodl-fs/data/qwen3.5-9b --output-dir runs/smoke-next
+```
+
+**第 4 步：检查保存的模型能否重新加载。**
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python scripts/check_sft_adapter.py --run-dir runs/smoke-next --output runs/smoke-next/reload-check.json
+```
+
+先做到这里：确认试跑成功、loss 有限、`actual-batch-check.json` 中 labels 保持不变，且 `reload-check.json` 加载成功，并查看生成内容和显存记录。加载检查默认只是打招呼，不代表业务评测通过。报错时先处理报错，再进入下一步。
+
+本次已在 `runs/smoke-02/` 完成：5 步最终平均 loss 0.6929，峰值 allocated/reserved 显存为 18.88/19.04 GiB，`labels_preserved=true`，248 个目标层与实际 LoRA 层一致，适配器重载和确定性生成成功。`runs/` 是本地运行产物，不纳入 Git。
+
+**第 5 步：正式训练。** 试跑与加载通过，并完成原模型的独立测试基线后，训练全部 556 条。测试种子已准备好，业务评测复用后端，调用入口及条件对齐待接入。
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python scripts/train_sft.py --mode train --model-dir /autodl-fs/data/qwen3.5-9b --output-dir runs/sft-01
+CUDA_VISIBLE_DEVICES=0 python scripts/check_sft_adapter.py --run-dir runs/sft-01 --output runs/sft-01/reload-check.json
+```
+
+**第 6 步：SFT 复测。** 将模型接口切换为同一底座加 SFT 适配器，复用第 2 步的种子、工具环境、提示词和评分配置，在后端新批次目录保存结果，再与基线对比。
+
+## 3 参数说明（需要调整时再看）
+
+| 参数 | 初始值与含义 |
+|---|---|
+| 底座 | Qwen/Qwen3.5-9B，沿用 tokenizer/snapshot.json 中的固定 revision |
+| 模式 | 非思考，训练和推理都显式 enable_thinking=False |
+| 精度与方法 | BF16 底座 + LoRA；只训练语言线性层的适配器 |
+| 上下文 | 8192；当前最长 6848，遇到超长直接报错 |
+| batch / 梯度累积 | 1 / 8；单卡一次优化约累计 8 条轨迹 |
+| LoRA | rank=16、alpha=16、dropout=0 |
+| 学习率 / 轮数 | 1e-4 / 2；这是起始配置，效果需评测 |
+| 显存措施 | Unsloth 梯度检查点、8-bit 优化器、训练时关闭 KV cache |
+| 保存 | 每 25 个优化步骤保存 checkpoint，最多保留 2 个；结束保存 final-adapter |
+
+先前提出的 QLoRA 已调整为 **BF16 LoRA**：Unsloth 当前的 [Qwen3.5 指南](https://unsloth.ai/docs/models/qwen3.5/fine-tune) 不建议该系列默认采用 4-bit 训练。32GB 已容纳本项目最长 smoke 样本，正式训练仍保留峰值记录和 OOM 保护。8-bit 优化器只压缩优化器状态，不代表底座被 4-bit 量化。
+
+## 4 产物与脚本说明
+
+`final-adapter/` 是 LoRA 权重和 tokenizer，**不是完整 9B 模型**，必须搭配记录的同一底座 revision 加载。运行目录还保存模型来源、配置和代码校验值、训练数据 manifest 校验值、工具、提示词、包版本、日志与显存记录。
+
+已下载权重时优先传 `--model-dir`；入口会先将该目录的 config、tokenizer、聊天模板、权重索引和每个分片与项目固定 revision 的字节数及 SHA-256 逐一对比，并以 `local_files_only` 加载，不会重新下载底座。
+
+`check_sft_adapter.py` 提供最小加载示例：加载固定底座 → 挂载适配器 → messages 与 tools 套模板 → 显式非思考生成。它只返回文本，不执行生成的工具调用。业务评测还需要多轮工具环境和评分器，不能把本脚本的输出当成正式测试结果。
+
+本地验证包含整批 CPU 预检、随机微型模型的 Trainer 一步训练，以及真实 Qwen3.5-9B 的 Unsloth GPU smoke。前两者见 `data/validation/training-script-v1/`；GPU 运行的配置、loss、显存、labels 检查和适配器保存在本地 `runs/smoke-02/`。这些只验证训练链路，不代表业务效果。
+
+| 文件 | 用途 |
+|---|---|
+| train-sft.json | 集中修改训练参数，路径相对该文件解析 |
+| scripts/validate_training_format.py | 步骤 6：完整格式报告、长度分布和输入/学习文本预览 |
+| scripts/train_sft.py | 步骤 7：GPU 小规模试跑、正式训练；preflight 为单独排查入口 |
+| scripts/sft_data.py | 检查文件版本、选取试跑样本、补齐 batch，保留 labels |
+| scripts/training_format.py | 沿用已验证的模板和 assistant 标签制作 |
+| scripts/check_sft_adapter.py | 单独重新加载适配器并生成一次回答，不执行工具 |
+
+一行 `train.jsonl` 包含并列的 `messages` 和 `tools`。加载时一起传给模板，9 个工具定义只呈现一次；JSON 字段写在最后，不代表工具在模型输入末尾。工具定义、system、用户和工具返回都仅作为上下文。
+
+参考了你提供的经验：采用 LoRA、梯度检查点、小 batch 和显式 labels。每条完整轨迹只训练一份，所有 assistant 回复和工具调用都参与损失；不复制前缀、不把最终回答重复三次、不截掉开头、不静默丢弃坏数据。这里没有额外设置最终回答权重，标准损失按有效目标 token 计算。
+
+SFT 使用 Unsloth 加载模型和注入 LoRA，Transformers Trainer 直接接收现成的 token 与 labels。当前不需要 TRL 的 SFTTrainer 再处理数据；后续 DPO 再接入 TRL。
+
+
+## 5 仅在遇到问题时查阅
+
+`train_sft.py --mode preflight` 与步骤 6 有大量重叠，主要增加训练配置、模型版本对应和最大长度约束；它不输出完整格式报告及文本预览，也不验证 GPU，不能替代步骤 6。正常流程中的 `smoke` 会自动执行这些训练入口检查，只有需要单独排查时才运行：
+
+```bash
+python scripts/train_sft.py --mode preflight --output-dir runs/preflight-01
+```
+
+显存不足时查看实际峰值和其他进程占用。脚本遇到超长数据会报错，不会自动截掉上下文；调整方案后使用新配置和运行目录。
+
+训练中断后，可以从真实存在的 checkpoint 恢复，保持代码、配置、数据和输出目录一致。例如已有 checkpoint-25 时：
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python scripts/train_sft.py --mode train --model-dir /autodl-fs/data/qwen3.5-9b --output-dir runs/sft-01 --resume-from-checkpoint runs/sft-01/checkpoint-25
+```
+
+没有 checkpoint 时使用新目录重新开始。脚本不从源轨迹划分验证集，也不依据训练 loss 自动选择“最佳模型”。

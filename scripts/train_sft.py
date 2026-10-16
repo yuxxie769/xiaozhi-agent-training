@@ -27,7 +27,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def package_versions():
     """只记录包名与版本；不把可能含私有仓库凭据的 pip URL 写入报告。"""
     names = ("torch", "transformers", "tokenizers", "trl", "datasets", "peft",
-             "accelerate", "unsloth", "unsloth_zoo", "bitsandbytes", "triton", "jinja2")
+             "accelerate", "unsloth", "unsloth_zoo", "bitsandbytes", "triton", "jinja2",
+             "wandb")
     versions = {}
     for name in names:
         try:
@@ -145,14 +146,17 @@ def training_argument_values(config, output, mode, sample_count):
         seed=config.seed, data_seed=config.seed,
         logging_steps=1, logging_nan_inf_filter=False,
         save_strategy="steps", save_steps=config.save_steps, save_total_limit=config.save_total_limit,
-        eval_strategy="no", report_to="none", push_to_hub=False,
+        eval_strategy="no", report_to="wandb" if config.wandb_project else "none",
+        run_name=f"{config.wandb_run_name}-{mode}" if config.wandb_run_name else None,
+        push_to_hub=False,
         dataloader_num_workers=0, remove_unused_columns=False,
         # Trainer 接收现成 token/labels，不做模板渲染、截断、packing 或二次掩码。
         label_names=["labels"],
     )
 
 
-def run_gpu_training(config, snapshot, tokenizer, rows, features, records, output, mode, resume):
+def run_gpu_training(config, snapshot, tokenizer, rows, features, records, output, mode, resume,
+                     oversampling):
     from unsloth import FastLanguageModel
     import torch
     from datasets import Dataset
@@ -160,8 +164,19 @@ def run_gpu_training(config, snapshot, tokenizer, rows, features, records, outpu
 
     set_seed(config.seed)
     indices = select_smoke_indices(records, config.smoke_samples, config.seed) if mode == "smoke" else list(range(len(features)))
+    if mode == "train" and oversampling:
+        index_by_id = {record["id"]: index for index, record in enumerate(records)}
+        for sample_id in oversampling["ids"]:
+            indices.extend([index_by_id[sample_id]] * (config.oversample_factor - 1))
     selected = [features[i] for i in indices]
     write_json(output / "selected-samples.json", [records[i] for i in indices])
+    write_json(output / "sampling-plan.json", {
+        "base_samples": len(features),
+        "effective_samples": len(selected),
+        "oversample_factor": config.oversample_factor if mode == "train" else 1,
+        "oversampled_unique_samples": len(oversampling["ids"]) if mode == "train" and oversampling else 0,
+        "oversampling": oversampling if mode == "train" else None,
+    })
     model, loaded_tokenizer = load_base_model(snapshot, config)
     check_loaded_tokenizer(loaded_tokenizer, tokenizer, rows)
     if getattr(model.config, "_commit_hash", None) not in (None, snapshot["revision"]):
@@ -266,6 +281,19 @@ def main():
     config, prepared, tokenizer_dir = load_config(args.config)
     output = args.output_dir.resolve()
     rows, metadata, snapshot = check_inputs(prepared, tokenizer_dir)
+    oversampling = None
+    if config.oversample_ids_file:
+        oversample_path = (args.config.resolve().parent / config.oversample_ids_file).resolve()
+        payload = json.loads(oversample_path.read_text(encoding="utf-8"))
+        ids = payload.get("ids")
+        if not isinstance(ids, list) or not ids or len(ids) != len(set(ids)):
+            raise ValueError("oversample_ids_file 必须包含非空且无重复的 ids 列表")
+        known_ids = {row["id"] for row in metadata}
+        unknown = [sample_id for sample_id in ids if sample_id not in known_ids]
+        if unknown:
+            raise ValueError(f"oversample_ids_file 含未知样本:{unknown[:3]}")
+        oversampling = {"path": str(oversample_path), "sha256": sha256(oversample_path),
+                        "ids": ids, "description": payload.get("description")}
     model_source = {"model_id": snapshot["model_id"], "revision": snapshot["revision"],
                     "enable_thinking": False, "max_seq_length": config.max_seq_length}
     if args.model_dir:
@@ -274,7 +302,7 @@ def main():
     fingerprint = {"config": asdict(config), "mode": args.mode,
                    "prepared_manifest_sha256": sha256(prepared / "manifest.json"),
                    "tokenizer_snapshot_sha256": sha256(tokenizer_dir / "snapshot.json"),
-                   "model_source": model_source,
+                   "model_source": model_source, "oversampling": oversampling,
                    "scripts": {name: sha256(Path(__file__).with_name(name))
                                for name in ("train_sft.py", "sft_data.py", "training_format.py")}}
     if resume:
@@ -301,6 +329,12 @@ def main():
                 raise ValueError("本配置要求原生 BF16，不自动降成 FP16")
             if int(importlib.metadata.version("transformers").split(".")[0]) < 5:
                 raise ValueError("Qwen3.5 GPU 训练需要 Transformers 5；旧 CPU 验证环境不能训练")
+            if config.wandb_project:
+                if not os.environ.get("WANDB_API_KEY"):
+                    raise ValueError("配置启用了 W&B，但环境缺少 WANDB_API_KEY")
+                os.environ.setdefault("WANDB_PROJECT", config.wandb_project)
+                os.environ.setdefault("WANDB_LOG_MODEL", "false")
+                os.environ.setdefault("WANDB_WATCH", "false")
             write_json(output / "gpu.json", {"name": torch.cuda.get_device_name(0),
                        "total_gib": torch.cuda.get_device_properties(0).total_memory / 2**30,
                        "torch_cuda": torch.version.cuda})
@@ -311,7 +345,12 @@ def main():
                    "platform": platform.platform(), "packages": package_versions()})
         tokenizer = load_local_tokenizer(tokenizer_dir)
         features, records = encode_dataset(tokenizer, rows, metadata, config.max_seq_length)
-        write_json(output / "preflight.json", {"samples": len(rows), "tools": len(rows[0]["tools"]),
+        effective_train_samples = len(rows) + ((config.oversample_factor - 1) * len(oversampling["ids"])
+                                                if oversampling else 0)
+        write_json(output / "preflight.json", {"samples": len(rows),
+                   "effective_train_samples": effective_train_samples,
+                   "oversampled_unique_samples": len(oversampling["ids"]) if oversampling else 0,
+                   "tools": len(rows[0]["tools"]),
                    "max_tokens": max(r["tokens"] for r in records), "enable_thinking": False,
                    "assistant_messages": sum(r["assistant_messages"] for r in records),
                    "tool_calls": sum(r["tool_calls"] for r in records),
@@ -324,7 +363,7 @@ def main():
             result = {"status": "cpu_preflight_passed", "training_started": False}
         else:
             result = run_gpu_training(config, model_source, tokenizer, rows, features, records,
-                                      output, args.mode, resume)
+                                      output, args.mode, resume, oversampling)
         write_json(output / "status.json", result)
         print(json.dumps(result, ensure_ascii=False))
     except Exception as exc:
